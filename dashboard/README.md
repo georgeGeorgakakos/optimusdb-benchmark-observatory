@@ -87,3 +87,13 @@ Files: `dashboard/report_data.py` (data), `dashboard/static/report/` (renderer, 
   `captions.md`, `tables.tex` (booktabs tables for E1, E3, E4, E5 and the hypotheses) and a README with the run
   and build. *Print figures* prints one figure per page with its caption, for a vector PDF. The figures and
   numbers are those of the evaluation report.
+
+## How to read this · About and Architecture
+
+*How to read this* opens with the official description of the evaluation (purpose, provenance, status of the results, comparability) and the reading guide. Its sub-section *Architecture* (`#arch`, `static/arch.js`) draws the testbed interactively:
+
+- pick the data store under test (its container and port appear in every host);
+- scenarios: **Overview**, **Client load** (entry host cloud-a for E1–E3, edge-a for E4, every host for E5 writers), **Replication** (packets follow the emulated links; speed follows the configured one-way delay, not to scale), **Partition (E5)** with split 4 | 4 or 2 | 6;
+- hover any host, link, tier, the bridge or bench for its parameters; click for details in the panel below; full-screen and pause buttons; motion stops when the system asks for reduced motion.
+
+The facts drawn come from `tools/gen_local.py` (addresses, links), `fresh-start.ps1` (limits) and `harness/bench/faults.py` (netem and partitions). Change them in `arch.js` if the testbed changes.

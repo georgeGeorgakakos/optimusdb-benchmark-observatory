@@ -7,6 +7,14 @@ Used by the dashboard (/api/report) and by report_cli.py, which saves a self-con
 """
 import csv, glob, json, os, re, statistics, time
 
+
+def _n0(v):
+    """whole number, or – when the value is missing (older result files)"""
+    try:
+        return f"{float(v):.0f}"
+    except (TypeError, ValueError):
+        return "–"
+
 import server
 
 SYS = ["optimusdb", "corrosion", "gun", "autobase", "iroh", "opendht"]
@@ -142,13 +150,13 @@ def build(mode):
             if "client_limited=1" in n: add("warn", e, f"{r['run_id']}: the load generator was the limit (marked client-limited).")
     for rid, lg in out["E2_lag"].items():
         if lg and lg["p50"] is not None and lg["p50"] > server_lag_limit():
-            add("warn", "E2", f"{rid}: operations issued a median {lg['p50']:.0f} ms late (load generator behind schedule).")
+            add("warn", "E2", f"{rid}: operations issued a median {_n0(lg['p50'])} ms late (load generator behind schedule).")
     for cc in out["E3"]:
         if cc["mean"] is not None and (cc["correct"] or 0) < 0.5:
-            add("bad", "E3", f"{server.LABEL.get(cc['system'], cc['system'])} ({cc['path']}) {cc['query']} at {int(cc['records'] or 0):,} records: {cc['rows_returned']:.0f} rows instead of {cc['rows_expected']:.0f}.")
+            add("bad", "E3", f"{server.LABEL.get(cc['system'], cc['system'])} ({cc['path']}) {cc['query']} at {int(cc['records'] or 0):,} records: {_n0(cc['rows_returned'])} rows instead of {_n0(cc['rows_expected'])}.")
     for cc in out["E5"]:
         if cc["convergence"] is not None and (cc["identical"] or 0) < 1:
-            add("warn", "E5", f"{server.LABEL.get(cc['system'], cc['system'])}: replicas not identical within the convergence limit (contention {cc['contention']:.0f} %, partition {cc['partition_s']:.0f} s).")
+            add("warn", "E5", f"{server.LABEL.get(cc['system'], cc['system'])}: replicas not identical within the convergence limit (contention {_n0(cc['contention'])} %, partition {_n0(cc['partition_s'])} s).")
     for e in ("E1", "E3", "E5"):
         p = _exp_log(logs, kind, e)
         if not p: continue

@@ -244,3 +244,123 @@ footer.foot img { width: 22px; opacity: .8; }
   #paperPrint svg { width: 100%; height: auto; }
   #paperPrint .cap { font: 10pt/1.4 Georgia, 'Times New Roman', serif; color: #000; margin-top: 4mm; }
 }
+
+/* ---------------------------------------------------------------- How to read this: sub-navigation, official description */
+nav.side button.sub { padding-left: 38px; font-size: 13px; }
+nav.side button.sub svg { width: 15px; height: 15px; }
+.subnav { display: flex; gap: 6px; margin: -4px 0 16px; flex-wrap: wrap; }
+.subnav a { text-decoration: none; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--ring); font-size: 12.5px; font-weight: 600; color: var(--ink-2); background: var(--surface); }
+.subnav a.on { background: var(--charcoal); color: #fff; border-color: var(--charcoal); }
+.about { display: grid; grid-template-columns: minmax(0, 1fr) 280px; gap: 22px; align-items: start; }
+.about .lead { font-size: 15.5px; line-height: 1.6; margin: 0 0 12px; }
+.about h4 { margin: 16px 0 4px; font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); }
+.about p { margin: 0 0 8px; color: var(--ink-2); max-width: 78ch; }
+.about p b { color: var(--ink); }
+.about .facts { border: 1px solid var(--ring); border-radius: 12px; padding: 12px 14px; background: color-mix(in srgb, var(--surface-2) 70%, var(--page)); font-size: 12.5px; }
+.about .facts div { display: flex; justify-content: space-between; gap: 10px; padding: 5px 0; border-bottom: 1px dashed var(--grid); }
+.about .facts div:last-child { border-bottom: 0; }
+.about .facts span { color: var(--muted); } .about .facts b { text-align: right; font-weight: 600; }
+@media (max-width: 1000px) { .about { grid-template-columns: 1fr; } }
+
+/* ---------------------------------------------------------------- interactive architecture */
+.arch-card { padding: 16px 18px 14px; }
+.arch-card:fullscreen { overflow: auto; background: var(--page); padding: 24px; }
+.ag-ctl { display: grid; gap: 10px; margin-bottom: 12px; }
+.ag-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.ag-chip { display: inline-flex; align-items: center; gap: 7px; padding: 5px 11px; border-radius: 999px; border: 1px solid var(--ring); background: var(--surface-2); cursor: pointer; font-size: 12.5px; font-weight: 600; color: var(--ink-2); transition: box-shadow .2s, border-color .2s; }
+.ag-chip i { width: 9px; height: 9px; border-radius: 50%; background: var(--c); }
+.ag-chip:hover { border-color: var(--c); }
+.ag-chip.on { color: var(--ink); border-color: var(--c); box-shadow: 0 0 0 3px color-mix(in srgb, var(--c) 22%, transparent); }
+.ag-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.ag-seg button { padding: 5px 11px; }
+.ag-sp { flex: 1; }
+.ag-btn { padding: 5px 11px; font-size: 12px; }
+.ag-grid { display: grid; grid-template-columns: 1fr; gap: 14px; }
+.ag-panel { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 4px 28px; align-items: start; }
+.ag-pr > p:first-child { margin-top: 0; }
+@media (max-width: 900px) { .ag-panel { grid-template-columns: 1fr; } }
+@media (min-width: 1800px) { .ag-grid { grid-template-columns: minmax(0, 1fr) 320px; } .ag-panel { grid-template-columns: 1fr; } }
+.ag-stage { position: relative; border-radius: 16px; overflow-x: auto; overflow-y: hidden; }
+.ag-canvas svg { display: block; width: 100%; height: auto; min-width: 860px; }
+.ag-canvas text { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+.ag-frame { fill: color-mix(in srgb, var(--surface-2) 55%, var(--page)); stroke: var(--axis); stroke-width: 1.4; }
+.ag-dot { fill: var(--grid); }
+.ag-title { font-size: 15px; font-weight: 700; fill: var(--ink); }
+.ag-kicker { font-size: 10.5px; letter-spacing: .2em; font-weight: 700; fill: var(--muted); }
+.ag-tier rect { fill: var(--surface); stroke: var(--axis); stroke-width: 1.4; transition: stroke .2s, fill .2s; cursor: pointer; }
+.ag-tier:hover rect, .ag-tier.sel rect { stroke: var(--ink-2); fill: var(--surface-2); }
+.ag-tn { font-size: 15px; font-weight: 700; fill: var(--ink); }
+.ag-ts { font-size: 12px; fill: var(--ink-2); }
+.ag-tiny { font-size: 10.5px; fill: var(--muted); letter-spacing: .02em; }
+.ag-lv { fill: none; stroke: var(--ink-2); stroke-width: 1.6; stroke-dasharray: 6 5; }
+.ag-link.der .ag-lv { stroke: var(--muted); }
+.ag-lflow { fill: none; stroke: var(--s1); stroke-width: 2; stroke-dasharray: 2 22; stroke-linecap: round; opacity: .55; animation: agflow 1.6s linear infinite; }
+.ag-link.der .ag-lflow { animation-duration: 3s; }
+.ag-lhit { fill: none; stroke: transparent; stroke-width: 16; cursor: pointer; pointer-events: stroke; }
+.ag-link:hover .ag-lv, .ag-link.sel .ag-lv { stroke: var(--ink); stroke-width: 2.4; }
+.ag-link.cut .ag-lv { stroke: var(--critical); opacity: .55; }
+.ag-link.cut .ag-lflow { display: none; }
+.ag-lbl rect { fill: var(--surface-2); stroke: var(--ring); }
+.ag-lbl text { font-size: 11.5px; font-weight: 600; fill: var(--ink-2); font-variant-numeric: tabular-nums; }
+.ag-link { pointer-events: visiblePainted; }
+.ag-host { cursor: pointer; outline: none; }
+.ag-hb { fill: var(--surface-2); stroke: var(--ink); stroke-width: 1.6; transition: stroke .2s, filter .2s; }
+.ag-host:hover .ag-hb, .ag-host:focus-visible .ag-hb { filter: drop-shadow(0 4px 10px rgba(0,0,0,.16)); }
+.ag-host.sel .ag-hb { stroke: var(--s1); stroke-width: 2.6; filter: drop-shadow(0 0 8px color-mix(in srgb, var(--s1) 45%, transparent)); }
+.ag-host.sideA .ag-hb { fill: color-mix(in srgb, var(--s1) 9%, var(--surface-2)); }
+.ag-host.sideB .ag-hb { fill: color-mix(in srgb, var(--s2) 10%, var(--surface-2)); stroke-dasharray: 5 3; }
+.ag-side { font-size: 11px; font-weight: 800; fill: var(--ink-2); }
+.ag-hn { font-size: 14px; font-weight: 700; fill: var(--ink); }
+.ag-hip { font-size: 12px; fill: var(--ink-2); font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-weight: 500; }
+.ag-pill { fill: color-mix(in srgb, var(--c) 14%, var(--surface-2)); stroke: color-mix(in srgb, var(--c) 55%, transparent); }
+.ag-pt { font-size: 10.5px; font-weight: 650; fill: var(--ink); }
+.ag-led { filter: url(#agGlow); }
+.ag-pk { fill: var(--s1); }
+.ag-pk.resp { fill: var(--ink-2); }
+.ag-pk.repl { fill: var(--ink); }
+.ag-burst { fill: none; stroke: var(--critical); stroke-width: 2; }
+.ag-wall path { fill: none; stroke: var(--critical); stroke-width: 2.6; stroke-linejoin: round; stroke-linecap: round; }
+.ag-wall rect { fill: var(--critical); }
+.ag-wall text { font-size: 11px; font-weight: 700; fill: #fff; }
+.ag-wall .ag-sidelbl { fill: var(--ink-2); font-weight: 700; letter-spacing: .04em; }
+.ag-bus { fill: url(#agBus); stroke: var(--axis); }
+.ag-bus0 { stop-color: var(--surface-2); } .ag-bus1 { stop-color: color-mix(in srgb, var(--s1) 14%, var(--surface-2)); }
+.ag-busg { cursor: pointer; }
+.ag-bt { font-size: 12.5px; fill: var(--ink); font-weight: 600; }
+.ag-drop { stroke: var(--ink); stroke-width: 1.6; }
+.ag-bench { cursor: pointer; outline: none; }
+.ag-bench rect { fill: var(--surface-2); stroke: var(--ink); stroke-width: 1.6; }
+.ag-bench.sel rect, .ag-bench:focus-visible rect { stroke: var(--s1); stroke-width: 2.6; }
+.ag-ib { fill: var(--surface); stroke: var(--axis); stroke-width: 1.4; }
+.ag-box rect { fill: var(--surface-2); stroke: var(--ink); stroke-width: 1.3; }
+.ag-dash { fill: none; stroke: var(--ink-2); stroke-dasharray: 4 4; }
+.ag-ds { cursor: pointer; }
+.ag-ds rect { fill: var(--surface-2); stroke: var(--axis); stroke-width: 1.2; transition: all .2s; }
+.ag-ds text { font-size: 11px; font-weight: 650; fill: var(--muted); }
+.ag-ds .ag-port { font-weight: 500; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+.ag-ds:hover rect { stroke: var(--c); }
+.ag-ds.on rect { fill: color-mix(in srgb, var(--c) 16%, var(--surface-2)); stroke: var(--c); stroke-width: 2.2; filter: drop-shadow(0 0 6px color-mix(in srgb, var(--c) 45%, transparent)); }
+.ag-ds.on text { fill: var(--ink); }
+.ag-motion-off .ag-lflow { animation: none; opacity: 0; }
+@keyframes agflow { to { stroke-dashoffset: -24; } }
+@media (prefers-reduced-motion: reduce) { .ag-lflow { animation: none; opacity: 0; } }
+.ag-tip { position: absolute; pointer-events: none; z-index: 3; width: max-content; max-width: 260px; padding: 8px 10px; border-radius: 9px; font-size: 12px; line-height: 1.45; background: var(--charcoal); color: #f2f2f2; box-shadow: var(--shadow); opacity: 0; transform: translateY(4px); transition: opacity .12s, transform .12s; }
+.ag-tip.on { opacity: 1; transform: none; }
+.ag-panel { border: 1px solid var(--ring); border-radius: 14px; padding: 14px 15px; background: color-mix(in srgb, var(--surface-2) 75%, var(--page)); font-size: 12.8px; color: var(--ink-2); min-width: 0; }
+.ag-panel p { margin: 8px 0; line-height: 1.5; }
+.ag-panel h5 { margin: 12px 0 4px; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+.ag-ph { font-size: 17px; font-weight: 750; color: var(--ink); line-height: 1.2; }
+.ag-ph small { display: block; font-size: 11.5px; font-weight: 500; color: var(--muted); margin-top: 3px; letter-spacing: .02em; }
+.ag-mode { margin: 10px 0; padding: 9px 11px; border-left: 3px solid var(--s1); background: var(--surface); border-radius: 0 9px 9px 0; line-height: 1.5; }
+.ag-kv { display: flex; justify-content: space-between; gap: 12px; padding: 6px 0; border-bottom: 1px dashed var(--grid); }
+.ag-kv span { color: var(--muted); flex: none; } .ag-kv b { color: var(--ink); font-weight: 600; text-align: right; }
+.ag-note { font-size: 12px; color: var(--muted); }
+.ag-legend { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-top: 12px; font-size: 12px; color: var(--ink-2); }
+.ag-legend span { display: inline-flex; align-items: center; gap: 7px; }
+.ag-legend i { display: inline-block; width: 26px; height: 0; border-top: 2px solid var(--ink); }
+.ag-legend i.lg-link { border-top: 2px dashed var(--ink-2); } .ag-legend i.lg-der { border-top: 2px dashed var(--muted); }
+.ag-legend i.lg-cut { border-top: 3px solid var(--critical); }
+.ag-legend i.lg-pk, .ag-legend i.lg-resp, .ag-legend i.lg-repl { width: 9px; height: 9px; border: 0; border-radius: 50%; background: var(--s1); box-shadow: 0 0 6px var(--s1); }
+.ag-legend i.lg-resp { background: var(--ink-2); box-shadow: none; } .ag-legend i.lg-repl { background: var(--ink); box-shadow: 0 0 6px var(--ink-2); }
+nav.side button.open { color: var(--ink); font-weight: 600; }
+.ag-entry text { font-size: 9.5px; font-weight: 800; letter-spacing: .08em; fill: #fff; }
