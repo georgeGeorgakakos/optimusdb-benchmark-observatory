@@ -307,9 +307,10 @@ function caveat() {
 }
 
 /* ------------------------------------------------------------------ pages */
-const PAGES = { overview, history: historyPage, health, summary, E1: e1, E2: e2, E3: e3, E4: e4, E5: e5, report: reportPage, paper: paperPage, guide };
+const PAGES = { overview, history: historyPage, health, summary, E1: e1, E2: e2, E3: e3, E4: e4, E5: e5, report: reportPage, paper: paperPage, guide, arch: archPage };
 function render() {
   document.querySelectorAll('#nav button').forEach(b => b.classList.toggle('on', b.dataset.page === S.page));
+  const gb = document.querySelector('#nav button[data-page="guide"]'); if (gb && S.page === 'arch') gb.classList.add('open');
   const f = PAGES[S.page] || overview; const y = scrollY; CH = []; Z.i = -1;
   $('#main').innerHTML = banner() + f() + `<footer class="foot"><img src="iccs-logo.png" alt="">Institute of Communication and Computer Systems (ICCS) · OptimusDB evaluation testbed · data from <span class="mono">${esc(srcPath(S.mode))}</span></footer>`;
   scrollTo(0, y); afterRender();
@@ -549,14 +550,46 @@ function e5() {
   </div>`;
 }
 
+function guideNav(on) { return `<nav class="subnav" aria-label="How to read this"><a href="#guide" class="${on === 'guide' ? 'on' : ''}">About and reading guide</a><a href="#arch" class="${on === 'arch' ? 'on' : ''}">Testbed architecture</a></nav>`; }
 function guide() {
-  return head('Reference', 'How to read this dashboard') + `<div class="grid g2">
-  ${explain('The setup', ['8 emulated hosts (2 cloud, 2 fog, 4 edge) with CPU and memory limits; links between them get the delays, jitter and loss of Table 7 (applied on outgoing traffic, so values are one-way).', 'Only the system under test runs; data are preloaded on an unshaped network, then replication is confirmed on every host before measuring.', 'Load is open-loop: operations are issued on a Poisson schedule, independent of how fast the system answers.'])}
+  const fact = (k, v) => `<div><span>${k}</span><b>${v}</b></div>`;
+  return head('Reference', 'How to read this dashboard') + guideNav('guide') + `
+  <div class="card about">
+    <div>
+      <p class="lead">The <b>OptimusDB Benchmark Observatory</b> presents the experimental evaluation of OptimusDB, the decentralized data management layer of the Swarmchestrate project (Horizon Europe, grant agreement No 101135012). OptimusDB is compared with five decentralized data stores (Corrosion, Gun.js, Autobase, Iroh docs and OpenDHT) on an emulated cloud–fog–edge continuum, under one protocol that is the same for every system.</p>
+      <h4>Purpose</h4>
+      <p>The evaluation answers three research questions: <b>RQ1</b>, what OptimusDB costs on constrained edge hosts; <b>RQ2</b>, how it performs in latency, throughput and query cost; and <b>RQ3</b>, how it behaves under network partitions and concurrent writes. Five experiments (E1–E5) test five hypotheses (H1–H5). The hypotheses and their acceptance criteria were registered before any measurement and are not changed after the results are known.</p>
+      <h4>Provenance</h4>
+      <p>Every figure, table and verdict is computed from the result files written by the benchmark harness (<span class="mono">results/</span> and <span class="mono">results-archive/</span>). Nothing is entered or adjusted by hand. The selector at the top chooses the result set, and the footer of each page names the folder it reads. The published site is a static snapshot of the same files; the header shows when it was built.</p>
+      <h4>Status of the results</h4>
+      <p>Quick and pilot runs check the testbed and the harness. They use one repetition and reduced data volumes, so they are <b>indicative only</b>. Claims in the paper rest only on the full campaign, with 5–10 repetitions per cell (10 for E1, E3 and E5; 5 for E2 and E4) and the statistical tests described below. Every result page says which kind of run it shows.</p>
+      <h4>Comparability</h4>
+      <p>All systems run on identical emulated hosts, with the same resource limits, network conditions, data, workloads and load schedule. Only the system under test runs during a measurement, on data that is freshly loaded and confirmed as replicated on every host. Where a system has no native support for an operation, the operation is either evaluated on the client and labelled as such, or reported as unsupported; it is never counted as an error, and it is never emulated in the system’s favour.</p>
+    </div>
+    <div class="facts">
+      ${fact('Systems', '6 decentralized data stores')}${fact('Hosts', '8 emulated: 2 cloud · 2 fog · 4 edge')}${fact('Experiments', 'E1–E5')}${fact('Hypotheses', 'H1–H5, pre-registered')}
+      ${fact('Load', 'open-loop Poisson')}${fact('Campaign', '5–10 repetitions per cell')}${fact('Statistics', 'Mann-Whitney U, Holm; Cliff’s δ')}${fact('Data', 'harness result files only')}
+      ${fact('Project', 'Swarmchestrate · HE 101135012')}${fact('Maintained by', 'George Georgakakos, ICCS')}
+      <p style="margin:10px 0 0"><a href="#arch" class="abtn" style="display:inline-block;text-decoration:none">Explore the testbed architecture →</a></p>
+    </div>
+  </div>
+  <div class="grid g2" style="margin-top:16px">
+  ${explain('The setup', ['8 emulated hosts (2 cloud, 2 fog, 4 edge) with CPU and memory limits; links between them get the delays, jitter and loss of Table 7 (applied on outgoing traffic, so values are one-way). See <a href="#arch">Testbed architecture</a>.', 'Only the system under test runs; data are preloaded on an unshaped network, then replication is confirmed on every host before measuring.', 'Load is open-loop: operations are issued on a Poisson schedule, independent of how fast the system answers.'])}
   ${explain('Workloads (E1, E2)', Object.values(WL).map(esc).concat(['Keys follow a Zipfian distribution (some documents are much hotter than others), as in YCSB.']))}
   ${explain('Percentiles', ['P50: the median operation. P95, P99, P99.9: 5 %, 1 %, 0.1 % of operations are slower.', 'Tail ratio P99.9/P50: how much worse the extreme tail is than the typical case.'])}
   ${explain('Modes', ['<b>Quick</b>: every experiment once on 10⁴ records, short windows — a functional check.', '<b>Pilot</b>: E1 on a few cells — timing check.', '<b>Campaign</b>: the full design with 5–10 repetitions — the results for the paper.'])}
   ${explain('Statistics', ['Repetitions are the unit of analysis: percentiles are computed inside each run and compared across runs.', 'Differences are tested with Mann-Whitney U, Holm-corrected for multiple baselines; effect sizes with Cliff’s δ (|δ| ≥ 0.147 small, 0.33 medium, 0.474 large).'])}
   ${explain('Verdict badges', ['<span class="badge good"><i>✓</i>Supported</span> the data satisfy the hypothesis’ criterion.', '<span class="badge bad"><i>✕</i>Not supported</span> they do not.', '<span class="badge na"><i>?</i>Insufficient data</span> the needed runs are missing. With fewer than 10 repetitions every verdict is indicative.'])}
+  </div>`;
+}
+function archPage() {
+  return head('Reference · How to read this', 'Testbed architecture', 'One Windows workstation running Docker Desktop emulates a three-tier continuum: eight hosts, each in its own network namespace, joined by one bridge network whose links are shaped per tier pair. Select a data store and a scenario, then click any element for its details.') + guideNav('arch') +
+  `<div class="card arch-card"><div id="archRoot"></div></div>
+  <div class="grid g2" style="margin-top:16px">
+  ${explain('Tiers and hosts', ['<b>Cloud</b> (cloud-a, cloud-b) and <b>fog</b> (fog-a, fog-b): 1.5 CPU and 3 GB per data store. <b>Edge</b> (edge-a … edge-d): 1 CPU and 2 GB.', 'Each host is a set of containers sharing one network namespace and one IP on <span class="mono">odbnet</span> (10.88.0.0/24): <b>net</b> owns the interface, the <b>agent</b> (:9100) starts, stops and wipes the data store and reports resource use.', 'The entry host for client requests is cloud-a in E1–E3 and edge-a in E4; in E5 a writer runs on every host.'])}
+  ${explain('Network emulation', ['Every host shapes its outgoing traffic with an htb class and a netem qdisc per destination tier, chosen by u32 filters on the destination IP. Delay, jitter, loss and rate are therefore one-way and pair-specific.', 'Two links are derived rather than set in Table 7: fog ↔ fog (the fog hosts share one regional site) and cloud ↔ edge (traffic crosses the fog link: 70 ms ± 11 ms, 0.6 % loss, 10 Mbit/s).', 'Traffic between <b>bench</b> (10.88.0.2) and the hosts is not shaped, so the measured latency is that of the data store and its replication, not of the client link.'])}
+  ${explain('Isolation between runs', ['Only the system under test runs; the other five data-store containers are stopped.', 'Before every run the cluster is reset, the data are loaded on an unshaped network, replication is confirmed on every host, and only then is the network profile applied and the measurement started.', 'The load generator records its own CPU; a run counts as client-limited at ≥ 85 % of a core, so a slow client is never mistaken for a slow data store.'])}
+  ${explain('Partitions (E5)', ['iptables DROP rules split the hosts into two groups: <b>4 | 4</b> (cloud + fog against edge) or <b>2 | 6</b> (cloud against fog + edge), for 5–300 s.', 'Writers keep running on both sides; bench is never blocked, so both sides stay observable.', 'After healing the harness checks for lost acknowledged writes, identical replicas and the time until all replicas converge.'])}
   </div>`;
 }
 
@@ -588,7 +621,8 @@ async function openRun(run) {
 
 /* ------------------------------------------------------------------ loop */
 function afterRender() { const c = $('#console'); if (c) c.scrollTop = 1e9; document.body.classList.toggle('on-report', S.page === 'report'); if (S.page === 'report') loadReport();
-  if (S.page === 'paper') PaperExport.load(S.mode, j); }
+  if (S.page === 'paper') PaperExport.load(S.mode, j);
+  if (S.page === 'arch' && window.ArchDiagram) ArchDiagram.mount($('#archRoot')); }
 function paperPage() { return head('Report', 'Paper figures', 'Publication-ready figures, data and LaTeX tables of the selected run, in one download.') + caveat() + PaperExport.page(srcLabel(S.mode)); }
 
 /* ------------------------------------------------------------------ evaluation report (report/report.js renders the pages) */
