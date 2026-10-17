@@ -1,0 +1,16 @@
+Baseline calibration 2026-10-14 20:54:03 systems autobase, workloads WA,WO, rates [5.0, 10.0, 25.0, 50.0], 20 s each, 10000 records, cluster with link profiles, Autobase indexers 3
+
+=== autobase WA
+  [single WA] started and loaded 10000 documents in 6 s
+  [single WA]    5 ops/s: achieved   5.0  P50      7.4 ms  P99     14.5 ms  errors   0.0 %  CPU max 11.5 % of 150  mem 247.1 MB
+  [single WA]   10 ops/s: achieved  10.6  P50      8.4 ms  P99     15.9 ms  errors   0.0 %  CPU max 7.75 % of 150  mem 205.2 MB
+  [single WA]   25 ops/s: achieved  25.0  P50      7.7 ms  P99     16.5 ms  errors   0.0 %  CPU max 23.32 % of 150  mem 226.6 MB
+  [single WA]   50 ops/s: achieved  48.5  P50      7.3 ms  P99     19.0 ms  errors   0.0 %  CPU max 24.7 % of 150  mem 239.4 MB
+  [cluster + links WA] started and loaded 10000 documents in 26 s
+  [cluster + links WA]    5 ops/s: achieved   5.0  P50      7.5 ms  P99   8188.5 ms  errors   0.0 %  CPU max 116.99 % of 150  mem 404.2 MB
+  [cluster + links WA]   10 ops/s: achieved  10.6  P50      6.4 ms  P99    333.2 ms  errors   0.0 %  CPU max 12.27 % of 150  mem 527.1 MB
+  [cluster + links WA]   25 ops/s: achieved  25.0  P50      6.0 ms  P99     28.3 ms  errors   0.0 %  CPU max 22.08 % of 150  mem 530.0 MB
+  [cluster + links WA]   50 ops/s: achieved  48.5  P50      5.8 ms  P99     29.7 ms  errors   0.0 %  CPU max 32.5 % of 150  mem 543.4 MB
+  VERDICT autobase WA: no failures up to 50 ops/s in either setup
+
+=== autobase WO

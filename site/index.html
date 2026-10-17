@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OptimusDB Benchmark Observatory · ICCS</title>
+<link rel="icon" href="favicon.png">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="report/report.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="silver" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5a5a5f"/><stop offset=".35" stop-color="#d9d9db"/>
+      <stop offset=".6" stop-color="#8e8e93"/><stop offset="1" stop-color="#3f3f44"/>
+    </linearGradient>
+  </defs>
+</svg>
+
+<header class="masthead">
+  <div class="brand">
+    <div class="logo-ring"><span><img src="iccs-logo.png" alt="ICCS"></span></div>
+    <div class="brand-text">
+      <div class="kicker">ΕΠΙΣΕΥ · ICCS · Swarmchestrate</div>
+      <h1><b>OptimusDB</b> Benchmark Observatory</h1>
+    </div>
+  </div>
+  <div class="mast-right">
+    <span class="pill" id="livePill"><span class="dot" id="liveDot"></span><span id="liveText">connecting…</span></span>
+    <select class="mode" id="mode" title="Which results to show"></select>
+    <button class="iconbtn" id="theme" title="Light / dark" aria-label="Toggle light or dark"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg></button>
+  </div>
+</header>
+
+<div class="shell">
+  <nav class="side" id="nav">
+    <div class="group">Monitor</div>
+    <button data-page="overview"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Live progress</button>
+    <button data-page="history"><svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5M12 7v5l3 2"/></svg>Run history</button>
+    <button data-page="health"><svg viewBox="0 0 24 24"><path d="M3 12h4l3-7 4 14 3-7h4"/></svg>Run health<span class="count" id="failCount"></span></button>
+    <div class="group">Results</div>
+    <button data-page="summary"><svg viewBox="0 0 24 24"><path d="M4 19V5M4 19h16M8 15v-4M12 15V8M16 15v-6"/></svg>Findings &amp; hypotheses</button>
+    <button data-page="E1"><svg viewBox="0 0 24 24"><path d="M3 17l5-5 4 3 8-9"/></svg>E1 Latency</button>
+    <button data-page="E2"><svg viewBox="0 0 24 24"><path d="M3 20h18M5 16l4-5 4 2 6-8"/></svg>E2 Throughput</button>
+    <button data-page="E3"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>E3 Queries</button>
+    <button data-page="E4"><svg viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg>E4 Edge resources</button>
+    <button data-page="E5"><svg viewBox="0 0 24 24"><path d="M4 7h6M14 7h6M4 17h16M10 4v6M14 4v6"/></svg>E5 Partitions</button>
+    <div class="group">Report</div>
+    <button data-page="report"><svg viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4M9 12h7M9 16h7M9 8h3"/></svg>Evaluation report</button>
+    <button data-page="paper"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M7 14l3-4 3 3 2-2 3 3M8 21h8"/></svg>Paper figures</button>
+    <div class="group">Reference</div>
+    <button data-page="guide"><svg viewBox="0 0 24 24"><path d="M5 4h10l4 4v12H5z"/><path d="M9 12h6M9 16h6M9 8h3"/></svg>How to read this</button>
+    <div class="foot">Reads <span class="mono">results\</span> only; refreshes every 5 s. Nothing here starts or stops a test.</div>
+  </nav>
+  <main id="main"></main>
+</div>
+
+<div class="tip" id="tip"></div>
+<div class="modal" id="modal"><div class="box" id="modalBox"></div></div>
+<script>window.ODB_STATIC = {"base": "site-data/", "built": "2026-10-17 19:10"};</script>
+<script src="summary-fig.js"></script>
+<script src="report/report.js"></script>
+<script src="paper.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

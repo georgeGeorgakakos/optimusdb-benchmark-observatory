@@ -1,0 +1,60 @@
+20:33:38 QUICK E2: 1 rep, 10^4 records, short windows, reduced grids, results in /results/quick
+20:33:38 OptimusDB runtime (cloud): GOGC=200 GOMAXPROCS=2 GOMEMLIMIT=2457MiB OPTIMUSDB_ARGS=-metrics=false OPTIMUSDB_IPFS_KEY=ed25519 OPTIMUSDB_IPFS_PROVIDE=false OPTIMUSDB_IPFS_SYNC=false OPTIMUSDB_LOG_LEVEL=WARN
+20:33:38 OptimusDB runtime (fog): GOGC=200 GOMAXPROCS=2 GOMEMLIMIT=2457MiB OPTIMUSDB_ARGS=-metrics=false OPTIMUSDB_IPFS_KEY=ed25519 OPTIMUSDB_IPFS_PROVIDE=false OPTIMUSDB_IPFS_SYNC=false OPTIMUSDB_LOG_LEVEL=WARN
+20:33:38 OptimusDB runtime (edge): GOGC=200 GOMAXPROCS=1 GOMEMLIMIT=1638MiB OPTIMUSDB_ARGS=-metrics=false OPTIMUSDB_IPFS_KEY=ed25519 OPTIMUSDB_IPFS_PROVIDE=false OPTIMUSDB_IPFS_SYNC=false OPTIMUSDB_LOG_LEVEL=WARN
+20:33:38 [1/6] E2 block gun 10000 records: load once, 1 repetitions
+20:33:38   reset gun: stop others, wipe, start, join, smoke test
+20:33:46   loading 10000 records (2KB)
+20:34:03   loaded in 17 s
+20:34:09   replicated on every host after 6 s
+20:34:10   measuring: 10 s warm-up + 30 s at 25 ops/s
+20:34:52   done E2-gun-10000-25-1: ops=712 errors=0 p50=16.754 ms p99=3898.782 ms
+20:34:54   measuring: 10 s warm-up + 30 s at 100 ops/s
+20:35:46   done E2-gun-10000-100-1: ops=3017 errors=1820 p50=6490.25 ms p99=12180.283 ms
+20:35:53 [2/6] E2 block autobase 10000 records: load once, 1 repetitions
+20:35:53   reset autobase: stop others, wipe, start, join, smoke test
+20:36:15   loading 10000 records (2KB)
+20:36:21   loaded in 7 s
+20:36:53   replicated on every host after 31 s
+20:36:53   measuring: 10 s warm-up + 30 s at 25 ops/s
+20:37:43   done E2-autobase-10000-25-1: ops=712 errors=60 p50=92.182 ms p99=8333.911 ms
+20:37:48 [3/6] E2 block corrosion 10000 records: load once, 1 repetitions
+20:37:48   reset corrosion: stop others, wipe, start, join, smoke test
+20:38:08   loading 10000 records (2KB)
+20:38:13   loaded in 5 s
+20:38:32   replicated on every host after 18 s
+20:38:32   measuring: 10 s warm-up + 30 s at 25 ops/s
+20:39:12   done E2-corrosion-10000-25-1: ops=712 errors=0 p50=4.406 ms p99=26.946 ms
+20:39:12   measuring: 10 s warm-up + 30 s at 100 ops/s
+20:39:52   done E2-corrosion-10000-100-1: ops=3017 errors=0 p50=4.142 ms p99=66.892 ms
+20:39:52   measuring: 10 s warm-up + 30 s at 200 ops/s
+20:40:40   done E2-corrosion-10000-200-1: ops=5995 errors=1295 p50=1500.093 ms p99=9856.22 ms
+20:40:45 [4/6] E2 block iroh 10000 records: load once, 1 repetitions
+20:40:45   reset iroh: stop others, wipe, start, join, smoke test
+20:40:54   loading 10000 records (2KB)
+20:41:06   loaded in 12 s
+20:41:12   replicated on every host after 6 s
+20:41:12   measuring: 10 s warm-up + 30 s at 25 ops/s
+20:41:53   done E2-iroh-10000-25-1: ops=712 errors=0 p50=4.503 ms p99=936.626 ms
+20:41:53   measuring: 10 s warm-up + 30 s at 100 ops/s
+20:42:44   done E2-iroh-10000-100-1: ops=3017 errors=835 p50=2573.717 ms p99=9977.334 ms
+20:42:49 [5/6] E2 block optimusdb 10000 records: load once, 1 repetitions
+20:42:49   reset optimusdb: stop others, wipe, start, join, smoke test
+20:43:13   loading 10000 records (2KB)
+20:43:16   loaded in 3 s
+20:43:23   replicated on every host after 6 s
+20:43:23   measuring: 10 s warm-up + 30 s at 25 ops/s
+20:44:03   done E2-optimusdb-10000-25-1: ops=712 errors=0 p50=4.392 ms p99=25.523 ms
+20:44:03   measuring: 10 s warm-up + 30 s at 100 ops/s
+20:44:44   done E2-optimusdb-10000-100-1: ops=3017 errors=0 p50=4.074 ms p99=62.853 ms
+20:44:44   measuring: 10 s warm-up + 30 s at 200 ops/s
+20:45:32   done E2-optimusdb-10000-200-1: ops=5995 errors=2162 p50=3910.277 ms p99=9959.973 ms
+20:45:37 [6/6] E2 block opendht 10000 records: load once, 1 repetitions
+20:45:37   reset opendht: stop others, wipe, start, join, smoke test
+20:45:44   loading 10000 records (2KB)
+20:46:14   loaded in 30 s
+20:46:24   replicated on every host after 9 s
+20:46:24   measuring: 10 s warm-up + 30 s at 25 ops/s
+20:47:05   done E2-opendht-10000-25-1: ops=634 errors=0 p50=454.62 ms p99=1785.546 ms unsupported=78
+20:47:05   measuring: 10 s warm-up + 30 s at 100 ops/s
+20:47:55   done E2-opendht-10000-100-1: ops=2712 errors=599 p50=1458.358 ms p99=10116.071 ms unsupported=305

@@ -1,0 +1,107 @@
+12:57:55 QUICK E1: 1 rep, 10^4 records, short windows, reduced grids, results in /results/quick
+12:57:55 OptimusDB runtime (cloud): GOGC=200 GOMAXPROCS=2 GOMEMLIMIT=2457MiB OPTIMUSDB_ARGS=-metrics=false OPTIMUSDB_HEADS_INTERVAL=10 OPTIMUSDB_IPFS_KEY=ed25519 OPTIMUSDB_IPFS_PROVIDE=false OPTIMUSDB_IPFS_SYNC=false OPTIMUSDB_LOG_LEVEL=WARN OPTIMUSDB_RECONNECT_INTERVAL=10
+12:57:55 OptimusDB runtime (fog): GOGC=200 GOMAXPROCS=2 GOMEMLIMIT=2457MiB OPTIMUSDB_ARGS=-metrics=false OPTIMUSDB_HEADS_INTERVAL=10 OPTIMUSDB_IPFS_KEY=ed25519 OPTIMUSDB_IPFS_PROVIDE=false OPTIMUSDB_IPFS_SYNC=false OPTIMUSDB_LOG_LEVEL=WARN OPTIMUSDB_RECONNECT_INTERVAL=10
+12:57:55 OptimusDB runtime (edge): GOGC=200 GOMAXPROCS=1 GOMEMLIMIT=1638MiB OPTIMUSDB_ARGS=-metrics=false OPTIMUSDB_HEADS_INTERVAL=10 OPTIMUSDB_IPFS_KEY=ed25519 OPTIMUSDB_IPFS_PROVIDE=false OPTIMUSDB_IPFS_SYNC=false OPTIMUSDB_LOG_LEVEL=WARN OPTIMUSDB_RECONNECT_INTERVAL=10
+12:57:55 == block 1/6: gun 2KB, 10000 records, 4 runs on one preload
+12:57:55 [1/24] gun WB 2KB rep 1
+12:57:55   reset gun: stop others, wipe, start, join, smoke test
+12:57:59   loading 10000 records (2KB)
+12:58:14   loaded in 14 s
+12:58:19   replicated on every host after 5 s
+12:58:19   measuring: 10 s warm-up + 30 s at 50 ops/s
+12:59:01   done E1-gun-WB-2KB-1: ops=1488 errors=0 p50=3.395 ms p99=262.161 ms | load generator CPU 2.5 % (busiest of 4 workers), issue lag p50 1.0 ms, cloud-a CPU max 24.3 % of 100 %
+12:59:02 [2/24] gun WC 2KB rep 1
+12:59:03   measuring: 10 s warm-up + 30 s at 50 ops/s
+12:59:46   done E1-gun-WC-2KB-1: ops=1488 errors=0 p50=3.451 ms p99=5.713 ms | load generator CPU 2.6 % (busiest of 4 workers), issue lag p50 1.1 ms, cloud-a CPU max 5.9 % of 100 %
+12:59:47 [3/24] gun WO 2KB rep 1
+12:59:47   measuring: 10 s warm-up + 30 s at 50 ops/s
+13:00:30   done E1-gun-WO-2KB-1: ops=1488 errors=0 p50=4.276 ms p99=279.257 ms | load generator CPU 3.3 % (busiest of 4 workers), issue lag p50 0.9 ms, cloud-a CPU max 48.1 % of 100 %
+13:00:31 [4/24] gun WA 2KB rep 1
+13:00:32   measuring: 10 s warm-up + 30 s at 50 ops/s
+13:01:14   done E1-gun-WA-2KB-1: ops=1488 errors=0 p50=7.55 ms p99=265.948 ms | load generator CPU 2.8 % (busiest of 4 workers), issue lag p50 0.9 ms, cloud-a CPU max 41.3 % of 100 %
+13:01:15 == block 2/6: autobase 2KB, 10000 records, 4 runs on one preload
+13:01:15 [5/24] autobase WO 2KB rep 1
+13:01:15   reset autobase: stop others, wipe, start, join, smoke test
+13:01:36   loading 10000 records (2KB)
+13:01:42   loaded in 5 s
+13:02:11   replicated on every host after 29 s
+13:02:11   measuring: 10 s warm-up + 30 s at 50 ops/s
+13:02:53   done E1-autobase-WO-2KB-1: ops=1488 errors=56 p50=90.906 ms p99=8846.884 ms | load generator CPU 4.1 % (busiest of 4 workers), issue lag p50 0.9 ms, cloud-a CPU max 141.4 % of 100 %
+13:02:53 [6/24] autobase WA 2KB rep 1
+13:02:53   measuring: 10 s warm-up + 30 s at 50 ops/s
+13:03:36   done E1-autobase-WA-2KB-1: ops=1488 errors=0 p50=4.787 ms p99=10.984 ms | load generator CPU 2.5 % (busiest of 4 workers), issue lag p50 0.8 ms, cloud-a CPU max 31.2 % of 100 %
+13:03:36 [7/24] autobase WB 2KB rep 1
+13:03:36   measuring: 10 s warm-up + 30 s at 50 ops/s
+13:04:19   done E1-autobase-WB-2KB-1: ops=1488 errors=0 p50=3.443 ms p99=8.294 ms | load generator CPU 2.4 % (busiest of 4 workers), issue lag p50 1.0 ms, cloud-a CPU max 14.8 % of 100 %
+13:04:19 [8/24] autobase WC 2KB rep 1
+13:04:19   measuring: 10 s warm-up + 30 s at 50 ops/s
+13:05:02   done E1-autobase-WC-2KB-1: ops=1488 errors=0 p50=3.867 ms p99=6.169 ms | load generator CPU 2.6 % (busiest of 4 workers), issue lag p50 1.2 ms, cloud-a CPU max 6.4 % of 100 %
+13:05:02 == block 3/6: corrosion 2KB, 10000 records, 4 runs on one preload
+13:05:02 [9/24] corrosion WA 2KB rep 1
+13:05:02   reset corrosion: stop others, wipe, start, join, smoke test
+13:05:22   loading 10000 records (2KB)
+13:05:24   loaded in 3 s
+13:05:43   replicated on every host after 18 s
+13:05:43   measuring: 10 s warm-up + 30 s at 50 ops/s
+13:06:25   done E1-corrosion-WA-2KB-1: ops=1488 errors=0 p50=3.155 ms p99=5.641 ms | load generator CPU 2.5 % (busiest of 4 workers), issue lag p50 0.8 ms, cloud-a CPU max 10.7 % of 150 %
+13:06:25 [10/24] corrosion WC 2KB rep 1
+13:06:26   measuring: 10 s warm-up + 30 s at 50 ops/s
+13:07:08   done E1-corrosion-WC-2KB-1: ops=1488 errors=0 p50=2.802 ms p99=4.473 ms | load generator CPU 2.4 % (busiest of 4 workers), issue lag p50 0.8 ms, cloud-a CPU max 4.6 % of 150 %
+13:07:08 [11/24] corrosion WO 2KB rep 1
+13:07:08   measuring: 10 s warm-up + 30 s at 50 ops/s
+13:07:51   done E1-corrosion-WO-2KB-1: ops=1488 errors=0 p50=3.327 ms p99=19.267 ms | load generator CPU 4.6 % (busiest of 4 workers), issue lag p50 0.9 ms, cloud-a CPU max 18.9 % of 150 %
+13:07:51 [12/24] corrosion WB 2KB rep 1
+13:07:51   measuring: 10 s warm-up + 30 s at 50 ops/s
+13:08:34   done E1-corrosion-WB-2KB-1: ops=1488 errors=0 p50=2.937 ms p99=4.667 ms | load generator CPU 2.5 % (busiest of 4 workers), issue lag p50 0.8 ms, cloud-a CPU max 6.1 % of 150 %
+13:08:34 == block 4/6: iroh 2KB, 10000 records, 4 runs on one preload
+13:08:34 [13/24] iroh WB 2KB rep 1
+13:08:34   reset iroh: stop others, wipe, start, join, smoke test
+13:08:43   loading 10000 records (2KB)
+13:08:52   loaded in 9 s
+13:10:53   readable sample keys per host: cloud-a 200/200, cloud-b 200/200, fog-a 200/200, fog-b 196/200, edge-a 182/200, edge-b 199/200, edge-c 194/200, edge-d 197/200
+13:10:54   WARNING: sample not readable on every replica after 120 s; measuring anyway
+13:10:54   measuring: 10 s warm-up + 30 s at 50 ops/s
+13:11:36   done E1-iroh-WB-2KB-1: ops=1488 errors=0 p50=3.183 ms p99=6.106 ms | load generator CPU 2.4 % (busiest of 4 workers), issue lag p50 1.0 ms, cloud-a CPU max 4.5 % of 150 %
+13:11:36 [14/24] iroh WC 2KB rep 1
+13:11:36   measuring: 10 s warm-up + 30 s at 50 ops/s
+13:12:19   done E1-iroh-WC-2KB-1: ops=1488 errors=0 p50=3.464 ms p99=5.689 ms | load generator CPU 2.6 % (busiest of 4 workers), issue lag p50 1.1 ms, cloud-a CPU max 3.8 % of 150 %
+13:12:19 [15/24] iroh WO 2KB rep 1
+13:12:19   measuring: 10 s warm-up + 30 s at 50 ops/s
+13:13:03   done E1-iroh-WO-2KB-1: ops=1488 errors=0 p50=55.224 ms p99=2566.69 ms | load generator CPU 3.4 % (busiest of 4 workers), issue lag p50 0.9 ms, cloud-a CPU max 148.3 % of 150 %
+13:13:03 [16/24] iroh WA 2KB rep 1
+13:13:03   measuring: 10 s warm-up + 30 s at 50 ops/s
+13:13:45   done E1-iroh-WA-2KB-1: ops=1488 errors=0 p50=3.408 ms p99=6.422 ms | load generator CPU 2.4 % (busiest of 4 workers), issue lag p50 0.9 ms, cloud-a CPU max 10.6 % of 150 %
+13:13:45 == block 5/6: optimusdb 2KB, 10000 records, 4 runs on one preload
+13:13:45 [17/24] optimusdb WO 2KB rep 1
+13:13:45   reset optimusdb: stop others, wipe, start, join, smoke test
+13:14:07   loading 10000 records (2KB)
+13:14:10   loaded in 3 s
+13:14:16   replicated on every host after 6 s
+13:14:16   measuring: 10 s warm-up + 30 s at 50 ops/s
+13:14:59   done E1-optimusdb-WO-2KB-1: ops=1488 errors=0 p50=3.288 ms p99=15.912 ms | load generator CPU 4.1 % (busiest of 4 workers), issue lag p50 0.9 ms, cloud-a CPU max 16.5 % of 150 %
+13:14:59 [18/24] optimusdb WB 2KB rep 1
+13:14:59   measuring: 10 s warm-up + 30 s at 50 ops/s
+13:15:41   done E1-optimusdb-WB-2KB-1: ops=1488 errors=0 p50=2.83 ms p99=5.321 ms | load generator CPU 2.4 % (busiest of 4 workers), issue lag p50 0.9 ms, cloud-a CPU max 7.7 % of 150 %
+13:15:42 [19/24] optimusdb WA 2KB rep 1
+13:15:42   measuring: 10 s warm-up + 30 s at 50 ops/s
+13:16:24   done E1-optimusdb-WA-2KB-1: ops=1488 errors=0 p50=3.285 ms p99=5.883 ms | load generator CPU 2.5 % (busiest of 4 workers), issue lag p50 0.9 ms, cloud-a CPU max 10.8 % of 150 %
+13:16:25 [20/24] optimusdb WC 2KB rep 1
+13:16:25   measuring: 10 s warm-up + 30 s at 50 ops/s
+13:17:07   done E1-optimusdb-WC-2KB-1: ops=1488 errors=0 p50=2.912 ms p99=5.126 ms | load generator CPU 2.6 % (busiest of 4 workers), issue lag p50 1.0 ms, cloud-a CPU max 5.6 % of 150 %
+13:17:08 == block 6/6: opendht 2KB, 10000 records, 4 runs on one preload
+13:17:08 [21/24] opendht WC 2KB rep 1
+13:17:08   reset opendht: stop others, wipe, start, join, smoke test
+13:17:13   loading 10000 records (2KB)
+13:17:39   loaded in 27 s
+13:17:47   replicated on every host after 7 s
+13:17:47   measuring: 10 s warm-up + 30 s at 50 ops/s
+13:18:30   done E1-opendht-WC-2KB-1: ops=1488 errors=0 p50=417.788 ms p99=1521.503 ms | load generator CPU 2.7 % (busiest of 4 workers), issue lag p50 0.8 ms, cloud-a CPU max 16.8 % of 150 %
+13:18:30 [22/24] opendht WB 2KB rep 1
+13:18:30   measuring: 10 s warm-up + 30 s at 50 ops/s
+13:19:13   done E1-opendht-WB-2KB-1: ops=1488 errors=0 p50=416.205 ms p99=1692.842 ms | load generator CPU 2.8 % (busiest of 4 workers), issue lag p50 0.8 ms, cloud-a CPU max 21.4 % of 150 %
+13:19:13 [23/24] opendht WA 2KB rep 1
+13:19:13   measuring: 10 s warm-up + 30 s at 50 ops/s
+13:19:57   done E1-opendht-WA-2KB-1: ops=1488 errors=0 p50=500.208 ms p99=2212.987 ms | load generator CPU 3.0 % (busiest of 4 workers), issue lag p50 0.8 ms, cloud-a CPU max 71.2 % of 150 %
+13:19:57 [24/24] opendht WO 2KB rep 1
+13:19:57   measuring: 10 s warm-up + 30 s at 50 ops/s
+13:20:47   done E1-opendht-WO-2KB-1: ops=1334 errors=5 p50=1702.948 ms p99=7088.723 ms unsupported=154 | load generator CPU 3.3 % (busiest of 4 workers), issue lag p50 0.8 ms, cloud-a CPU max 105.8 % of 150 %

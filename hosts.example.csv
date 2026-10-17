@@ -1,0 +1,10 @@
+name,role,lan_ip,ds_cpus,ds_mem
+bench,bench,192.168.10.10,,
+cloud-a,cloud,192.168.10.11,,
+cloud-b,cloud,192.168.10.12,,
+fog-a,fog,192.168.10.21,,
+fog-b,fog,192.168.10.22,,
+edge-a,edge,192.168.10.31,4,4g
+edge-b,edge,192.168.10.32,4,4g
+edge-c,edge,192.168.10.33,4,4g
+edge-d,edge,192.168.10.34,4,4g

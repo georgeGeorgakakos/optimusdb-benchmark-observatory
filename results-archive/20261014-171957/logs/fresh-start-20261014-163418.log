@@ -1,0 +1,171 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20261014163418
+Username: IKNOWHOW\ggeorgakakos
+RunAs User: IKNOWHOW\ggeorgakakos
+Configuration Name: 
+Machine: IKH-LP212 (Microsoft Windows NT 10.0.26300.0)
+Host Application: C:\windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -File .\fresh-start.ps1
+Process ID: 29084
+PSVersion: 5.1.26100.9444
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.9444
+BuildVersion: 10.0.26100.9444
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+==> Checking Docker Desktop
+  [OK]   Docker is running
+  [OK]   Limits per data store: cloud 1.5 CPU/3g, fog 1.5 CPU/3g, edge 1 CPU/2g
+==> Removing the old testbed
+docker.exe : Error response from daemon: No such container: odb-bench
+At C:\odb\optimusdb-deploy\scripts\lib\common.ps1:19 char:16
++         else { & $Exe @Arguments 2>$null }
++                ~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Error response ...iner: odb-bench:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+docker.exe : Error response from daemon: network odbnet not found
+At C:\odb\optimusdb-deploy\scripts\lib\common.ps1:19 char:16
++         else { & $Exe @Arguments 2>$null }
++                ~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Error response ...dbnet not found:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+exit status 1
+  [OK]   Containers, data volumes and network removed
+==> Docker Desktop VM: 12 CPUs, 25.4 GB RAM; testbed needs about 11.5 CPUs while one system runs
+==> Building images (first time: 30-60 min, mostly Corrosion, Iroh and OpenDHT)
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/iu2riyi0hygzdjxb52yo8ghme
+
+
+==> Cloning https://github.com/georgeGeorgakakos/optimusdb.git
+==> Checking out main
+PS>TerminatingError(): "The pipeline has been stopped."
+  [OK]   OptimusDB source: 9e7189efc411b621e229600118dd1720a1bc0ccf fix retrieve query delay
+  [OK]   Batched ingestion code found (app\batch_put.go, third_party\go-orbit-db)
+
+
+
+
+
+
+
+==> Checking netem and iptables in the Docker Desktop kernel
+  [OK]   tc netem available
+  [OK]   iptables available
+==> Generating the single-machine layout
+
+==> Starting bench, 8 emulated hosts and their agents
+
+==> Creating 48 data-store containers (stopped)
+
+
+  [OK]   Harness self-test passed
+
+==> Smoke test: optimusdb
+{
+  "system": "optimusdb",
+  "hosts": [
+    "cloud-a",
+    "cloud-b",
+    "fog-a",
+    "fog-b",
+    "edge-a",
+    "edge-b",
+    "edge-c",
+    "edge-d"
+  ],
+  "smoke_s": 0.08
+}
+==> Smoke test: corrosion
+{
+  "system": "corrosion",
+  "hosts": [
+    "cloud-a",
+    "cloud-b",
+    "fog-a",
+    "fog-b",
+    "edge-a",
+    "edge-b",
+    "edge-c",
+    "edge-d"
+  ],
+  "smoke_s": 1.01
+}
+==> Smoke test: gun
+{
+  "system": "gun",
+  "hosts": [
+    "cloud-a",
+    "cloud-b",
+    "fog-a",
+    "fog-b",
+    "edge-a",
+    "edge-b",
+    "edge-c",
+    "edge-d"
+  ],
+  "smoke_s": 0.38
+}
+==> Smoke test: autobase
+{
+  "system": "autobase",
+  "hosts": [
+    "cloud-a",
+    "cloud-b",
+    "fog-a",
+    "fog-b",
+    "edge-a",
+    "edge-b",
+    "edge-c",
+    "edge-d"
+  ],
+  "smoke_s": 1.21
+}
+==> Smoke test: iroh
+{
+  "system": "iroh",
+  "hosts": [
+    "cloud-a",
+    "cloud-b",
+    "fog-a",
+    "fog-b",
+    "edge-a",
+    "edge-b",
+    "edge-c",
+    "edge-d"
+  ],
+  "smoke_s": 0.02
+}
+==> Smoke test: opendht
+{
+  "system": "opendht",
+  "hosts": [
+    "cloud-a",
+    "cloud-b",
+    "fog-a",
+    "fog-b",
+    "edge-a",
+    "edge-b",
+    "edge-c",
+    "edge-d"
+  ],
+  "smoke_s": 0.88
+}
+==> Smoke test summary
+  System     Result Visible on last host (s)
+  optimusdb  PASS   0.08
+  corrosion  PASS   1.01
+  gun        PASS   0.38
+  autobase   PASS   1.21
+  iroh       PASS   0.02
+  opendht    PASS   0.88
+  [OK]   All six data stores form a cluster and replicate
+
+Fresh testbed ready. Next:  .\run-all.ps1 -Pilot   then   .\progress.ps1 -Watch
+**********************
+Windows PowerShell transcript end
+End time: 20261014163906
+**********************

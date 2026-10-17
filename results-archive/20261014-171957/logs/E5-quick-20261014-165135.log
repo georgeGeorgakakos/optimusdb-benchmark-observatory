@@ -1,0 +1,9 @@
+14:03:51 QUICK E5: 1 rep, 10^4 records, short windows, reduced grids, results in /results/quick
+14:03:51 == block 1/1: gun, 1 runs on one preload
+14:03:51 [1/1] gun 30 30 4|4 rep 1
+14:03:51   reset gun: stop others, wipe, start, join, smoke test
+14:04:10   loading 10000 records (2KB)
+14:04:48   loaded in 37 s
+14:04:56   replicated on every host after 8 s
+14:07:09   WARNING: replicas of gun not identical after the preload (120 s); running anyway
+14:10:46   done E5-gun-30-30-4v4-1: availability=100.0 lost=0 convergence_s=120

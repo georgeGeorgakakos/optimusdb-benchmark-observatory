@@ -1,0 +1,8 @@
+run_id,system,contention_pct,partition_s,partition_shape,rep,write_availability_pct,ack_writes,lost_ack_writes,divergent_entries,convergence_s,replicas_identical,keys_readable_pct,merge_msgs,notes
+E5-gun-30-30-4v4-1,gun,30,30,4|4,1,100.0,404,23,2,120,0,94.307,,merge_msgs from gossip metrics
+E5-autobase-30-30-4v4-1,autobase,30,30,4|4,1,100.0,404,0,8,23.804,1,100.0,,merge_msgs from gossip metrics
+E5-corrosion-30-30-4v4-1,corrosion,30,30,4|4,1,100.0,404,0,5,17.147,1,100.0,,merge_msgs from gossip metrics
+E5-iroh-30-30-4v4-1,iroh,30,30,4|4,1,100.0,404,210,6,120,0,48.02,,merge_msgs from gossip metrics
+E5-optimusdb-30-30-4v4-1,optimusdb,30,30,4|4,1,100.0,404,0,3,12.586,1,100.0,,merge_msgs from gossip metrics
+E5-optimusdb-0-30-4v4-1,optimusdb,0,30,4|4,1,100.0,478,0,3,9.629,1,100.0,,merge_msgs from gossip metrics
+E5-opendht-30-30-4v4-1,opendht,30,30,4|4,1,100.0,404,164,,,,59.406,,merge_msgs from gossip metrics; partial replication: replica identity not applicable

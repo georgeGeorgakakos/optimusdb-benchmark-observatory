@@ -1,0 +1,107 @@
+# One agent host (cloud, fog or edge). Started by deploy-host with --env-file <out>/<host>/.env.
+# net + agent run permanently; the six data stores are created stopped and started by the agent,
+# one system at a time, on request of the bench host.
+name: odb
+
+x-ds: &ds
+  network_mode: "service:net"
+  restart: "no"
+  depends_on: [net]
+  cpus: ${DS_CPUS:-0}
+  mem_limit: ${DS_MEM:-0}
+  environment: &dsenv
+    OVERLAY_IP: ${OVERLAY_IP}
+    HOST_NAME: ${HOST_NAME}
+
+services:
+  net:
+    image: odb-net:latest
+    build: { context: .., dockerfile: images/net/Dockerfile }
+    container_name: odb-net
+    hostname: ${HOST_NAME}
+    cap_add: [NET_ADMIN]
+    sysctls: [net.ipv4.conf.all.src_valid_mark=1]
+    devices: ["/dev/net/tun:/dev/net/tun"]
+    ports: ["${WG_PORT:-51820}:${WG_PORT:-51820}/udp"]
+    environment: { WG_USERSPACE: "${WG_USERSPACE:-auto}" }
+    volumes: ["${HOST_DIR}/wg:/etc/wireguard:ro"]
+    restart: unless-stopped
+
+  agent:
+    image: odb-agent:latest
+    build: { context: .., dockerfile: images/agent/Dockerfile }
+    container_name: odb-agent
+    network_mode: "service:net"
+    depends_on: [net]
+    cap_add: [NET_ADMIN]
+    environment:
+      AGENT_TOKEN: ${AGENT_TOKEN}
+      HOST_NAME: ${HOST_NAME}
+      ROLE: ${ROLE}
+      OVERLAY_IP: ${OVERLAY_IP}
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - runtime:/runtime
+      - optimusdb-root:/volumes/optimusdb-root
+      - optimusdb-data:/volumes/optimusdb-data
+      - corrosion-data:/volumes/corrosion
+      - gun-data:/volumes/gun
+      - autobase-data:/volumes/autobase
+      - iroh-data:/volumes/iroh
+    restart: unless-stopped
+
+  optimusdb:
+    <<: *ds
+    image: odb-optimusdb:latest
+    build: { context: .., dockerfile: images/optimusdb/Dockerfile }
+    container_name: odb-optimusdb
+    environment:
+      <<: *dsenv
+      METADATA_AUTO_ENRICH: "false"
+      METADATA_ENRICHMENT_ENABLED: "false"
+      AGENT_NAME: ${HOST_NAME}
+    volumes: [optimusdb-root:/root, optimusdb-data:/data, runtime:/runtime:ro]
+
+  corrosion:
+    <<: *ds
+    image: odb-corrosion:latest
+    build: { context: .., dockerfile: images/corrosion/Dockerfile, args: { CORROSION_REF: "${CORROSION_REF}" } }
+    container_name: odb-corrosion
+    volumes: [corrosion-data:/data, runtime:/runtime:ro]
+
+  gun:
+    <<: *ds
+    image: odb-gun:latest
+    build: { context: .., dockerfile: images/gun/Dockerfile }
+    container_name: odb-gun
+    volumes: [gun-data:/data, runtime:/runtime:ro]
+
+  autobase:
+    <<: *ds
+    image: odb-autobase:latest
+    build: { context: .., dockerfile: images/autobase/Dockerfile }
+    container_name: odb-autobase
+    volumes: [autobase-data:/data, runtime:/runtime:ro]
+
+  iroh:
+    <<: *ds
+    image: odb-iroh:latest
+    build: { context: .., dockerfile: images/iroh/Dockerfile }
+    container_name: odb-iroh
+    volumes: [iroh-data:/data, runtime:/runtime:ro]
+
+  opendht:
+    <<: *ds
+    image: odb-opendht:latest
+    build: { context: .., dockerfile: images/opendht/Dockerfile, args: { OPENDHT_REF: "${OPENDHT_REF}" } }
+    container_name: odb-opendht
+    volumes: [runtime:/runtime:ro]
+
+volumes:
+  runtime: {}
+  optimusdb-root: {}
+  optimusdb-data: {}
+  corrosion-data: {}
+  gun-data: {}
+  autobase-data: {}
+  iroh-data: {}

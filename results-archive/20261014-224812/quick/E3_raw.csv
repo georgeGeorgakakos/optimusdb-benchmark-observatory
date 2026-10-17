@@ -1,0 +1,36 @@
+run_id,system,path,query,dataset_records,rep,mean_ms,p95_ms,rows_returned,rows_expected,correct,notes
+E3-optimusdb-sqlite-Q1-10000-1,optimusdb,sqlite,Q1,10000,1,1.423,1.702,-1,1,0,
+E3-optimusdb-sqlite-Q2-10000-1,optimusdb,sqlite,Q2,10000,1,86.302,91.818,-1,2512,0,
+E3-optimusdb-sqlite-Q3-10000-1,optimusdb,sqlite,Q3,10000,1,42.659,46.595,-1,936,0,
+E3-optimusdb-sqlite-Q4-10000-1,optimusdb,sqlite,Q4,10000,1,21.632,23.183,-1,4,0,
+E3-optimusdb-sqlite-Q5-10000-1,optimusdb,sqlite,Q5,10000,1,31.509,35.716,-1,2500,0,
+E3-corrosion-sql-Q1-10000-1,corrosion,sql,Q1,10000,1,1.297,1.588,1,1,1,
+E3-corrosion-sql-Q2-10000-1,corrosion,sql,Q2,10000,1,53.278,59.08,2512,2512,1,
+E3-corrosion-sql-Q3-10000-1,corrosion,sql,Q3,10000,1,22.47,24.936,936,936,1,
+E3-corrosion-sql-Q4-10000-1,corrosion,sql,Q4,10000,1,4.714,5.259,4,4,1,
+E3-corrosion-sql-Q5-10000-1,corrosion,sql,Q5,10000,1,27.602,29.91,2500,2500,1,
+E3-autobase-range_client_filter-Q1-10000-1,autobase,range_client_filter,Q1,10000,1,1.66,2.089,1,1,1,
+E3-autobase-range_client_filter-Q2-10000-1,autobase,range_client_filter,Q2,10000,1,213.498,264.334,2512,2512,1,
+E3-autobase-range_client_filter-Q3-10000-1,autobase,range_client_filter,Q3,10000,1,222.08,376.27,936,936,1,
+E3-autobase-range_client_filter-Q4-10000-1,autobase,range_client_filter,Q4,10000,1,,,4,4,0,failed: ReadTimeout: 
+E3-autobase-range_client_filter-Q5-10000-1,autobase,range_client_filter,Q5,10000,1,,,-1,2500,0,failed: ReadTimeout: 
+E3-gun-client_filter-Q1-10000-1,gun,client_filter,Q1,10000,1,102.814,103.909,1,1,1,
+E3-gun-client_filter-Q2-10000-1,gun,client_filter,Q2,10000,1,,,-1,2512,0,failed: ReadTimeout: 
+E3-gun-client_filter-Q3-10000-1,gun,client_filter,Q3,10000,1,,,-1,936,0,failed: ReadTimeout: 
+E3-gun-client_filter-Q4-10000-1,gun,client_filter,Q4,10000,1,1064.411,1354.785,4,4,1,
+E3-gun-client_filter-Q5-10000-1,gun,client_filter,Q5,10000,1,1237.859,1384.288,2499,2500,0,
+E3-opendht-key_only-Q1-10000-1,opendht,key_only,Q1,10000,1,530.46,1261.589,1,1,1,
+E3-opendht-key_only-Q2-10000-1,opendht,key_only,Q2,10000,1,,,-1,2512,0,unsupported
+E3-opendht-key_only-Q3-10000-1,opendht,key_only,Q3,10000,1,,,-1,936,0,unsupported
+E3-opendht-key_only-Q4-10000-1,opendht,key_only,Q4,10000,1,197.229,209.573,0,4,0,
+E3-opendht-key_only-Q5-10000-1,opendht,key_only,Q5,10000,1,203.753,225.849,0,2500,0,
+E3-optimusdb-crdt-Q1-10000-1,optimusdb,crdt,Q1,10000,1,1.495,1.805,1,1,1,
+E3-optimusdb-crdt-Q2-10000-1,optimusdb,crdt,Q2,10000,1,74.606,84.401,2512,2512,1,
+E3-optimusdb-crdt-Q3-10000-1,optimusdb,crdt,Q3,10000,1,75.529,87.198,936,936,1,
+E3-optimusdb-crdt-Q4-10000-1,optimusdb,crdt,Q4,10000,1,440.161,473.986,4,4,1,
+E3-optimusdb-crdt-Q5-10000-1,optimusdb,crdt,Q5,10000,1,437.723,462.28,2500,2500,1,
+E3-iroh-prefix_client_filter-Q1-10000-1,iroh,prefix_client_filter,Q1,10000,1,1.028,1.207,1,1,1,
+E3-iroh-prefix_client_filter-Q2-10000-1,iroh,prefix_client_filter,Q2,10000,1,1672.501,1716.292,2512,2512,1,
+E3-iroh-prefix_client_filter-Q3-10000-1,iroh,prefix_client_filter,Q3,10000,1,1638.562,1726.528,936,936,1,
+E3-iroh-prefix_client_filter-Q4-10000-1,iroh,prefix_client_filter,Q4,10000,1,1748.371,1803.881,4,4,1,
+E3-iroh-prefix_client_filter-Q5-10000-1,iroh,prefix_client_filter,Q5,10000,1,1757.531,1848.912,2500,2500,1,

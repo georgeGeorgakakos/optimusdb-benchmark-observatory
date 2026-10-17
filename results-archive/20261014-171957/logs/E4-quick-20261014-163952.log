@@ -1,0 +1,10 @@
+13:46:29 QUICK E4: 1 rep, 10^4 records, short windows, reduced grids, results in /results/quick
+13:46:29 [1/1] E4 block corrosion: edge deployment, load once, 1 repetitions
+13:46:29   reset corrosion_edge: stop others, wipe, start, join, smoke test
+13:46:38   loading 10000 records (2KB)
+13:46:41   loaded in 3 s
+13:46:56   replicated on every host after 14 s
+13:46:56   E4 corrosion rep 1: 0 ops/s for 45 s
+13:47:43   E4 corrosion rep 1: 40 ops/s for 45 s
+13:47:43   measuring: 0 s warm-up + 45 s at 40 ops/s
+13:48:28   done E4-corrosion-40-1: ops=1789 errors=0 p50=3.398 ms p99=15.083 ms

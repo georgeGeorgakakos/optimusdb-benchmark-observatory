@@ -1,0 +1,21 @@
+
+Computed default go-libp2p Resource Manager limits based on:
+    - 'Swarm.ResourceMgr.MaxMemory': "14 GB"
+    - 'Swarm.ResourceMgr.MaxFileDescriptors': 524288
+
+Theses can be inspected with 'ipfs swarm resources'.
+
+
+Connectedness : {12D3KooWGX1i4Hh3ngipCTQt5RzuZPh426uEp6GfxeMnHkvYU8KX NotConnected}
+Connectedness : {12D3KooWJYAGKwdcxLLnYRKakP771S4W66gtGCjhNRXUQB5mAxxM NotConnected}
+Connectedness : {12D3KooWGjR5ipzrR3yedxJVjCX2Gd3bxXRnkMw6gcWeHGM5c7GN NotConnected}
+Connectedness : {12D3KooWQXfAvTkFbWMdo9bsFzdJpgzkjewYySPR4h8LgvMzs8aR NotConnected}
+Connectedness : {12D3KooWBMpPYGFJoLmkK1XdqYmu6e78sDBFiLx5wmEHSMFLL2UX NotConnected}
+Connectedness : {12D3KooWBtdzdPcJPza5rPzJmFvNVVmNZYg7Ds5ZHJcodARcdqi6 NotConnected}
+Connectedness : {12D3KooWFJdwotWGe6BcjYn7G6CMoQDy6sAJD615yqgZemHG22Hg NotConnected}
+Computed default go-libp2p Resource Manager limits based on:
+    - 'Swarm.ResourceMgr.MaxMemory': "14 GB"
+    - 'Swarm.ResourceMgr.MaxFileDescriptors': 524288
+
+Theses can be inspected with 'ipfs swarm resources'.
+

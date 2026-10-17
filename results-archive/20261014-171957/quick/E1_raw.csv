@@ -1,0 +1,9 @@
+run_id,system,workload,doc_size,rep,ops,errors,mean_ms,p50_ms,p95_ms,p99_ms,p999_ms,achieved_ops_s,start_utc,notes
+E1-corrosion-WC-2KB-1,corrosion,WC,2KB,1,1488,0,3.303,3.228,4.934,5.992,6.545,49.6,2026-10-14T13:40:23+00:00,dropped=0 records=10000 settled=18s seq=1
+E1-corrosion-WB-2KB-1,corrosion,WB,2KB,1,1488,0,3.656,3.436,5.297,6.379,54.843,49.6,2026-10-14T13:41:03+00:00,dropped=0 records=10000 settled=18s seq=2
+E1-corrosion-WO-2KB-1,corrosion,WO,2KB,1,1488,0,5.026,3.931,13.154,16.248,28.712,49.6,2026-10-14T13:41:43+00:00,dropped=0 records=10000 settled=18s seq=3
+E1-corrosion-WA-2KB-1,corrosion,WA,2KB,1,1488,0,4.07,3.852,5.991,10.569,19.17,49.6,2026-10-14T13:42:23+00:00,dropped=0 records=10000 settled=18s seq=4
+E1-gun-WC-2KB-1,gun,WC,2KB,1,1488,0,107.901,104.208,117.502,123.933,157.49,49.6,2026-10-14T13:52:31+00:00,dropped=0 records=10000 settled=8s seq=1
+E1-gun-WB-2KB-1,gun,WB,2KB,1,1488,0,115.862,103.919,259.811,267.498,282.23,49.6,2026-10-14T13:53:11+00:00,dropped=0 records=10000 settled=8s seq=2
+E1-gun-WO-2KB-1,gun,WO,2KB,1,1488,1064,2623.151,1462.286,8804.951,10139.915,10511.523,14.133,2026-10-14T13:53:52+00:00,dropped=0 records=10000 settled=8s seq=3
+E1-gun-WA-2KB-1,gun,WA,2KB,1,1488,1483,5212.441,6091.23,8051.014,8184.477,8214.506,0.167,2026-10-14T13:54:42+00:00,dropped=0 records=10000 settled=8s seq=4

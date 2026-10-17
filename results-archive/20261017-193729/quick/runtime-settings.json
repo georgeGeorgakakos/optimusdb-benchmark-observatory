@@ -1,0 +1,252 @@
+[
+ {
+  "exp": "E1",
+  "started": "2026-10-17 12:57:55",
+  "settings": {
+   "optimusdb": {
+    "cloud": {
+     "OPTIMUSDB_LOG_LEVEL": "WARN",
+     "GOGC": "200",
+     "GOMAXPROCS": "2",
+     "GOMEMLIMIT": "2457MiB",
+     "OPTIMUSDB_ARGS": "-metrics=false",
+     "OPTIMUSDB_IPFS_KEY": "ed25519",
+     "OPTIMUSDB_IPFS_PROVIDE": "false",
+     "OPTIMUSDB_IPFS_SYNC": "false",
+     "OPTIMUSDB_HEADS_INTERVAL": "10",
+     "OPTIMUSDB_RECONNECT_INTERVAL": "10"
+    },
+    "fog": {
+     "OPTIMUSDB_LOG_LEVEL": "WARN",
+     "GOGC": "200",
+     "GOMAXPROCS": "2",
+     "GOMEMLIMIT": "2457MiB",
+     "OPTIMUSDB_ARGS": "-metrics=false",
+     "OPTIMUSDB_IPFS_KEY": "ed25519",
+     "OPTIMUSDB_IPFS_PROVIDE": "false",
+     "OPTIMUSDB_IPFS_SYNC": "false",
+     "OPTIMUSDB_HEADS_INTERVAL": "10",
+     "OPTIMUSDB_RECONNECT_INTERVAL": "10"
+    },
+    "edge": {
+     "OPTIMUSDB_LOG_LEVEL": "WARN",
+     "GOGC": "200",
+     "GOMAXPROCS": "1",
+     "GOMEMLIMIT": "1638MiB",
+     "OPTIMUSDB_ARGS": "-metrics=false",
+     "OPTIMUSDB_IPFS_KEY": "ed25519",
+     "OPTIMUSDB_IPFS_PROVIDE": "false",
+     "OPTIMUSDB_IPFS_SYNC": "false",
+     "OPTIMUSDB_HEADS_INTERVAL": "10",
+     "OPTIMUSDB_RECONNECT_INTERVAL": "10"
+    }
+   },
+   "corrosion": {
+    "RUST_LOG": "warn"
+   },
+   "autobase": {
+    "indexers": 3
+   }
+  }
+ },
+ {
+  "exp": "E2",
+  "started": "2026-10-17 13:20:48",
+  "settings": {
+   "optimusdb": {
+    "cloud": {
+     "OPTIMUSDB_LOG_LEVEL": "WARN",
+     "GOGC": "200",
+     "GOMAXPROCS": "2",
+     "GOMEMLIMIT": "2457MiB",
+     "OPTIMUSDB_ARGS": "-metrics=false",
+     "OPTIMUSDB_IPFS_KEY": "ed25519",
+     "OPTIMUSDB_IPFS_PROVIDE": "false",
+     "OPTIMUSDB_IPFS_SYNC": "false",
+     "OPTIMUSDB_HEADS_INTERVAL": "10",
+     "OPTIMUSDB_RECONNECT_INTERVAL": "10"
+    },
+    "fog": {
+     "OPTIMUSDB_LOG_LEVEL": "WARN",
+     "GOGC": "200",
+     "GOMAXPROCS": "2",
+     "GOMEMLIMIT": "2457MiB",
+     "OPTIMUSDB_ARGS": "-metrics=false",
+     "OPTIMUSDB_IPFS_KEY": "ed25519",
+     "OPTIMUSDB_IPFS_PROVIDE": "false",
+     "OPTIMUSDB_IPFS_SYNC": "false",
+     "OPTIMUSDB_HEADS_INTERVAL": "10",
+     "OPTIMUSDB_RECONNECT_INTERVAL": "10"
+    },
+    "edge": {
+     "OPTIMUSDB_LOG_LEVEL": "WARN",
+     "GOGC": "200",
+     "GOMAXPROCS": "1",
+     "GOMEMLIMIT": "1638MiB",
+     "OPTIMUSDB_ARGS": "-metrics=false",
+     "OPTIMUSDB_IPFS_KEY": "ed25519",
+     "OPTIMUSDB_IPFS_PROVIDE": "false",
+     "OPTIMUSDB_IPFS_SYNC": "false",
+     "OPTIMUSDB_HEADS_INTERVAL": "10",
+     "OPTIMUSDB_RECONNECT_INTERVAL": "10"
+    }
+   },
+   "corrosion": {
+    "RUST_LOG": "warn"
+   },
+   "autobase": {
+    "indexers": 3
+   }
+  }
+ },
+ {
+  "exp": "E3",
+  "started": "2026-10-17 13:40:45",
+  "settings": {
+   "optimusdb": {
+    "cloud": {
+     "OPTIMUSDB_LOG_LEVEL": "WARN",
+     "GOGC": "200",
+     "GOMAXPROCS": "2",
+     "GOMEMLIMIT": "2457MiB",
+     "OPTIMUSDB_ARGS": "-metrics=false",
+     "OPTIMUSDB_IPFS_KEY": "ed25519",
+     "OPTIMUSDB_IPFS_PROVIDE": "false",
+     "OPTIMUSDB_IPFS_SYNC": "false",
+     "OPTIMUSDB_HEADS_INTERVAL": "10",
+     "OPTIMUSDB_RECONNECT_INTERVAL": "10"
+    },
+    "fog": {
+     "OPTIMUSDB_LOG_LEVEL": "WARN",
+     "GOGC": "200",
+     "GOMAXPROCS": "2",
+     "GOMEMLIMIT": "2457MiB",
+     "OPTIMUSDB_ARGS": "-metrics=false",
+     "OPTIMUSDB_IPFS_KEY": "ed25519",
+     "OPTIMUSDB_IPFS_PROVIDE": "false",
+     "OPTIMUSDB_IPFS_SYNC": "false",
+     "OPTIMUSDB_HEADS_INTERVAL": "10",
+     "OPTIMUSDB_RECONNECT_INTERVAL": "10"
+    },
+    "edge": {
+     "OPTIMUSDB_LOG_LEVEL": "WARN",
+     "GOGC": "200",
+     "GOMAXPROCS": "1",
+     "GOMEMLIMIT": "1638MiB",
+     "OPTIMUSDB_ARGS": "-metrics=false",
+     "OPTIMUSDB_IPFS_KEY": "ed25519",
+     "OPTIMUSDB_IPFS_PROVIDE": "false",
+     "OPTIMUSDB_IPFS_SYNC": "false",
+     "OPTIMUSDB_HEADS_INTERVAL": "10",
+     "OPTIMUSDB_RECONNECT_INTERVAL": "10"
+    }
+   },
+   "corrosion": {
+    "RUST_LOG": "warn"
+   },
+   "autobase": {
+    "indexers": 3
+   }
+  }
+ },
+ {
+  "exp": "E4",
+  "started": "2026-10-17 13:49:43",
+  "settings": {
+   "optimusdb": {
+    "cloud": {
+     "OPTIMUSDB_LOG_LEVEL": "WARN",
+     "GOGC": "200",
+     "GOMAXPROCS": "2",
+     "GOMEMLIMIT": "2457MiB",
+     "OPTIMUSDB_ARGS": "-metrics=false",
+     "OPTIMUSDB_IPFS_KEY": "ed25519",
+     "OPTIMUSDB_IPFS_PROVIDE": "false",
+     "OPTIMUSDB_IPFS_SYNC": "false",
+     "OPTIMUSDB_HEADS_INTERVAL": "10",
+     "OPTIMUSDB_RECONNECT_INTERVAL": "10"
+    },
+    "fog": {
+     "OPTIMUSDB_LOG_LEVEL": "WARN",
+     "GOGC": "200",
+     "GOMAXPROCS": "2",
+     "GOMEMLIMIT": "2457MiB",
+     "OPTIMUSDB_ARGS": "-metrics=false",
+     "OPTIMUSDB_IPFS_KEY": "ed25519",
+     "OPTIMUSDB_IPFS_PROVIDE": "false",
+     "OPTIMUSDB_IPFS_SYNC": "false",
+     "OPTIMUSDB_HEADS_INTERVAL": "10",
+     "OPTIMUSDB_RECONNECT_INTERVAL": "10"
+    },
+    "edge": {
+     "OPTIMUSDB_LOG_LEVEL": "WARN",
+     "GOGC": "200",
+     "GOMAXPROCS": "1",
+     "GOMEMLIMIT": "1638MiB",
+     "OPTIMUSDB_ARGS": "-metrics=false",
+     "OPTIMUSDB_IPFS_KEY": "ed25519",
+     "OPTIMUSDB_IPFS_PROVIDE": "false",
+     "OPTIMUSDB_IPFS_SYNC": "false",
+     "OPTIMUSDB_HEADS_INTERVAL": "10",
+     "OPTIMUSDB_RECONNECT_INTERVAL": "10"
+    }
+   },
+   "corrosion": {
+    "RUST_LOG": "warn"
+   },
+   "autobase": {
+    "indexers": 3
+   }
+  }
+ },
+ {
+  "exp": "E5",
+  "started": "2026-10-17 14:02:49",
+  "settings": {
+   "optimusdb": {
+    "cloud": {
+     "OPTIMUSDB_LOG_LEVEL": "WARN",
+     "GOGC": "200",
+     "GOMAXPROCS": "2",
+     "GOMEMLIMIT": "2457MiB",
+     "OPTIMUSDB_ARGS": "-metrics=false",
+     "OPTIMUSDB_IPFS_KEY": "ed25519",
+     "OPTIMUSDB_IPFS_PROVIDE": "false",
+     "OPTIMUSDB_IPFS_SYNC": "false",
+     "OPTIMUSDB_HEADS_INTERVAL": "10",
+     "OPTIMUSDB_RECONNECT_INTERVAL": "10"
+    },
+    "fog": {
+     "OPTIMUSDB_LOG_LEVEL": "WARN",
+     "GOGC": "200",
+     "GOMAXPROCS": "2",
+     "GOMEMLIMIT": "2457MiB",
+     "OPTIMUSDB_ARGS": "-metrics=false",
+     "OPTIMUSDB_IPFS_KEY": "ed25519",
+     "OPTIMUSDB_IPFS_PROVIDE": "false",
+     "OPTIMUSDB_IPFS_SYNC": "false",
+     "OPTIMUSDB_HEADS_INTERVAL": "10",
+     "OPTIMUSDB_RECONNECT_INTERVAL": "10"
+    },
+    "edge": {
+     "OPTIMUSDB_LOG_LEVEL": "WARN",
+     "GOGC": "200",
+     "GOMAXPROCS": "1",
+     "GOMEMLIMIT": "1638MiB",
+     "OPTIMUSDB_ARGS": "-metrics=false",
+     "OPTIMUSDB_IPFS_KEY": "ed25519",
+     "OPTIMUSDB_IPFS_PROVIDE": "false",
+     "OPTIMUSDB_IPFS_SYNC": "false",
+     "OPTIMUSDB_HEADS_INTERVAL": "10",
+     "OPTIMUSDB_RECONNECT_INTERVAL": "10"
+    }
+   },
+   "corrosion": {
+    "RUST_LOG": "warn"
+   },
+   "autobase": {
+    "indexers": 3
+   }
+  }
+ }
+]

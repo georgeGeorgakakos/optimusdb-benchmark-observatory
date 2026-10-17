@@ -1,0 +1,13 @@
+run_id,system,offered_ops_s,rep,started_ok,cpu_pct,rss_mb,disk_mb_per_1k_docs,net_kb_per_op,power_w,notes
+E4-gun-0-1,gun,0,1,1,0.53,192.1,2.1,,,documents=10000; power: no meter
+E4-gun-40-1,gun,40,1,1,40.96,387.0,2.083,19.361,,documents=10202; power: no meter
+E4-autobase-0-1,autobase,0,1,1,39.24,416.9,16.0,,,documents=10000; power: no meter
+E4-autobase-40-1,autobase,40,1,1,32.85,695.1,16.786,33.683,,documents=10202; power: no meter
+E4-corrosion-0-1,corrosion,0,1,1,0.78,144.9,7.6,,,documents=10000; power: no meter
+E4-corrosion-40-1,corrosion,40,1,1,5.59,149.8,7.474,7.395,,documents=10202; power: no meter
+E4-iroh-0-1,iroh,0,1,1,0.11,70.4,4.975,,,documents=10000; power: no meter
+E4-iroh-40-1,iroh,40,1,1,25.85,183.8,4.975,18.728,,documents=10202; power: no meter
+E4-optimusdb-0-1,optimusdb,0,1,1,0.65,464.9,3.675,,,documents=10000; power: no meter
+E4-optimusdb-40-1,optimusdb,40,1,1,9.79,499.5,4.435,41.861,,documents=10202; power: no meter
+E4-opendht-0-1,opendht,0,1,1,0.15,55.3,,,,documents=10000; power: no meter
+E4-opendht-40-1,opendht,40,1,1,3.25,57.1,,14.003,,documents=10202; power: no meter

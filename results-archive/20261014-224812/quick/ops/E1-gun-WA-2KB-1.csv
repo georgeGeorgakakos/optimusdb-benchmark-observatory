@@ -1,0 +1,1785 @@
+scheduled_s,start_s,end_s,latency_ms,service_ms,kind,ok,rows,error
+12.988064,12.989331,14.504935,1516.871,1515.604,read,1,1,
+14.525952,14.526540,14.797228,271.275,270.688,read,1,1,
+11.041531,11.042496,18.164918,7123.387,7122.422,read,1,1,
+11.934194,11.935376,18.170138,6235.944,6234.762,read,1,1,
+11.799034,11.800354,18.171238,6372.204,6370.884,read,1,1,
+10.001439,10.002704,18.591095,8589.656,8588.391,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000008789'
+For more information check: h"
+10.015423,10.015638,18.653527,8638.104,8637.889,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000002971'
+For more information check: https://devel"
+10.024250,10.024866,18.657402,8633.152,8632.536,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000003745'
+For more information check: h"
+10.039282,10.041222,18.659268,8619.986,8618.046,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000008671'
+For more information check: h"
+10.039299,10.043135,18.663225,8623.926,8620.090,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000006025'
+For more information check: h"
+10.050978,10.051913,18.665544,8614.566,8613.631,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000005921'
+For more information check: https://devel"
+10.062919,10.065035,18.667983,8605.065,8602.948,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000007623'
+For more information check: https://devel"
+10.070190,10.071267,18.670902,8600.712,8599.634,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000004413'
+For more information check: https://devel"
+10.080386,10.081205,18.673681,8593.295,8592.476,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000004561'
+For more information check: https://devel"
+10.110951,10.112102,18.678180,8567.229,8566.078,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000003910'
+For more information check: h"
+10.133955,10.135282,18.680969,8547.014,8545.687,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000008482'
+For more information check: h"
+10.147512,10.148094,20.066791,9919.279,9918.697,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000000616'
+For more information check: h"
+10.168375,10.169575,20.072152,9903.777,9902.578,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000005836'
+For more information check: h"
+10.177858,10.178702,20.073353,9895.496,9894.652,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000001801'
+For more information check: h"
+10.182419,10.183149,20.074476,9892.057,9891.327,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000007792'
+For more information check: https://devel"
+10.182496,10.184524,20.078728,9896.231,9894.204,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000002961'
+For more information check: https://devel"
+10.189000,10.189571,20.080289,9891.288,9890.717,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000001100'
+For more information check: https://devel"
+10.386480,10.387679,20.082106,9695.626,9694.427,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000002901'
+For more information check: https://devel"
+10.398863,10.400345,20.084247,9685.384,9683.901,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000000486'
+For more information check: h"
+10.434850,10.435969,20.086093,9651.243,9650.124,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000003910'
+For more information check: https://devel"
+10.445367,10.446361,20.090758,9645.391,9644.397,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000003910'
+For more information check: h"
+10.472668,10.474161,20.091582,9618.914,9617.421,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000003910'
+For more information check: h"
+10.560456,10.561003,20.092470,9532.014,9531.467,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000001738'
+For more information check: https://devel"
+10.567743,10.568382,20.093358,9525.616,9524.976,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000008561'
+For more information check: https://devel"
+10.571477,10.572092,20.094202,9522.725,9522.109,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000006538'
+For more information check: h"
+10.685799,10.687069,20.095121,9409.322,9408.052,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000006435'
+For more information check: https://devel"
+10.703361,10.704535,20.096106,9392.744,9391.571,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000001100'
+For more information check: https://devel"
+10.729834,10.731286,20.097122,9367.288,9365.836,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000004502'
+For more information check: h"
+10.864516,10.865774,20.098188,9233.672,9232.414,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000001100'
+For more information check: h"
+11.011022,11.012063,20.099291,9088.269,9087.228,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000008294'
+For more information check: https://devel"
+11.078982,11.080166,20.104576,9025.594,9024.410,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000008200'
+For more information check: https://devel"
+11.364498,11.365695,20.105787,8741.290,8740.092,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000005332'
+For more information check: h"
+11.384257,11.386054,20.106969,8722.712,8720.915,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000004668'
+For more information check: h"
+11.405649,11.406650,20.108199,8702.550,8701.550,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000004561'
+For more information check: h"
+11.478622,11.479765,20.109497,8630.875,8629.732,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000000399'
+For more information check: https://devel"
+11.502074,11.503126,20.110789,8608.714,8607.662,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000003910'
+For more information check: https://devel"
+11.512355,11.512862,20.112376,8600.021,8599.514,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000004089'
+For more information check: https://devel"
+11.535708,11.536328,20.113836,8578.127,8577.508,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000002891'
+For more information check: https://devel"
+11.554285,11.555942,20.115321,8561.035,8559.379,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000002901'
+For more information check: h"
+11.558972,11.560222,20.117105,8558.134,8556.884,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000005993'
+For more information check: h"
+11.563628,11.564342,20.118994,8555.365,8554.652,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000008994'
+For more information check: https://devel"
+11.607064,11.607771,20.121064,8514.000,8513.293,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000008348'
+For more information check: h"
+11.613333,11.614610,20.122851,8509.518,8508.240,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000009798'
+For more information check: h"
+11.614889,11.617117,20.124628,8509.739,8507.512,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000004522'
+For more information check: https://devel"
+11.650408,11.652669,20.132848,8482.440,8480.179,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000003700'
+For more information check: h"
+11.665221,11.667660,20.134653,8469.432,8466.993,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000008789'
+For more information check: https://devel"
+11.674405,11.677771,20.136794,8462.389,8459.024,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000001445'
+For more information check: https://devel"
+11.688734,11.693279,20.138660,8449.925,8445.381,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000009798'
+For more information check: h"
+11.715426,11.716467,20.140661,8425.235,8424.194,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000005316'
+For more information check: h"
+11.719117,11.720170,20.142608,8423.491,8422.438,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000003910'
+For more information check: https://devel"
+11.740290,11.744081,20.144670,8404.380,8400.589,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000003823'
+For more information check: h"
+11.765286,11.766261,20.146694,8381.408,8380.433,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000004877'
+For more information check: https://devel"
+11.805322,11.806927,20.148783,8343.461,8341.856,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000000783'
+For more information check: h"
+11.824137,11.824704,20.151429,8327.292,8326.725,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000002104'
+For more information check: https://devel"
+11.829419,11.830808,20.156633,8327.214,8325.825,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000004561'
+For more information check: https://devel"
+11.845886,11.846828,20.160613,8314.727,8313.785,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000003910'
+For more information check: https://devel"
+11.849670,11.850340,20.165316,8315.646,8314.976,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000008719'
+For more information check: https://devel"
+11.880861,11.882247,20.170080,8289.220,8287.833,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000008789'
+For more information check: https://devel"
+11.921166,11.923076,20.174515,8253.349,8251.439,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000008085'
+For more information check: h"
+11.929165,11.930403,20.178632,8249.467,8248.230,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000006538'
+For more information check: h"
+10.207235,10.208256,20.220725,10013.491,10012.469,read,0,-1,TimeoutError: 
+10.249919,10.251768,20.280672,10030.753,10028.903,update,0,-1,TimeoutError: 
+10.285290,10.286828,20.291232,10005.942,10004.404,update,0,-1,TimeoutError: 
+10.299596,10.301611,20.306669,10007.073,10005.058,update,0,-1,TimeoutError: 
+12.000562,12.001146,20.546357,8545.795,8545.211,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000006649'
+For more information check: https://devel"
+12.025092,12.025680,20.549670,8524.578,8523.989,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000008789'
+For more information check: h"
+12.062224,12.063052,20.554171,8491.948,8491.119,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000004502'
+For more information check: https://devel"
+12.062844,12.065531,20.558555,8495.712,8493.025,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000009708'
+For more information check: https://devel"
+12.108775,12.109479,20.561854,8453.080,8452.375,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000000559'
+For more information check: h"
+12.128256,12.129526,20.564626,8436.371,8435.100,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000003477'
+For more information check: h"
+12.135867,12.137157,20.567622,8431.754,8430.465,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000001006'
+For more information check: h"
+12.147172,12.148228,20.570836,8423.665,8422.608,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000004502'
+For more information check: h"
+12.175847,12.176583,20.574336,8398.489,8397.753,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000009639'
+For more information check: h"
+12.206628,12.207933,20.577273,8370.646,8369.341,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000007792'
+For more information check: https://devel"
+12.210840,12.211715,20.580202,8369.362,8368.487,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000006566'
+For more information check: h"
+12.230504,12.231293,20.583257,8352.753,8351.964,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000008564'
+For more information check: https://devel"
+12.234125,12.234959,20.587252,8353.127,8352.293,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000006947'
+For more information check: https://devel"
+17.014950,17.018866,20.591734,3576.784,3572.867,read,1,1,
+11.420199,11.420960,20.597307,9177.108,9176.346,read,1,1,
+10.590830,10.593235,20.651645,10060.815,10058.410,update,0,-1,TimeoutError: 
+10.605971,10.607413,20.658247,10052.276,10050.835,read,0,-1,TimeoutError: 
+10.614879,10.615979,20.662638,10047.759,10046.659,update,0,-1,TimeoutError: 
+10.614950,10.617478,20.666334,10051.385,10048.856,update,0,-1,TimeoutError: 
+10.624808,10.625179,20.683639,10058.831,10058.460,read,0,-1,TimeoutError: 
+10.635906,10.637790,20.687546,10051.640,10049.757,update,0,-1,TimeoutError: 
+10.646298,10.647545,20.696888,10050.590,10049.343,update,0,-1,TimeoutError: 
+12.306401,12.307662,20.809368,8502.967,8501.706,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000005727'
+For more information check: https://devel"
+10.775472,10.776723,20.832912,10057.440,10056.189,update,0,-1,TimeoutError: 
+12.366995,12.368218,20.837510,8470.514,8469.292,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000008789'
+For more information check: https://devel"
+12.393053,12.393930,20.841495,8448.442,8447.565,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000006057'
+For more information check: h"
+10.803100,10.803794,20.887124,10084.025,10083.330,read,0,-1,TimeoutError: 
+10.816673,10.818386,20.906550,10089.877,10088.164,read,0,-1,TimeoutError: 
+10.844063,10.845228,20.933333,10089.270,10088.105,update,0,-1,TimeoutError: 
+10.885441,10.886159,20.945576,10060.135,10059.417,update,0,-1,TimeoutError: 
+10.905308,10.906691,20.958719,10053.411,10052.028,update,0,-1,TimeoutError: 
+10.915759,10.916564,20.963461,10047.702,10046.897,read,0,-1,TimeoutError: 
+10.935604,10.937927,21.008164,10072.560,10070.237,read,0,-1,TimeoutError: 
+12.411694,12.412593,21.010577,8598.883,8597.984,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000008789'
+For more information check: h"
+12.417770,12.418151,21.012973,8595.203,8594.822,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000003910'
+For more information check: https://devel"
+12.689489,12.690619,21.015472,8325.983,8324.853,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000008085'
+For more information check: h"
+12.723228,12.724235,21.018215,8294.988,8293.981,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000004561'
+For more information check: https://devel"
+10.955692,10.956971,21.035980,10080.287,10079.008,update,0,-1,TimeoutError: 
+11.108159,11.110194,21.148771,10040.612,10038.577,update,0,-1,TimeoutError: 
+11.141942,11.142323,21.217797,10075.854,10075.474,read,0,-1,TimeoutError: 
+12.789780,12.790848,21.220708,8430.928,8429.860,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000003910'
+For more information check: h"
+12.808776,12.810555,21.223173,8414.397,8412.618,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000008163'
+For more information check: h"
+12.817160,12.818341,21.225363,8408.203,8407.022,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000006811'
+For more information check: h"
+12.853547,12.853992,21.227609,8374.062,8373.617,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000001950'
+For more information check: https://devel"
+12.856060,12.857057,21.229825,8373.765,8372.769,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000008656'
+For more information check: https://devel"
+12.879655,12.880264,21.232047,8352.392,8351.782,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000004637'
+For more information check: h"
+11.160543,11.161335,21.242845,10082.302,10081.510,read,0,-1,TimeoutError: 
+12.881656,12.883059,21.245114,8363.458,8362.055,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000008131'
+For more information check: h"
+12.891863,12.892523,21.247345,8355.482,8354.822,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000002464'
+For more information check: h"
+12.905528,12.907093,21.249699,8344.172,8342.606,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000000390'
+For more information check: h"
+12.915021,12.916235,21.252726,8337.705,8336.491,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000008789'
+For more information check: h"
+12.918713,12.919994,21.256424,8337.711,8336.430,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000006538'
+For more information check: https://devel"
+11.169142,11.170567,21.279668,10110.526,10109.101,update,0,-1,TimeoutError: 
+11.175288,11.175627,21.284940,10109.651,10109.313,read,0,-1,TimeoutError: 
+11.199910,11.200513,21.310065,10110.155,10109.552,read,0,-1,TimeoutError: 
+11.241330,11.242520,21.339847,10098.517,10097.327,read,0,-1,TimeoutError: 
+11.257046,11.257981,21.371224,10114.178,10113.243,update,0,-1,TimeoutError: 
+11.260345,11.260962,21.374607,10114.262,10113.644,update,0,-1,TimeoutError: 
+11.296137,11.297687,21.390765,10094.628,10093.078,update,0,-1,TimeoutError: 
+11.309391,11.311463,21.407948,10098.556,10096.485,update,0,-1,TimeoutError: 
+11.321980,11.323308,21.411789,10089.809,10088.481,read,0,-1,TimeoutError: 
+11.322909,11.324934,21.451297,10128.388,10126.362,update,0,-1,TimeoutError: 
+11.337187,11.337576,21.457713,10120.526,10120.137,read,0,-1,TimeoutError: 
+11.375482,11.376820,21.499110,10123.628,10122.290,update,0,-1,TimeoutError: 
+11.406048,11.408842,21.533005,10126.958,10124.163,read,0,-1,TimeoutError: 
+12.923985,12.925175,21.536520,8612.535,8611.345,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000001100'
+For more information check: https://devel"
+12.958298,12.971220,21.540105,8581.808,8568.886,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000004107'
+For more information check: h"
+12.970717,12.975621,21.543277,8572.559,8567.656,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000007568'
+For more information check: https://devel"
+12.992827,12.993341,21.546571,8553.744,8553.230,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000001100'
+For more information check: https://devel"
+13.017928,13.019100,21.549745,8531.817,8530.645,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000005653'
+For more information check: h"
+13.025941,13.026350,21.583803,8557.863,8557.453,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000006165'
+For more information check: https://devel"
+13.043950,13.045247,21.588604,8544.654,8543.357,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000001806'
+For more information check: https://devel"
+13.091995,13.093335,21.592631,8500.636,8499.296,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000004502'
+For more information check: h"
+13.195671,13.196330,21.942833,8747.161,8746.503,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000002066'
+For more information check: https://devel"
+13.196618,13.198652,21.945145,8748.527,8746.493,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000008789'
+For more information check: https://devel"
+13.228552,13.229733,21.947587,8719.034,8717.854,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000001597'
+For more information check: https://devel"
+13.267533,13.268390,21.949877,8682.344,8681.487,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000001848'
+For more information check: h"
+13.275234,13.276033,21.953798,8678.564,8677.765,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000008666'
+For more information check: h"
+13.284896,13.286009,21.958512,8673.616,8672.503,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000003910'
+For more information check: https://devel"
+13.302258,13.303152,21.963712,8661.454,8660.560,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000004561'
+For more information check: https://devel"
+13.352485,13.353316,21.969544,8617.059,8616.228,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000001738'
+For more information check: h"
+13.362699,13.363532,21.975542,8612.842,8612.009,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000009725'
+For more information check: https://devel"
+13.405110,13.405794,21.980613,8575.503,8574.819,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000006126'
+For more information check: https://devel"
+13.433532,13.434429,21.984795,8551.263,8550.366,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000004063'
+For more information check: https://devel"
+13.436836,13.438833,21.988722,8551.885,8549.888,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000008577'
+For more information check: h"
+13.485830,13.486899,22.340974,8855.144,8854.075,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000009384'
+For more information check: https://devel"
+13.486136,13.489505,22.343708,8857.572,8854.203,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000005064'
+For more information check: h"
+13.489273,13.492890,22.346287,8857.013,8853.397,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000001445'
+For more information check: https://devel"
+13.511135,13.512121,22.349261,8838.126,8837.140,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000007945'
+For more information check: https://devel"
+13.512311,13.514760,22.353932,8841.621,8839.172,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000001197'
+For more information check: https://devel"
+13.521855,13.522707,22.359015,8837.160,8836.309,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000008789'
+For more information check: h"
+13.524640,13.525257,22.364376,8839.736,8839.119,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000005833'
+For more information check: h"
+13.537071,13.538028,22.370690,8833.619,8832.661,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000004561'
+For more information check: https://devel"
+13.573720,13.574793,22.374850,8801.130,8800.057,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000005773'
+For more information check: h"
+13.621027,13.622492,22.379154,8758.127,8756.662,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000004561'
+For more information check: h"
+13.621750,13.626029,22.382935,8761.186,8756.906,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000007915'
+For more information check: https://devel"
+13.623005,13.628671,22.386858,8763.853,8758.186,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000005890'
+For more information check: https://devel"
+13.659735,13.660316,22.390589,8730.854,8730.273,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000003750'
+For more information check: https://devel"
+13.660610,13.662985,22.393823,8733.213,8730.838,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000004502'
+For more information check: https://devel"
+13.667003,13.667591,22.397047,8730.044,8729.456,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000008085'
+For more information check: https://devel"
+13.669501,13.671248,22.400068,8730.566,8728.820,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000008789'
+For more information check: h"
+13.671410,13.673873,22.444034,8772.623,8770.161,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000002344'
+For more information check: h"
+13.671971,13.675098,22.447531,8775.560,8772.433,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000002161'
+For more information check: h"
+13.692266,13.692851,22.450725,8758.459,8757.874,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000009260'
+For more information check: h"
+13.719566,13.720830,22.455715,8736.149,8734.885,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000008789'
+For more information check: h"
+13.742782,13.744430,22.459906,8717.124,8715.476,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000005890'
+For more information check: https://devel"
+13.901585,13.903482,22.463926,8562.341,8560.444,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000008789'
+For more information check: https://devel"
+12.318125,12.320115,22.636511,10318.386,10316.396,read,0,-1,TimeoutError: 
+12.432726,12.433497,22.671047,10238.321,10237.550,update,0,-1,TimeoutError: 
+12.435710,12.437708,22.677026,10241.316,10239.318,update,0,-1,TimeoutError: 
+12.438682,12.439422,22.681896,10243.214,10242.475,update,0,-1,TimeoutError: 
+12.463840,12.464664,22.717226,10253.385,10252.562,read,0,-1,TimeoutError: 
+12.472800,12.474150,22.721006,10248.206,10246.856,update,0,-1,TimeoutError: 
+14.513286,14.515533,22.724789,8211.503,8209.256,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000001860'
+For more information check: h"
+12.500636,12.501683,22.797849,10297.212,10296.166,update,0,-1,TimeoutError: 
+12.506138,12.507055,22.800907,10294.769,10293.852,read,0,-1,TimeoutError: 
+12.531466,12.532782,22.804363,10272.897,10271.582,update,0,-1,TimeoutError: 
+12.556817,12.558216,22.807447,10250.630,10249.231,update,0,-1,TimeoutError: 
+12.564108,12.564769,22.810471,10246.363,10245.702,update,0,-1,TimeoutError: 
+12.566358,12.567100,22.813510,10247.152,10246.411,update,0,-1,TimeoutError: 
+12.576475,12.577879,22.816480,10240.005,10238.601,update,0,-1,TimeoutError: 
+12.590035,12.591352,22.819498,10229.463,10228.146,update,0,-1,TimeoutError: 
+12.592141,12.594079,22.822515,10230.374,10228.436,read,0,-1,TimeoutError: 
+12.596276,12.596854,22.825745,10229.469,10228.891,read,0,-1,TimeoutError: 
+12.597415,12.598325,22.828767,10231.352,10230.442,read,0,-1,TimeoutError: 
+12.615617,12.616564,22.858622,10243.005,10242.058,update,0,-1,TimeoutError: 
+14.535201,14.535689,22.862578,8327.377,8326.889,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000004918'
+For more information check: https://devel"
+12.659559,12.660713,22.894576,10235.017,10233.863,read,0,-1,TimeoutError: 
+12.664440,12.665191,22.897919,10233.479,10232.728,read,0,-1,TimeoutError: 
+12.665146,12.667000,22.901069,10235.923,10234.069,read,0,-1,TimeoutError: 
+14.618783,14.620175,23.025931,8407.148,8405.756,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000005864'
+For more information check: h"
+14.619602,14.623336,23.096969,8477.367,8473.632,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000000366'
+For more information check: h"
+14.634765,14.635267,23.100022,8465.257,8464.755,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000006538'
+For more information check: https://devel"
+14.646481,14.647973,23.103391,8456.910,8455.418,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000000194'
+For more information check: https://devel"
+14.649225,14.651260,23.108081,8458.856,8456.821,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000009798'
+For more information check: https://devel"
+14.659282,14.660237,23.112725,8453.443,8452.488,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000002732'
+For more information check: h"
+14.683878,14.687403,23.117620,8433.742,8430.217,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000001932'
+For more information check: h"
+14.726673,14.774060,23.123106,8396.433,8349.046,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000004561'
+For more information check: https://devel"
+14.727171,14.779063,23.189288,8462.117,8410.225,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000009798'
+For more information check: h"
+14.776162,14.803961,23.193401,8417.239,8389.439,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000008789'
+For more information check: h"
+14.788349,14.812582,23.197186,8408.837,8384.605,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000001100'
+For more information check: h"
+14.825030,14.848926,23.200746,8375.716,8351.820,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000009292'
+For more information check: h"
+14.822244,14.843481,23.204630,8382.386,8361.149,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000000353'
+For more information check: https://devel"
+14.742039,14.782944,23.352599,8610.560,8569.655,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000008789'
+For more information check: h"
+14.928315,14.953860,23.356821,8428.505,8402.960,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000003185'
+For more information check: https://devel"
+14.743934,14.787584,23.360969,8617.035,8573.384,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000002183'
+For more information check: h"
+14.952249,14.998524,23.365017,8412.768,8366.493,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000003623'
+For more information check: h"
+14.889576,14.922404,23.369138,8479.562,8446.733,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000000936'
+For more information check: h"
+14.778652,14.809848,23.410237,8631.586,8600.389,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000005316'
+For more information check: https://devel"
+13.780149,13.780807,24.111513,10331.364,10330.706,read,0,-1,TimeoutError: 
+14.984823,15.026119,24.116792,9131.968,9090.673,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000007141'
+For more information check: https://devel"
+14.814730,14.838002,24.123189,9308.459,9285.188,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000007024'
+For more information check: h"
+15.015438,15.047164,24.128424,9112.986,9081.260,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000001536'
+For more information check: h"
+14.856683,14.885006,24.133073,9276.390,9248.067,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000006522'
+For more information check: https://devel"
+13.801904,13.803632,24.196106,10394.202,10392.474,update,0,-1,TimeoutError: 
+13.811780,13.812834,24.200229,10388.449,10387.394,update,0,-1,TimeoutError: 
+13.831722,13.832616,24.205063,10373.341,10372.447,read,0,-1,TimeoutError: 
+13.922107,13.923719,24.315727,10393.620,10392.008,update,0,-1,TimeoutError: 
+13.927678,13.927993,24.319549,10391.871,10391.556,update,0,-1,TimeoutError: 
+13.928919,13.935246,24.323397,10394.478,10388.151,read,0,-1,TimeoutError: 
+13.983638,13.984961,24.389180,10405.542,10404.219,update,0,-1,TimeoutError: 
+14.001494,14.002351,24.393302,10391.808,10390.950,update,0,-1,TimeoutError: 
+14.010098,14.010788,24.397304,10387.206,10386.516,read,0,-1,TimeoutError: 
+14.028693,14.030134,24.401122,10372.429,10370.988,read,0,-1,TimeoutError: 
+15.118948,15.138411,24.405384,9286.435,9266.973,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000009846'
+For more information check: https://devel"
+15.095592,15.111612,24.409338,9313.745,9297.726,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000003910'
+For more information check: h"
+14.976554,15.004407,24.413077,9436.523,9408.670,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000005122'
+For more information check: https://devel"
+15.097804,15.115500,24.416664,9318.860,9301.164,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000004819'
+For more information check: h"
+15.130855,15.140459,24.420676,9289.821,9280.217,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000002183'
+For more information check: https://devel"
+14.045124,14.046272,24.484601,10439.477,10438.329,update,0,-1,TimeoutError: 
+14.059894,14.061568,24.490042,10430.148,10428.474,update,0,-1,TimeoutError: 
+14.061149,14.063727,24.494573,10433.424,10430.846,read,0,-1,TimeoutError: 
+14.069864,14.070589,24.498955,10429.090,10428.365,update,0,-1,TimeoutError: 
+14.080507,14.081569,24.503409,10422.902,10421.840,update,0,-1,TimeoutError: 
+14.084954,14.085280,24.507839,10422.885,10422.559,update,0,-1,TimeoutError: 
+14.127377,14.128440,24.511666,10384.290,10383.226,update,0,-1,TimeoutError: 
+15.078044,15.107578,24.515535,9437.490,9407.956,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000009973'
+For more information check: h"
+14.968541,15.001398,24.519257,9550.716,9517.859,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000008469'
+For more information check: h"
+14.935556,14.959090,24.523181,9587.625,9564.091,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000006679'
+For more information check: https://devel"
+14.138414,14.139186,24.643162,10504.748,10503.976,read,0,-1,TimeoutError: 
+14.160131,14.161947,24.646736,10486.605,10484.789,read,0,-1,TimeoutError: 
+14.185134,14.186161,24.650300,10465.165,10464.139,update,0,-1,TimeoutError: 
+14.212330,14.213593,24.655984,10443.654,10442.390,read,0,-1,TimeoutError: 
+14.237869,14.239097,24.660701,10422.832,10421.604,update,0,-1,TimeoutError: 
+14.265773,14.266448,24.714005,10448.232,10447.557,update,0,-1,TimeoutError: 
+14.271568,14.272404,24.717802,10446.233,10445.397,read,0,-1,TimeoutError: 
+14.346502,14.348918,24.773010,10426.509,10424.092,update,0,-1,TimeoutError: 
+14.349776,14.352740,24.780167,10430.391,10427.427,update,0,-1,TimeoutError: 
+14.399955,14.401291,24.786112,10386.157,10384.821,update,0,-1,TimeoutError: 
+14.438516,14.439750,24.899314,10460.797,10459.564,update,0,-1,TimeoutError: 
+14.476749,14.477483,24.902785,10426.035,10425.301,update,0,-1,TimeoutError: 
+14.477834,14.480711,24.906253,10428.418,10425.542,read,0,-1,TimeoutError: 
+14.479747,14.483180,24.909767,10430.020,10426.587,update,0,-1,TimeoutError: 
+14.777956,14.806923,25.128238,10350.282,10321.315,read,0,-1,TimeoutError: 
+14.946618,14.962657,25.303425,10356.807,10340.768,read,0,-1,TimeoutError: 
+15.219362,15.231151,25.307116,10087.753,10075.964,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000005790'
+For more information check: https://devel"
+15.244778,15.248183,25.310322,10065.545,10062.139,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000001178'
+For more information check: h"
+15.280788,15.281819,25.313560,10032.772,10031.741,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000006764'
+For more information check: h"
+15.304953,15.305857,25.316701,10011.748,10010.844,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000008789'
+For more information check: h"
+15.320294,15.321356,25.320369,10000.075,9999.013,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000004629'
+For more information check: h"
+15.365720,15.367383,25.324178,9958.458,9956.795,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000001308'
+For more information check: h"
+15.401350,15.402364,25.398000,9996.650,9995.636,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000004502'
+For more information check: h"
+15.674785,15.678076,25.401889,9727.104,9723.813,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000006963'
+For more information check: https://devel"
+15.676211,15.679285,25.405691,9729.479,9726.406,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000008789'
+For more information check: https://devel"
+15.753872,15.754650,25.409333,9655.461,9654.683,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000004502'
+For more information check: h"
+15.766939,15.767637,25.412901,9645.962,9645.264,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000003910'
+For more information check: https://devel"
+16.240111,16.240730,25.416407,9176.296,9175.677,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000006538'
+For more information check: https://devel"
+16.270755,16.271982,25.420297,9149.542,9148.315,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000005363'
+For more information check: https://devel"
+16.295030,16.295931,25.423945,9128.915,9128.014,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000008511'
+For more information check: https://devel"
+16.322490,16.323136,25.427551,9105.061,9104.415,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000003665'
+For more information check: https://devel"
+16.331465,16.332573,25.431224,9099.759,9098.650,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000001563'
+For more information check: h"
+16.388520,16.389794,25.434830,9046.310,9045.036,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000009537'
+For more information check: h"
+16.409148,16.409857,25.438859,9029.711,9029.002,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000008789'
+For more information check: h"
+16.419451,16.420697,25.442782,9023.332,9022.085,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000008114'
+For more information check: h"
+16.431944,16.434319,25.446503,9014.559,9012.185,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000008994'
+For more information check: https://devel"
+16.509941,16.512033,25.450211,8940.269,8938.177,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000009900'
+For more information check: https://devel"
+16.525133,16.526590,25.456582,8931.450,8929.992,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000006703'
+For more information check: h"
+15.408237,15.408979,25.748250,10340.013,10339.271,update,0,-1,TimeoutError: 
+15.411654,15.412054,25.752785,10341.131,10340.731,update,0,-1,TimeoutError: 
+15.420906,15.421600,25.758604,10337.698,10337.004,update,0,-1,TimeoutError: 
+15.435630,15.436532,25.764769,10329.139,10328.236,update,0,-1,TimeoutError: 
+15.437679,15.438666,25.769913,10332.234,10331.246,read,0,-1,TimeoutError: 
+15.446153,15.447122,25.776446,10330.293,10329.325,update,0,-1,TimeoutError: 
+17.059610,17.060734,25.781472,8721.863,8720.739,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000007247'
+For more information check: h"
+17.070693,17.072065,25.786683,8715.990,8714.618,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000009374'
+For more information check: h"
+17.093209,17.094516,25.791127,8697.919,8696.611,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000008692'
+For more information check: https://devel"
+17.108935,17.110328,25.796124,8687.190,8685.797,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000004561'
+For more information check: h"
+17.166847,17.168201,25.801384,8634.537,8633.183,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000009697'
+For more information check: https://devel"
+17.198853,17.199440,25.806324,8607.471,8606.884,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000006649'
+For more information check: https://devel"
+17.258376,17.260756,25.813983,8555.607,8553.227,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000002594'
+For more information check: h"
+17.384335,17.385651,25.817513,8433.178,8431.862,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000004781'
+For more information check: https://devel"
+17.390264,17.390982,25.821321,8431.056,8430.339,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000004561'
+For more information check: https://devel"
+17.394761,17.395159,25.824974,8430.212,8429.815,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000000829'
+For more information check: https://devel"
+17.422232,17.423405,25.828499,8406.267,8405.094,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000001100'
+For more information check: h"
+17.451654,17.453085,25.832093,8380.439,8379.007,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000001100'
+For more information check: https://devel"
+17.466097,17.466705,25.835648,8369.551,8368.942,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000002428'
+For more information check: h"
+17.479449,17.480321,25.839471,8360.022,8359.150,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000004637'
+For more information check: h"
+17.532651,17.533081,25.846849,8314.198,8313.768,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000003910'
+For more information check: https://devel"
+17.224732,17.226941,25.956869,8732.137,8729.929,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000006649'
+For more information check: h"
+17.489791,17.491351,25.956981,8467.190,8465.630,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000005316'
+For more information check: https://devel"
+15.463262,15.465101,25.963933,10500.671,10498.832,read,0,-1,TimeoutError: 
+15.464153,15.467386,25.972731,10508.578,10505.344,update,0,-1,TimeoutError: 
+15.497895,15.499603,25.980885,10482.990,10481.282,update,0,-1,TimeoutError: 
+15.518956,15.520001,25.986882,10467.927,10466.882,read,0,-1,TimeoutError: 
+15.526483,15.527660,25.991676,10465.193,10464.017,read,0,-1,TimeoutError: 
+15.533569,15.534633,25.996151,10462.582,10461.518,read,0,-1,TimeoutError: 
+15.542265,15.542718,26.000033,10457.768,10457.315,update,0,-1,TimeoutError: 
+15.550134,15.551456,26.003900,10453.766,10452.445,read,0,-1,TimeoutError: 
+15.577742,15.579002,26.007572,10429.831,10428.570,read,0,-1,TimeoutError: 
+15.591647,15.592358,26.056287,10464.640,10463.929,read,0,-1,TimeoutError: 
+15.606583,15.607355,26.062045,10455.461,10454.689,read,0,-1,TimeoutError: 
+15.609804,15.610931,26.067519,10457.714,10456.587,update,0,-1,TimeoutError: 
+15.658970,15.660079,26.125868,10466.898,10465.789,update,0,-1,TimeoutError: 
+15.666848,15.667627,26.129252,10462.404,10461.625,update,0,-1,TimeoutError: 
+17.564466,17.565210,26.132724,8568.258,8567.514,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000005890'
+For more information check: https://devel"
+17.582036,17.583721,26.136417,8554.381,8552.696,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000004502'
+For more information check: https://devel"
+17.582855,17.586259,26.139937,8557.082,8553.679,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000006645'
+For more information check: h"
+17.620950,17.622344,26.143312,8522.362,8520.969,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000003216'
+For more information check: h"
+17.677928,17.679213,26.146770,8468.842,8467.557,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000004068'
+For more information check: h"
+17.721569,17.722830,26.150312,8428.743,8427.482,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000005958'
+For more information check: h"
+15.815749,15.817812,26.306848,10491.099,10489.036,update,0,-1,TimeoutError: 
+15.868265,15.869952,26.309938,10441.672,10439.986,update,0,-1,TimeoutError: 
+15.938232,15.939419,26.363619,10425.387,10424.199,read,0,-1,TimeoutError: 
+15.972048,15.973498,26.367051,10395.003,10393.554,update,0,-1,TimeoutError: 
+17.749046,17.749640,26.370754,8621.709,8621.115,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000007244'
+For more information check: https://devel"
+17.819712,17.820462,26.374383,8554.671,8553.921,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000002087'
+For more information check: h"
+17.835374,17.836840,26.377695,8542.321,8540.855,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000008589'
+For more information check: h"
+17.994359,17.995745,26.381172,8386.813,8385.427,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000008789'
+For more information check: h"
+16.023972,16.024902,26.434032,10410.060,10409.130,update,0,-1,TimeoutError: 
+16.075067,16.075743,26.580709,10505.642,10504.967,update,0,-1,TimeoutError: 
+16.142260,16.143076,26.596449,10454.189,10453.372,read,0,-1,TimeoutError: 
+16.107393,16.108221,26.670750,10563.357,10562.529,read,0,-1,TimeoutError: 
+16.110284,16.111716,26.670858,10560.574,10559.142,update,0,-1,TimeoutError: 
+16.125118,16.126580,26.670946,10545.828,10544.366,update,0,-1,TimeoutError: 
+18.004854,18.005717,26.678142,8673.288,8672.426,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000003968'
+For more information check: h"
+18.024737,18.025704,26.685062,8660.325,8659.358,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000009901'
+For more information check: h"
+18.032094,18.033583,26.690398,8658.304,8656.814,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000004561'
+For more information check: h"
+18.039282,18.039952,26.697363,8658.082,8657.411,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000007336'
+For more information check: https://devel"
+18.162103,18.164934,26.703764,8541.662,8538.830,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000001460'
+For more information check: h"
+18.165661,18.172905,26.709156,8543.495,8536.251,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000009166'
+For more information check: h"
+18.185909,18.193266,26.716529,8530.620,8523.262,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000008789'
+For more information check: https://devel"
+16.528806,16.530057,27.187787,10658.981,10657.729,read,0,-1,TimeoutError: 
+16.532018,16.533142,27.192463,10660.445,10659.321,read,0,-1,TimeoutError: 
+16.555264,16.556506,27.198473,10643.209,10641.967,read,0,-1,TimeoutError: 
+16.571811,16.572781,27.204549,10632.738,10631.768,update,0,-1,TimeoutError: 
+16.619272,16.621314,27.261385,10642.113,10640.070,update,0,-1,TimeoutError: 
+16.623354,16.625359,27.267371,10644.018,10642.012,update,0,-1,TimeoutError: 
+16.633944,16.635149,27.272997,10639.053,10637.848,read,0,-1,TimeoutError: 
+16.659980,16.660770,27.277544,10617.564,10616.774,read,0,-1,TimeoutError: 
+16.661008,16.663583,27.282024,10621.016,10618.441,update,0,-1,TimeoutError: 
+16.663098,16.664959,27.286883,10623.785,10621.924,update,0,-1,TimeoutError: 
+16.678878,16.680049,27.291019,10612.141,10610.970,update,0,-1,TimeoutError: 
+16.685056,16.685538,27.294410,10609.354,10608.872,read,0,-1,TimeoutError: 
+16.687318,16.688915,27.297982,10610.664,10609.067,update,0,-1,TimeoutError: 
+16.693386,16.693974,27.301336,10607.950,10607.362,update,0,-1,TimeoutError: 
+16.713387,16.715327,27.304739,10591.352,10589.412,update,0,-1,TimeoutError: 
+16.731481,16.734901,27.456547,10725.066,10721.646,update,0,-1,TimeoutError: 
+16.793929,16.794365,27.465975,10672.046,10671.610,read,0,-1,TimeoutError: 
+16.833515,16.835044,27.468655,10635.140,10633.611,read,0,-1,TimeoutError: 
+16.833956,16.838097,27.471447,10637.491,10633.350,update,0,-1,TimeoutError: 
+16.843137,16.843801,27.473702,10630.565,10629.900,read,0,-1,TimeoutError: 
+16.880766,16.883332,27.476217,10595.451,10592.885,update,0,-1,TimeoutError: 
+16.905543,16.906039,27.478804,10573.261,10572.765,read,0,-1,TimeoutError: 
+16.912217,16.913322,27.481502,10569.284,10568.180,update,0,-1,TimeoutError: 
+16.956597,16.958117,27.484273,10527.676,10526.156,update,0,-1,TimeoutError: 
+16.974827,16.976301,27.487406,10512.579,10511.105,update,0,-1,TimeoutError: 
+16.728334,16.730434,27.524088,10795.754,10793.654,read,0,-1,TimeoutError: 
+16.729969,16.733177,27.524160,10794.192,10790.984,read,0,-1,TimeoutError: 
+16.769507,16.770740,27.524273,10754.766,10753.534,update,0,-1,TimeoutError: 
+16.790121,16.791241,27.524332,10734.211,10733.090,read,0,-1,TimeoutError: 
+17.633217,17.634259,27.819260,10186.043,10185.001,update,0,-1,TimeoutError: 
+17.637425,17.637781,27.821790,10184.364,10184.009,read,0,-1,TimeoutError: 
+17.644541,17.645652,27.824078,10179.538,10178.426,update,0,-1,TimeoutError: 
+17.668050,17.669394,27.890005,10221.955,10220.612,update,0,-1,TimeoutError: 
+17.668161,17.670996,27.892072,10223.911,10221.076,update,0,-1,TimeoutError: 
+17.670719,17.672464,27.893944,10223.226,10221.480,read,0,-1,TimeoutError: 
+17.852345,17.853721,28.050348,10198.002,10196.627,update,0,-1,TimeoutError: 
+17.868377,17.868893,28.054004,10185.627,10185.111,read,0,-1,TimeoutError: 
+17.883292,17.885187,28.057929,10174.637,10172.742,read,0,-1,TimeoutError: 
+17.898912,17.900341,28.141002,10242.091,10240.661,update,0,-1,TimeoutError: 
+17.933049,17.933711,28.142777,10209.728,10209.066,read,0,-1,TimeoutError: 
+18.053399,18.054413,28.221470,10168.071,10167.057,read,0,-1,TimeoutError: 
+18.071050,18.072881,28.290479,10219.430,10217.599,update,0,-1,TimeoutError: 
+18.087020,18.088780,28.292279,10205.260,10203.500,read,0,-1,TimeoutError: 
+18.290082,18.291083,28.433859,10143.777,10142.776,read,0,-1,TimeoutError: 
+18.316729,18.317776,28.468721,10151.992,10150.945,update,0,-1,TimeoutError: 
+18.333419,18.334841,28.514462,10181.043,10179.621,read,0,-1,TimeoutError: 
+18.342608,18.342991,28.516084,10173.476,10173.093,read,0,-1,TimeoutError: 
+18.352895,18.353742,28.517521,10164.625,10163.779,read,0,-1,TimeoutError: 
+18.408037,18.408830,28.579520,10171.483,10170.689,update,0,-1,TimeoutError: 
+18.453176,18.454209,28.629849,10176.673,10175.640,update,0,-1,TimeoutError: 
+18.475330,18.477091,28.631251,10155.921,10154.159,update,0,-1,TimeoutError: 
+18.521132,18.522741,28.716058,10194.925,10193.317,update,0,-1,TimeoutError: 
+18.572981,18.581316,28.791636,10218.654,10210.320,read,0,-1,TimeoutError: 
+18.610442,18.611753,28.818955,10208.512,10207.202,read,0,-1,TimeoutError: 
+18.620113,18.620695,28.820490,10200.377,10199.796,update,0,-1,TimeoutError: 
+18.632599,18.633802,28.846711,10214.111,10212.908,update,0,-1,TimeoutError: 
+18.664383,18.681382,28.898607,10234.224,10217.225,read,0,-1,TimeoutError: 
+18.673708,18.684071,28.900002,10226.294,10215.931,update,0,-1,TimeoutError: 
+18.701383,18.701863,28.901207,10199.825,10199.344,read,0,-1,TimeoutError: 
+18.714516,18.715911,28.902554,10188.038,10186.643,update,0,-1,TimeoutError: 
+18.722722,18.723925,28.904025,10181.304,10180.100,update,0,-1,TimeoutError: 
+18.734903,18.736923,28.929533,10194.630,10192.610,read,0,-1,TimeoutError: 
+18.737381,18.740540,28.930726,10193.345,10190.186,read,0,-1,TimeoutError: 
+18.746135,18.747149,28.932460,10186.325,10185.311,read,0,-1,TimeoutError: 
+18.756865,18.757626,28.933796,10176.931,10176.170,read,0,-1,TimeoutError: 
+18.757231,18.760118,28.935351,10178.120,10175.233,update,0,-1,TimeoutError: 
+18.761008,18.767380,28.937551,10176.543,10170.171,read,0,-1,TimeoutError: 
+18.767036,18.775194,28.939024,10171.987,10163.829,update,0,-1,TimeoutError: 
+18.806059,18.807057,28.975767,10169.708,10168.709,read,0,-1,TimeoutError: 
+18.823870,18.824486,29.016974,10193.105,10192.488,read,0,-1,TimeoutError: 
+18.830639,18.831576,29.018697,10188.058,10187.121,update,0,-1,TimeoutError: 
+18.952370,18.954743,29.114274,10161.904,10159.531,update,0,-1,TimeoutError: 
+18.958336,18.958741,29.115410,10157.074,10156.668,update,0,-1,TimeoutError: 
+18.972758,18.973242,29.116631,10143.873,10143.389,read,0,-1,TimeoutError: 
+18.999663,19.001261,29.142786,10143.123,10141.525,read,0,-1,TimeoutError: 
+19.023172,19.024786,29.172292,10149.120,10147.506,update,0,-1,TimeoutError: 
+19.034537,19.035368,29.173481,10138.943,10138.113,read,0,-1,TimeoutError: 
+20.087706,20.178650,29.174583,9086.877,8995.933,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000002551'
+For more information check: https://devel"
+20.089943,20.182858,29.176956,9087.013,8994.098,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000008789'
+For more information check: h"
+20.146870,20.193797,29.179275,9032.405,8985.477,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000008078'
+For more information check: h"
+20.176851,20.203024,29.181414,9004.564,8978.390,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000009526'
+For more information check: https://devel"
+20.220626,20.233388,29.184076,8963.449,8950.688,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000003910'
+For more information check: h"
+20.166073,20.200242,29.187409,9021.337,8987.167,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000006285'
+For more information check: https://devel"
+19.064549,19.066320,29.239842,10175.293,10173.522,read,0,-1,TimeoutError: 
+19.077851,19.080368,29.241839,10163.987,10161.471,update,0,-1,TimeoutError: 
+19.102989,19.104155,29.298064,10195.075,10193.909,read,0,-1,TimeoutError: 
+19.116510,19.118390,29.329964,10213.453,10211.573,read,0,-1,TimeoutError: 
+20.151362,20.197153,29.332084,9180.722,9134.932,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000006144'
+For more information check: h"
+20.099710,20.187444,29.334575,9234.865,9147.130,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000005649'
+For more information check: h"
+20.317355,20.318033,29.336932,9019.577,9018.899,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000002624'
+For more information check: https://devel"
+20.324165,20.324768,29.339066,9014.900,9014.298,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000003910'
+For more information check: h"
+20.337729,20.339515,29.341516,9003.787,9002.001,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000002105'
+For more information check: https://devel"
+20.382806,20.384424,29.343302,8960.495,8958.878,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000008789'
+For more information check: https://devel"
+20.398547,20.400105,29.344718,8946.171,8944.613,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000008131'
+For more information check: h"
+20.403378,20.405154,29.346170,8942.791,8941.016,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000007006'
+For more information check: https://devel"
+20.431893,20.597367,29.347497,8915.604,8750.130,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000000302'
+For more information check: https://devel"
+20.440115,20.604371,29.348864,8908.749,8744.493,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000001463'
+For more information check: https://devel"
+20.543734,20.625112,29.350256,8806.522,8725.144,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000000473'
+For more information check: https://devel"
+20.453425,20.608877,29.353767,8900.343,8744.890,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000004140'
+For more information check: https://devel"
+19.187664,19.188345,29.413866,10226.202,10225.521,read,0,-1,TimeoutError: 
+19.212852,19.213884,29.439414,10226.562,10225.529,update,0,-1,TimeoutError: 
+19.214768,19.217723,29.440967,10226.198,10223.244,read,0,-1,TimeoutError: 
+19.217542,19.218866,29.442174,10224.632,10223.308,read,0,-1,TimeoutError: 
+19.285475,19.286129,29.489902,10204.428,10203.773,read,0,-1,TimeoutError: 
+19.290682,19.291152,29.491392,10200.711,10200.240,update,0,-1,TimeoutError: 
+19.291212,19.293097,29.493452,10202.240,10200.354,update,0,-1,TimeoutError: 
+19.297051,19.297525,29.495147,10198.095,10197.622,read,0,-1,TimeoutError: 
+19.310122,19.311231,29.535235,10225.113,10224.004,read,0,-1,TimeoutError: 
+19.370923,19.371846,29.536758,10165.835,10164.912,read,0,-1,TimeoutError: 
+19.381111,19.382487,29.574064,10192.953,10191.576,update,0,-1,TimeoutError: 
+19.406822,19.407587,29.576187,10169.365,10168.600,update,0,-1,TimeoutError: 
+19.442781,19.443755,29.608394,10165.613,10164.639,read,0,-1,TimeoutError: 
+19.444649,19.447801,29.645654,10201.005,10197.853,update,0,-1,TimeoutError: 
+19.463578,19.465001,29.646815,10183.236,10181.813,read,0,-1,TimeoutError: 
+19.572957,19.573950,29.709266,10136.308,10135.315,read,0,-1,TimeoutError: 
+19.588910,19.589897,29.736071,10147.161,10146.174,read,0,-1,TimeoutError: 
+19.604202,19.605338,29.737163,10132.961,10131.825,update,0,-1,TimeoutError: 
+19.612716,19.613317,29.738126,10125.410,10124.809,read,0,-1,TimeoutError: 
+20.565151,20.629396,29.768761,9203.610,9139.365,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000008412'
+For more information check: https://devel"
+20.686447,20.711412,29.769806,9083.359,9058.394,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000002411'
+For more information check: h"
+20.719833,20.730530,29.770912,9051.078,9040.381,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000004502'
+For more information check: h"
+20.748364,20.780072,29.771981,9023.618,8991.909,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000002901'
+For more information check: https://devel"
+20.692674,20.714892,29.773087,9080.413,9058.195,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000000686'
+For more information check: h"
+20.785316,20.841516,29.774203,8988.888,8932.687,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000006948'
+For more information check: h"
+20.453597,20.614838,29.775322,9321.725,9160.484,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000002183'
+For more information check: h"
+20.821427,20.861153,29.776402,8954.976,8915.249,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000004637'
+For more information check: https://devel"
+20.834825,20.912491,29.777514,8942.689,8865.022,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000006538'
+For more information check: https://devel"
+20.832035,20.906575,29.778729,8946.694,8872.155,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000008789'
+For more information check: https://devel"
+20.975516,21.043405,29.779978,8804.462,8736.573,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000009971'
+For more information check: h"
+20.953512,20.986024,29.781148,8827.635,8795.124,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000003910'
+For more information check: https://devel"
+20.839171,20.918021,29.782288,8943.117,8864.267,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000009241'
+For more information check: h"
+19.671131,19.672692,29.808283,10137.152,10135.591,update,0,-1,TimeoutError: 
+21.027579,21.071723,29.809792,8782.213,8738.069,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000008806'
+For more information check: h"
+21.057726,21.108929,29.811283,8753.557,8702.354,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000000504'
+For more information check: https://devel"
+21.080339,21.115802,29.813292,8732.953,8697.490,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000009798'
+For more information check: https://devel"
+19.740996,19.741986,29.907048,10166.051,10165.062,update,0,-1,TimeoutError: 
+20.938293,20.981564,29.908760,8970.466,8927.196,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000004612'
+For more information check: h"
+20.873880,20.925352,29.910348,9036.468,8984.996,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000005322'
+For more information check: https://devel"
+21.194248,21.284959,29.912653,8718.405,8627.694,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000008789'
+For more information check: https://devel"
+20.986198,21.046622,29.914659,8928.461,8868.037,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000003910'
+For more information check: https://devel"
+19.743174,19.746372,29.967619,10224.445,10221.247,read,0,-1,TimeoutError: 
+19.759271,19.760066,29.969296,10210.025,10209.230,read,0,-1,TimeoutError: 
+19.770153,19.771252,29.970708,10200.555,10199.456,read,0,-1,TimeoutError: 
+19.792426,19.794318,30.025547,10233.121,10231.228,read,0,-1,TimeoutError: 
+19.794952,19.796730,30.027001,10232.050,10230.271,read,0,-1,TimeoutError: 
+19.801119,19.801684,30.028969,10227.850,10227.284,update,0,-1,TimeoutError: 
+19.807654,19.808831,30.030809,10223.155,10221.978,read,0,-1,TimeoutError: 
+19.820721,19.822035,30.032621,10211.900,10210.586,read,0,-1,TimeoutError: 
+19.852250,19.853311,30.072667,10220.417,10219.355,update,0,-1,TimeoutError: 
+20.972292,20.991843,30.075451,9103.159,9083.609,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000006422'
+For more information check: https://devel"
+21.292807,21.340152,30.078276,8785.468,8738.123,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000002644'
+For more information check: h"
+20.796925,20.853731,30.081155,9284.230,9227.425,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000007945'
+For more information check: https://devel"
+19.891267,19.892667,30.113868,10222.601,10221.200,update,0,-1,TimeoutError: 
+20.992762,21.050307,30.115790,9123.028,9065.483,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000005890'
+For more information check: https://devel"
+19.922142,19.923038,30.171770,10249.628,10248.732,read,0,-1,TimeoutError: 
+19.944732,19.947386,30.174816,10230.084,10227.430,update,0,-1,TimeoutError: 
+19.946557,19.949775,30.177978,10231.421,10228.203,update,0,-1,TimeoutError: 
+19.956433,19.957416,30.180605,10224.172,10223.190,read,0,-1,TimeoutError: 
+19.978528,19.979946,30.183611,10205.083,10203.666,read,0,-1,TimeoutError: 
+19.985498,19.990533,30.229083,10243.585,10238.550,read,0,-1,TimeoutError: 
+19.999676,20.000536,30.231102,10231.426,10230.566,update,0,-1,TimeoutError: 
+21.214964,21.289349,30.232735,9017.771,8943.386,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000000515'
+For more information check: h"
+21.484417,21.608539,30.234296,8749.879,8625.757,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000001003'
+For more information check: https://devel"
+20.046770,20.048531,30.279536,10232.766,10231.005,update,0,-1,TimeoutError: 
+20.049240,20.052503,30.281790,10232.550,10229.287,update,0,-1,TimeoutError: 
+20.617174,20.633940,30.744244,10127.070,10110.304,read,0,-1,TimeoutError: 
+20.708228,20.727113,30.767062,10058.834,10039.949,read,0,-1,TimeoutError: 
+20.790506,20.847364,30.938148,10147.642,10090.784,update,0,-1,TimeoutError: 
+20.855629,20.922221,30.999482,10143.853,10077.261,update,0,-1,TimeoutError: 
+21.441284,21.511263,31.032179,9590.895,9520.916,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000008600'
+For more information check: https://devel"
+21.635942,21.730919,31.032858,9396.916,9301.939,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000008994'
+For more information check: h"
+21.524042,21.635902,31.033500,9509.458,9397.597,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000001327'
+For more information check: h"
+21.495389,21.613150,31.034180,9538.790,9421.030,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000007748'
+For more information check: h"
+21.016539,21.058921,31.034901,10018.362,9975.979,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000008994'
+For more information check: h"
+21.322009,21.349860,31.035572,9713.563,9685.712,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000009798'
+For more information check: https://devel"
+21.076340,21.111467,31.036379,9960.039,9924.912,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000007724'
+For more information check: h"
+21.937544,22.025018,31.037161,9099.617,9012.143,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000005363'
+For more information check: https://devel"
+21.022752,21.065588,31.115648,10092.895,10050.059,update,0,-1,TimeoutError: 
+21.036746,21.102035,31.149851,10113.105,10047.816,read,0,-1,TimeoutError: 
+21.049464,21.105868,31.150765,10101.301,10044.897,update,0,-1,TimeoutError: 
+21.122729,21.148784,31.206280,10083.551,10057.496,update,0,-1,TimeoutError: 
+21.146424,21.193137,31.237370,10090.946,10044.232,read,0,-1,TimeoutError: 
+21.161728,21.195553,31.238047,10076.319,10042.494,update,0,-1,TimeoutError: 
+21.162926,21.197949,31.238672,10075.746,10040.724,read,0,-1,TimeoutError: 
+21.170817,21.200142,31.286256,10115.439,10086.114,read,0,-1,TimeoutError: 
+21.248385,21.293331,31.325605,10077.219,10032.274,update,0,-1,TimeoutError: 
+22.005623,22.103984,31.339320,9333.698,9235.336,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000003777'
+For more information check: h"
+21.300385,21.343347,31.398019,10097.635,10054.673,update,0,-1,TimeoutError: 
+22.512197,22.725018,31.410341,8898.144,8685.323,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000005648'
+For more information check: https://devel"
+21.929777,22.021959,31.410861,9481.084,9388.902,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000009994'
+For more information check: https://devel"
+21.723926,21.809995,31.411372,9687.446,9601.377,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000002758'
+For more information check: https://devel"
+21.313998,21.346372,31.423577,10109.579,10077.205,update,0,-1,TimeoutError: 
+21.324747,21.411804,31.450319,10125.572,10038.515,read,0,-1,TimeoutError: 
+21.327766,21.417265,31.450920,10123.154,10033.655,read,0,-1,TimeoutError: 
+21.333693,21.421226,31.451711,10118.019,10030.485,read,0,-1,TimeoutError: 
+21.351015,21.427454,31.468985,10117.970,10041.530,update,0,-1,TimeoutError: 
+21.375290,21.430016,31.470118,10094.827,10040.102,read,0,-1,TimeoutError: 
+21.335536,21.424695,31.500438,10164.903,10075.743,read,0,-1,TimeoutError: 
+21.391850,21.499127,31.523535,10131.685,10024.408,read,0,-1,TimeoutError: 
+21.414939,21.502025,31.533994,10119.055,10031.969,update,0,-1,TimeoutError: 
+21.420069,21.505562,31.534487,10114.418,10028.925,update,0,-1,TimeoutError: 
+21.424517,21.508450,31.559645,10135.128,10051.196,update,0,-1,TimeoutError: 
+21.495879,21.623634,31.649936,10154.057,10026.302,read,0,-1,TimeoutError: 
+21.503165,21.627423,31.650447,10147.282,10023.024,read,0,-1,TimeoutError: 
+21.495474,21.617828,31.684698,10189.224,10066.870,update,0,-1,TimeoutError: 
+21.522275,21.631415,31.696356,10174.081,10064.941,read,0,-1,TimeoutError: 
+21.529127,21.641168,31.699776,10170.649,10058.608,read,0,-1,TimeoutError: 
+21.551959,21.646307,31.708490,10156.531,10062.184,update,0,-1,TimeoutError: 
+21.644285,21.734497,31.766162,10121.877,10031.665,update,0,-1,TimeoutError: 
+21.662668,21.739522,31.766692,10104.024,10027.170,read,0,-1,TimeoutError: 
+21.677282,21.742948,31.780580,10103.298,10037.632,read,0,-1,TimeoutError: 
+21.685755,21.748635,31.781006,10095.251,10032.371,update,0,-1,TimeoutError: 
+21.694534,21.758210,31.789884,10095.350,10031.674,update,0,-1,TimeoutError: 
+21.677750,21.745798,31.797076,10119.326,10051.278,update,0,-1,TimeoutError: 
+21.688758,21.752010,31.808332,10119.574,10056.322,read,0,-1,TimeoutError: 
+21.746790,21.812947,31.829839,10083.049,10016.892,read,0,-1,TimeoutError: 
+21.749238,21.818189,31.837584,10088.347,10019.396,read,0,-1,TimeoutError: 
+21.775052,21.821733,31.837850,10062.797,10016.117,update,0,-1,TimeoutError: 
+21.747627,21.815488,31.843665,10096.037,10028.177,update,0,-1,TimeoutError: 
+21.777231,21.824457,31.844155,10066.923,10019.698,update,0,-1,TimeoutError: 
+21.784857,21.827466,31.844402,10059.545,10016.936,read,0,-1,TimeoutError: 
+21.792154,21.832332,31.850221,10058.067,10017.888,update,0,-1,TimeoutError: 
+21.792787,21.835204,31.850525,10057.737,10015.321,update,0,-1,TimeoutError: 
+21.791133,21.829901,31.860064,10068.931,10030.163,update,0,-1,TimeoutError: 
+21.795781,21.895132,31.914563,10118.782,10019.432,read,0,-1,TimeoutError: 
+21.860248,21.901193,31.921701,10061.453,10020.508,read,0,-1,TimeoutError: 
+21.805975,21.897913,31.940064,10134.088,10042.151,update,0,-1,TimeoutError: 
+21.886135,22.012375,32.047988,10161.853,10035.613,read,0,-1,TimeoutError: 
+21.908901,22.015287,32.118926,10210.025,10103.639,update,0,-1,TimeoutError: 
+21.915295,22.018352,32.119188,10203.893,10100.836,read,0,-1,TimeoutError: 
+22.899477,23.025948,32.138620,9239.143,9112.672,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000007781'
+For more information check: h"
+22.239370,22.400075,32.138924,9899.554,9738.849,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000004413'
+For more information check: h"
+22.264727,22.409044,32.139189,9874.462,9730.145,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000009599'
+For more information check: h"
+22.038171,22.107196,32.162972,10124.802,10055.776,update,0,-1,TimeoutError: 
+22.058670,22.110090,32.163375,10104.704,10053.285,read,0,-1,TimeoutError: 
+22.095742,22.180348,32.220883,10125.141,10040.535,update,0,-1,TimeoutError: 
+22.114378,22.184338,32.240733,10126.355,10056.395,read,0,-1,TimeoutError: 
+22.188358,22.256246,32.306543,10118.186,10050.298,read,0,-1,TimeoutError: 
+22.165631,22.251415,32.313123,10147.492,10061.708,update,0,-1,TimeoutError: 
+22.155242,22.248140,32.321896,10166.654,10073.757,read,0,-1,TimeoutError: 
+22.207743,22.260159,32.333159,10125.416,10073.000,read,0,-1,TimeoutError: 
+22.222747,22.264057,32.333422,10110.675,10069.365,read,0,-1,TimeoutError: 
+22.254717,22.405229,32.465913,10211.196,10060.684,update,0,-1,TimeoutError: 
+22.310445,22.412332,32.466262,10155.817,10053.930,read,0,-1,TimeoutError: 
+22.330478,22.525265,32.561024,10230.546,10035.759,update,0,-1,TimeoutError: 
+22.346409,22.528909,32.565211,10218.801,10036.302,update,0,-1,TimeoutError: 
+22.347518,22.532247,32.572003,10224.485,10039.756,read,0,-1,TimeoutError: 
+22.361725,22.535713,32.572695,10210.970,10036.983,update,0,-1,TimeoutError: 
+22.365576,22.539620,32.573057,10207.480,10033.436,read,0,-1,TimeoutError: 
+22.370418,22.542981,32.573410,10202.992,10030.429,update,0,-1,TimeoutError: 
+22.381823,22.546384,32.584687,10202.864,10038.303,read,0,-1,TimeoutError: 
+22.397615,22.549741,32.586111,10188.497,10036.370,read,0,-1,TimeoutError: 
+22.403379,22.555429,32.590906,10187.527,10035.477,update,0,-1,TimeoutError: 
+22.409699,22.563731,32.594707,10185.008,10030.976,read,0,-1,TimeoutError: 
+22.424806,22.570418,32.596663,10171.858,10026.245,update,0,-1,TimeoutError: 
+22.437626,22.575804,32.596982,10159.357,10021.179,update,0,-1,TimeoutError: 
+22.447952,22.581137,32.599146,10151.194,10018.009,update,0,-1,TimeoutError: 
+22.450143,22.586336,32.599497,10149.354,10013.160,read,0,-1,TimeoutError: 
+22.459494,22.591347,32.603565,10144.071,10012.218,update,0,-1,TimeoutError: 
+22.480745,22.595713,32.607137,10126.392,10011.424,update,0,-1,TimeoutError: 
+22.496459,22.599567,32.608774,10112.315,10009.207,read,0,-1,TimeoutError: 
+22.549332,22.729153,32.735055,10185.723,10005.902,update,0,-1,TimeoutError: 
+22.575018,22.732583,32.736102,10161.084,10003.520,read,0,-1,TimeoutError: 
+22.598096,22.736288,32.741842,10143.746,10005.554,read,0,-1,TimeoutError: 
+22.598714,22.739892,32.742404,10143.690,10002.511,update,0,-1,TimeoutError: 
+22.606081,22.743290,32.744805,10138.724,10001.515,read,0,-1,TimeoutError: 
+22.629021,22.746833,32.749141,10120.120,10002.307,update,0,-1,TimeoutError: 
+22.632408,22.750248,32.753219,10120.811,10002.970,read,0,-1,TimeoutError: 
+22.681354,22.755387,32.757837,10076.484,10002.450,read,0,-1,TimeoutError: 
+22.684415,22.901078,32.904065,10219.651,10002.987,read,0,-1,TimeoutError: 
+22.726674,22.905626,32.907633,10180.959,10002.007,update,0,-1,TimeoutError: 
+22.731548,22.910511,32.912200,10180.652,10001.689,update,0,-1,TimeoutError: 
+22.768399,22.914529,32.916486,10148.086,10001.957,update,0,-1,TimeoutError: 
+22.806107,22.917981,32.919762,10113.655,10001.781,read,0,-1,TimeoutError: 
+22.814280,22.921586,32.923090,10108.809,10001.504,read,0,-1,TimeoutError: 
+22.858172,22.924920,32.926835,10068.664,10001.915,update,0,-1,TimeoutError: 
+22.861653,22.928524,32.929476,10067.823,10000.953,read,0,-1,TimeoutError: 
+22.909094,23.029489,33.030493,10121.399,10001.004,update,0,-1,TimeoutError: 
+22.920680,23.032755,33.033891,10113.211,10001.136,read,0,-1,TimeoutError: 
+22.923188,23.036565,33.038575,10115.387,10002.010,update,0,-1,TimeoutError: 
+22.941564,23.040355,33.041780,10100.216,10001.425,update,0,-1,TimeoutError: 
+22.947852,23.043521,33.044993,10097.141,10001.473,read,0,-1,TimeoutError: 
+22.969837,23.047466,33.048327,10078.490,10000.861,update,0,-1,TimeoutError: 
+23.001965,23.240347,33.241963,10239.998,10001.616,read,0,-1,TimeoutError: 
+23.020475,23.244629,33.246138,10225.662,10001.509,update,0,-1,TimeoutError: 
+23.020640,23.248606,33.250085,10229.445,10001.478,read,0,-1,TimeoutError: 
+23.081511,23.256202,33.258853,10177.342,10002.652,update,0,-1,TimeoutError: 
+23.131946,23.263465,33.265844,10133.898,10002.379,update,0,-1,TimeoutError: 
+23.152543,23.275559,33.277466,10124.923,10001.908,read,0,-1,TimeoutError: 
+23.162088,23.281430,33.283004,10120.916,10001.574,update,0,-1,TimeoutError: 
+23.178594,23.288129,33.290584,10111.989,10002.455,update,0,-1,TimeoutError: 
+23.221474,23.451632,33.455584,10234.110,10003.952,update,0,-1,TimeoutError: 
+23.233780,23.457054,33.459646,10225.866,10002.592,update,0,-1,TimeoutError: 
+23.263992,23.461689,33.464663,10200.671,10002.975,read,0,-1,TimeoutError: 
+23.282246,23.466476,33.468766,10186.520,10002.290,update,0,-1,TimeoutError: 
+23.293219,23.474393,33.475330,10182.111,10000.937,read,0,-1,TimeoutError: 
+23.347438,23.482573,33.485168,10137.730,10002.595,update,0,-1,TimeoutError: 
+23.357938,23.488407,33.491767,10133.830,10003.360,read,0,-1,TimeoutError: 
+23.376555,23.493302,33.494400,10117.845,10001.098,read,0,-1,TimeoutError: 
+23.377649,23.498368,33.499200,10121.550,10000.832,read,0,-1,TimeoutError: 
+23.390376,23.503479,33.505620,10115.244,10002.140,update,0,-1,TimeoutError: 
+23.391139,23.509581,33.511297,10120.158,10001.716,update,0,-1,TimeoutError: 
+23.415495,23.667590,33.669924,10254.428,10002.334,read,0,-1,TimeoutError: 
+23.415507,23.673634,33.676406,10260.898,10002.771,read,0,-1,TimeoutError: 
+23.416367,23.678952,33.681024,10264.658,10002.072,read,0,-1,TimeoutError: 
+23.418723,23.683888,33.685395,10266.672,10001.506,read,0,-1,TimeoutError: 
+23.421729,23.689930,33.691719,10269.989,10001.789,update,0,-1,TimeoutError: 
+23.435918,23.695555,33.696669,10260.751,10001.114,read,0,-1,TimeoutError: 
+23.444728,23.700887,33.702464,10257.736,10001.577,update,0,-1,TimeoutError: 
+23.451047,23.707232,33.708705,10257.658,10001.474,read,0,-1,TimeoutError: 
+23.533285,23.713282,33.717055,10183.769,10003.772,update,0,-1,TimeoutError: 
+23.581223,23.719577,33.720977,10139.754,10001.400,update,0,-1,TimeoutError: 
+23.602500,23.727652,33.729090,10126.591,10001.439,update,0,-1,TimeoutError: 
+23.634898,23.920593,33.922517,10287.619,10001.924,read,0,-1,TimeoutError: 
+23.669162,23.925024,33.926519,10257.358,10001.495,update,0,-1,TimeoutError: 
+23.674787,23.929021,33.931396,10256.609,10002.375,read,0,-1,TimeoutError: 
+23.707822,23.932742,33.934133,10226.311,10001.391,update,0,-1,TimeoutError: 
+23.713306,23.936903,33.938648,10225.342,10001.745,read,0,-1,TimeoutError: 
+23.729833,23.940873,33.942374,10212.541,10001.501,read,0,-1,TimeoutError: 
+23.738687,23.944761,33.946361,10207.673,10001.600,update,0,-1,TimeoutError: 
+23.742143,23.948471,33.950167,10208.025,10001.696,read,0,-1,TimeoutError: 
+23.772141,23.953656,33.955802,10183.661,10002.147,update,0,-1,TimeoutError: 
+23.821761,23.960479,33.962300,10140.539,10001.821,read,0,-1,TimeoutError: 
+23.829290,23.968544,33.970705,10141.415,10002.162,read,0,-1,TimeoutError: 
+24.062569,24.236994,34.160138,10097.568,9923.143,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000009140'
+For more information check: h"
+23.871656,24.205083,34.206983,10335.327,10001.900,update,0,-1,TimeoutError: 
+23.880157,24.210074,34.213532,10333.375,10003.458,update,0,-1,TimeoutError: 
+23.901590,24.214485,34.216371,10314.781,10001.885,read,0,-1,TimeoutError: 
+24.010994,24.219364,34.221591,10210.598,10002.227,read,0,-1,TimeoutError: 
+24.040568,24.224501,34.226837,10186.269,10002.335,update,0,-1,TimeoutError: 
+24.041713,24.228756,34.230560,10188.846,10001.803,read,0,-1,TimeoutError: 
+24.053128,24.232663,34.234864,10181.736,10002.201,update,0,-1,TimeoutError: 
+24.069530,24.241767,34.243446,10173.916,10001.678,read,0,-1,TimeoutError: 
+24.103401,24.245925,34.247231,10143.830,10001.307,read,0,-1,TimeoutError: 
+24.115034,24.249811,34.251443,10136.408,10001.632,read,0,-1,TimeoutError: 
+24.175007,24.535972,34.461757,10286.750,9925.785,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000003954'
+For more information check: h"
+24.139063,24.523192,34.526837,10387.774,10003.645,update,0,-1,TimeoutError: 
+24.159216,24.528144,34.530213,10370.996,10002.069,read,0,-1,TimeoutError: 
+24.173854,24.532072,34.534976,10361.122,10002.904,read,0,-1,TimeoutError: 
+24.197365,24.539842,34.542187,10344.822,10002.345,read,0,-1,TimeoutError: 
+24.241764,24.543666,34.545901,10304.137,10002.235,update,0,-1,TimeoutError: 
+24.245544,24.547549,34.550460,10304.916,10002.911,update,0,-1,TimeoutError: 
+24.266130,24.552752,34.556547,10290.417,10003.795,read,0,-1,TimeoutError: 
+24.279496,24.559580,34.563794,10284.298,10004.214,update,0,-1,TimeoutError: 
+24.287837,24.565552,34.568854,10281.018,10003.302,read,0,-1,TimeoutError: 
+24.312624,24.572552,34.575305,10262.682,10002.754,read,0,-1,TimeoutError: 
+24.386561,24.580894,34.583076,10196.515,10002.181,update,0,-1,TimeoutError: 
+24.386999,24.586709,34.589420,10202.421,10002.711,read,0,-1,TimeoutError: 
+24.432519,24.786134,34.789539,10357.020,10003.405,read,0,-1,TimeoutError: 
+24.442184,24.790836,34.793476,10351.292,10002.640,update,0,-1,TimeoutError: 
+24.478081,24.794732,34.796653,10318.571,10001.920,read,0,-1,TimeoutError: 
+24.481922,24.798591,34.802036,10320.114,10003.446,read,0,-1,TimeoutError: 
+24.507139,24.802413,34.805030,10297.891,10002.618,read,0,-1,TimeoutError: 
+24.509240,24.806196,34.811567,10302.327,10005.371,update,0,-1,TimeoutError: 
+24.517417,24.810429,34.813288,10295.871,10002.859,update,0,-1,TimeoutError: 
+24.587488,24.814424,34.818286,10230.798,10003.862,update,0,-1,TimeoutError: 
+24.608866,24.818384,34.820427,10211.561,10002.042,read,0,-1,TimeoutError: 
+24.639564,24.822210,34.826424,10186.860,10004.214,read,0,-1,TimeoutError: 
+24.651936,24.826060,34.828149,10176.213,10002.089,update,0,-1,TimeoutError: 
+24.664678,24.830115,34.831842,10167.164,10001.727,update,0,-1,TimeoutError: 
+24.678248,24.833910,34.835538,10157.290,10001.628,update,0,-1,TimeoutError: 
+24.707918,24.838056,34.841400,10133.482,10003.343,update,0,-1,TimeoutError: 
+24.733610,25.000099,35.006080,10272.469,10005.981,update,0,-1,TimeoutError: 
+24.737918,25.004330,35.011348,10273.430,10007.019,read,0,-1,TimeoutError: 
+24.749536,25.008345,35.013263,10263.727,10004.919,update,0,-1,TimeoutError: 
+24.765155,25.012072,35.014928,10249.773,10002.855,update,0,-1,TimeoutError: 
+24.782101,25.015712,35.018017,10235.916,10002.306,update,0,-1,TimeoutError: 
+24.834384,25.019728,35.022114,10187.730,10002.386,read,0,-1,TimeoutError: 
+24.871004,25.023912,35.026098,10155.094,10002.186,read,0,-1,TimeoutError: 
+24.874252,25.027793,35.029629,10155.377,10001.836,read,0,-1,TimeoutError: 
+24.883688,25.031581,35.035343,10151.655,10003.762,update,0,-1,TimeoutError: 
+24.885995,25.035369,35.037000,10151.005,10001.631,update,0,-1,TimeoutError: 
+24.886527,25.039502,35.040677,10154.150,10001.174,read,0,-1,TimeoutError: 
+24.888077,25.043656,35.044911,10156.834,10001.255,read,0,-1,TimeoutError: 
+24.892119,25.048107,35.050404,10158.286,10002.298,read,0,-1,TimeoutError: 
+24.921174,25.052719,35.056760,10135.586,10004.041,read,0,-1,TimeoutError: 
+24.943179,25.059978,35.061681,10118.502,10001.704,read,0,-1,TimeoutError: 
+24.975156,25.217188,35.220419,10245.263,10003.231,read,0,-1,TimeoutError: 
+24.981964,25.221527,35.224021,10242.057,10002.494,read,0,-1,TimeoutError: 
+24.985345,25.225715,35.228829,10243.485,10003.114,update,0,-1,TimeoutError: 
+25.056927,25.229024,35.230464,10173.537,10001.440,read,0,-1,TimeoutError: 
+25.091904,25.232520,35.234391,10142.487,10001.871,update,0,-1,TimeoutError: 
+25.150571,25.235929,35.237604,10087.033,10001.676,read,0,-1,TimeoutError: 
+25.150951,25.239508,35.241880,10090.930,10002.373,read,0,-1,TimeoutError: 
+25.161052,25.242872,35.244610,10083.557,10001.738,update,0,-1,TimeoutError: 
+25.181144,25.527103,35.531547,10350.404,10004.444,update,0,-1,TimeoutError: 
+25.207786,25.537051,35.541437,10333.651,10004.385,read,0,-1,TimeoutError: 
+25.256542,25.545517,35.552310,10295.768,10006.794,read,0,-1,TimeoutError: 
+25.271975,25.550585,35.563140,10291.165,10012.555,update,0,-1,TimeoutError: 
+25.281887,25.558943,35.567072,10285.186,10008.130,read,0,-1,TimeoutError: 
+25.281993,25.565002,35.574000,10292.007,10008.998,read,0,-1,TimeoutError: 
+25.314572,25.571789,35.579507,10264.935,10007.718,read,0,-1,TimeoutError: 
+25.395096,25.577894,35.585301,10190.205,10007.407,read,0,-1,TimeoutError: 
+25.442652,25.583971,35.590580,10147.928,10006.610,update,0,-1,TimeoutError: 
+25.464362,25.846861,35.856831,10392.468,10009.970,read,0,-1,TimeoutError: 
+25.472748,25.852196,35.886417,10413.669,10034.221,update,0,-1,TimeoutError: 
+25.478214,25.859223,35.894589,10416.375,10035.366,read,0,-1,TimeoutError: 
+25.508049,25.864852,35.899220,10391.171,10034.368,update,0,-1,TimeoutError: 
+25.562849,25.870416,35.903622,10340.773,10033.206,update,0,-1,TimeoutError: 
+25.627390,25.875332,35.907512,10280.122,10032.179,update,0,-1,TimeoutError: 
+25.631252,25.880000,35.912360,10281.107,10032.359,update,0,-1,TimeoutError: 
+25.648859,25.884486,35.915883,10267.024,10031.397,update,0,-1,TimeoutError: 
+25.663254,25.890710,35.937030,10273.777,10046.320,read,0,-1,TimeoutError: 
+25.674406,25.895556,35.940904,10266.499,10045.349,update,0,-1,TimeoutError: 
+25.706042,26.150340,36.159130,10453.088,10008.790,read,0,-1,TimeoutError: 
+25.760952,26.161460,36.167800,10406.848,10006.340,update,0,-1,TimeoutError: 
+25.786744,26.172027,36.179241,10392.497,10007.215,read,0,-1,TimeoutError: 
+25.810844,26.180350,36.186619,10375.775,10006.269,update,0,-1,TimeoutError: 
+25.834308,26.186863,36.196782,10362.474,10009.919,update,0,-1,TimeoutError: 
+25.855508,26.191810,36.201382,10345.874,10009.573,read,0,-1,TimeoutError: 
+25.870898,26.196216,36.206533,10335.634,10010.316,update,0,-1,TimeoutError: 
+25.876596,26.200164,36.210696,10334.099,10010.532,read,0,-1,TimeoutError: 
+25.906831,26.204409,36.214392,10307.561,10009.983,update,0,-1,TimeoutError: 
+25.909367,26.208538,36.226259,10316.891,10017.721,read,0,-1,TimeoutError: 
+25.930018,26.212293,36.230634,10300.616,10018.341,read,0,-1,TimeoutError: 
+25.939805,26.215912,36.234462,10294.657,10018.551,read,0,-1,TimeoutError: 
+25.956223,26.219505,36.237474,10281.251,10017.969,update,0,-1,TimeoutError: 
+25.976736,26.223452,36.244956,10268.220,10021.504,read,0,-1,TimeoutError: 
+25.989773,26.227407,36.249443,10259.670,10022.036,read,0,-1,TimeoutError: 
+26.066193,26.232844,36.256764,10190.571,10023.920,read,0,-1,TimeoutError: 
+26.071661,26.236410,36.263688,10192.027,10027.278,read,0,-1,TimeoutError: 
+26.071905,26.240144,36.271673,10199.767,10031.529,read,0,-1,TimeoutError: 
+26.134042,26.434238,36.444571,10310.528,10010.333,read,0,-1,TimeoutError: 
+26.141522,26.439198,36.448435,10306.913,10009.237,update,0,-1,TimeoutError: 
+26.148038,26.445740,36.452217,10304.178,10006.477,read,0,-1,TimeoutError: 
+26.158780,26.450257,36.459010,10300.229,10008.753,read,0,-1,TimeoutError: 
+26.176856,26.455174,36.469534,10292.678,10014.360,read,0,-1,TimeoutError: 
+26.262395,26.460008,36.477491,10215.096,10017.483,read,0,-1,TimeoutError: 
+26.286982,26.464247,36.488994,10202.012,10024.747,read,0,-1,TimeoutError: 
+26.294646,26.468652,36.492498,10197.852,10023.846,update,0,-1,TimeoutError: 
+26.309947,26.474117,36.496472,10186.525,10022.354,read,0,-1,TimeoutError: 
+26.321856,26.480623,36.498803,10176.948,10018.181,read,0,-1,TimeoutError: 
+26.335782,26.487723,36.501568,10165.786,10013.845,read,0,-1,TimeoutError: 
+26.346595,26.493344,36.510401,10163.806,10017.057,update,0,-1,TimeoutError: 
+26.350264,26.498839,36.512613,10162.349,10013.774,update,0,-1,TimeoutError: 
+26.360330,26.503585,36.515295,10154.964,10011.709,read,0,-1,TimeoutError: 
+26.370187,26.508098,36.516918,10146.732,10008.821,update,0,-1,TimeoutError: 
+26.374667,26.512777,36.519057,10144.390,10006.280,update,0,-1,TimeoutError: 
+26.408624,26.816754,36.825655,10417.031,10008.902,read,0,-1,TimeoutError: 
+26.417549,26.825070,36.830001,10412.452,10004.931,update,0,-1,TimeoutError: 
+26.420835,26.834855,36.844259,10423.424,10009.405,read,0,-1,TimeoutError: 
+26.437569,26.840718,36.862432,10424.863,10021.714,read,0,-1,TimeoutError: 
+26.474836,26.849525,36.877004,10402.168,10027.479,update,0,-1,TimeoutError: 
+26.505169,26.858893,36.883473,10378.304,10024.580,update,0,-1,TimeoutError: 
+26.524629,26.869717,36.894507,10369.878,10024.790,read,0,-1,TimeoutError: 
+26.550892,26.881667,36.899012,10348.119,10017.344,update,0,-1,TimeoutError: 
+26.559085,26.890833,36.903158,10344.072,10012.325,read,0,-1,TimeoutError: 
+26.562165,26.901921,36.907931,10345.766,10006.010,read,0,-1,TimeoutError: 
+26.568053,26.911559,36.919042,10350.989,10007.483,read,0,-1,TimeoutError: 
+26.576648,26.918945,36.923664,10347.016,10004.719,update,0,-1,TimeoutError: 
+26.583194,26.926039,36.934024,10350.829,10007.984,update,0,-1,TimeoutError: 
+26.595808,26.933247,36.937865,10342.057,10004.618,update,0,-1,TimeoutError: 
+26.599035,26.939810,36.943828,10344.792,10004.017,read,0,-1,TimeoutError: 
+26.601827,26.946036,36.949782,10347.955,10003.746,read,0,-1,TimeoutError: 
+26.607653,26.954078,36.958824,10351.171,10004.746,read,0,-1,TimeoutError: 
+26.612029,26.962285,36.966950,10354.921,10004.664,update,0,-1,TimeoutError: 
+26.644388,26.969348,36.974303,10329.915,10004.955,update,0,-1,TimeoutError: 
+26.659813,26.977997,36.982506,10322.693,10004.510,update,0,-1,TimeoutError: 
+26.664236,26.983796,36.988099,10323.863,10004.303,update,0,-1,TimeoutError: 
+26.675451,26.990361,36.993933,10318.482,10003.572,update,0,-1,TimeoutError: 
+26.716552,26.997091,36.999953,10283.401,10002.862,update,0,-1,TimeoutError: 
+26.733789,27.304885,37.318199,10584.410,10013.314,read,0,-1,TimeoutError: 
+26.749934,27.308562,37.324851,10574.918,10016.289,read,0,-1,TimeoutError: 
+26.759863,27.311577,37.329457,10569.594,10017.879,read,0,-1,TimeoutError: 
+26.764222,27.314573,37.334426,10570.204,10019.853,update,0,-1,TimeoutError: 
+26.783860,27.317568,37.339011,10555.151,10021.444,read,0,-1,TimeoutError: 
+26.785466,27.320665,37.346178,10560.712,10025.512,update,0,-1,TimeoutError: 
+26.816319,27.323821,37.350031,10533.711,10026.210,update,0,-1,TimeoutError: 
+26.817504,27.326791,37.356238,10538.734,10029.448,update,0,-1,TimeoutError: 
+26.844940,27.329699,37.362703,10517.763,10033.004,update,0,-1,TimeoutError: 
+26.854586,27.333251,37.367630,10513.044,10034.379,read,0,-1,TimeoutError: 
+26.877526,27.338118,37.374432,10496.907,10036.314,read,0,-1,TimeoutError: 
+26.895407,27.342231,37.392511,10497.105,10050.281,read,0,-1,TimeoutError: 
+26.898173,27.345754,37.395912,10497.739,10050.158,read,0,-1,TimeoutError: 
+26.913639,27.349436,37.399315,10485.676,10049.879,read,0,-1,TimeoutError: 
+26.915180,27.356288,37.404056,10488.877,10047.768,read,0,-1,TimeoutError: 
+26.920701,27.362412,37.408640,10487.939,10046.228,update,0,-1,TimeoutError: 
+26.930315,27.368854,37.411593,10481.278,10042.739,read,0,-1,TimeoutError: 
+26.937044,27.375217,37.415439,10478.396,10040.222,read,0,-1,TimeoutError: 
+26.958723,27.381142,37.418056,10459.333,10036.914,update,0,-1,TimeoutError: 
+27.045327,27.385887,37.420989,10375.662,10035.102,read,0,-1,TimeoutError: 
+27.054155,27.389637,37.426725,10372.571,10037.088,read,0,-1,TimeoutError: 
+27.090632,27.392783,37.428731,10338.099,10035.948,update,0,-1,TimeoutError: 
+27.095732,27.395600,37.430538,10334.805,10034.938,read,0,-1,TimeoutError: 
+27.120444,27.398391,37.432367,10311.924,10033.977,read,0,-1,TimeoutError: 
+27.128989,27.400903,37.434236,10305.247,10033.334,read,0,-1,TimeoutError: 
+27.144319,27.403375,37.436231,10291.912,10032.856,update,0,-1,TimeoutError: 
+27.146174,27.406323,37.439473,10293.299,10033.150,read,0,-1,TimeoutError: 
+27.181304,27.408799,37.441002,10259.697,10032.202,read,0,-1,TimeoutError: 
+27.185989,27.411092,37.442470,10256.480,10031.377,update,0,-1,TimeoutError: 
+27.198441,27.413533,37.444877,10246.436,10031.344,update,0,-1,TimeoutError: 
+27.205300,27.416035,37.446064,10240.765,10030.029,update,0,-1,TimeoutError: 
+27.238536,27.555569,37.561973,10323.438,10006.404,update,0,-1,TimeoutError: 
+27.256495,27.559081,37.565633,10309.139,10006.553,update,0,-1,TimeoutError: 
+27.275594,27.563207,37.569333,10293.739,10006.126,update,0,-1,TimeoutError: 
+27.303704,27.567892,37.573125,10269.421,10005.233,read,0,-1,TimeoutError: 
+27.309588,27.572999,37.576163,10266.574,10003.163,update,0,-1,TimeoutError: 
+27.310789,27.577366,37.580251,10269.462,10002.884,update,0,-1,TimeoutError: 
+27.346059,27.580888,37.584876,10238.818,10003.988,update,0,-1,TimeoutError: 
+27.353643,27.584371,37.589080,10235.437,10004.710,update,0,-1,TimeoutError: 
+27.387098,27.587685,37.591925,10204.827,10004.240,read,0,-1,TimeoutError: 
+27.449862,27.590469,37.594558,10144.696,10004.089,read,0,-1,TimeoutError: 
+27.469704,27.592842,37.596743,10127.040,10003.901,read,0,-1,TimeoutError: 
+27.471884,27.595133,37.598611,10126.727,10003.478,read,0,-1,TimeoutError: 
+27.510365,27.597374,37.600541,10090.176,10003.168,update,0,-1,TimeoutError: 
+27.530437,27.699287,37.702266,10171.830,10002.979,update,0,-1,TimeoutError: 
+27.536081,27.701742,37.704852,10168.771,10003.110,update,0,-1,TimeoutError: 
+27.540742,27.703940,37.706891,10166.149,10002.951,read,0,-1,TimeoutError: 
+27.554916,27.705988,37.708376,10153.460,10002.388,read,0,-1,TimeoutError: 
+27.557508,27.708158,37.709637,10152.129,10001.480,update,0,-1,TimeoutError: 
+27.604802,27.710142,37.712107,10107.305,10001.964,read,0,-1,TimeoutError: 
+27.629412,27.712197,37.713177,10083.765,10000.980,read,0,-1,TimeoutError: 
+27.663629,27.824091,37.828068,10164.439,10003.977,update,0,-1,TimeoutError: 
+27.673313,27.826761,37.830273,10156.960,10003.512,read,0,-1,TimeoutError: 
+27.724642,27.828707,37.831872,10107.230,10003.165,update,0,-1,TimeoutError: 
+27.727518,27.830823,37.833506,10105.988,10002.683,read,0,-1,TimeoutError: 
+27.752711,27.833196,37.835065,10082.353,10001.869,update,0,-1,TimeoutError: 
+27.758588,27.835252,37.839572,10080.984,10004.320,update,0,-1,TimeoutError: 
+27.758661,27.837417,37.840840,10082.179,10003.423,update,0,-1,TimeoutError: 
+27.761238,27.839510,37.844007,10082.769,10004.497,update,0,-1,TimeoutError: 
+27.765739,27.841767,37.845159,10079.419,10003.391,read,0,-1,TimeoutError: 
+27.794562,27.961619,37.968021,10173.459,10006.402,read,0,-1,TimeoutError: 
+27.804060,27.965819,37.971266,10167.206,10005.447,read,0,-1,TimeoutError: 
+27.817217,27.970216,37.973871,10156.654,10003.655,read,0,-1,TimeoutError: 
+27.836234,27.974049,37.978154,10141.920,10004.104,read,0,-1,TimeoutError: 
+27.842464,27.977630,37.982820,10140.356,10005.190,update,0,-1,TimeoutError: 
+27.862810,27.981077,37.984942,10122.132,10003.865,read,0,-1,TimeoutError: 
+27.885079,27.984135,37.989150,10104.071,10005.015,read,0,-1,TimeoutError: 
+27.935939,28.106353,37.996203,10060.264,9889.850,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000002464'
+For more information check: h"
+29.067076,29.187675,37.997824,8930.748,8810.149,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000002601'
+For more information check: https://devel"
+28.329904,28.472534,37.998223,9668.319,9525.689,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000002483'
+For more information check: h"
+28.703949,28.846927,37.998642,9294.693,9151.715,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000008153'
+For more information check: https://devel"
+27.949917,28.108826,38.111020,10161.103,10002.194,update,0,-1,TimeoutError: 
+27.988577,28.111123,38.112856,10124.279,10001.733,update,0,-1,TimeoutError: 
+28.057263,28.113112,38.114747,10057.485,10001.636,read,0,-1,TimeoutError: 
+28.086560,28.221640,38.225164,10138.604,10003.524,read,0,-1,TimeoutError: 
+28.097496,28.224211,38.227480,10129.984,10003.269,update,0,-1,TimeoutError: 
+28.103844,28.226446,38.229387,10125.542,10002.941,read,0,-1,TimeoutError: 
+28.105901,28.228609,38.231186,10125.285,10002.578,update,0,-1,TimeoutError: 
+28.141462,28.230731,38.232884,10091.423,10002.154,read,0,-1,TimeoutError: 
+28.144238,28.232807,38.234366,10090.128,10001.559,read,0,-1,TimeoutError: 
+28.160635,28.234856,38.237268,10076.633,10002.412,read,0,-1,TimeoutError: 
+28.172735,28.237328,38.240273,10067.537,10002.945,update,0,-1,TimeoutError: 
+28.173653,28.239562,38.241610,10067.957,10002.047,read,0,-1,TimeoutError: 
+28.178478,28.241762,38.242826,10064.349,10001.064,update,0,-1,TimeoutError: 
+28.213098,28.354345,38.358460,10145.362,10004.114,read,0,-1,TimeoutError: 
+28.228570,28.357652,38.360914,10132.344,10003.262,read,0,-1,TimeoutError: 
+28.280215,28.360663,38.363081,10082.866,10002.417,update,0,-1,TimeoutError: 
+28.327929,28.468748,38.472886,10144.957,10004.138,read,0,-1,TimeoutError: 
+28.352575,28.476222,38.482748,10130.173,10006.525,read,0,-1,TimeoutError: 
+28.353447,28.479523,38.484112,10130.665,10004.589,update,0,-1,TimeoutError: 
+28.364434,28.482250,38.486517,10122.083,10004.267,read,0,-1,TimeoutError: 
+28.376093,28.484573,38.488391,10112.298,10003.818,read,0,-1,TimeoutError: 
+28.438965,28.579537,38.583094,10144.129,10003.557,read,0,-1,TimeoutError: 
+28.457058,28.582252,38.585241,10128.183,10002.990,update,0,-1,TimeoutError: 
+28.461273,28.585409,38.587550,10126.277,10002.141,read,0,-1,TimeoutError: 
+28.475530,28.589377,38.591787,10116.257,10002.410,update,0,-1,TimeoutError: 
+28.490285,28.592949,38.594382,10104.097,10001.433,read,0,-1,TimeoutError: 
+28.494675,28.595374,38.597001,10102.326,10001.627,update,0,-1,TimeoutError: 
+28.503592,28.597893,38.599481,10095.889,10001.588,update,0,-1,TimeoutError: 
+28.545585,28.716084,38.720205,10174.621,10004.122,update,0,-1,TimeoutError: 
+28.625353,28.720811,38.725519,10100.167,10004.709,update,0,-1,TimeoutError: 
+28.655352,28.724646,38.729313,10073.960,10004.666,update,0,-1,TimeoutError: 
+28.656686,28.728680,38.731127,10074.441,10002.447,update,0,-1,TimeoutError: 
+28.716216,28.848617,38.854778,10138.562,10006.161,update,0,-1,TimeoutError: 
+28.752138,28.850040,38.858392,10106.255,10008.352,update,0,-1,TimeoutError: 
+28.756028,28.851949,38.862804,10106.776,10010.856,read,0,-1,TimeoutError: 
+28.759224,28.854599,38.865082,10105.857,10010.483,read,0,-1,TimeoutError: 
+28.806655,28.857224,38.868114,10061.459,10010.890,read,0,-1,TimeoutError: 
+28.813379,28.859296,38.872855,10059.476,10013.559,update,0,-1,TimeoutError: 
+28.814259,28.861308,38.875256,10060.997,10013.948,read,0,-1,TimeoutError: 
+28.828164,28.975901,38.981379,10153.214,10005.478,read,0,-1,TimeoutError: 
+28.921438,28.977514,38.984183,10062.745,10006.669,read,0,-1,TimeoutError: 
+28.957535,29.083509,39.090643,10133.108,10007.134,update,0,-1,TimeoutError: 
+28.967628,29.085550,39.095372,10127.744,10009.822,update,0,-1,TimeoutError: 
+29.098935,29.191599,39.195531,10096.597,10003.932,read,0,-1,TimeoutError: 
+29.135846,29.195950,39.198765,10062.918,10002.814,update,0,-1,TimeoutError: 
+29.156621,29.353807,39.358841,10202.220,10005.035,read,0,-1,TimeoutError: 
+29.166652,29.358263,39.363781,10197.129,10005.517,read,0,-1,TimeoutError: 
+29.213879,29.362538,39.368111,10154.232,10005.574,update,0,-1,TimeoutError: 
+29.226600,29.366590,39.373184,10146.584,10006.594,update,0,-1,TimeoutError: 
+29.281158,29.371352,39.377305,10096.147,10005.952,read,0,-1,TimeoutError: 
+29.297226,29.375396,39.387325,10090.099,10011.928,update,0,-1,TimeoutError: 
+29.345353,29.495279,39.499342,10153.989,10004.063,update,0,-1,TimeoutError: 
+29.358322,29.497403,39.502960,10144.637,10005.557,update,0,-1,TimeoutError: 
+29.369454,29.499298,39.505433,10135.979,10006.134,update,0,-1,TimeoutError: 
+29.387221,29.501176,39.508973,10121.751,10007.796,update,0,-1,TimeoutError: 
+29.394856,29.503608,39.510958,10116.103,10007.351,update,0,-1,TimeoutError: 
+29.398092,29.505679,39.513418,10115.326,10007.739,read,0,-1,TimeoutError: 
+29.415891,29.507193,39.515736,10099.845,10008.544,update,0,-1,TimeoutError: 
+29.453963,29.608490,39.613360,10159.398,10004.870,read,0,-1,TimeoutError: 
+29.460471,29.609862,39.615829,10155.358,10005.967,read,0,-1,TimeoutError: 
+29.500524,29.611107,39.619292,10118.769,10008.186,update,0,-1,TimeoutError: 
+29.531465,29.612621,39.621233,10089.768,10008.612,read,0,-1,TimeoutError: 
+29.561358,29.613898,39.623057,10061.699,10009.159,read,0,-1,TimeoutError: 
+29.572086,29.616249,39.625847,10053.761,10009.599,update,0,-1,TimeoutError: 
+29.705882,29.813312,39.818804,10112.922,10005.492,read,0,-1,TimeoutError: 
+29.737179,29.815485,39.822670,10085.490,10007.184,read,0,-1,TimeoutError: 
+29.754323,29.817183,39.825217,10070.894,10008.034,update,0,-1,TimeoutError: 
+29.756733,29.819078,39.828265,10071.532,10009.187,read,0,-1,TimeoutError: 
+29.773790,29.821779,39.831284,10057.493,10009.505,update,0,-1,TimeoutError: 
+29.774080,29.824065,39.833321,10059.241,10009.256,update,0,-1,TimeoutError: 
+29.820579,29.970898,39.979320,10158.742,10008.422,read,0,-1,TimeoutError: 
+29.828789,29.972662,39.982115,10153.326,10009.453,read,0,-1,TimeoutError: 
+29.837977,29.974240,39.984809,10146.832,10010.569,read,0,-1,TimeoutError: 
+29.853987,29.976767,39.995580,10141.593,10018.813,read,0,-1,TimeoutError: 
+29.874279,29.978951,39.998047,10123.768,10019.096,update,0,-1,TimeoutError: 
+29.891760,29.981226,40.000622,10108.863,10019.396,update,0,-1,TimeoutError: 
+29.905028,29.985045,40.003610,10098.582,10018.565,read,0,-1,TimeoutError: 
+29.925150,30.116020,40.125532,10200.382,10009.512,update,0,-1,TimeoutError: 
+29.962715,30.118207,40.132676,10169.961,10014.468,update,0,-1,TimeoutError: 
+29.974535,30.120197,40.134528,10159.994,10014.331,update,0,-1,TimeoutError: 
+29.988401,30.121817,40.137933,10149.533,10016.116,update,0,-1,TimeoutError: 
+30.021652,30.123308,40.141100,10119.448,10017.792,read,0,-1,TimeoutError: 
+30.021720,30.124971,40.143751,10122.031,10018.780,update,0,-1,TimeoutError: 
+30.025224,30.126649,40.147967,10122.743,10021.319,update,0,-1,TimeoutError: 
+37.916200,37.917042,40.159313,2243.112,2242.271,read,1,1,
+37.983418,37.985614,40.160595,2177.178,2174.981,read,1,1,
+30.033086,30.128323,40.162732,10129.646,10034.409,update,0,-1,TimeoutError: 
+30.037900,30.130189,40.163373,10125.473,10033.184,update,0,-1,TimeoutError: 
+30.083170,30.131732,40.164190,10081.021,10032.459,update,0,-1,TimeoutError: 
+30.366973,30.454136,40.192326,9825.353,9738.190,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000001691'
+For more information check: https://devel"
+30.561635,30.647118,40.192788,9631.152,9545.670,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000002458'
+For more information check: https://devel"
+30.096292,30.285518,40.258451,10162.159,9972.933,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000005316'
+For more information check: https://devel"
+30.332690,30.384264,40.260989,9928.299,9876.725,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000006538'
+For more information check: https://devel"
+30.970289,31.003167,40.278110,9307.821,9274.943,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000004367'
+For more information check: https://devel"
+30.086378,30.281800,40.279415,10193.037,9997.616,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000004561'
+For more information check: https://devel"
+31.553150,31.605250,40.280881,8727.731,8675.631,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000003245'
+For more information check: https://devel"
+30.088661,30.283737,40.285162,10196.501,10001.425,update,0,-1,TimeoutError: 
+30.110504,30.287352,40.289428,10178.924,10002.076,read,0,-1,TimeoutError: 
+30.144965,30.289123,40.289883,10144.918,10000.759,read,0,-1,TimeoutError: 
+39.764316,39.785617,40.372946,608.630,587.329,read,1,1,
+30.253722,30.375651,40.378470,10124.748,10002.819,read,0,-1,TimeoutError: 
+30.291915,30.377499,40.381492,10089.577,10003.993,read,0,-1,TimeoutError: 
+30.310688,30.379199,40.382392,10071.705,10003.193,read,0,-1,TimeoutError: 
+30.311454,30.381246,40.382895,10071.441,10001.649,update,0,-1,TimeoutError: 
+30.312765,30.382828,40.383360,10070.595,10000.532,read,0,-1,TimeoutError: 
+30.373145,30.456676,40.458592,10085.448,10001.916,read,0,-1,TimeoutError: 
+32.057209,32.139309,40.490795,8433.586,8351.486,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000007792'
+For more information check: h"
+31.661009,31.698118,40.492113,8831.103,8793.995,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000005707'
+For more information check: https://devel"
+30.442762,30.539562,40.542718,10099.956,10003.157,read,0,-1,TimeoutError: 
+30.458749,30.544226,40.548789,10090.040,10004.563,read,0,-1,TimeoutError: 
+30.475805,30.545202,40.550147,10074.342,10004.945,update,0,-1,TimeoutError: 
+30.495084,30.546225,40.550760,10055.676,10004.535,read,0,-1,TimeoutError: 
+30.496642,30.547194,40.551498,10054.856,10004.304,read,0,-1,TimeoutError: 
+30.500378,30.548238,40.552070,10051.692,10003.831,read,0,-1,TimeoutError: 
+30.555415,30.645645,40.647958,10092.543,10002.313,update,0,-1,TimeoutError: 
+30.563375,30.648526,40.649902,10086.527,10001.376,update,0,-1,TimeoutError: 
+30.570012,30.649809,40.650727,10080.714,10000.918,read,0,-1,TimeoutError: 
+30.595916,30.651097,40.652685,10056.770,10001.588,update,0,-1,TimeoutError: 
+30.602014,30.652819,40.654849,10052.835,10002.030,update,0,-1,TimeoutError: 
+30.606743,30.655110,40.657668,10050.925,10002.558,update,0,-1,TimeoutError: 
+30.613234,30.657824,40.660594,10047.361,10002.770,update,0,-1,TimeoutError: 
+30.626328,30.723464,40.725479,10099.151,10002.015,read,0,-1,TimeoutError: 
+30.653082,30.724806,40.726304,10073.222,10001.498,update,0,-1,TimeoutError: 
+30.660253,30.725842,40.726924,10066.671,10001.082,read,0,-1,TimeoutError: 
+30.701605,30.726810,40.727554,10025.949,10000.744,read,0,-1,TimeoutError: 
+30.776102,30.836553,40.840174,10064.073,10003.621,update,0,-1,TimeoutError: 
+30.810623,30.838325,40.840935,10030.312,10002.609,read,0,-1,TimeoutError: 
+30.812185,30.839615,40.841487,10029.302,10001.872,update,0,-1,TimeoutError: 
+30.819765,30.840985,40.842035,10022.270,10001.050,read,0,-1,TimeoutError: 
+30.871781,30.938165,40.940687,10068.906,10002.522,read,0,-1,TimeoutError: 
+30.911015,30.939334,40.941300,10030.285,10001.966,update,0,-1,TimeoutError: 
+30.913876,30.940339,40.941832,10027.956,10001.493,update,0,-1,TimeoutError: 
+30.925551,30.999499,41.002496,10076.944,10002.997,update,0,-1,TimeoutError: 
+30.934601,31.000785,41.004208,10069.607,10003.423,read,0,-1,TimeoutError: 
+30.962125,31.001545,41.004818,10042.692,10003.272,update,0,-1,TimeoutError: 
+30.962708,31.002323,41.005223,10042.515,10002.900,update,0,-1,TimeoutError: 
+30.997997,31.053973,41.056498,10058.502,10002.526,read,0,-1,TimeoutError: 
+31.041581,31.111106,41.114389,10072.808,10003.284,read,0,-1,TimeoutError: 
+31.042411,31.112373,41.115020,10072.610,10002.648,read,0,-1,TimeoutError: 
+31.060162,31.113167,41.115783,10055.620,10002.616,read,0,-1,TimeoutError: 
+31.081952,31.113994,41.116298,10034.346,10002.304,update,0,-1,TimeoutError: 
+31.123210,31.203639,41.208382,10085.171,10004.743,read,0,-1,TimeoutError: 
+31.134263,31.204835,41.208856,10074.593,10004.021,update,0,-1,TimeoutError: 
+31.206539,31.286269,41.288755,10082.217,10002.486,update,0,-1,TimeoutError: 
+31.210937,31.287440,41.289331,10078.394,10001.892,update,0,-1,TimeoutError: 
+31.213375,31.288459,41.289918,10076.543,10001.459,update,0,-1,TimeoutError: 
+31.216162,31.289336,41.290440,10074.278,10001.104,read,0,-1,TimeoutError: 
+31.233834,31.290107,41.290940,10057.106,10000.833,update,0,-1,TimeoutError: 
+31.236447,31.290932,41.291447,10055.001,10000.516,update,0,-1,TimeoutError: 
+31.242648,31.291717,41.293532,10050.884,10001.814,update,0,-1,TimeoutError: 
+31.247018,31.292643,41.294190,10047.171,10001.547,update,0,-1,TimeoutError: 
+31.248156,31.293435,41.294740,10046.584,10001.304,read,0,-1,TimeoutError: 
+31.313762,31.377766,41.381607,10067.845,10003.841,update,0,-1,TimeoutError: 
+31.321919,31.379089,41.382194,10060.275,10003.105,update,0,-1,TimeoutError: 
+31.388413,31.435834,41.438545,10050.133,10002.712,read,0,-1,TimeoutError: 
+31.414104,31.436747,41.439762,10025.658,10003.015,read,0,-1,TimeoutError: 
+31.419068,31.437457,41.440896,10021.828,10003.439,update,0,-1,TimeoutError: 
+31.472994,31.521348,41.523328,10050.334,10001.980,update,0,-1,TimeoutError: 
+31.473182,31.522411,41.523985,10050.803,10001.574,update,0,-1,TimeoutError: 
+31.553806,31.606022,41.608841,10055.035,10002.819,update,0,-1,TimeoutError: 
+31.559648,31.606718,41.609284,10049.636,10002.565,update,0,-1,TimeoutError: 
+31.575705,31.607329,41.609834,10034.129,10002.505,read,0,-1,TimeoutError: 
+31.575890,31.607968,41.610355,10034.465,10002.387,update,0,-1,TimeoutError: 
+31.604828,31.638499,41.641397,10036.569,10002.899,read,0,-1,TimeoutError: 
+31.606598,31.639430,41.641995,10035.398,10002.565,update,0,-1,TimeoutError: 
+31.640572,31.696365,41.698053,10057.480,10001.688,update,0,-1,TimeoutError: 
+31.641287,31.697053,41.698669,10057.382,10001.616,update,0,-1,TimeoutError: 
+31.656309,31.697565,41.699242,10042.933,10001.677,update,0,-1,TimeoutError: 
+31.667825,31.698641,41.699795,10031.970,10001.154,read,0,-1,TimeoutError: 
+31.681310,31.699107,41.700448,10019.138,10001.341,update,0,-1,TimeoutError: 
+31.690595,31.723406,41.725462,10034.867,10002.056,read,0,-1,TimeoutError: 
+31.700546,31.724110,41.726105,10025.559,10001.996,read,0,-1,TimeoutError: 
+31.721739,31.747578,41.750544,10028.805,10002.966,update,0,-1,TimeoutError: 
+31.726084,31.748538,41.752132,10026.049,10003.594,update,0,-1,TimeoutError: 
+31.730089,31.749003,41.752909,10022.820,10003.906,read,0,-1,TimeoutError: 
+31.753154,31.797084,41.800709,10047.554,10003.625,update,0,-1,TimeoutError: 
+31.760201,31.797722,41.801187,10040.986,10003.465,update,0,-1,TimeoutError: 
+31.814249,31.836282,41.841327,10027.078,10005.045,read,0,-1,TimeoutError: 
+31.825360,31.836869,41.841741,10016.381,10004.872,read,0,-1,TimeoutError: 
+31.838210,31.871376,41.874038,10035.828,10002.662,read,0,-1,TimeoutError: 
+31.838679,31.872245,41.874939,10036.261,10002.694,read,0,-1,TimeoutError: 
+31.839096,31.872709,41.875358,10036.261,10002.649,read,0,-1,TimeoutError: 
+31.841310,31.873081,41.876092,10034.782,10003.011,update,0,-1,TimeoutError: 
+31.860960,31.892755,41.895407,10034.447,10002.652,read,0,-1,TimeoutError: 
+31.882805,31.893187,41.895826,10013.021,10002.639,update,0,-1,TimeoutError: 
+31.943619,31.994953,41.998354,10054.735,10003.401,read,0,-1,TimeoutError: 
+31.954948,31.995698,41.998738,10043.790,10003.040,update,0,-1,TimeoutError: 
+31.979545,31.996210,41.999151,10019.605,10002.941,update,0,-1,TimeoutError: 
+31.987965,32.045594,42.048923,10060.958,10003.329,update,0,-1,TimeoutError: 
+31.989504,32.046193,42.049326,10059.822,10003.133,read,0,-1,TimeoutError: 
+32.000405,32.046548,42.049839,10049.434,10003.291,read,0,-1,TimeoutError: 
+32.024593,32.046878,42.050369,10025.776,10003.491,update,0,-1,TimeoutError: 
+21.880592,22.008947,42.117055,20236.464,20108.109,read,0,-1,ReadTimeout: 
+32.117933,32.140185,42.143148,10025.215,10002.963,read,0,-1,TimeoutError: 
+21.996934,22.100341,42.213827,20216.893,20113.486,update,0,-1,ReadTimeout: 
+32.153629,32.217296,42.219022,10065.392,10001.726,update,0,-1,TimeoutError: 
+32.170214,32.218236,42.220050,10049.836,10001.814,update,0,-1,TimeoutError: 
+32.186200,32.218774,42.220557,10034.357,10001.783,read,0,-1,TimeoutError: 
+32.200107,32.219230,42.221081,10020.974,10001.851,update,0,-1,TimeoutError: 
+32.213094,32.249603,42.252522,10039.428,10002.919,read,0,-1,TimeoutError: 
+32.235913,32.250339,42.253106,10017.193,10002.767,update,0,-1,TimeoutError: 
+32.253060,32.321907,42.324909,10071.849,10003.003,update,0,-1,TimeoutError: 
+32.291981,32.322838,42.325636,10033.655,10002.798,read,0,-1,TimeoutError: 
+32.303940,32.323324,42.326045,10022.105,10002.721,read,0,-1,TimeoutError: 
+32.316682,32.352227,42.356212,10039.530,10003.985,update,0,-1,TimeoutError: 
+32.352367,32.401865,42.405167,10052.800,10003.302,read,0,-1,TimeoutError: 
+32.374885,32.402771,42.405921,10031.036,10003.150,read,0,-1,TimeoutError: 
+32.389751,32.435926,42.438033,10048.282,10002.106,update,0,-1,TimeoutError: 
+32.406328,32.437529,42.438990,10032.662,10001.461,update,0,-1,TimeoutError: 
+32.439095,32.484715,42.486761,10047.666,10002.046,update,0,-1,TimeoutError: 
+32.457794,32.486135,42.487387,10029.593,10001.252,update,0,-1,TimeoutError: 
+32.463793,32.487241,42.487924,10024.131,10000.682,update,0,-1,TimeoutError: 
+32.471221,32.488444,42.490469,10019.248,10002.025,update,0,-1,TimeoutError: 
+32.489779,32.521632,42.524298,10034.519,10002.666,update,0,-1,TimeoutError: 
+32.490717,32.523550,42.524951,10034.234,10001.401,update,0,-1,TimeoutError: 
+32.502951,32.524719,42.525485,10022.534,10000.766,update,0,-1,TimeoutError: 
+32.547447,32.573610,42.576578,10029.131,10002.968,read,0,-1,TimeoutError: 
+32.552730,32.575411,42.577711,10024.981,10002.300,update,0,-1,TimeoutError: 
+32.564475,32.577685,42.578939,10014.464,10001.254,update,0,-1,TimeoutError: 
+32.588521,32.599567,42.601734,10013.213,10002.168,read,0,-1,TimeoutError: 
+32.640462,32.642117,42.644360,10003.898,10002.243,update,0,-1,TimeoutError: 
+32.664294,32.665005,42.668159,10003.865,10003.154,update,0,-1,TimeoutError: 
+32.683955,32.685338,42.688990,10005.035,10003.652,update,0,-1,TimeoutError: 
+32.693642,32.694913,42.697161,10003.519,10002.248,read,0,-1,TimeoutError: 
+32.705144,32.706441,42.708983,10003.838,10002.542,read,0,-1,TimeoutError: 
+32.725686,32.726558,42.730102,10004.417,10003.544,read,0,-1,TimeoutError: 
+32.734497,32.737000,42.738881,10004.385,10001.881,update,0,-1,TimeoutError: 
+32.765227,32.766543,42.769671,10004.444,10003.128,read,0,-1,TimeoutError: 
+32.765391,32.769207,42.770381,10004.989,10001.173,read,0,-1,TimeoutError: 
+32.793231,32.794382,42.796872,10003.641,10002.490,update,0,-1,TimeoutError: 
+32.820331,32.821825,42.823598,10003.267,10001.773,update,0,-1,TimeoutError: 
+32.827649,32.828511,42.830798,10003.149,10002.287,update,0,-1,TimeoutError: 
+32.827950,32.832123,42.833815,10005.865,10001.692,update,0,-1,TimeoutError: 
+32.836205,32.837438,42.839544,10003.339,10002.107,read,0,-1,TimeoutError: 
+32.853997,32.855635,42.858178,10004.181,10002.543,read,0,-1,TimeoutError: 
+32.884922,32.885842,42.888107,10003.185,10002.265,update,0,-1,TimeoutError: 
+32.925782,32.927003,42.928715,10002.933,10001.712,read,0,-1,TimeoutError: 
+32.930461,32.931242,42.932779,10002.318,10001.537,update,0,-1,TimeoutError: 
+32.932166,32.932639,42.933425,10001.259,10000.786,update,0,-1,TimeoutError: 
+32.934720,32.936104,42.937778,10003.058,10001.674,update,0,-1,TimeoutError: 
+33.025005,33.027179,43.029488,10004.482,10002.309,read,0,-1,TimeoutError: 
+33.045743,33.046225,43.049325,10003.582,10003.100,read,0,-1,TimeoutError: 
+33.048490,33.048909,43.050616,10002.126,10001.707,read,0,-1,TimeoutError: 
+33.071963,33.072906,43.075212,10003.249,10002.307,update,0,-1,TimeoutError: 
+33.136082,33.137832,43.140128,10004.047,10002.297,read,0,-1,TimeoutError: 
+33.154783,33.156618,43.159381,10004.598,10002.763,update,0,-1,TimeoutError: 
+33.160077,33.160346,43.161354,10001.277,10001.007,update,0,-1,TimeoutError: 
+33.225686,33.226804,43.230603,10004.916,10003.799,read,0,-1,TimeoutError: 
+33.249803,33.250422,43.253837,10004.034,10003.415,update,0,-1,TimeoutError: 
+33.253845,33.254660,43.257452,10003.607,10002.792,update,0,-1,TimeoutError: 
+33.282912,33.283128,43.287580,10004.668,10004.451,read,0,-1,TimeoutError: 
+33.296943,33.297954,43.300306,10003.363,10002.352,read,0,-1,TimeoutError: 
+33.314011,33.315417,43.318130,10004.119,10002.712,update,0,-1,TimeoutError: 
+33.323118,33.323702,43.325794,10002.675,10002.091,read,0,-1,TimeoutError: 
+33.330074,33.331165,43.334045,10003.971,10002.880,update,0,-1,TimeoutError: 
+33.340984,33.342360,43.346595,10005.612,10004.235,update,0,-1,TimeoutError: 
+33.355932,33.357619,43.359293,10003.361,10001.674,update,0,-1,TimeoutError: 
+33.368309,33.369450,43.372885,10004.576,10003.436,update,0,-1,TimeoutError: 
+33.408547,33.410317,43.413737,10005.190,10003.420,read,0,-1,TimeoutError: 
+33.410089,33.412208,43.414976,10004.887,10002.768,read,0,-1,TimeoutError: 
+33.414527,33.415653,43.417474,10002.947,10001.821,update,0,-1,TimeoutError: 
+33.469980,33.471196,43.473550,10003.570,10002.354,read,0,-1,TimeoutError: 
+33.488703,33.489825,43.492812,10004.110,10002.987,read,0,-1,TimeoutError: 
+33.507925,33.508901,43.512447,10004.522,10003.546,read,0,-1,TimeoutError: 
+33.527796,33.528805,43.532114,10004.317,10003.308,update,0,-1,TimeoutError: 
+33.533377,33.534384,43.537199,10003.822,10002.816,update,0,-1,TimeoutError: 
+33.543417,33.543922,43.545771,10002.354,10001.849,read,0,-1,TimeoutError: 
+33.548135,33.548937,43.551374,10003.239,10002.438,update,0,-1,TimeoutError: 
+33.551433,33.552418,43.554147,10002.714,10001.729,read,0,-1,TimeoutError: 
+33.642583,33.644396,43.647593,10005.010,10003.198,read,0,-1,TimeoutError: 
+33.669821,33.670075,43.673100,10003.279,10003.025,read,0,-1,TimeoutError: 
+33.712083,33.713261,43.716579,10004.496,10003.318,read,0,-1,TimeoutError: 
+33.712112,33.715135,43.717446,10005.334,10002.311,update,0,-1,TimeoutError: 
+33.736492,33.737440,43.738940,10002.448,10001.499,read,0,-1,TimeoutError: 
+33.743834,33.744727,43.747280,10003.446,10002.553,update,0,-1,TimeoutError: 
+33.757613,33.758682,43.760785,10003.172,10002.104,update,0,-1,TimeoutError: 
+33.780107,33.781134,43.784967,10004.860,10003.833,update,0,-1,TimeoutError: 
+33.780741,33.782861,43.786128,10005.387,10003.267,update,0,-1,TimeoutError: 
+33.790006,33.790828,43.792617,10002.611,10001.790,update,0,-1,TimeoutError: 
+33.806150,33.807059,43.809025,10002.875,10001.966,read,0,-1,TimeoutError: 
+33.847639,33.848899,43.851366,10003.726,10002.467,read,0,-1,TimeoutError: 
+33.862038,33.862812,43.866131,10004.093,10003.319,read,0,-1,TimeoutError: 
+33.869680,33.870744,43.872865,10003.185,10002.121,read,0,-1,TimeoutError: 
+33.888195,33.889204,43.891417,10003.223,10002.214,update,0,-1,TimeoutError: 
+33.905718,33.907024,43.909082,10003.364,10002.057,read,0,-1,TimeoutError: 
+33.912632,33.913432,43.915642,10003.010,10002.211,read,0,-1,TimeoutError: 
+33.928516,33.928744,43.931922,10003.406,10003.177,read,0,-1,TimeoutError: 
+33.934978,33.935356,43.939040,10004.062,10003.685,read,0,-1,TimeoutError: 
+33.935205,33.936831,43.940362,10005.157,10003.531,read,0,-1,TimeoutError: 
+33.942648,33.943772,43.946428,10003.781,10002.656,update,0,-1,TimeoutError: 
+33.944456,33.945313,43.947754,10003.299,10002.441,update,0,-1,TimeoutError: 
+33.957997,33.959164,43.962296,10004.299,10003.132,read,0,-1,TimeoutError: 
+33.971906,33.973343,43.976509,10004.603,10003.165,update,0,-1,TimeoutError: 
+34.012744,34.013609,44.017455,10004.711,10003.846,read,0,-1,TimeoutError: 
+34.040304,34.041567,44.044172,10003.868,10002.605,read,0,-1,TimeoutError: 
+34.067980,34.068879,44.071345,10003.365,10002.466,update,0,-1,TimeoutError: 
+34.159384,34.160379,44.163164,10003.779,10002.785,read,0,-1,TimeoutError: 
+34.165533,34.165685,44.168377,10002.843,10002.691,read,0,-1,TimeoutError: 
+34.174861,34.176202,44.177866,10003.005,10001.663,read,0,-1,TimeoutError: 
+34.180103,34.181550,44.184281,10004.178,10002.731,update,0,-1,TimeoutError: 
+34.182265,34.184172,44.185181,10002.916,10001.009,update,0,-1,TimeoutError: 
+34.196747,34.197411,44.201794,10005.047,10004.383,update,0,-1,TimeoutError: 
+34.211068,34.211621,44.214258,10003.190,10002.637,update,0,-1,TimeoutError: 
+34.213847,34.215120,44.216647,10002.800,10001.527,read,0,-1,TimeoutError: 
+34.265007,34.265873,44.269787,10004.780,10003.914,read,0,-1,TimeoutError: 
+34.341804,34.343494,44.345936,10004.131,10002.442,update,0,-1,TimeoutError: 
+34.343220,34.345357,44.346686,10003.466,10001.329,read,0,-1,TimeoutError: 
+34.343283,34.345938,44.347046,10003.763,10001.107,update,0,-1,TimeoutError: 
+34.344559,34.347648,44.349054,10004.495,10001.407,update,0,-1,TimeoutError: 
+34.370874,34.371536,44.373480,10002.606,10001.944,read,0,-1,TimeoutError: 
+34.409156,34.409803,44.412846,10003.691,10003.043,read,0,-1,TimeoutError: 
+34.410525,34.413395,44.414829,10004.305,10001.434,read,0,-1,TimeoutError: 
+34.410705,34.414223,44.415431,10004.727,10001.208,read,0,-1,TimeoutError: 
+34.426146,34.426763,44.429939,10003.793,10003.177,read,0,-1,TimeoutError: 
+34.434237,34.435298,44.438637,10004.400,10003.339,update,0,-1,TimeoutError: 
+34.434615,34.438415,44.439774,10005.159,10001.360,read,0,-1,TimeoutError: 
+34.434792,34.440779,44.442025,10007.233,10001.245,update,0,-1,TimeoutError: 
+34.439541,34.443414,44.445326,10005.786,10001.913,update,0,-1,TimeoutError: 
+34.444006,34.444908,44.446082,10002.075,10001.174,read,0,-1,TimeoutError: 
+34.451008,34.452087,44.454215,10003.207,10002.128,read,0,-1,TimeoutError: 
+34.467008,34.468094,44.470982,10003.974,10002.888,read,0,-1,TimeoutError: 
+34.472798,34.473780,44.475227,10002.429,10001.447,update,0,-1,TimeoutError: 
+34.478117,34.479144,44.481144,10003.027,10002.000,update,0,-1,TimeoutError: 
+34.482850,34.484275,44.487681,10004.830,10003.405,update,0,-1,TimeoutError: 
+34.526458,34.527362,44.529872,10003.414,10002.509,read,0,-1,TimeoutError: 
+34.531910,34.532293,44.533805,10001.895,10001.512,update,0,-1,TimeoutError: 
+34.548118,34.548622,44.551356,10003.238,10002.734,read,0,-1,TimeoutError: 
+34.560171,34.561274,44.563522,10003.352,10002.248,update,0,-1,TimeoutError: 
+34.568222,34.569962,44.572277,10004.055,10002.315,update,0,-1,TimeoutError: 
+34.578665,34.579104,44.580708,10002.043,10001.605,read,0,-1,TimeoutError: 
+34.578988,34.581110,44.582513,10003.525,10001.403,read,0,-1,TimeoutError: 
+34.583080,34.583653,44.585634,10002.554,10001.981,update,0,-1,TimeoutError: 
+34.603521,34.604847,44.607034,10003.513,10002.187,update,0,-1,TimeoutError: 
+34.632188,34.633597,44.636579,10004.391,10002.982,update,0,-1,TimeoutError: 
+34.637115,34.638255,44.639740,10002.625,10001.486,read,0,-1,TimeoutError: 
+34.641000,34.641451,44.642544,10001.544,10001.092,read,0,-1,TimeoutError: 
+34.688224,34.688811,44.691164,10002.941,10002.353,update,0,-1,TimeoutError: 
+34.690282,34.691312,44.693241,10002.960,10001.929,update,0,-1,TimeoutError: 
+34.721963,34.722663,44.725716,10003.753,10003.054,read,0,-1,TimeoutError: 
+34.764046,34.765165,44.768079,10004.033,10002.914,update,0,-1,TimeoutError: 
+34.767210,34.768591,44.770649,10003.439,10002.059,update,0,-1,TimeoutError: 
+34.803002,34.805640,44.807114,10004.113,10001.475,read,0,-1,TimeoutError: 
+34.806254,34.807580,44.808887,10002.634,10001.308,update,0,-1,TimeoutError: 
+34.807135,34.809021,44.810564,10003.429,10001.543,read,0,-1,TimeoutError: 
+34.813879,34.815145,44.816377,10002.498,10001.231,update,0,-1,TimeoutError: 
+34.822321,34.823650,44.825780,10003.460,10002.130,update,0,-1,TimeoutError: 
+34.840130,34.842103,44.844183,10004.053,10002.080,update,0,-1,TimeoutError: 
+34.851817,34.853357,44.855511,10003.694,10002.154,read,0,-1,TimeoutError: 
+34.883362,34.885136,44.888152,10004.790,10003.016,update,0,-1,TimeoutError: 
+34.905220,34.907482,44.909518,10004.298,10002.036,update,0,-1,TimeoutError: 
+34.907759,34.911460,44.912940,10005.181,10001.480,read,0,-1,TimeoutError: 
+34.912281,34.912781,44.914078,10001.798,10001.298,read,0,-1,TimeoutError: 
+34.939702,34.942079,44.943551,10003.849,10001.472,update,0,-1,TimeoutError: 
+34.942167,34.946374,44.948045,10005.879,10001.671,read,0,-1,TimeoutError: 
+35.003164,35.007346,45.009503,10006.339,10002.157,update,0,-1,TimeoutError: 
+35.036544,35.037682,45.040358,10003.814,10002.675,update,0,-1,TimeoutError: 
+35.041509,35.042147,45.043795,10002.286,10001.648,read,0,-1,TimeoutError: 
+35.048249,35.050587,45.053126,10004.877,10002.539,read,0,-1,TimeoutError: 
+35.054060,35.057284,45.060027,10005.967,10002.742,update,0,-1,TimeoutError: 
+35.065052,35.066201,45.068875,10003.823,10002.674,update,0,-1,TimeoutError: 
+35.070770,35.072701,45.074452,10003.682,10001.751,update,0,-1,TimeoutError: 
+35.071426,35.074533,45.076483,10005.057,10001.950,update,0,-1,TimeoutError: 
+35.077227,35.078113,45.079518,10002.291,10001.405,read,0,-1,TimeoutError: 
+35.081560,35.082411,45.083463,10001.903,10001.052,read,0,-1,TimeoutError: 
+35.090173,35.090703,45.093212,10003.039,10002.510,update,0,-1,TimeoutError: 
+35.102286,35.104079,45.105707,10003.422,10001.628,read,0,-1,TimeoutError: 
+35.143765,35.144783,45.147019,10003.254,10002.236,read,0,-1,TimeoutError: 
+35.165315,35.166439,45.168984,10003.669,10002.544,update,0,-1,TimeoutError: 
+35.184430,35.185484,45.188851,10004.421,10003.367,read,0,-1,TimeoutError: 
+35.224410,35.225604,45.227683,10003.273,10002.079,update,0,-1,TimeoutError: 
+35.234183,35.234819,45.237617,10003.435,10002.798,update,0,-1,TimeoutError: 
+35.245288,35.246071,45.249585,10004.297,10003.515,read,0,-1,TimeoutError: 
+35.250896,35.252547,45.254486,10003.590,10001.939,read,0,-1,TimeoutError: 
+35.286359,35.286969,45.289418,10003.059,10002.449,update,0,-1,TimeoutError: 
+35.328329,35.329228,45.331702,10003.373,10002.473,read,0,-1,TimeoutError: 
+35.376673,35.377914,45.380696,10004.024,10002.783,read,0,-1,TimeoutError: 
+35.395247,35.396176,45.398961,10003.715,10002.785,update,0,-1,TimeoutError: 
+35.397664,35.399428,45.401036,10003.372,10001.609,update,0,-1,TimeoutError: 
+35.399164,35.401797,45.402982,10003.818,10001.184,read,0,-1,TimeoutError: 
+35.431108,35.433692,45.436511,10005.403,10002.819,update,0,-1,TimeoutError: 
+35.474445,35.476209,45.477894,10003.449,10001.685,read,0,-1,TimeoutError: 
+35.489643,35.490830,45.493238,10003.596,10002.408,read,0,-1,TimeoutError: 
+35.540350,35.542233,45.543438,10003.088,10001.205,update,0,-1,TimeoutError: 
+35.593757,35.594471,45.597669,10003.912,10003.198,read,0,-1,TimeoutError: 
+35.621867,35.622383,45.624098,10002.231,10001.715,read,0,-1,TimeoutError: 
+35.631125,35.632009,45.633995,10002.870,10001.986,update,0,-1,TimeoutError: 
+35.643313,35.644166,45.647015,10003.702,10002.849,read,0,-1,TimeoutError: 
+35.651987,35.653045,45.654802,10002.814,10001.757,read,0,-1,TimeoutError: 
+35.662072,35.663657,45.666425,10004.352,10002.767,update,0,-1,TimeoutError: 
+35.674820,35.675792,45.678198,10003.378,10002.406,read,0,-1,TimeoutError: 
+35.675165,35.680303,45.682559,10007.394,10002.256,update,0,-1,TimeoutError: 
+35.677889,35.685690,45.687740,10009.851,10002.050,read,0,-1,TimeoutError: 
+35.681568,35.691550,45.693607,10012.039,10002.057,read,0,-1,TimeoutError: 
+35.698300,35.698881,45.702005,10003.705,10003.124,update,0,-1,TimeoutError: 
+35.739353,35.740136,45.742609,10003.256,10002.474,update,0,-1,TimeoutError: 
+35.764207,35.766676,45.769828,10005.621,10003.152,update,0,-1,TimeoutError: 
+35.767446,35.776125,45.778905,10011.459,10002.780,read,0,-1,TimeoutError: 
+35.779684,35.782360,45.784656,10004.972,10002.295,read,0,-1,TimeoutError: 
+35.799424,35.800120,45.802211,10002.787,10002.091,update,0,-1,TimeoutError: 
+35.802329,35.806001,45.807820,10005.491,10001.819,read,0,-1,TimeoutError: 
+35.803990,35.810487,45.812518,10008.528,10002.031,update,0,-1,TimeoutError: 
+35.822927,35.823484,45.825039,10002.112,10001.555,read,0,-1,TimeoutError: 
+35.828295,35.831102,45.834724,10006.428,10003.621,read,0,-1,TimeoutError: 
+35.849011,35.858116,45.861507,10012.496,10003.391,read,0,-1,TimeoutError: 
+35.852775,35.867074,45.870356,10017.581,10003.282,update,0,-1,TimeoutError: 
+35.891521,35.917899,45.920689,10029.168,10002.791,update,0,-1,TimeoutError: 
+35.898935,35.923640,45.925000,10026.065,10001.360,update,0,-1,TimeoutError: 
+35.910120,35.928151,45.930663,10020.544,10002.512,read,0,-1,TimeoutError: 
+35.926088,35.941672,45.943280,10017.191,10001.607,update,0,-1,TimeoutError: 
+35.969580,35.970230,45.972798,10003.218,10002.568,read,0,-1,TimeoutError: 
+36.019209,36.020102,46.022456,10003.247,10002.354,read,0,-1,TimeoutError: 
+36.056469,36.057095,46.059275,10002.806,10002.180,read,0,-1,TimeoutError: 
+36.079542,36.080345,46.084266,10004.724,10003.921,update,0,-1,TimeoutError: 
+36.080976,36.090061,46.092540,10011.564,10002.480,update,0,-1,TimeoutError: 
+36.085111,36.096080,46.098436,10013.324,10002.355,read,0,-1,TimeoutError: 
+36.100409,36.101188,46.103443,10003.034,10002.255,read,0,-1,TimeoutError: 
+36.184574,36.187371,46.189329,10004.755,10001.958,read,0,-1,TimeoutError: 
+36.210477,36.215125,46.219015,10008.538,10003.890,update,0,-1,TimeoutError: 
+36.214732,36.218945,46.220181,10005.449,10001.237,update,0,-1,TimeoutError: 
+36.223533,36.237584,46.241127,10017.594,10003.543,update,0,-1,TimeoutError: 
+36.289183,36.289834,46.291667,10002.484,10001.833,read,0,-1,TimeoutError: 
+36.303358,36.304322,46.307148,10003.789,10002.826,read,0,-1,TimeoutError: 
+36.344212,36.346409,46.350078,10005.867,10003.670,read,0,-1,TimeoutError: 
+36.383249,36.384700,46.388489,10005.240,10003.790,update,0,-1,TimeoutError: 
+36.413693,36.414940,46.418105,10004.411,10003.164,read,0,-1,TimeoutError: 
+36.433419,36.435057,46.438038,10004.619,10002.981,update,0,-1,TimeoutError: 
+36.455342,36.460487,46.462676,10007.334,10002.188,update,0,-1,TimeoutError: 
+36.463715,36.477514,46.479501,10015.785,10001.986,update,0,-1,TimeoutError: 
+36.466281,36.481703,46.483680,10017.398,10001.976,update,0,-1,TimeoutError: 
+36.525629,36.526599,46.529368,10003.740,10002.769,read,0,-1,TimeoutError: 
+36.526292,36.529791,46.531303,10005.011,10001.512,read,0,-1,TimeoutError: 
+36.532610,36.534084,46.535279,10002.668,10001.195,update,0,-1,TimeoutError: 
+36.551643,36.552804,46.556955,10005.311,10004.150,update,0,-1,TimeoutError: 
+36.618653,36.620103,46.623039,10004.386,10002.935,read,0,-1,TimeoutError: 
+36.623371,36.624752,46.626476,10003.105,10001.724,update,0,-1,TimeoutError: 
+36.629044,36.630345,46.631651,10002.607,10001.306,update,0,-1,TimeoutError: 
+36.666710,36.668020,46.671914,10005.204,10003.894,update,0,-1,TimeoutError: 
+36.674632,36.676333,46.678247,10003.616,10001.915,update,0,-1,TimeoutError: 
+36.684947,36.685447,46.687802,10002.855,10002.356,update,0,-1,TimeoutError: 
+36.693865,36.695196,46.698283,10004.418,10003.087,update,0,-1,TimeoutError: 
+36.694879,36.698929,46.700742,10005.863,10001.813,read,0,-1,TimeoutError: 
+36.751764,36.753028,46.756559,10004.795,10003.531,update,0,-1,TimeoutError: 
+36.775693,36.777086,46.779784,10004.092,10002.698,read,0,-1,TimeoutError: 
+36.775830,36.781937,46.784364,10008.534,10002.426,read,0,-1,TimeoutError: 
+36.777874,36.786582,46.789028,10011.154,10002.446,read,0,-1,TimeoutError: 
+36.780785,36.791057,46.792338,10011.553,10001.281,read,0,-1,TimeoutError: 
+36.789990,36.795313,46.796884,10006.894,10001.571,read,0,-1,TimeoutError: 
+36.834194,36.834936,46.837126,10002.932,10002.190,update,0,-1,TimeoutError: 
+36.837231,36.844272,46.846478,10009.248,10002.207,update,0,-1,TimeoutError: 
+36.842408,36.849196,46.850633,10008.225,10001.437,read,0,-1,TimeoutError: 
+36.849871,36.863289,46.865913,10016.041,10002.624,read,0,-1,TimeoutError: 
+36.864167,36.884422,46.886877,10022.711,10002.456,update,0,-1,TimeoutError: 
+36.910437,36.911632,46.913572,10003.135,10001.941,read,0,-1,TimeoutError: 
+36.925944,36.926866,46.928913,10002.968,10002.047,update,0,-1,TimeoutError: 
+36.972720,36.974990,46.977487,10004.767,10002.496,read,0,-1,TimeoutError: 
+36.988334,36.988650,46.990866,10002.531,10002.216,read,0,-1,TimeoutError: 
+36.999651,37.000279,47.002624,10002.973,10002.345,read,0,-1,TimeoutError: 
+37.040682,37.042115,47.043812,10003.130,10001.697,read,0,-1,TimeoutError: 
+37.058072,37.058712,47.060534,10002.461,10001.822,read,0,-1,TimeoutError: 
+37.070958,37.072854,47.075977,10005.019,10003.123,read,0,-1,TimeoutError: 
+37.085326,37.086324,47.088758,10003.432,10002.434,read,0,-1,TimeoutError: 
+37.094115,37.094829,47.096829,10002.713,10002.000,read,0,-1,TimeoutError: 
+37.105467,37.106568,47.107822,10002.355,10001.254,read,0,-1,TimeoutError: 
+37.107008,37.110691,47.112207,10005.199,10001.516,read,0,-1,TimeoutError: 
+37.111602,37.113956,47.115237,10003.635,10001.281,read,0,-1,TimeoutError: 
+37.140395,37.141471,47.144028,10003.633,10002.557,update,0,-1,TimeoutError: 
+37.143263,37.147243,47.149436,10006.173,10002.193,read,0,-1,TimeoutError: 
+37.147933,37.164558,47.166486,10018.553,10001.928,read,0,-1,TimeoutError: 
+37.151506,37.170769,47.172763,10021.257,10001.995,update,0,-1,TimeoutError: 
+37.160522,37.178981,47.181165,10020.643,10002.184,read,0,-1,TimeoutError: 
+37.161533,37.184041,47.184902,10023.369,10000.861,read,0,-1,TimeoutError: 
+37.170469,37.188783,47.189888,10019.419,10001.105,read,0,-1,TimeoutError: 
+37.189285,37.193192,47.194764,10005.478,10001.572,read,0,-1,TimeoutError: 
+37.211948,37.212618,47.215455,10003.507,10002.837,update,0,-1,TimeoutError: 
+37.252348,37.254423,47.255606,10003.257,10001.182,update,0,-1,TimeoutError: 
+37.254170,37.261524,47.262826,10008.656,10001.302,read,0,-1,TimeoutError: 
+37.274817,37.276435,47.278142,10003.325,10001.706,update,0,-1,TimeoutError: 
+37.279188,37.282890,47.284693,10005.505,10001.802,read,0,-1,TimeoutError: 
+37.287572,37.288463,47.289687,10002.115,10001.224,update,0,-1,TimeoutError: 
+37.304691,37.306535,47.308044,10003.353,10001.509,read,0,-1,TimeoutError: 
+37.341089,37.375447,47.377899,10036.810,10002.452,update,0,-1,TimeoutError: 
+37.363299,37.380694,47.382893,10019.595,10002.199,update,0,-1,TimeoutError: 
+37.447695,37.449301,47.453396,10005.701,10004.095,update,0,-1,TimeoutError: 
+37.448058,37.451138,47.454331,10006.273,10003.193,update,0,-1,TimeoutError: 
+37.455656,37.456528,47.458657,10003.001,10002.129,read,0,-1,TimeoutError: 
+37.468749,37.469969,47.472495,10003.747,10002.527,read,0,-1,TimeoutError: 
+37.469486,37.473036,47.474547,10005.061,10001.511,read,0,-1,TimeoutError: 
+37.470562,37.475445,47.476261,10005.699,10000.816,read,0,-1,TimeoutError: 
+37.479701,37.480214,47.481357,10001.656,10001.142,read,0,-1,TimeoutError: 
+37.496082,37.497620,47.500904,10004.822,10003.283,read,0,-1,TimeoutError: 
+37.498994,37.503693,47.505402,10006.407,10001.709,update,0,-1,TimeoutError: 
+37.500409,37.507143,47.508710,10008.300,10001.567,read,0,-1,TimeoutError: 
+37.508089,37.510062,47.511927,10003.838,10001.865,read,0,-1,TimeoutError: 
+37.535147,37.536545,47.539145,10003.998,10002.601,read,0,-1,TimeoutError: 
+37.551896,37.553762,47.556121,10004.226,10002.360,update,0,-1,TimeoutError: 
+37.666815,37.668416,47.671670,10004.855,10003.253,update,0,-1,TimeoutError: 
+37.685398,37.686430,47.688497,10003.100,10002.067,read,0,-1,TimeoutError: 
+37.729615,37.730824,47.734357,10004.742,10003.533,read,0,-1,TimeoutError: 
+37.746629,37.748058,47.750852,10004.222,10002.794,update,0,-1,TimeoutError: 
+37.759743,37.761192,47.764358,10004.615,10003.166,read,0,-1,TimeoutError: 
+37.770485,37.771694,47.774234,10003.749,10002.540,update,0,-1,TimeoutError: 
+37.771968,37.776561,47.778769,10006.800,10002.208,update,0,-1,TimeoutError: 
+37.773268,37.779279,47.780872,10007.604,10001.593,read,0,-1,TimeoutError: 
+37.794751,37.796602,47.799490,10004.739,10002.887,read,0,-1,TimeoutError: 
+37.833956,37.835440,47.838290,10004.335,10002.850,read,0,-1,TimeoutError: 
+37.834340,37.836867,47.838601,10004.260,10001.734,read,0,-1,TimeoutError: 
+37.838315,37.841411,47.842523,10004.208,10001.112,update,0,-1,TimeoutError: 
+37.846249,37.846698,47.848570,10002.321,10001.872,read,0,-1,TimeoutError: 
+37.853759,37.855545,47.857085,10003.326,10001.540,update,0,-1,TimeoutError: 
+37.889698,37.890215,47.893898,10004.199,10003.683,read,0,-1,TimeoutError: 
+37.895516,37.896227,47.897895,10002.379,10001.668,update,0,-1,TimeoutError: 
+37.902828,37.903308,47.905259,10002.431,10001.951,read,0,-1,TimeoutError: 
+37.976440,37.979001,47.981225,10004.784,10002.224,read,0,-1,TimeoutError: 
+38.003504,38.003949,48.007118,10003.614,10003.169,update,0,-1,TimeoutError: 
+38.004500,38.005151,48.008577,10004.077,10003.426,read,0,-1,TimeoutError: 
+38.015793,38.016105,48.017841,10002.048,10001.736,read,0,-1,TimeoutError: 
+38.068198,38.069600,48.072370,10004.172,10002.769,update,0,-1,TimeoutError: 
+38.073101,38.073982,48.075190,10002.090,10001.209,read,0,-1,TimeoutError: 
+38.081916,38.083422,48.086534,10004.618,10003.112,update,0,-1,TimeoutError: 
+38.103151,38.104511,48.108043,10004.893,10003.532,read,0,-1,TimeoutError: 
+38.119824,38.120572,48.123732,10003.908,10003.160,read,0,-1,TimeoutError: 
+38.136986,38.138472,48.140194,10003.209,10001.722,update,0,-1,TimeoutError: 
+38.155744,38.157136,48.159793,10004.049,10002.657,read,0,-1,TimeoutError: 
+38.178246,38.179908,48.181387,10003.140,10001.479,read,0,-1,TimeoutError: 
+38.186038,38.186896,48.189112,10003.074,10002.217,update,0,-1,TimeoutError: 
+38.194707,38.195391,48.197493,10002.787,10002.103,update,0,-1,TimeoutError: 
+38.204823,38.205576,48.209426,10004.602,10003.850,update,0,-1,TimeoutError: 
+38.219600,38.219960,48.221891,10002.291,10001.932,read,0,-1,TimeoutError: 
+38.236341,38.237722,48.240964,10004.623,10003.242,read,0,-1,TimeoutError: 
+38.277765,38.278787,48.280921,10003.156,10002.133,update,0,-1,TimeoutError: 
+38.287843,38.288705,48.290549,10002.706,10001.844,read,0,-1,TimeoutError: 
+38.299772,38.301101,48.303200,10003.428,10002.099,read,0,-1,TimeoutError: 
+38.335526,38.336588,48.339029,10003.503,10002.441,read,0,-1,TimeoutError: 
+38.406387,38.407411,48.409521,10003.133,10002.110,read,0,-1,TimeoutError: 
+38.411952,38.413225,48.414812,10002.860,10001.587,update,0,-1,TimeoutError: 
+38.438171,38.439621,48.441315,10003.144,10001.694,update,0,-1,TimeoutError: 
+38.443861,38.444334,48.446188,10002.327,10001.854,update,0,-1,TimeoutError: 
+38.470889,38.473718,48.476063,10005.174,10002.345,read,0,-1,TimeoutError: 
+38.471675,38.476473,48.478002,10006.327,10001.529,update,0,-1,TimeoutError: 
+38.485825,38.488915,48.490452,10004.628,10001.538,update,0,-1,TimeoutError: 
+38.502703,38.504377,48.505926,10003.223,10001.549,update,0,-1,TimeoutError: 
+38.526755,38.527744,48.529669,10002.914,10001.926,update,0,-1,TimeoutError: 
+38.576541,38.577664,48.579295,10002.754,10001.631,update,0,-1,TimeoutError: 
+38.608245,38.610704,48.613114,10004.869,10002.410,update,0,-1,TimeoutError: 
+38.624805,38.625842,48.628866,10004.060,10003.024,read,0,-1,TimeoutError: 
+38.638556,38.639778,48.641567,10003.012,10001.789,update,0,-1,TimeoutError: 
+38.638822,38.642621,48.643804,10004.982,10001.183,read,0,-1,TimeoutError: 
+38.654911,38.656650,48.659469,10004.558,10002.819,update,0,-1,TimeoutError: 
+38.671432,38.673785,48.676027,10004.595,10002.243,read,0,-1,TimeoutError: 
+38.698536,38.699993,48.702248,10003.712,10002.255,update,0,-1,TimeoutError: 
+38.702152,38.704168,48.705513,10003.362,10001.345,read,0,-1,TimeoutError: 
+38.719919,38.721146,48.722929,10003.010,10001.783,update,0,-1,TimeoutError: 
+38.720978,38.725527,48.727037,10006.059,10001.510,update,0,-1,TimeoutError: 
+38.746863,38.747835,48.750026,10003.163,10002.191,update,0,-1,TimeoutError: 
+38.781338,38.782476,48.785587,10004.248,10003.110,read,0,-1,TimeoutError: 
+38.792856,38.793815,48.798210,10005.355,10004.395,update,0,-1,TimeoutError: 
+38.816130,38.817539,48.820845,10004.714,10003.306,update,0,-1,TimeoutError: 
+38.837843,38.838727,48.841222,10003.379,10002.495,update,0,-1,TimeoutError: 
+38.845080,38.845500,48.847891,10002.812,10002.391,update,0,-1,TimeoutError: 
+38.846927,38.848641,48.851055,10004.128,10002.414,update,0,-1,TimeoutError: 
+38.875303,38.876286,48.879566,10004.262,10003.279,read,0,-1,TimeoutError: 
+38.884138,38.885448,48.887749,10003.611,10002.301,read,0,-1,TimeoutError: 
+38.887658,38.888561,48.889982,10002.324,10001.421,read,0,-1,TimeoutError: 
+38.899333,38.901017,48.904201,10004.868,10003.184,update,0,-1,TimeoutError: 
+38.935121,38.936615,48.939097,10003.976,10002.482,update,0,-1,TimeoutError: 
+38.996785,38.998859,49.001328,10004.543,10002.469,read,0,-1,TimeoutError: 
+39.013541,39.014511,49.017433,10003.892,10002.922,read,0,-1,TimeoutError: 
+39.083577,39.085053,49.088654,10005.078,10003.601,read,0,-1,TimeoutError: 
+39.087386,39.091303,49.093124,10005.739,10001.821,read,0,-1,TimeoutError: 
+39.100869,39.102252,49.105178,10004.309,10002.926,update,0,-1,TimeoutError: 
+39.101037,39.105302,49.107308,10006.270,10002.006,read,0,-1,TimeoutError: 
+39.106368,39.107991,49.109385,10003.017,10001.394,read,0,-1,TimeoutError: 
+39.148208,39.149164,49.151598,10003.390,10002.434,read,0,-1,TimeoutError: 
+39.149433,39.157425,49.158962,10009.529,10001.537,update,0,-1,TimeoutError: 
+39.170684,39.171711,49.174213,10003.529,10002.502,read,0,-1,TimeoutError: 
+39.184932,39.186572,49.190585,10005.653,10004.013,update,0,-1,TimeoutError: 
+39.272696,39.273255,49.275031,10002.335,10001.777,read,0,-1,TimeoutError: 
+39.373714,39.377896,49.380478,10006.764,10002.582,read,0,-1,TimeoutError: 
+39.376347,39.380929,49.382108,10005.761,10001.179,update,0,-1,TimeoutError: 
+39.382425,39.387693,49.389395,10006.970,10001.703,update,0,-1,TimeoutError: 
+39.477588,39.478206,49.480751,10003.162,10002.544,read,0,-1,TimeoutError: 
+39.485596,39.486541,49.488118,10002.522,10001.577,update,0,-1,TimeoutError: 
+39.489577,39.490931,49.492495,10002.918,10001.564,update,0,-1,TimeoutError: 
+39.538134,39.539166,49.540994,10002.861,10001.828,update,0,-1,TimeoutError: 
+39.557340,39.557834,49.559071,10001.732,10001.237,read,0,-1,TimeoutError: 
+39.564707,39.565556,49.567118,10002.410,10001.561,read,0,-1,TimeoutError: 
+39.580874,39.581941,49.583262,10002.388,10001.321,update,0,-1,TimeoutError: 
+39.592025,39.592394,49.594383,10002.358,10001.989,read,0,-1,TimeoutError: 
+39.604274,39.606046,49.607407,10003.132,10001.360,read,0,-1,TimeoutError: 
+39.620339,39.626660,49.628913,10008.573,10002.252,read,0,-1,TimeoutError: 
+39.624060,39.628802,49.629603,10005.543,10000.801,update,0,-1,TimeoutError: 
+39.643182,39.643834,49.646603,10003.421,10002.769,read,0,-1,TimeoutError: 
+39.705279,39.706871,49.708806,10003.527,10001.935,update,0,-1,TimeoutError: 
+39.723211,39.723762,49.724801,10001.590,10001.039,read,0,-1,TimeoutError: 
+39.754187,39.755337,49.756736,10002.549,10001.399,update,0,-1,TimeoutError: 
+39.760828,39.778727,49.779984,10019.156,10001.257,update,0,-1,TimeoutError: 
+39.764186,39.782426,49.784024,10019.838,10001.598,update,0,-1,TimeoutError: 
+39.843920,39.844459,49.846440,10002.520,10001.981,read,0,-1,TimeoutError: 
+39.846456,39.848945,49.850374,10003.918,10001.429,read,0,-1,TimeoutError: 
+39.856017,39.857073,49.859056,10003.039,10001.982,read,0,-1,TimeoutError: 
+39.877285,39.878596,49.880694,10003.409,10002.098,update,0,-1,TimeoutError: 
+39.903815,39.905407,49.908241,10004.426,10002.834,update,0,-1,TimeoutError: 
+39.923069,39.925308,49.926760,10003.691,10001.452,update,0,-1,TimeoutError: 
+39.934650,39.935295,49.938073,10003.424,10002.779,update,0,-1,TimeoutError: 
+39.968391,39.969115,49.971621,10003.230,10002.506,update,0,-1,TimeoutError: 
+39.980072,39.988200,49.990168,10010.096,10001.968,update,0,-1,TimeoutError: 

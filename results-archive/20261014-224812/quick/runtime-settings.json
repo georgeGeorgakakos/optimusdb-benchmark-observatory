@@ -1,0 +1,162 @@
+[
+ {
+  "exp": "E1",
+  "started": "2026-10-14 17:12:53",
+  "settings": {
+   "optimusdb": {
+    "cloud": {
+     "OPTIMUSDB_LOG_LEVEL": "WARN",
+     "GOGC": "200",
+     "GOMAXPROCS": "2",
+     "GOMEMLIMIT": "2457MiB",
+     "OPTIMUSDB_ARGS": "-metrics=false"
+    },
+    "fog": {
+     "OPTIMUSDB_LOG_LEVEL": "WARN",
+     "GOGC": "200",
+     "GOMAXPROCS": "2",
+     "GOMEMLIMIT": "2457MiB",
+     "OPTIMUSDB_ARGS": "-metrics=false"
+    },
+    "edge": {
+     "OPTIMUSDB_LOG_LEVEL": "WARN",
+     "GOGC": "200",
+     "GOMAXPROCS": "1",
+     "GOMEMLIMIT": "1638MiB",
+     "OPTIMUSDB_ARGS": "-metrics=false"
+    }
+   },
+   "corrosion": {
+    "RUST_LOG": "warn"
+   }
+  }
+ },
+ {
+  "exp": "E2",
+  "started": "2026-10-14 17:35:44",
+  "settings": {
+   "optimusdb": {
+    "cloud": {
+     "OPTIMUSDB_LOG_LEVEL": "WARN",
+     "GOGC": "200",
+     "GOMAXPROCS": "2",
+     "GOMEMLIMIT": "2457MiB",
+     "OPTIMUSDB_ARGS": "-metrics=false"
+    },
+    "fog": {
+     "OPTIMUSDB_LOG_LEVEL": "WARN",
+     "GOGC": "200",
+     "GOMAXPROCS": "2",
+     "GOMEMLIMIT": "2457MiB",
+     "OPTIMUSDB_ARGS": "-metrics=false"
+    },
+    "edge": {
+     "OPTIMUSDB_LOG_LEVEL": "WARN",
+     "GOGC": "200",
+     "GOMAXPROCS": "1",
+     "GOMEMLIMIT": "1638MiB",
+     "OPTIMUSDB_ARGS": "-metrics=false"
+    }
+   },
+   "corrosion": {
+    "RUST_LOG": "warn"
+   }
+  }
+ },
+ {
+  "exp": "E3",
+  "started": "2026-10-14 17:51:32",
+  "settings": {
+   "optimusdb": {
+    "cloud": {
+     "OPTIMUSDB_LOG_LEVEL": "WARN",
+     "GOGC": "200",
+     "GOMAXPROCS": "2",
+     "GOMEMLIMIT": "2457MiB",
+     "OPTIMUSDB_ARGS": "-metrics=false"
+    },
+    "fog": {
+     "OPTIMUSDB_LOG_LEVEL": "WARN",
+     "GOGC": "200",
+     "GOMAXPROCS": "2",
+     "GOMEMLIMIT": "2457MiB",
+     "OPTIMUSDB_ARGS": "-metrics=false"
+    },
+    "edge": {
+     "OPTIMUSDB_LOG_LEVEL": "WARN",
+     "GOGC": "200",
+     "GOMAXPROCS": "1",
+     "GOMEMLIMIT": "1638MiB",
+     "OPTIMUSDB_ARGS": "-metrics=false"
+    }
+   },
+   "corrosion": {
+    "RUST_LOG": "warn"
+   }
+  }
+ },
+ {
+  "exp": "E4",
+  "started": "2026-10-14 18:05:22",
+  "settings": {
+   "optimusdb": {
+    "cloud": {
+     "OPTIMUSDB_LOG_LEVEL": "WARN",
+     "GOGC": "200",
+     "GOMAXPROCS": "2",
+     "GOMEMLIMIT": "2457MiB",
+     "OPTIMUSDB_ARGS": "-metrics=false"
+    },
+    "fog": {
+     "OPTIMUSDB_LOG_LEVEL": "WARN",
+     "GOGC": "200",
+     "GOMAXPROCS": "2",
+     "GOMEMLIMIT": "2457MiB",
+     "OPTIMUSDB_ARGS": "-metrics=false"
+    },
+    "edge": {
+     "OPTIMUSDB_LOG_LEVEL": "WARN",
+     "GOGC": "200",
+     "GOMAXPROCS": "1",
+     "GOMEMLIMIT": "1638MiB",
+     "OPTIMUSDB_ARGS": "-metrics=false"
+    }
+   },
+   "corrosion": {
+    "RUST_LOG": "warn"
+   }
+  }
+ },
+ {
+  "exp": "E5",
+  "started": "2026-10-14 18:18:45",
+  "settings": {
+   "optimusdb": {
+    "cloud": {
+     "OPTIMUSDB_LOG_LEVEL": "WARN",
+     "GOGC": "200",
+     "GOMAXPROCS": "2",
+     "GOMEMLIMIT": "2457MiB",
+     "OPTIMUSDB_ARGS": "-metrics=false"
+    },
+    "fog": {
+     "OPTIMUSDB_LOG_LEVEL": "WARN",
+     "GOGC": "200",
+     "GOMAXPROCS": "2",
+     "GOMEMLIMIT": "2457MiB",
+     "OPTIMUSDB_ARGS": "-metrics=false"
+    },
+    "edge": {
+     "OPTIMUSDB_LOG_LEVEL": "WARN",
+     "GOGC": "200",
+     "GOMAXPROCS": "1",
+     "GOMEMLIMIT": "1638MiB",
+     "OPTIMUSDB_ARGS": "-metrics=false"
+    }
+   },
+   "corrosion": {
+    "RUST_LOG": "warn"
+   }
+  }
+ }
+]

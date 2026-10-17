@@ -1,0 +1,1583 @@
+scheduled_s,start_s,end_s,latency_ms,service_ms,kind,ok,rows,error
+10.001439,10.002343,18.205025,8203.587,8202.682,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000008789'
+For more information check: h"
+10.015423,10.016239,18.205748,8190.325,8189.509,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000002971'
+For more information check: https://devel"
+10.024250,10.024889,18.206433,8182.183,8181.544,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000003745'
+For more information check: h"
+10.039282,10.041571,18.208580,8169.298,8167.009,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000008671'
+For more information check: h"
+10.039299,10.045112,18.209529,8170.230,8164.417,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000006025'
+For more information check: h"
+10.050978,10.051182,18.211015,8160.037,8159.834,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000005921'
+For more information check: https://devel"
+11.011022,11.011826,18.394722,7383.699,7382.895,read,1,1,
+10.182419,10.197419,18.400261,8217.843,8202.842,read,1,1,
+10.133955,10.188426,18.407028,8273.073,8218.602,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000008482'
+For more information check: h"
+10.147512,10.190956,18.412124,8264.612,8221.168,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000000616'
+For more information check: h"
+10.177858,10.195965,18.415255,8237.397,8219.290,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000001801'
+For more information check: h"
+10.062919,10.063389,20.065019,10002.100,10001.630,read,0,-1,TimeoutError: 
+10.070190,10.071096,20.073771,10003.581,10002.675,read,0,-1,TimeoutError: 
+10.080386,10.081382,20.083651,10003.265,10002.269,read,0,-1,TimeoutError: 
+10.110951,10.111871,20.114524,10003.573,10002.653,update,0,-1,TimeoutError: 
+10.386480,10.387717,20.178263,9791.783,9790.546,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000002901'
+For more information check: https://devel"
+10.398863,10.400624,20.180727,9781.864,9780.103,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000000486'
+For more information check: h"
+10.434850,10.435434,20.184613,9749.763,9749.178,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000003910'
+For more information check: https://devel"
+10.445367,10.446315,20.185968,9740.601,9739.654,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000003910'
+For more information check: h"
+10.472668,10.473860,20.187669,9715.000,9713.809,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000003910'
+For more information check: h"
+10.560456,10.562533,20.192688,9632.232,9630.155,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000001738'
+For more information check: https://devel"
+10.567743,10.568614,20.198170,9630.428,9629.556,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000008561'
+For more information check: https://devel"
+10.571477,10.572743,20.198786,9627.309,9626.043,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000006538'
+For more information check: h"
+10.590830,10.592096,20.199367,9608.536,9607.271,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000008996'
+For more information check: h"
+10.605971,10.606422,20.200040,9594.068,9593.618,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000008789'
+For more information check: https://devel"
+10.614879,10.616478,20.200804,9585.925,9584.326,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000008412'
+For more information check: h"
+10.614950,10.619200,20.201909,9586.960,9582.709,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000008789'
+For more information check: h"
+10.624808,10.625564,20.202752,9577.944,9577.188,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000006538'
+For more information check: https://devel"
+10.635906,10.637114,20.203594,9567.688,9566.480,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000001993'
+For more information check: h"
+10.646298,10.647069,20.204557,9558.258,9557.488,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000009798'
+For more information check: h"
+10.685799,10.686016,20.205429,9519.629,9519.413,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000006435'
+For more information check: https://devel"
+10.703361,10.703834,20.206365,9503.004,9502.531,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000001100'
+For more information check: https://devel"
+10.729834,10.730518,20.211178,9481.344,9480.660,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000004502'
+For more information check: h"
+10.775472,10.776242,20.212368,9436.897,9436.127,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000002848'
+For more information check: h"
+10.803100,10.803710,20.213692,9410.592,9409.982,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000007843'
+For more information check: https://devel"
+10.816673,10.817255,20.214849,9398.177,9397.594,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000005273'
+For more information check: https://devel"
+10.864516,10.865832,20.216060,9351.544,9350.228,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000001100'
+For more information check: h"
+10.885441,10.886153,20.217309,9331.868,9331.156,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000005750'
+For more information check: h"
+10.905308,10.907047,20.218512,9313.204,9311.465,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000005422'
+For more information check: h"
+10.915759,10.916459,20.219804,9304.044,9303.344,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000001100'
+For more information check: https://devel"
+10.935604,10.937950,20.221118,9285.514,9283.168,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000007050'
+For more information check: https://devel"
+10.955692,10.956348,20.222406,9266.713,9266.058,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000008789'
+For more information check: h"
+11.041531,11.042324,20.223822,9182.291,9181.497,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000003335'
+For more information check: https://devel"
+11.078982,11.081008,20.225292,9146.311,9144.285,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000008200'
+For more information check: https://devel"
+11.108159,11.110383,20.226714,9118.555,9116.330,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000009798'
+For more information check: h"
+10.168375,10.193573,20.228749,10060.374,10035.177,update,0,-1,TimeoutError: 
+10.182496,10.198077,20.230582,10048.086,10032.505,read,0,-1,TimeoutError: 
+10.189000,10.199896,20.232178,10043.178,10032.282,read,0,-1,TimeoutError: 
+10.207235,10.207787,20.233668,10026.433,10025.881,read,0,-1,TimeoutError: 
+10.249919,10.251067,20.254870,10004.951,10003.803,update,0,-1,TimeoutError: 
+10.285290,10.286441,20.290187,10004.897,10003.747,update,0,-1,TimeoutError: 
+10.299596,10.300641,20.304453,10004.857,10003.813,update,0,-1,TimeoutError: 
+11.715426,11.716576,20.415263,8699.837,8698.687,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000005316'
+For more information check: h"
+11.719117,11.720339,20.418259,8699.142,8697.920,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000003910'
+For more information check: https://devel"
+11.740290,11.741559,20.419721,8679.432,8678.162,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000003823'
+For more information check: h"
+11.799034,11.799812,20.421244,8622.210,8621.432,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000000372'
+For more information check: https://devel"
+11.805322,11.806212,20.422747,8617.425,8616.535,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000000783'
+For more information check: h"
+11.824137,11.824567,20.482863,8658.726,8658.296,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000002104'
+For more information check: https://devel"
+18.342608,18.343285,20.549867,2207.260,2206.582,read,1,1,
+10.844063,10.845011,20.846890,10002.827,10001.879,update,0,-1,TimeoutError: 
+11.141942,11.143220,21.145557,10003.614,10002.336,read,0,-1,TimeoutError: 
+11.160543,11.161135,21.165434,10004.890,10004.299,read,0,-1,TimeoutError: 
+11.169142,11.170104,21.172246,10003.104,10002.143,update,0,-1,TimeoutError: 
+11.175288,11.175644,21.176822,10001.534,10001.178,read,0,-1,TimeoutError: 
+11.199910,11.201070,21.202095,10002.185,10001.025,read,0,-1,TimeoutError: 
+11.241330,11.242146,21.243546,10002.216,10001.400,read,0,-1,TimeoutError: 
+11.257046,11.259354,21.261315,10004.269,10001.961,update,0,-1,TimeoutError: 
+11.260345,11.261719,21.262936,10002.591,10001.217,update,0,-1,TimeoutError: 
+11.296137,11.297002,21.297842,10001.705,10000.841,update,0,-1,TimeoutError: 
+11.309391,11.310389,21.312649,10003.258,10002.260,update,0,-1,TimeoutError: 
+11.321980,11.322839,21.325261,10003.281,10002.422,read,0,-1,TimeoutError: 
+11.322909,11.325075,21.326683,10003.774,10001.608,update,0,-1,TimeoutError: 
+11.337187,11.338042,21.339154,10001.967,10001.113,read,0,-1,TimeoutError: 
+11.364498,11.365151,21.367353,10002.855,10002.202,update,0,-1,TimeoutError: 
+11.375482,11.376516,21.378754,10003.272,10002.237,update,0,-1,TimeoutError: 
+11.384257,11.385444,21.387248,10002.991,10001.805,update,0,-1,TimeoutError: 
+11.405649,11.406686,21.408954,10003.305,10002.268,update,0,-1,TimeoutError: 
+11.406048,11.408469,21.409374,10003.327,10000.905,read,0,-1,TimeoutError: 
+11.420199,11.420563,21.422752,10002.552,10002.188,read,0,-1,TimeoutError: 
+11.478622,11.479690,21.482199,10003.577,10002.509,read,0,-1,TimeoutError: 
+11.502074,11.502680,21.505431,10003.357,10002.751,read,0,-1,TimeoutError: 
+11.512355,11.512906,21.514019,10001.664,10001.114,read,0,-1,TimeoutError: 
+11.535708,11.536280,21.537253,10001.545,10000.973,read,0,-1,TimeoutError: 
+11.554285,11.555251,21.556864,10002.578,10001.613,update,0,-1,TimeoutError: 
+11.558972,11.559598,21.560527,10001.555,10000.929,update,0,-1,TimeoutError: 
+11.563628,11.564687,21.566440,10002.811,10001.753,read,0,-1,TimeoutError: 
+11.607064,11.608072,21.609964,10002.901,10001.892,update,0,-1,TimeoutError: 
+11.613333,11.614026,21.616229,10002.897,10002.204,update,0,-1,TimeoutError: 
+11.614889,11.615038,21.616467,10001.578,10001.429,read,0,-1,TimeoutError: 
+11.650408,11.652062,21.653622,10003.213,10001.560,update,0,-1,TimeoutError: 
+11.665221,11.666221,21.667271,10002.050,10001.050,read,0,-1,TimeoutError: 
+11.674405,11.674833,21.676866,10002.460,10002.033,read,0,-1,TimeoutError: 
+11.688734,11.689976,21.693005,10004.271,10003.030,update,0,-1,TimeoutError: 
+11.765286,11.766591,21.768808,10003.523,10002.217,read,0,-1,TimeoutError: 
+11.829419,11.830497,21.832063,10002.644,10001.566,read,0,-1,TimeoutError: 
+11.845886,11.848017,21.849128,10003.242,10001.111,read,0,-1,TimeoutError: 
+11.849670,11.850094,21.850797,10001.128,10000.703,read,0,-1,TimeoutError: 
+11.880861,11.881007,21.885133,10004.272,10004.126,read,0,-1,TimeoutError: 
+11.921166,11.922189,21.923987,10002.821,10001.799,update,0,-1,TimeoutError: 
+11.929165,11.930412,21.932169,10003.004,10001.757,update,0,-1,TimeoutError: 
+11.934194,11.934610,21.935869,10001.674,10001.258,read,0,-1,TimeoutError: 
+12.000562,12.002874,22.004123,10003.561,10001.249,read,0,-1,TimeoutError: 
+12.025092,12.025554,22.027271,10002.179,10001.717,update,0,-1,TimeoutError: 
+12.062224,12.062924,22.064606,10002.383,10001.682,read,0,-1,TimeoutError: 
+12.062844,12.064743,22.066231,10003.387,10001.488,read,0,-1,TimeoutError: 
+12.108775,12.109323,22.111323,10002.549,10002.000,update,0,-1,TimeoutError: 
+12.128256,12.129613,22.131687,10003.431,10002.074,update,0,-1,TimeoutError: 
+12.135867,12.136343,22.137938,10002.070,10001.595,update,0,-1,TimeoutError: 
+12.147172,12.148325,22.150405,10003.233,10002.079,update,0,-1,TimeoutError: 
+12.175847,12.176846,22.178843,10002.996,10001.997,update,0,-1,TimeoutError: 
+12.206628,12.208858,22.215321,10008.693,10006.462,read,0,-1,TimeoutError: 
+12.210840,12.211252,22.216496,10005.656,10005.244,update,0,-1,TimeoutError: 
+12.230504,12.232402,22.234053,10003.550,10001.651,read,0,-1,TimeoutError: 
+12.234125,12.234548,22.236029,10001.903,10001.481,read,0,-1,TimeoutError: 
+12.306401,12.306835,22.309202,10002.801,10002.367,read,0,-1,TimeoutError: 
+12.318125,12.319993,22.320984,10002.859,10000.991,read,0,-1,TimeoutError: 
+12.366995,12.368009,22.370703,10003.708,10002.694,read,0,-1,TimeoutError: 
+12.393053,12.394469,22.397219,10004.167,10002.751,update,0,-1,TimeoutError: 
+12.411694,12.412179,22.413736,10002.042,10001.556,update,0,-1,TimeoutError: 
+12.417770,12.418512,22.419373,10001.603,10000.861,read,0,-1,TimeoutError: 
+12.432726,12.433871,22.434792,10002.067,10000.921,update,0,-1,TimeoutError: 
+12.435710,12.436254,22.437494,10001.784,10001.240,update,0,-1,TimeoutError: 
+12.438682,12.439667,22.440695,10002.013,10001.028,update,0,-1,TimeoutError: 
+12.463840,12.465745,22.466581,10002.741,10000.837,read,0,-1,TimeoutError: 
+12.472800,12.473557,22.476389,10003.589,10002.832,update,0,-1,TimeoutError: 
+12.500636,12.502759,22.486695,9986.058,9983.936,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000003910'
+For more information check: h"
+12.506138,12.506404,22.487069,9980.931,9980.665,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000001251'
+For more information check: https://devel"
+12.531466,12.532834,22.487430,9955.963,9954.596,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000006089'
+For more information check: h"
+12.556817,12.558075,22.487897,9931.080,9929.822,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000001544'
+For more information check: h"
+12.564108,12.564996,22.488332,9924.223,9923.335,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000002901'
+For more information check: h"
+12.566358,12.566764,22.488836,9922.478,9922.072,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000001100'
+For more information check: h"
+12.576475,12.578030,22.489384,9912.909,9911.354,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000002177'
+For more information check: h"
+12.590035,12.591422,22.490493,9900.458,9899.071,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000001885'
+For more information check: h"
+12.592141,12.594507,22.491152,9899.010,9896.645,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000008789'
+For more information check: https://devel"
+13.228552,13.229733,22.492597,9264.044,9262.863,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000001597'
+For more information check: https://devel"
+13.511135,13.513300,22.493361,8982.227,8980.062,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000007945'
+For more information check: https://devel"
+13.621027,13.621786,22.494149,8873.122,8872.363,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000004561'
+For more information check: h"
+14.069864,14.071436,22.540143,8470.279,8468.707,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000001100'
+For more information check: h"
+14.080507,14.081574,22.541815,8461.308,8460.240,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000000353'
+For more information check: h"
+14.127377,14.128481,22.542579,8415.202,8414.098,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000004561'
+For more information check: h"
+14.346502,14.347666,22.571713,8225.211,8224.047,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000005762'
+For more information check: h"
+14.349776,14.350832,22.591179,8241.403,8240.348,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000003910'
+For more information check: h"
+14.399955,14.400558,22.593082,8193.127,8192.524,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000006273'
+For more information check: h"
+14.438516,14.439676,22.594139,8155.623,8154.463,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000003910'
+For more information check: h"
+12.596276,12.596488,22.599053,10002.777,10002.564,read,0,-1,TimeoutError: 
+12.597415,12.597549,22.600903,10003.488,10003.354,read,0,-1,TimeoutError: 
+12.615617,12.616635,22.618517,10002.901,10001.882,update,0,-1,TimeoutError: 
+12.659559,12.660620,22.662669,10003.110,10002.049,read,0,-1,TimeoutError: 
+12.664440,12.666039,22.668769,10004.329,10002.730,read,0,-1,TimeoutError: 
+12.665146,12.667806,22.669594,10004.447,10001.787,read,0,-1,TimeoutError: 
+12.689489,12.690437,22.692362,10002.873,10001.925,update,0,-1,TimeoutError: 
+16.633944,16.634293,22.725174,6091.230,6090.881,read,1,1,
+20.565151,20.566284,22.727322,2162.171,2161.038,read,1,1,
+12.723228,12.724437,22.729132,10005.905,10004.695,read,0,-1,TimeoutError: 
+12.789780,12.790559,22.793502,10003.722,10002.943,update,0,-1,TimeoutError: 
+12.808776,12.809706,22.811527,10002.751,10001.820,update,0,-1,TimeoutError: 
+12.817160,12.817976,22.819151,10001.991,10001.175,update,0,-1,TimeoutError: 
+12.853547,12.855337,22.858005,10004.458,10002.668,read,0,-1,TimeoutError: 
+12.856060,12.856685,22.859196,10003.136,10002.512,read,0,-1,TimeoutError: 
+12.879655,12.880612,22.885661,10006.007,10005.049,update,0,-1,TimeoutError: 
+12.881656,12.884083,22.887238,10005.582,10003.155,update,0,-1,TimeoutError: 
+12.891863,12.893499,22.896859,10004.997,10003.361,update,0,-1,TimeoutError: 
+12.905528,12.906437,22.907942,10002.414,10001.505,update,0,-1,TimeoutError: 
+12.915021,12.915538,22.917165,10002.145,10001.628,update,0,-1,TimeoutError: 
+12.918713,12.920357,22.923362,10004.649,10003.005,read,0,-1,TimeoutError: 
+12.923985,12.924219,22.925510,10001.525,10001.291,read,0,-1,TimeoutError: 
+12.958298,12.959405,22.961627,10003.329,10002.222,update,0,-1,TimeoutError: 
+12.970717,12.972607,22.976113,10005.396,10003.506,read,0,-1,TimeoutError: 
+12.988064,12.989108,22.991695,10003.631,10002.587,read,0,-1,TimeoutError: 
+12.992827,12.994038,22.996383,10003.557,10002.345,read,0,-1,TimeoutError: 
+13.017928,13.018460,23.020713,10002.785,10002.253,update,0,-1,TimeoutError: 
+13.025941,13.027115,23.028801,10002.860,10001.686,read,0,-1,TimeoutError: 
+13.043950,13.044940,23.046561,10002.611,10001.621,read,0,-1,TimeoutError: 
+13.091995,13.092982,23.095883,10003.888,10002.902,update,0,-1,TimeoutError: 
+13.195671,13.197076,23.198597,10002.925,10001.521,read,0,-1,TimeoutError: 
+13.196618,13.199484,23.200647,10004.029,10001.162,read,0,-1,TimeoutError: 
+13.267533,13.268353,23.269294,10001.761,10000.941,update,0,-1,TimeoutError: 
+13.275234,13.276298,23.278363,10003.129,10002.066,update,0,-1,TimeoutError: 
+13.284896,13.285296,23.286101,10001.205,10000.805,read,0,-1,TimeoutError: 
+13.302258,13.303181,23.305341,10003.083,10002.160,read,0,-1,TimeoutError: 
+13.352485,13.353162,23.354999,10002.513,10001.836,update,0,-1,TimeoutError: 
+13.362699,13.363836,23.365618,10002.919,10001.782,read,0,-1,TimeoutError: 
+13.405110,13.405987,23.407474,10002.364,10001.486,read,0,-1,TimeoutError: 
+13.433532,13.434780,23.436245,10002.713,10001.465,read,0,-1,TimeoutError: 
+13.436836,13.437828,23.438724,10001.888,10000.897,update,0,-1,TimeoutError: 
+13.485830,13.486840,23.489267,10003.437,10002.427,read,0,-1,TimeoutError: 
+13.486136,13.488596,23.489795,10003.659,10001.199,update,0,-1,TimeoutError: 
+13.489273,13.489700,23.490193,10000.919,10000.492,read,0,-1,TimeoutError: 
+13.512311,13.514918,23.517235,10004.924,10002.317,read,0,-1,TimeoutError: 
+13.521855,13.522762,23.524829,10002.973,10002.067,update,0,-1,TimeoutError: 
+13.524640,13.525169,23.526533,10001.894,10001.365,update,0,-1,TimeoutError: 
+13.537071,13.537534,23.539359,10002.288,10001.826,read,0,-1,TimeoutError: 
+13.573720,13.574775,23.576784,10003.064,10002.009,update,0,-1,TimeoutError: 
+13.621750,13.624137,23.625640,10003.891,10001.503,read,0,-1,TimeoutError: 
+13.623005,13.625284,23.626148,10003.143,10000.863,read,0,-1,TimeoutError: 
+13.659735,13.660197,23.662595,10002.860,10002.397,read,0,-1,TimeoutError: 
+13.660610,13.662750,23.665720,10005.110,10002.970,read,0,-1,TimeoutError: 
+13.667003,13.667990,23.670174,10003.171,10002.184,read,0,-1,TimeoutError: 
+13.669501,13.670164,23.672858,10003.356,10002.693,update,0,-1,TimeoutError: 
+13.671410,13.672859,23.673479,10002.069,10000.620,update,0,-1,TimeoutError: 
+13.671971,13.674857,23.678708,10006.738,10003.852,update,0,-1,TimeoutError: 
+13.692266,13.693625,23.696025,10003.759,10002.401,update,0,-1,TimeoutError: 
+13.719566,13.721179,23.723395,10003.830,10002.216,update,0,-1,TimeoutError: 
+13.742782,13.744087,23.746254,10003.472,10002.167,read,0,-1,TimeoutError: 
+13.780149,13.780554,23.782711,10002.562,10002.157,read,0,-1,TimeoutError: 
+13.801904,13.804226,23.807548,10005.645,10003.323,update,0,-1,TimeoutError: 
+13.811780,13.812391,23.813715,10001.935,10001.323,update,0,-1,TimeoutError: 
+13.831722,13.832832,23.834389,10002.667,10001.557,read,0,-1,TimeoutError: 
+13.901585,13.902691,23.904575,10002.990,10001.884,read,0,-1,TimeoutError: 
+13.922107,13.922467,23.924381,10002.274,10001.914,update,0,-1,TimeoutError: 
+13.927678,13.928547,23.930290,10002.613,10001.743,update,0,-1,TimeoutError: 
+13.928919,13.929604,23.930581,10001.662,10000.977,read,0,-1,TimeoutError: 
+13.983638,13.984824,23.986715,10003.077,10001.891,update,0,-1,TimeoutError: 
+14.001494,14.003872,24.005686,10004.192,10001.814,update,0,-1,TimeoutError: 
+14.010098,14.010997,24.013974,10003.876,10002.977,read,0,-1,TimeoutError: 
+14.028693,14.028930,24.030507,10001.814,10001.577,read,0,-1,TimeoutError: 
+14.045124,14.047079,24.048131,10003.007,10001.052,update,0,-1,TimeoutError: 
+14.059894,14.060560,24.062587,10002.692,10002.026,update,0,-1,TimeoutError: 
+14.061149,14.062758,24.065684,10004.536,10002.927,read,0,-1,TimeoutError: 
+14.084954,14.085180,24.087015,10002.061,10001.834,update,0,-1,TimeoutError: 
+14.138414,14.140527,24.142999,10004.585,10002.472,read,0,-1,TimeoutError: 
+14.160131,14.161151,24.162344,10002.213,10001.193,read,0,-1,TimeoutError: 
+14.185134,14.185903,24.188383,10003.248,10002.480,update,0,-1,TimeoutError: 
+14.212330,14.213197,24.216181,10003.851,10002.984,read,0,-1,TimeoutError: 
+14.237869,14.238935,24.240455,10002.586,10001.521,update,0,-1,TimeoutError: 
+14.265773,14.267441,24.269163,10003.391,10001.723,update,0,-1,TimeoutError: 
+14.271568,14.272519,24.274467,10002.899,10001.949,read,0,-1,TimeoutError: 
+15.591647,15.592196,24.334703,8743.056,8742.507,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000000357'
+For more information check: https://devel"
+16.107393,16.108059,24.396559,8289.166,8288.500,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000002409'
+For more information check: https://devel"
+14.476749,14.477545,24.482154,10005.405,10004.609,update,0,-1,TimeoutError: 
+14.477834,14.480533,24.483678,10005.844,10003.145,read,0,-1,TimeoutError: 
+14.479747,14.482352,24.486925,10007.177,10004.572,update,0,-1,TimeoutError: 
+14.513286,14.514700,24.515975,10002.689,10001.275,update,0,-1,TimeoutError: 
+14.525952,14.526933,24.528121,10002.169,10001.188,read,0,-1,TimeoutError: 
+14.535201,14.536036,24.537062,10001.861,10001.027,read,0,-1,TimeoutError: 
+16.110284,16.111564,24.573719,8463.435,8462.155,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000008789'
+For more information check: h"
+16.125118,16.127509,24.576137,8451.019,8448.628,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000006483'
+For more information check: h"
+16.142260,16.143137,24.576789,8434.529,8433.652,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000000864'
+For more information check: https://devel"
+14.618783,14.620051,24.621847,10003.065,10001.797,update,0,-1,TimeoutError: 
+14.619602,14.621228,24.622317,10002.716,10001.089,update,0,-1,TimeoutError: 
+14.634765,14.635148,24.637143,10002.378,10001.995,read,0,-1,TimeoutError: 
+14.646481,14.647265,24.648341,10001.860,10001.075,read,0,-1,TimeoutError: 
+14.649225,14.649617,24.650978,10001.753,10001.361,read,0,-1,TimeoutError: 
+14.659282,14.661056,24.662154,10002.872,10001.098,update,0,-1,TimeoutError: 
+14.683878,14.684982,24.686225,10002.347,10001.243,update,0,-1,TimeoutError: 
+14.726673,14.728076,24.730203,10003.531,10002.128,read,0,-1,TimeoutError: 
+14.727171,14.729565,24.730594,10003.423,10001.029,update,0,-1,TimeoutError: 
+14.742039,14.743290,24.744855,10002.816,10001.565,update,0,-1,TimeoutError: 
+14.743934,14.744508,24.745226,10001.292,10000.718,update,0,-1,TimeoutError: 
+14.776162,14.777296,24.779356,10003.194,10002.059,update,0,-1,TimeoutError: 
+14.777956,14.780251,24.781291,10003.336,10001.040,read,0,-1,TimeoutError: 
+14.778652,14.782175,24.784664,10006.012,10002.489,read,0,-1,TimeoutError: 
+14.788349,14.789651,24.791677,10003.328,10002.026,update,0,-1,TimeoutError: 
+14.814730,14.817501,24.820522,10005.792,10003.022,update,0,-1,TimeoutError: 
+14.822244,14.823048,24.825286,10003.041,10002.238,read,0,-1,TimeoutError: 
+14.825030,14.825453,24.827991,10002.962,10002.538,update,0,-1,TimeoutError: 
+14.856683,14.857883,24.860574,10003.891,10002.692,read,0,-1,TimeoutError: 
+14.889576,14.891964,24.897680,10008.104,10005.716,update,0,-1,TimeoutError: 
+14.928315,14.929417,24.931416,10003.101,10002.000,read,0,-1,TimeoutError: 
+14.935556,14.936229,24.937508,10001.952,10001.280,read,0,-1,TimeoutError: 
+14.946618,14.948138,24.948969,10002.351,10000.831,read,0,-1,TimeoutError: 
+14.952249,14.953823,24.954654,10002.405,10000.831,update,0,-1,TimeoutError: 
+14.968541,14.969993,24.972045,10003.504,10002.052,update,0,-1,TimeoutError: 
+14.976554,14.977615,24.980388,10003.835,10002.773,read,0,-1,TimeoutError: 
+14.984823,14.986058,24.988809,10003.986,10002.751,read,0,-1,TimeoutError: 
+15.015438,15.016838,25.018922,10003.484,10002.084,update,0,-1,TimeoutError: 
+15.078044,15.079232,25.081507,10003.463,10002.276,update,0,-1,TimeoutError: 
+15.095592,15.097717,25.099675,10004.082,10001.958,update,0,-1,TimeoutError: 
+15.097804,15.100119,25.102204,10004.400,10002.085,update,0,-1,TimeoutError: 
+15.118948,15.120270,25.122726,10003.778,10002.456,read,0,-1,TimeoutError: 
+15.130855,15.132120,25.133853,10002.998,10001.732,read,0,-1,TimeoutError: 
+15.219362,15.220470,25.222715,10003.352,10002.245,read,0,-1,TimeoutError: 
+15.244778,15.245870,25.247346,10002.568,10001.477,update,0,-1,TimeoutError: 
+15.280788,15.281575,25.285382,10004.594,10003.806,update,0,-1,TimeoutError: 
+15.304953,15.306040,25.308466,10003.513,10002.426,update,0,-1,TimeoutError: 
+15.320294,15.321384,25.322877,10002.583,10001.492,update,0,-1,TimeoutError: 
+15.365720,15.367341,25.369500,10003.780,10002.159,update,0,-1,TimeoutError: 
+15.401350,15.401992,25.404573,10003.223,10002.581,update,0,-1,TimeoutError: 
+15.408237,15.409239,25.411448,10003.210,10002.209,update,0,-1,TimeoutError: 
+15.411654,15.412472,25.414764,10003.111,10002.292,update,0,-1,TimeoutError: 
+15.420906,15.422022,25.424167,10003.261,10002.145,update,0,-1,TimeoutError: 
+15.435630,15.436211,25.437353,10001.724,10001.142,update,0,-1,TimeoutError: 
+15.437679,15.437999,25.439029,10001.350,10001.030,read,0,-1,TimeoutError: 
+15.446153,15.446841,25.447747,10001.594,10000.907,update,0,-1,TimeoutError: 
+15.463262,15.463839,25.464663,10001.401,10000.824,read,0,-1,TimeoutError: 
+15.464153,15.465048,25.465978,10001.825,10000.930,update,0,-1,TimeoutError: 
+15.497895,15.498632,25.501802,10003.907,10003.171,update,0,-1,TimeoutError: 
+15.518956,15.520689,25.523424,10004.468,10002.735,read,0,-1,TimeoutError: 
+15.526483,15.528265,25.529479,10002.996,10001.214,read,0,-1,TimeoutError: 
+15.533569,15.534481,25.535245,10001.677,10000.764,read,0,-1,TimeoutError: 
+15.542265,15.543863,25.545131,10002.866,10001.267,update,0,-1,TimeoutError: 
+15.550134,15.551355,25.552784,10002.650,10001.429,read,0,-1,TimeoutError: 
+15.577742,15.578699,25.580442,10002.700,10001.743,read,0,-1,TimeoutError: 
+15.606583,15.607154,25.609011,10002.428,10001.857,read,0,-1,TimeoutError: 
+15.609804,15.611066,25.613594,10003.790,10002.529,update,0,-1,TimeoutError: 
+15.658970,15.660274,25.662160,10003.190,10001.886,update,0,-1,TimeoutError: 
+15.666848,15.667891,25.669394,10002.546,10001.503,update,0,-1,TimeoutError: 
+15.674785,15.675866,25.678730,10003.945,10002.864,read,0,-1,TimeoutError: 
+15.676211,15.678516,25.679102,10002.890,10000.586,read,0,-1,TimeoutError: 
+15.753872,15.754852,25.757116,10003.244,10002.265,update,0,-1,TimeoutError: 
+15.766939,15.768868,25.771076,10004.137,10002.208,read,0,-1,TimeoutError: 
+15.815749,15.817255,25.822781,10007.031,10005.526,update,0,-1,TimeoutError: 
+15.868265,15.869593,25.874031,10005.766,10004.438,update,0,-1,TimeoutError: 
+15.938232,15.938490,25.939243,10001.011,10000.753,read,0,-1,TimeoutError: 
+15.972048,15.972759,25.975341,10003.293,10002.582,update,0,-1,TimeoutError: 
+16.023972,16.025088,26.027485,10003.513,10002.397,update,0,-1,TimeoutError: 
+16.075067,16.076711,26.078781,10003.714,10002.070,update,0,-1,TimeoutError: 
+16.240111,16.240746,26.242730,10002.620,10001.984,read,0,-1,TimeoutError: 
+16.270755,16.271685,26.273556,10002.801,10001.871,read,0,-1,TimeoutError: 
+16.295030,16.296051,26.298588,10003.558,10002.537,read,0,-1,TimeoutError: 
+16.322490,16.323872,26.325202,10002.712,10001.330,read,0,-1,TimeoutError: 
+16.331465,16.332057,26.333815,10002.350,10001.759,update,0,-1,TimeoutError: 
+16.388520,16.389834,26.391301,10002.781,10001.466,update,0,-1,TimeoutError: 
+16.409148,16.409778,26.411966,10002.817,10002.188,update,0,-1,TimeoutError: 
+16.419451,16.420603,26.423466,10004.015,10002.862,update,0,-1,TimeoutError: 
+16.431944,16.432315,26.433967,10002.022,10001.652,read,0,-1,TimeoutError: 
+16.509941,16.511111,26.481318,9971.376,9970.206,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000009900'
+For more information check: https://devel"
+16.525133,16.525654,26.486854,9961.722,9961.200,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000006703'
+For more information check: h"
+16.528806,16.529348,26.487575,9958.769,9958.227,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000009140'
+For more information check: https://devel"
+16.532018,16.532523,26.488645,9956.627,9956.122,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000009949'
+For more information check: https://devel"
+16.571811,16.573096,26.489768,9917.957,9916.672,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000004561'
+For more information check: h"
+16.619272,16.620686,26.490896,9871.624,9870.211,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000009238'
+For more information check: h"
+16.623354,16.624257,26.491957,9868.604,9867.700,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000008789'
+For more information check: h"
+16.659980,16.660973,26.494089,9834.109,9833.116,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000006572'
+For more information check: https://devel"
+16.661008,16.663357,26.497076,9836.068,9833.719,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000008127'
+For more information check: h"
+16.663098,16.664659,26.498294,9835.196,9833.634,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000003753'
+For more information check: h"
+17.670719,17.690053,26.499594,8828.875,8809.541,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000000722'
+For more information check: https://devel"
+17.677928,17.692626,26.501083,8823.155,8808.457,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000004068'
+For more information check: h"
+17.721569,17.722226,26.505418,8783.849,8783.192,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000005958'
+For more information check: h"
+17.749046,17.751026,26.506228,8757.182,8755.201,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000007244'
+For more information check: https://devel"
+17.819712,17.821173,26.506966,8687.254,8685.792,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000002087'
+For more information check: h"
+17.835374,17.836318,26.507771,8672.397,8671.453,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000008589'
+For more information check: h"
+17.852345,17.853481,26.508631,8656.286,8655.150,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000002901'
+For more information check: h"
+17.868377,17.869908,26.509501,8641.124,8639.593,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000007484'
+For more information check: https://devel"
+17.883292,17.885703,26.510407,8627.115,8624.705,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000001100'
+For more information check: https://devel"
+17.898912,17.899893,26.511294,8612.382,8611.401,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000005757'
+For more information check: h"
+17.933049,17.933901,26.512282,8579.233,8578.381,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000005836'
+For more information check: https://devel"
+17.994359,17.996359,26.513251,8518.893,8516.892,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000008789'
+For more information check: h"
+18.162103,18.163779,26.514308,8352.206,8350.529,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000001460'
+For more information check: h"
+18.165661,18.166943,26.515351,8349.690,8348.408,update,0,-1,"HTTPStatusError: Server error '500 Internal Server Error' for url 'http://10.88.0.11:7004/kv/res-000009166'
+For more information check: h"
+18.185909,18.187212,26.516498,8330.589,8329.286,read,0,-1,"HTTPStatusError: Client error '404 Not Found' for url 'http://10.88.0.11:7004/kv/res-000008789'
+For more information check: https://devel"
+16.555264,16.556350,26.558337,10003.072,10001.987,read,0,-1,TimeoutError: 
+16.678878,16.680063,26.683107,10004.229,10003.044,update,0,-1,TimeoutError: 
+16.685056,16.686085,26.687771,10002.715,10001.686,read,0,-1,TimeoutError: 
+16.687318,16.688677,26.690003,10002.685,10001.326,update,0,-1,TimeoutError: 
+16.693386,16.694356,26.696590,10003.204,10002.234,update,0,-1,TimeoutError: 
+16.713387,16.714663,26.718061,10004.674,10003.398,update,0,-1,TimeoutError: 
+16.728334,16.729596,26.732093,10003.759,10002.497,read,0,-1,TimeoutError: 
+16.729969,16.731980,26.732923,10002.954,10000.943,read,0,-1,TimeoutError: 
+16.731481,16.732748,26.733553,10002.072,10000.804,update,0,-1,TimeoutError: 
+16.769507,16.770184,26.773129,10003.622,10002.945,update,0,-1,TimeoutError: 
+16.790121,16.791372,26.793849,10003.728,10002.477,read,0,-1,TimeoutError: 
+16.793929,16.795347,26.797322,10003.393,10001.975,read,0,-1,TimeoutError: 
+16.833515,16.834396,26.836759,10003.244,10002.363,read,0,-1,TimeoutError: 
+16.833956,16.837355,26.839484,10005.528,10002.129,update,0,-1,TimeoutError: 
+16.843137,16.844200,26.847971,10004.834,10003.771,read,0,-1,TimeoutError: 
+16.880766,16.882495,26.884554,10003.788,10002.060,update,0,-1,TimeoutError: 
+16.905543,16.907071,26.908471,10002.928,10001.400,read,0,-1,TimeoutError: 
+16.912217,16.913500,26.916200,10003.983,10002.700,update,0,-1,TimeoutError: 
+16.956597,16.957745,26.962400,10005.803,10004.655,update,0,-1,TimeoutError: 
+16.974827,16.975972,26.978427,10003.600,10002.455,update,0,-1,TimeoutError: 
+17.014950,17.015467,27.017817,10002.867,10002.350,read,0,-1,TimeoutError: 
+17.059610,17.061690,27.063443,10003.834,10001.754,update,0,-1,TimeoutError: 
+17.070693,17.072069,27.074441,10003.748,10002.372,update,0,-1,TimeoutError: 
+17.093209,17.094990,27.097641,10004.432,10002.651,read,0,-1,TimeoutError: 
+17.108935,17.110172,27.112449,10003.514,10002.277,update,0,-1,TimeoutError: 
+17.166847,17.167895,27.169166,10002.319,10001.272,read,0,-1,TimeoutError: 
+17.198853,17.199167,27.201710,10002.857,10002.543,read,0,-1,TimeoutError: 
+17.224732,17.227235,27.228455,10003.723,10001.220,update,0,-1,TimeoutError: 
+17.258376,17.259431,27.259932,10001.556,10000.501,update,0,-1,TimeoutError: 
+17.384335,17.385339,27.387150,10002.815,10001.811,read,0,-1,TimeoutError: 
+17.390264,17.391381,27.393634,10003.370,10002.253,read,0,-1,TimeoutError: 
+17.394761,17.395702,27.398196,10003.435,10002.494,read,0,-1,TimeoutError: 
+17.422232,17.423372,27.425170,10002.938,10001.798,update,0,-1,TimeoutError: 
+17.451654,17.452133,27.453931,10002.277,10001.798,read,0,-1,TimeoutError: 
+17.466097,17.466638,27.470039,10003.942,10003.401,update,0,-1,TimeoutError: 
+17.479449,17.480607,27.482845,10003.396,10002.238,update,0,-1,TimeoutError: 
+17.489791,17.490171,27.492630,10002.839,10002.458,read,0,-1,TimeoutError: 
+17.532651,17.533449,27.534568,10001.917,10001.119,read,0,-1,TimeoutError: 
+17.564466,17.565924,27.568212,10003.746,10002.288,read,0,-1,TimeoutError: 
+17.582036,17.583200,27.584645,10002.609,10001.445,read,0,-1,TimeoutError: 
+17.582855,17.584777,27.586818,10003.963,10002.041,update,0,-1,TimeoutError: 
+17.620950,17.623448,27.625877,10004.926,10002.429,update,0,-1,TimeoutError: 
+17.633217,17.634092,27.636027,10002.810,10001.935,update,0,-1,TimeoutError: 
+17.637425,17.637909,27.639791,10002.366,10001.882,read,0,-1,TimeoutError: 
+17.644541,17.645137,27.647249,10002.709,10002.113,update,0,-1,TimeoutError: 
+17.668050,17.669003,27.670359,10002.309,10001.356,update,0,-1,TimeoutError: 
+17.668161,17.671331,27.672447,10004.286,10001.116,update,0,-1,TimeoutError: 
+18.004854,18.005953,28.007463,10002.609,10001.510,update,0,-1,TimeoutError: 
+18.024737,18.026085,28.028085,10003.348,10002.000,update,0,-1,TimeoutError: 
+18.032094,18.033215,28.035475,10003.381,10002.260,update,0,-1,TimeoutError: 
+18.039282,18.039939,28.041817,10002.535,10001.878,read,0,-1,TimeoutError: 
+18.053399,18.053751,28.055872,10002.473,10002.120,read,0,-1,TimeoutError: 
+18.071050,18.072420,28.074663,10003.613,10002.243,update,0,-1,TimeoutError: 
+18.087020,18.088009,28.089827,10002.807,10001.818,read,0,-1,TimeoutError: 
+18.290082,18.291409,28.293306,10003.223,10001.897,read,0,-1,TimeoutError: 
+18.316729,18.318009,28.320175,10003.447,10002.166,update,0,-1,TimeoutError: 
+18.333419,18.333956,28.335172,10001.753,10001.216,read,0,-1,TimeoutError: 
+18.352895,18.353631,28.356812,10003.916,10003.181,read,0,-1,TimeoutError: 
+18.408037,18.415688,28.417081,10009.044,10001.393,update,0,-1,TimeoutError: 
+18.453176,18.453988,28.456118,10002.942,10002.130,update,0,-1,TimeoutError: 
+18.475330,18.476827,28.479213,10003.884,10002.386,update,0,-1,TimeoutError: 
+18.521132,18.521797,28.523724,10002.592,10001.927,update,0,-1,TimeoutError: 
+18.572981,18.573869,28.575604,10002.622,10001.734,read,0,-1,TimeoutError: 
+18.610442,18.611701,28.613995,10003.553,10002.294,read,0,-1,TimeoutError: 
+18.620113,18.620845,28.623007,10002.894,10002.163,update,0,-1,TimeoutError: 
+18.632599,18.634688,28.636405,10003.806,10001.717,update,0,-1,TimeoutError: 
+18.664383,18.665224,28.666107,10001.724,10000.883,read,0,-1,TimeoutError: 
+18.673708,18.674416,28.677326,10003.618,10002.910,update,0,-1,TimeoutError: 
+18.701383,18.702163,28.704015,10002.632,10001.852,read,0,-1,TimeoutError: 
+18.714516,18.715145,28.716937,10002.421,10001.792,update,0,-1,TimeoutError: 
+18.722722,18.723609,28.725348,10002.626,10001.739,update,0,-1,TimeoutError: 
+18.734903,18.735444,28.737200,10002.296,10001.755,read,0,-1,TimeoutError: 
+18.737381,18.738252,28.740464,10003.084,10002.212,read,0,-1,TimeoutError: 
+18.746135,18.747312,28.749212,10003.077,10001.900,read,0,-1,TimeoutError: 
+18.756865,18.757969,28.758935,10002.070,10000.966,read,0,-1,TimeoutError: 
+18.757231,18.759258,28.761420,10004.188,10002.162,update,0,-1,TimeoutError: 
+18.761008,18.763530,28.764310,10003.302,10000.780,read,0,-1,TimeoutError: 
+18.767036,18.768054,28.769281,10002.245,10001.227,update,0,-1,TimeoutError: 
+18.806059,18.806736,28.810234,10004.176,10003.498,read,0,-1,TimeoutError: 
+18.823870,18.825083,28.827034,10003.164,10001.951,read,0,-1,TimeoutError: 
+18.830639,18.831841,28.833833,10003.193,10001.992,update,0,-1,TimeoutError: 
+18.952370,18.953248,28.956020,10003.650,10002.772,update,0,-1,TimeoutError: 
+18.958336,18.959564,28.962264,10003.928,10002.700,update,0,-1,TimeoutError: 
+18.972758,18.973263,28.974963,10002.204,10001.700,read,0,-1,TimeoutError: 
+18.999663,19.000561,29.003420,10003.757,10002.859,read,0,-1,TimeoutError: 
+19.023172,19.023891,29.025449,10002.278,10001.558,update,0,-1,TimeoutError: 
+19.034537,19.035271,29.036874,10002.337,10001.603,read,0,-1,TimeoutError: 
+19.064549,19.064850,29.066736,10002.188,10001.886,read,0,-1,TimeoutError: 
+19.077851,19.078324,29.081071,10003.220,10002.747,update,0,-1,TimeoutError: 
+19.102989,19.103630,29.105039,10002.050,10001.409,read,0,-1,TimeoutError: 
+19.116510,19.117477,29.120572,10004.062,10003.095,read,0,-1,TimeoutError: 
+19.187664,19.188339,29.190874,10003.210,10002.535,read,0,-1,TimeoutError: 
+19.212852,19.214212,29.217271,10004.419,10003.059,update,0,-1,TimeoutError: 
+19.214768,19.216382,29.217833,10003.064,10001.450,read,0,-1,TimeoutError: 
+19.217542,19.218051,29.219406,10001.864,10001.354,read,0,-1,TimeoutError: 
+19.285475,19.285924,29.287721,10002.247,10001.797,read,0,-1,TimeoutError: 
+19.290682,19.292026,29.293660,10002.978,10001.634,update,0,-1,TimeoutError: 
+19.291212,19.294317,29.295261,10004.050,10000.944,update,0,-1,TimeoutError: 
+19.297051,19.299561,29.301141,10004.090,10001.580,read,0,-1,TimeoutError: 
+19.310122,19.311388,29.313511,10003.389,10002.123,read,0,-1,TimeoutError: 
+19.370923,19.371555,29.373638,10002.714,10002.082,read,0,-1,TimeoutError: 
+19.381111,19.381822,29.384805,10003.694,10002.983,update,0,-1,TimeoutError: 
+19.406822,19.408105,29.409929,10003.107,10001.824,update,0,-1,TimeoutError: 
+19.442781,19.443959,29.445914,10003.133,10001.955,read,0,-1,TimeoutError: 
+19.444649,19.446336,29.448206,10003.557,10001.870,update,0,-1,TimeoutError: 
+19.463578,19.464440,29.466312,10002.734,10001.872,read,0,-1,TimeoutError: 
+19.572957,19.574269,29.582597,10009.640,10008.328,read,0,-1,TimeoutError: 
+19.588910,19.590135,29.592171,10003.262,10002.037,read,0,-1,TimeoutError: 
+19.604202,19.605657,29.607821,10003.619,10002.164,update,0,-1,TimeoutError: 
+19.612716,19.613371,29.615819,10003.102,10002.448,read,0,-1,TimeoutError: 
+19.671131,19.672028,29.673719,10002.589,10001.692,update,0,-1,TimeoutError: 
+19.740996,19.743059,29.744844,10003.848,10001.785,update,0,-1,TimeoutError: 
+19.743174,19.744716,29.745409,10002.235,10000.693,read,0,-1,TimeoutError: 
+19.759271,19.762270,29.764304,10005.033,10002.034,read,0,-1,TimeoutError: 
+19.770153,19.771468,29.773102,10002.950,10001.635,read,0,-1,TimeoutError: 
+19.792426,19.793879,29.795493,10003.067,10001.614,read,0,-1,TimeoutError: 
+19.794952,19.796893,29.798529,10003.577,10001.636,read,0,-1,TimeoutError: 
+19.801119,19.802098,29.803318,10002.200,10001.220,update,0,-1,TimeoutError: 
+19.807654,19.808186,29.809274,10001.620,10001.089,read,0,-1,TimeoutError: 
+19.820721,19.821803,29.824582,10003.860,10002.779,read,0,-1,TimeoutError: 
+19.852250,19.853733,29.859034,10006.785,10005.301,update,0,-1,TimeoutError: 
+19.891267,19.892491,29.895505,10004.239,10003.014,update,0,-1,TimeoutError: 
+19.922142,19.923041,29.924963,10002.821,10001.921,read,0,-1,TimeoutError: 
+19.944732,19.946074,29.948155,10003.423,10002.080,update,0,-1,TimeoutError: 
+19.946557,19.948094,29.949064,10002.508,10000.970,update,0,-1,TimeoutError: 
+19.956433,19.956897,29.958295,10001.862,10001.399,read,0,-1,TimeoutError: 
+19.978528,19.979590,29.981296,10002.768,10001.706,read,0,-1,TimeoutError: 
+19.985498,19.985919,29.987535,10002.038,10001.616,read,0,-1,TimeoutError: 
+19.999676,20.000662,30.002257,10002.581,10001.594,update,0,-1,TimeoutError: 
+20.046770,20.047982,30.050622,10003.852,10002.640,update,0,-1,TimeoutError: 
+20.049240,20.050301,30.052084,10002.845,10001.784,update,0,-1,TimeoutError: 
+20.087706,20.089003,30.092896,10005.190,10003.892,read,0,-1,TimeoutError: 
+20.089943,20.091591,30.093449,10003.507,10001.859,update,0,-1,TimeoutError: 
+20.099710,20.100215,30.101718,10002.008,10001.503,update,0,-1,TimeoutError: 
+20.146870,20.148058,30.149463,10002.593,10001.405,update,0,-1,TimeoutError: 
+20.151362,20.151860,30.153417,10002.054,10001.557,update,0,-1,TimeoutError: 
+20.166073,20.167838,30.170132,10004.060,10002.294,read,0,-1,TimeoutError: 
+20.176851,20.187693,30.189143,10012.293,10001.450,read,0,-1,TimeoutError: 
+20.220626,20.233673,30.235392,10014.766,10001.720,update,0,-1,TimeoutError: 
+20.317355,20.319103,30.320664,10003.309,10001.561,read,0,-1,TimeoutError: 
+20.324165,20.324542,30.325700,10001.535,10001.158,update,0,-1,TimeoutError: 
+20.337729,20.338671,30.340511,10002.781,10001.840,read,0,-1,TimeoutError: 
+20.382806,20.383852,30.385587,10002.781,10001.735,read,0,-1,TimeoutError: 
+20.398547,20.399574,30.402110,10003.563,10002.535,update,0,-1,TimeoutError: 
+20.403378,20.403914,30.405019,10001.640,10001.104,read,0,-1,TimeoutError: 
+20.431893,20.433084,30.435331,10003.438,10002.247,read,0,-1,TimeoutError: 
+20.440115,20.440527,30.442444,10002.330,10001.917,read,0,-1,TimeoutError: 
+20.453425,20.454725,30.456905,10003.481,10002.180,read,0,-1,TimeoutError: 
+20.453597,20.457605,30.458779,10005.183,10001.174,update,0,-1,TimeoutError: 
+20.543734,20.544228,30.547015,10003.281,10002.787,read,0,-1,TimeoutError: 
+20.617174,20.617610,30.618367,10001.193,10000.757,read,0,-1,TimeoutError: 
+20.686447,20.688076,30.690365,10003.917,10002.289,update,0,-1,TimeoutError: 
+20.692674,20.693679,30.696146,10003.472,10002.467,update,0,-1,TimeoutError: 
+20.708228,20.709103,30.711101,10002.873,10001.997,read,0,-1,TimeoutError: 
+20.719833,20.720266,30.722435,10002.602,10002.169,update,0,-1,TimeoutError: 
+20.748364,20.750459,30.752374,10004.010,10001.915,read,0,-1,TimeoutError: 
+20.785316,20.786850,30.789302,10003.986,10002.451,update,0,-1,TimeoutError: 
+20.790506,20.791274,30.792914,10002.408,10001.640,update,0,-1,TimeoutError: 
+20.796925,20.797619,30.799392,10002.466,10001.772,read,0,-1,TimeoutError: 
+20.821427,20.822085,30.824387,10002.960,10002.302,read,0,-1,TimeoutError: 
+20.832035,20.832931,30.836175,10004.140,10003.244,read,0,-1,TimeoutError: 
+20.834825,20.835380,30.836738,10001.913,10001.358,read,0,-1,TimeoutError: 
+20.839171,20.840129,30.841705,10002.534,10001.576,update,0,-1,TimeoutError: 
+20.855629,20.857617,30.859637,10004.008,10002.020,update,0,-1,TimeoutError: 
+20.873880,20.875272,30.876627,10002.747,10001.356,read,0,-1,TimeoutError: 
+20.938293,20.939829,30.941365,10003.072,10001.536,update,0,-1,TimeoutError: 
+20.953512,20.954654,30.956713,10003.201,10002.060,read,0,-1,TimeoutError: 
+20.972292,20.973014,30.974215,10001.922,10001.201,read,0,-1,TimeoutError: 
+20.975516,20.976972,30.978048,10002.532,10001.076,update,0,-1,TimeoutError: 
+20.986198,20.986899,30.989674,10003.476,10002.775,read,0,-1,TimeoutError: 
+20.992762,20.993786,30.996135,10003.372,10002.348,read,0,-1,TimeoutError: 
+21.016539,21.018125,31.022090,10005.551,10003.965,update,0,-1,TimeoutError: 
+21.022752,21.024384,31.026133,10003.381,10001.750,update,0,-1,TimeoutError: 
+21.027579,21.028973,31.030381,10002.802,10001.408,update,0,-1,TimeoutError: 
+21.036746,21.038353,31.039599,10002.853,10001.245,read,0,-1,TimeoutError: 
+21.049464,21.052038,31.053610,10004.146,10001.573,update,0,-1,TimeoutError: 
+21.057726,21.058808,31.061022,10003.296,10002.214,read,0,-1,TimeoutError: 
+21.076340,21.076960,31.078826,10002.486,10001.866,update,0,-1,TimeoutError: 
+21.080339,21.080424,31.081773,10001.434,10001.349,read,0,-1,TimeoutError: 
+21.122729,21.124075,31.128387,10005.658,10004.312,update,0,-1,TimeoutError: 
+21.146424,21.146767,31.150374,10003.950,10003.607,read,0,-1,TimeoutError: 
+21.161728,21.163511,31.166161,10004.433,10002.649,update,0,-1,TimeoutError: 
+21.162926,21.164680,31.166453,10003.526,10001.773,read,0,-1,TimeoutError: 
+21.170817,21.172378,31.174716,10003.899,10002.338,read,0,-1,TimeoutError: 
+21.194248,21.196218,31.198175,10003.928,10001.957,read,0,-1,TimeoutError: 
+21.214964,21.216512,31.219077,10004.113,10002.565,update,0,-1,TimeoutError: 
+21.248385,21.248899,31.252344,10003.958,10003.445,update,0,-1,TimeoutError: 
+21.292807,21.293575,31.295163,10002.356,10001.588,update,0,-1,TimeoutError: 
+21.300385,21.301227,31.302828,10002.444,10001.602,update,0,-1,TimeoutError: 
+21.313998,21.315577,31.319097,10005.098,10003.519,update,0,-1,TimeoutError: 
+21.322009,21.322715,31.325740,10003.731,10003.025,read,0,-1,TimeoutError: 
+21.324747,21.325360,31.326687,10001.940,10001.327,read,0,-1,TimeoutError: 
+21.327766,21.328811,31.331417,10003.651,10002.606,read,0,-1,TimeoutError: 
+21.333693,21.335071,31.337482,10003.790,10002.411,read,0,-1,TimeoutError: 
+21.335536,21.337144,31.338581,10003.045,10001.436,read,0,-1,TimeoutError: 
+21.351015,21.352920,31.355091,10004.075,10002.171,update,0,-1,TimeoutError: 
+21.375290,21.375807,31.379092,10003.802,10003.285,read,0,-1,TimeoutError: 
+21.391850,21.392660,31.394734,10002.884,10002.074,read,0,-1,TimeoutError: 
+21.414939,21.415863,31.418217,10003.277,10002.354,update,0,-1,TimeoutError: 
+21.420069,21.421345,31.422217,10002.148,10000.872,update,0,-1,TimeoutError: 
+21.424517,21.425736,31.427940,10003.423,10002.204,update,0,-1,TimeoutError: 
+21.441284,21.442996,31.446103,10004.819,10003.107,read,0,-1,TimeoutError: 
+21.484417,21.485603,31.489206,10004.789,10003.602,read,0,-1,TimeoutError: 
+21.495389,21.496483,31.498559,10003.169,10002.076,update,0,-1,TimeoutError: 
+21.495474,21.498369,31.499784,10004.310,10001.415,update,0,-1,TimeoutError: 
+21.495879,21.499039,31.500632,10004.753,10001.593,read,0,-1,TimeoutError: 
+21.503165,21.504146,31.506319,10003.154,10002.174,read,0,-1,TimeoutError: 
+21.522275,21.524385,31.527975,10005.701,10003.590,read,0,-1,TimeoutError: 
+21.524042,21.525205,31.528653,10004.611,10003.448,update,0,-1,TimeoutError: 
+21.529127,21.530087,31.532423,10003.296,10002.336,read,0,-1,TimeoutError: 
+21.551959,21.552625,31.556953,10004.994,10004.328,update,0,-1,TimeoutError: 
+21.635942,21.637317,31.640529,10004.587,10003.212,update,0,-1,TimeoutError: 
+21.644285,21.645457,31.647134,10002.848,10001.677,update,0,-1,TimeoutError: 
+21.662668,21.663824,31.665090,10002.422,10001.266,read,0,-1,TimeoutError: 
+21.677282,21.678274,31.681763,10004.481,10003.489,read,0,-1,TimeoutError: 
+21.677750,21.680364,31.685753,10008.003,10005.389,update,0,-1,TimeoutError: 
+21.685755,21.687253,31.688433,10002.678,10001.179,update,0,-1,TimeoutError: 
+21.688758,21.689833,31.691409,10002.651,10001.576,read,0,-1,TimeoutError: 
+21.694534,21.695932,31.697572,10003.038,10001.640,update,0,-1,TimeoutError: 
+21.723926,21.724770,31.727314,10003.388,10002.543,read,0,-1,TimeoutError: 
+21.746790,21.747960,31.749710,10002.921,10001.750,read,0,-1,TimeoutError: 
+21.747627,21.749996,31.751846,10004.219,10001.850,update,0,-1,TimeoutError: 
+21.749238,21.751044,31.752247,10003.009,10001.203,read,0,-1,TimeoutError: 
+21.775052,21.776457,31.780494,10005.441,10004.037,update,0,-1,TimeoutError: 
+21.777231,21.779390,31.781373,10004.142,10001.983,update,0,-1,TimeoutError: 
+21.784857,21.786056,31.787637,10002.780,10001.581,read,0,-1,TimeoutError: 
+21.791133,21.791846,31.794146,10003.013,10002.300,update,0,-1,TimeoutError: 
+21.792154,21.795106,31.796781,10004.627,10001.675,update,0,-1,TimeoutError: 
+21.792787,21.797246,31.799137,10006.350,10001.891,update,0,-1,TimeoutError: 
+21.795781,21.799453,31.801503,10005.722,10002.050,read,0,-1,TimeoutError: 
+21.805975,21.807050,31.808997,10003.021,10001.947,update,0,-1,TimeoutError: 
+21.860248,21.861016,31.865966,10005.718,10004.950,read,0,-1,TimeoutError: 
+21.880592,21.882221,31.886209,10005.617,10003.988,read,0,-1,TimeoutError: 
+21.886135,21.886704,31.888083,10001.949,10001.379,read,0,-1,TimeoutError: 
+21.908901,21.910264,31.912863,10003.962,10002.599,update,0,-1,TimeoutError: 
+21.915295,21.915605,31.917506,10002.211,10001.901,read,0,-1,TimeoutError: 
+21.929777,21.930185,31.933033,10003.256,10002.848,read,0,-1,TimeoutError: 
+21.937544,21.938053,31.939356,10001.812,10001.303,read,0,-1,TimeoutError: 
+21.996934,21.997650,31.998853,10001.919,10001.203,update,0,-1,TimeoutError: 
+22.005623,22.006476,32.008238,10002.616,10001.762,update,0,-1,TimeoutError: 
+22.038171,22.038944,32.040626,10002.456,10001.682,update,0,-1,TimeoutError: 
+22.058670,22.058780,32.060558,10001.888,10001.778,read,0,-1,TimeoutError: 
+22.095742,22.096836,32.098802,10003.060,10001.966,update,0,-1,TimeoutError: 
+22.114378,22.114760,32.116336,10001.958,10001.576,read,0,-1,TimeoutError: 
+22.155242,22.156256,32.156884,10001.643,10000.629,read,0,-1,TimeoutError: 
+22.165631,22.167153,32.169484,10003.853,10002.332,update,0,-1,TimeoutError: 
+22.188358,22.189419,32.190688,10002.331,10001.269,read,0,-1,TimeoutError: 
+22.207743,22.208945,32.211079,10003.336,10002.134,read,0,-1,TimeoutError: 
+22.222747,22.224050,32.225994,10003.247,10001.944,read,0,-1,TimeoutError: 
+22.239370,22.240454,32.241937,10002.567,10001.483,update,0,-1,TimeoutError: 
+22.254717,22.256117,32.257532,10002.815,10001.415,update,0,-1,TimeoutError: 
+22.264727,22.265968,32.268782,10004.055,10002.814,update,0,-1,TimeoutError: 
+22.310445,22.311561,32.314239,10003.794,10002.679,read,0,-1,TimeoutError: 
+22.330478,22.331577,32.333642,10003.164,10002.065,update,0,-1,TimeoutError: 
+22.346409,22.348097,32.350382,10003.973,10002.285,update,0,-1,TimeoutError: 
+22.347518,22.349274,32.351339,10003.821,10002.065,read,0,-1,TimeoutError: 
+22.361725,22.363563,32.365183,10003.458,10001.621,update,0,-1,TimeoutError: 
+22.365576,22.365842,32.367453,10001.877,10001.611,read,0,-1,TimeoutError: 
+22.370418,22.371111,32.372905,10002.486,10001.794,update,0,-1,TimeoutError: 
+22.381823,22.382686,32.384906,10003.082,10002.220,read,0,-1,TimeoutError: 
+22.397615,22.398590,32.401080,10003.465,10002.490,read,0,-1,TimeoutError: 
+22.403379,22.404571,32.406240,10002.861,10001.669,update,0,-1,TimeoutError: 
+22.409699,22.410743,32.412421,10002.722,10001.678,read,0,-1,TimeoutError: 
+22.424806,22.425875,32.428997,10004.192,10003.123,update,0,-1,TimeoutError: 
+22.437626,22.438832,32.441853,10004.227,10003.021,update,0,-1,TimeoutError: 
+22.447952,22.449173,32.451339,10003.387,10002.166,update,0,-1,TimeoutError: 
+22.450143,22.451277,32.451709,10001.566,10000.432,read,0,-1,TimeoutError: 
+22.459494,22.460576,32.461632,10002.138,10001.056,update,0,-1,TimeoutError: 
+22.480745,22.482092,32.485196,10004.451,10003.104,update,0,-1,TimeoutError: 
+22.496459,22.497447,32.498874,10002.415,10001.427,read,0,-1,TimeoutError: 
+22.512197,22.512993,32.516892,10004.694,10003.899,read,0,-1,TimeoutError: 
+22.549332,22.550019,32.551503,10002.171,10001.484,update,0,-1,TimeoutError: 
+22.575018,22.576010,32.578631,10003.612,10002.621,read,0,-1,TimeoutError: 
+22.598096,22.600911,32.602336,10004.240,10001.425,read,0,-1,TimeoutError: 
+22.598714,22.602573,32.604049,10005.336,10001.477,update,0,-1,TimeoutError: 
+22.606081,22.606180,32.606698,10000.617,10000.518,read,0,-1,TimeoutError: 
+22.629021,22.630417,32.632891,10003.871,10002.475,update,0,-1,TimeoutError: 
+22.632408,22.634857,32.636174,10003.766,10001.317,read,0,-1,TimeoutError: 
+22.681354,22.682249,32.684125,10002.772,10001.876,read,0,-1,TimeoutError: 
+22.684415,22.685676,32.687524,10003.109,10001.848,read,0,-1,TimeoutError: 
+22.726674,22.729780,32.730534,10003.859,10000.753,update,0,-1,TimeoutError: 
+22.731548,22.732792,32.734870,10003.322,10002.079,update,0,-1,TimeoutError: 
+22.768399,22.769787,32.771191,10002.792,10001.404,update,0,-1,TimeoutError: 
+22.806107,22.807938,32.809716,10003.609,10001.778,read,0,-1,TimeoutError: 
+22.814280,22.815189,32.817817,10003.537,10002.628,read,0,-1,TimeoutError: 
+22.858172,22.859468,32.860504,10002.332,10001.035,update,0,-1,TimeoutError: 
+22.861653,22.861816,32.864131,10002.477,10002.314,read,0,-1,TimeoutError: 
+22.899477,22.900411,32.902368,10002.891,10001.957,update,0,-1,TimeoutError: 
+22.909094,22.910460,32.913775,10004.681,10003.315,update,0,-1,TimeoutError: 
+22.920680,22.921591,32.923431,10002.751,10001.840,read,0,-1,TimeoutError: 
+22.923188,22.923884,32.925066,10001.878,10001.182,update,0,-1,TimeoutError: 
+22.941564,22.943066,32.945471,10003.906,10002.404,update,0,-1,TimeoutError: 
+22.947852,22.948177,32.950134,10002.282,10001.957,read,0,-1,TimeoutError: 
+22.969837,22.972385,32.973880,10004.043,10001.495,update,0,-1,TimeoutError: 
+23.001965,23.002769,33.006182,10004.217,10003.413,read,0,-1,TimeoutError: 
+23.020475,23.021022,33.022581,10002.105,10001.559,update,0,-1,TimeoutError: 
+23.020640,23.022117,33.022903,10002.263,10000.787,read,0,-1,TimeoutError: 
+23.081511,23.082142,33.084208,10002.697,10002.066,update,0,-1,TimeoutError: 
+23.131946,23.133488,33.135988,10004.042,10002.500,update,0,-1,TimeoutError: 
+23.152543,23.154849,33.157919,10005.377,10003.071,read,0,-1,TimeoutError: 
+23.162088,23.163130,33.164696,10002.609,10001.566,update,0,-1,TimeoutError: 
+23.178594,23.179397,33.181124,10002.529,10001.727,update,0,-1,TimeoutError: 
+23.221474,23.222465,33.224286,10002.812,10001.822,update,0,-1,TimeoutError: 
+23.233780,23.234990,33.236931,10003.151,10001.941,update,0,-1,TimeoutError: 
+23.263992,23.265470,33.267632,10003.640,10002.161,read,0,-1,TimeoutError: 
+23.282246,23.283012,33.286184,10003.938,10003.172,update,0,-1,TimeoutError: 
+23.293219,23.294542,33.297904,10004.685,10003.362,read,0,-1,TimeoutError: 
+23.347438,23.350021,33.352110,10004.672,10002.089,update,0,-1,TimeoutError: 
+23.357938,23.358372,33.361004,10003.066,10002.632,read,0,-1,TimeoutError: 
+23.376555,23.376987,33.378453,10001.898,10001.466,read,0,-1,TimeoutError: 
+23.377649,23.379210,33.380847,10003.198,10001.637,read,0,-1,TimeoutError: 
+23.390376,23.391819,33.394168,10003.792,10002.349,update,0,-1,TimeoutError: 
+23.391139,23.393548,33.395456,10004.317,10001.908,update,0,-1,TimeoutError: 
+23.415495,23.415970,33.419227,10003.732,10003.257,read,0,-1,TimeoutError: 
+23.415507,23.417562,33.419463,10003.956,10001.901,read,0,-1,TimeoutError: 
+23.416367,23.418468,33.419878,10003.511,10001.410,read,0,-1,TimeoutError: 
+23.418723,23.419094,33.420265,10001.542,10001.171,read,0,-1,TimeoutError: 
+23.421729,23.422220,33.423010,10001.281,10000.790,update,0,-1,TimeoutError: 
+23.435918,23.436313,33.438760,10002.842,10002.448,read,0,-1,TimeoutError: 
+23.444728,23.445081,33.447662,10002.934,10002.581,update,0,-1,TimeoutError: 
+23.451047,23.451290,33.453206,10002.159,10001.916,read,0,-1,TimeoutError: 
+23.533285,23.534495,33.538158,10004.873,10003.663,update,0,-1,TimeoutError: 
+23.581223,23.582577,33.584478,10003.254,10001.901,update,0,-1,TimeoutError: 
+23.602500,23.604476,33.606981,10004.482,10002.505,update,0,-1,TimeoutError: 
+23.634898,23.635594,33.636935,10002.037,10001.341,read,0,-1,TimeoutError: 
+23.669162,23.670417,33.673801,10004.639,10003.384,update,0,-1,TimeoutError: 
+23.674787,23.676236,33.678041,10003.254,10001.805,read,0,-1,TimeoutError: 
+23.707822,23.708874,33.710405,10002.582,10001.530,update,0,-1,TimeoutError: 
+23.713306,23.714030,33.716928,10003.623,10002.898,read,0,-1,TimeoutError: 
+23.729833,23.730881,33.733355,10003.522,10002.474,read,0,-1,TimeoutError: 
+23.738687,23.739994,33.740620,10001.933,10000.627,update,0,-1,TimeoutError: 
+23.742143,23.743635,33.744610,10002.468,10000.975,read,0,-1,TimeoutError: 
+23.772141,23.773934,33.775704,10003.563,10001.771,update,0,-1,TimeoutError: 
+23.821761,23.823966,33.826056,10004.294,10002.090,read,0,-1,TimeoutError: 
+23.829290,23.829606,33.831407,10002.117,10001.802,read,0,-1,TimeoutError: 
+23.871656,23.872516,33.873791,10002.135,10001.276,update,0,-1,TimeoutError: 
+23.880157,23.881261,33.883479,10003.322,10002.218,update,0,-1,TimeoutError: 
+23.901590,23.902117,33.904168,10002.579,10002.051,read,0,-1,TimeoutError: 
+24.010994,24.012069,34.038783,10027.790,10026.714,read,0,-1,TimeoutError: 
+24.040568,24.041972,34.047300,10006.732,10005.328,update,0,-1,TimeoutError: 
+24.041713,24.043377,34.048717,10007.004,10005.340,read,0,-1,TimeoutError: 
+24.053128,24.053592,34.055583,10002.456,10001.992,update,0,-1,TimeoutError: 
+24.062569,24.062883,34.065454,10002.884,10002.571,update,0,-1,TimeoutError: 
+24.069530,24.070063,34.079927,10010.397,10009.864,read,0,-1,TimeoutError: 
+24.103401,24.104372,34.106609,10003.208,10002.238,read,0,-1,TimeoutError: 
+24.115034,24.116548,34.118518,10003.484,10001.971,read,0,-1,TimeoutError: 
+24.139063,24.140193,34.144323,10005.260,10004.130,update,0,-1,TimeoutError: 
+24.159216,24.160382,34.164003,10004.787,10003.621,read,0,-1,TimeoutError: 
+24.173854,24.174703,34.179309,10005.455,10004.606,read,0,-1,TimeoutError: 
+24.175007,24.177550,34.180904,10005.897,10003.354,update,0,-1,TimeoutError: 
+24.197365,24.198795,34.202802,10005.436,10004.007,read,0,-1,TimeoutError: 
+24.241764,24.242854,34.245002,10003.238,10002.148,update,0,-1,TimeoutError: 
+24.245544,24.246857,34.249093,10003.550,10002.236,update,0,-1,TimeoutError: 
+24.266130,24.266567,34.269676,10003.546,10003.108,read,0,-1,TimeoutError: 
+24.279496,24.280975,34.284015,10004.518,10003.039,update,0,-1,TimeoutError: 
+24.287837,24.288247,34.289800,10001.963,10001.552,read,0,-1,TimeoutError: 
+24.312624,24.313107,34.316523,10003.899,10003.416,read,0,-1,TimeoutError: 
+24.386561,24.388563,34.391444,10004.883,10002.882,update,0,-1,TimeoutError: 
+24.386999,24.390387,34.392727,10005.728,10002.341,read,0,-1,TimeoutError: 
+24.432519,24.432816,34.436102,10003.583,10003.286,read,0,-1,TimeoutError: 
+24.442184,24.443249,34.450270,10008.086,10007.021,update,0,-1,TimeoutError: 
+24.478081,24.478989,34.483254,10005.173,10004.265,read,0,-1,TimeoutError: 
+24.481922,24.483691,34.487356,10005.434,10003.666,read,0,-1,TimeoutError: 
+24.507139,24.509227,34.511270,10004.130,10002.043,read,0,-1,TimeoutError: 
+24.509240,24.511456,34.513692,10004.452,10002.236,update,0,-1,TimeoutError: 
+24.517417,24.518460,34.520126,10002.709,10001.666,update,0,-1,TimeoutError: 
+24.587488,24.588776,34.591123,10003.635,10002.346,update,0,-1,TimeoutError: 
+24.608866,24.609532,34.612000,10003.134,10002.468,read,0,-1,TimeoutError: 
+24.639564,24.640421,34.642505,10002.941,10002.084,read,0,-1,TimeoutError: 
+24.651936,24.652355,34.654443,10002.507,10002.088,update,0,-1,TimeoutError: 
+24.664678,24.665488,34.666984,10002.306,10001.497,update,0,-1,TimeoutError: 
+24.678248,24.678979,34.681534,10003.287,10002.556,update,0,-1,TimeoutError: 
+24.707918,24.708701,34.710623,10002.705,10001.922,update,0,-1,TimeoutError: 
+24.733610,24.734195,34.735699,10002.089,10001.505,update,0,-1,TimeoutError: 
+24.737918,24.738693,34.739605,10001.686,10000.911,read,0,-1,TimeoutError: 
+24.749536,24.750743,34.752790,10003.254,10002.047,update,0,-1,TimeoutError: 
+24.765155,24.766648,34.767723,10002.568,10001.075,update,0,-1,TimeoutError: 
+24.782101,24.782876,34.785883,10003.782,10003.007,update,0,-1,TimeoutError: 
+24.834384,24.835357,34.837159,10002.775,10001.802,read,0,-1,TimeoutError: 
+24.871004,24.871948,34.874831,10003.827,10002.882,read,0,-1,TimeoutError: 
+24.874252,24.874758,34.875636,10001.384,10000.878,read,0,-1,TimeoutError: 
+24.883688,24.884799,34.887468,10003.780,10002.669,update,0,-1,TimeoutError: 
+24.885995,24.887527,34.888031,10002.036,10000.504,update,0,-1,TimeoutError: 
+24.886527,24.889808,34.890793,10004.267,10000.986,read,0,-1,TimeoutError: 
+24.888077,24.893785,34.894456,10006.379,10000.670,read,0,-1,TimeoutError: 
+24.892119,24.895340,34.896188,10004.070,10000.848,read,0,-1,TimeoutError: 
+24.921174,24.921726,34.923838,10002.664,10002.112,read,0,-1,TimeoutError: 
+24.943179,24.943814,34.945240,10002.061,10001.426,read,0,-1,TimeoutError: 
+24.975156,24.976438,34.978251,10003.095,10001.813,read,0,-1,TimeoutError: 
+24.981964,24.982783,34.984829,10002.865,10002.045,read,0,-1,TimeoutError: 
+24.985345,24.986329,34.988013,10002.668,10001.684,update,0,-1,TimeoutError: 
+25.056927,25.057253,35.059678,10002.750,10002.425,read,0,-1,TimeoutError: 
+25.091904,25.092527,35.093667,10001.763,10001.140,update,0,-1,TimeoutError: 
+25.150571,25.151192,35.152831,10002.259,10001.639,read,0,-1,TimeoutError: 
+25.150951,25.153043,35.154327,10003.377,10001.285,read,0,-1,TimeoutError: 
+25.161052,25.161769,35.163156,10002.103,10001.387,update,0,-1,TimeoutError: 
+25.181144,25.182640,35.184085,10002.941,10001.445,update,0,-1,TimeoutError: 
+25.207786,25.208583,35.210782,10002.996,10002.198,read,0,-1,TimeoutError: 
+25.256542,25.257622,35.260205,10003.663,10002.583,read,0,-1,TimeoutError: 
+25.271975,25.273594,35.276274,10004.299,10002.680,update,0,-1,TimeoutError: 
+25.281887,25.282561,35.284729,10002.842,10002.168,read,0,-1,TimeoutError: 
+25.281993,25.284410,35.285406,10003.413,10000.996,read,0,-1,TimeoutError: 
+25.314572,25.314999,35.316404,10001.832,10001.405,read,0,-1,TimeoutError: 
+25.395096,25.396935,35.402996,10007.900,10006.061,read,0,-1,TimeoutError: 
+25.442652,25.443525,35.446784,10004.131,10003.259,update,0,-1,TimeoutError: 
+25.464362,25.464719,35.468621,10004.258,10003.902,read,0,-1,TimeoutError: 
+25.472748,25.473587,35.475606,10002.858,10002.019,update,0,-1,TimeoutError: 
+25.478214,25.478999,35.480155,10001.941,10001.156,read,0,-1,TimeoutError: 
+25.508049,25.509544,35.511435,10003.386,10001.891,update,0,-1,TimeoutError: 
+25.562849,25.564199,35.566541,10003.692,10002.342,update,0,-1,TimeoutError: 
+25.627390,25.628232,35.630998,10003.607,10002.765,update,0,-1,TimeoutError: 
+25.631252,25.632442,35.636319,10005.067,10003.877,update,0,-1,TimeoutError: 
+25.648859,25.649841,35.652840,10003.981,10002.999,update,0,-1,TimeoutError: 
+25.663254,25.664350,35.670470,10007.216,10006.120,read,0,-1,TimeoutError: 
+25.674406,25.676085,35.694126,10019.720,10018.041,update,0,-1,TimeoutError: 
+25.706042,25.706905,35.711297,10005.255,10004.392,read,0,-1,TimeoutError: 
+25.760952,25.761718,35.765989,10005.037,10004.271,update,0,-1,TimeoutError: 
+25.786744,25.787537,35.791244,10004.500,10003.707,read,0,-1,TimeoutError: 
+25.810844,25.812410,35.816517,10005.673,10004.107,update,0,-1,TimeoutError: 
+25.834308,25.835211,35.838185,10003.878,10002.974,update,0,-1,TimeoutError: 
+25.855508,25.855984,35.865302,10009.794,10009.317,read,0,-1,TimeoutError: 
+25.870898,25.872111,35.879059,10008.161,10006.949,update,0,-1,TimeoutError: 
+25.876596,25.877695,35.890448,10013.851,10012.753,read,0,-1,TimeoutError: 
+25.906831,25.907562,35.913776,10006.945,10006.214,update,0,-1,TimeoutError: 
+25.909367,25.910115,35.927827,10018.459,10017.711,read,0,-1,TimeoutError: 
+25.930018,25.930657,35.943598,10013.580,10012.940,read,0,-1,TimeoutError: 
+25.939805,25.940397,35.947474,10007.669,10007.077,read,0,-1,TimeoutError: 
+25.956223,25.956592,35.962387,10006.164,10005.794,update,0,-1,TimeoutError: 
+25.976736,25.977708,35.982330,10005.594,10004.623,read,0,-1,TimeoutError: 
+25.989773,25.990302,35.995913,10006.140,10005.611,read,0,-1,TimeoutError: 
+26.066193,26.067174,36.076861,10010.668,10009.687,read,0,-1,TimeoutError: 
+26.071661,26.072750,36.081771,10010.111,10009.021,read,0,-1,TimeoutError: 
+26.071905,26.074356,36.087188,10015.282,10012.832,read,0,-1,TimeoutError: 
+26.134042,26.134479,36.138718,10004.676,10004.239,read,0,-1,TimeoutError: 
+26.141522,26.142754,36.147001,10005.479,10004.247,update,0,-1,TimeoutError: 
+26.148038,26.149070,36.156102,10008.064,10007.032,read,0,-1,TimeoutError: 
+26.158780,26.160168,36.164976,10006.196,10004.808,read,0,-1,TimeoutError: 
+26.176856,26.177640,36.181575,10004.719,10003.935,read,0,-1,TimeoutError: 
+26.262395,26.263821,36.266683,10004.288,10002.862,read,0,-1,TimeoutError: 
+26.286982,26.288006,36.291284,10004.302,10003.278,read,0,-1,TimeoutError: 
+26.294646,26.295594,36.298372,10003.726,10002.779,update,0,-1,TimeoutError: 
+26.309947,26.311016,36.314689,10004.742,10003.673,read,0,-1,TimeoutError: 
+26.321856,26.322779,36.326094,10004.238,10003.315,read,0,-1,TimeoutError: 
+26.335782,26.336168,36.340363,10004.581,10004.195,read,0,-1,TimeoutError: 
+26.346595,26.348805,36.350933,10004.339,10002.129,update,0,-1,TimeoutError: 
+26.350264,26.350837,36.352897,10002.634,10002.060,update,0,-1,TimeoutError: 
+26.360330,26.362266,36.365976,10005.646,10003.710,read,0,-1,TimeoutError: 
+26.370187,26.371011,36.373859,10003.672,10002.848,update,0,-1,TimeoutError: 
+26.374667,26.375572,36.378547,10003.880,10002.975,update,0,-1,TimeoutError: 
+26.408624,26.409192,36.411655,10003.031,10002.463,read,0,-1,TimeoutError: 
+26.417549,26.418488,36.420589,10003.040,10002.101,update,0,-1,TimeoutError: 
+26.420835,26.421882,36.423646,10002.811,10001.765,read,0,-1,TimeoutError: 
+26.437569,26.438391,36.439909,10002.340,10001.518,read,0,-1,TimeoutError: 
+26.474836,26.476389,36.479284,10004.449,10002.895,update,0,-1,TimeoutError: 
+26.505169,26.517401,36.519256,10014.087,10001.855,update,0,-1,TimeoutError: 
+26.524629,26.525416,36.532105,10007.476,10006.688,read,0,-1,TimeoutError: 
+26.550892,26.551654,36.555868,10004.975,10004.214,update,0,-1,TimeoutError: 
+26.559085,26.559493,36.562551,10003.466,10003.058,read,0,-1,TimeoutError: 
+26.562165,26.562332,36.564560,10002.395,10002.228,read,0,-1,TimeoutError: 
+26.568053,26.569402,36.571585,10003.532,10002.183,read,0,-1,TimeoutError: 
+26.576648,26.582048,36.584620,10007.972,10002.572,update,0,-1,TimeoutError: 
+26.583194,26.591314,36.593245,10010.051,10001.931,update,0,-1,TimeoutError: 
+26.595808,26.600186,36.601582,10005.775,10001.397,update,0,-1,TimeoutError: 
+26.599035,26.602761,36.604842,10005.806,10002.080,read,0,-1,TimeoutError: 
+26.601827,26.606269,36.607910,10006.084,10001.641,read,0,-1,TimeoutError: 
+26.607653,26.609358,36.611111,10003.458,10001.753,read,0,-1,TimeoutError: 
+26.612029,26.613037,36.614649,10002.620,10001.612,update,0,-1,TimeoutError: 
+26.644388,26.645567,36.648243,10003.855,10002.676,update,0,-1,TimeoutError: 
+26.659813,26.660436,36.664009,10004.196,10003.572,update,0,-1,TimeoutError: 
+26.664236,26.664937,36.666048,10001.812,10001.111,update,0,-1,TimeoutError: 
+26.675451,26.676942,36.679174,10003.724,10002.233,update,0,-1,TimeoutError: 
+26.716552,26.718414,36.720385,10003.833,10001.971,update,0,-1,TimeoutError: 
+26.733789,26.734783,36.737427,10003.638,10002.644,read,0,-1,TimeoutError: 
+26.749934,26.750690,36.752929,10002.996,10002.240,read,0,-1,TimeoutError: 
+26.759863,26.760783,36.762687,10002.824,10001.904,read,0,-1,TimeoutError: 
+26.764222,26.765515,36.767291,10003.069,10001.776,update,0,-1,TimeoutError: 
+26.783860,26.784523,36.786333,10002.473,10001.811,read,0,-1,TimeoutError: 
+26.785466,26.787224,36.788404,10002.938,10001.180,update,0,-1,TimeoutError: 
+26.816319,26.816898,36.819157,10002.838,10002.260,update,0,-1,TimeoutError: 
+26.817504,26.818876,36.820106,10002.602,10001.230,update,0,-1,TimeoutError: 
+26.844940,26.846262,36.847241,10002.301,10000.979,update,0,-1,TimeoutError: 
+26.854586,26.856336,36.857625,10003.040,10001.289,read,0,-1,TimeoutError: 
+26.877526,26.878605,36.880571,10003.045,10001.966,read,0,-1,TimeoutError: 
+26.895407,26.896081,36.898217,10002.810,10002.136,read,0,-1,TimeoutError: 
+26.898173,26.898523,36.900138,10001.965,10001.615,read,0,-1,TimeoutError: 
+26.913639,26.914900,36.915929,10002.290,10001.029,read,0,-1,TimeoutError: 
+26.915180,26.916510,36.917795,10002.616,10001.285,read,0,-1,TimeoutError: 
+26.920701,26.921554,36.923252,10002.551,10001.698,update,0,-1,TimeoutError: 
+26.930315,26.930703,36.932414,10002.098,10001.711,read,0,-1,TimeoutError: 
+26.937044,26.938325,36.939642,10002.598,10001.317,read,0,-1,TimeoutError: 
+26.958723,26.960775,36.962492,10003.768,10001.717,update,0,-1,TimeoutError: 
+27.045327,27.046050,37.047948,10002.621,10001.898,read,0,-1,TimeoutError: 
+27.054155,27.054769,37.056266,10002.111,10001.498,read,0,-1,TimeoutError: 
+27.090632,27.092250,37.093726,10003.094,10001.476,update,0,-1,TimeoutError: 
+27.095732,27.097653,37.099346,10003.614,10001.693,read,0,-1,TimeoutError: 
+27.120444,27.121185,37.123311,10002.867,10002.126,read,0,-1,TimeoutError: 
+27.128989,27.130038,37.131585,10002.596,10001.547,read,0,-1,TimeoutError: 
+27.144319,27.146614,37.148442,10004.123,10001.829,update,0,-1,TimeoutError: 
+27.146174,27.148191,37.152029,10005.855,10003.838,read,0,-1,TimeoutError: 
+27.181304,27.182042,37.183996,10002.691,10001.953,read,0,-1,TimeoutError: 
+27.185989,27.186823,37.188313,10002.323,10001.489,update,0,-1,TimeoutError: 
+27.198441,27.199076,37.201260,10002.819,10002.185,update,0,-1,TimeoutError: 
+27.205300,27.206127,37.207767,10002.467,10001.640,update,0,-1,TimeoutError: 
+27.238536,27.239879,37.241632,10003.096,10001.753,update,0,-1,TimeoutError: 
+27.256495,27.257510,37.259400,10002.905,10001.889,update,0,-1,TimeoutError: 
+27.275594,27.276547,37.279037,10003.443,10002.490,update,0,-1,TimeoutError: 
+27.303704,27.304306,37.308449,10004.745,10004.143,read,0,-1,TimeoutError: 
+27.309588,27.310124,37.311832,10002.243,10001.708,update,0,-1,TimeoutError: 
+27.310789,27.311334,37.312156,10001.367,10000.822,update,0,-1,TimeoutError: 
+27.346059,27.346884,37.349225,10003.167,10002.341,update,0,-1,TimeoutError: 
+27.353643,27.354772,37.356491,10002.848,10001.719,update,0,-1,TimeoutError: 
+27.387098,27.387274,37.389412,10002.314,10002.138,read,0,-1,TimeoutError: 
+27.449862,27.451518,37.454365,10004.502,10002.846,read,0,-1,TimeoutError: 
+27.469704,27.470141,37.477436,10007.732,10007.294,read,0,-1,TimeoutError: 
+27.471884,27.473148,37.477857,10005.973,10004.708,read,0,-1,TimeoutError: 
+27.510365,27.511583,37.515960,10005.595,10004.378,update,0,-1,TimeoutError: 
+27.530437,27.532367,37.535059,10004.622,10002.691,update,0,-1,TimeoutError: 
+27.536081,27.537091,37.557416,10021.335,10020.326,update,0,-1,TimeoutError: 
+27.540742,27.541732,37.558227,10017.486,10016.495,read,0,-1,TimeoutError: 
+27.554916,27.556148,37.559806,10004.890,10003.658,read,0,-1,TimeoutError: 
+27.557508,27.558702,37.560915,10003.407,10002.213,update,0,-1,TimeoutError: 
+27.604802,27.605446,37.607249,10002.448,10001.803,read,0,-1,TimeoutError: 
+27.629412,27.630322,37.633099,10003.686,10002.777,read,0,-1,TimeoutError: 
+27.663629,27.664804,37.666547,10002.918,10001.743,update,0,-1,TimeoutError: 
+27.673313,27.673832,37.675281,10001.968,10001.450,read,0,-1,TimeoutError: 
+27.724642,27.726290,37.728424,10003.782,10002.134,update,0,-1,TimeoutError: 
+27.727518,27.728358,37.729080,10001.562,10000.722,read,0,-1,TimeoutError: 
+27.752711,27.753514,37.754811,10002.099,10001.297,update,0,-1,TimeoutError: 
+27.758588,27.760223,37.762711,10004.122,10002.488,update,0,-1,TimeoutError: 
+27.758661,27.761802,37.762913,10004.252,10001.111,update,0,-1,TimeoutError: 
+27.761238,27.763125,37.764589,10003.351,10001.464,update,0,-1,TimeoutError: 
+27.765739,27.766770,37.767414,10001.675,10000.644,read,0,-1,TimeoutError: 
+27.794562,27.795264,37.798954,10004.391,10003.690,read,0,-1,TimeoutError: 
+27.804060,27.805106,37.807047,10002.986,10001.941,read,0,-1,TimeoutError: 
+27.817217,27.817559,37.818923,10001.706,10001.364,read,0,-1,TimeoutError: 
+35.677889,35.681846,37.829302,2151.413,2147.456,read,0,-1,ConnectError: All connection attempts failed
+34.767210,34.768011,37.829546,3062.336,3061.535,update,0,-1,ConnectError: All connection attempts failed
+34.764046,34.765388,37.829803,3065.756,3064.415,update,0,-1,ConnectError: All connection attempts failed
+32.725686,32.726798,37.830055,5104.369,5103.257,read,0,-1,ConnectError: All connection attempts failed
+32.705144,32.705490,37.830229,5125.085,5124.739,read,0,-1,ConnectError: All connection attempts failed
+33.736492,33.737765,37.830380,4093.889,4092.615,read,0,-1,ConnectError: All connection attempts failed
+33.743834,33.744617,37.830521,4086.688,4085.904,update,0,-1,ConnectError: All connection attempts failed
+30.701605,30.702764,37.830662,7129.056,7127.897,read,0,-1,ConnectError: All connection attempts failed
+37.833956,37.834973,37.838295,4.339,3.322,read,0,-1,ConnectError: All connection attempts failed
+37.834340,37.836476,37.838601,4.261,2.125,read,0,-1,ConnectError: All connection attempts failed
+27.836234,27.838720,37.840803,10004.569,10002.083,read,0,-1,TimeoutError: 
+37.838315,37.838953,37.841155,2.840,2.203,update,0,-1,ConnectError: All connection attempts failed
+27.842464,27.844065,37.845220,10002.756,10001.155,update,0,-1,TimeoutError: 
+37.846249,37.847592,37.850754,4.505,3.162,read,0,-1,ConnectError: All connection attempts failed
+35.681568,35.685547,37.986422,2304.854,2300.876,read,0,-1,ConnectError: All connection attempts failed
+36.849871,36.850527,37.986657,1136.786,1136.130,read,0,-1,ConnectError: All connection attempts failed
+36.842408,36.843202,37.986827,1144.419,1143.625,read,0,-1,ConnectError: All connection attempts failed
+36.837231,36.839608,37.986977,1149.746,1147.369,update,0,-1,ConnectError: All connection attempts failed
+36.834194,36.835931,37.987121,1152.927,1151.191,update,0,-1,ConnectError: All connection attempts failed
+34.807135,34.809041,37.987270,3180.135,3178.229,read,0,-1,ConnectError: All connection attempts failed
+34.806254,34.807064,37.987411,3181.158,3180.347,update,0,-1,ConnectError: All connection attempts failed
+34.803002,34.803746,37.987552,3184.550,3183.806,read,0,-1,ConnectError: All connection attempts failed
+33.757613,33.758852,37.987856,4230.243,4229.004,update,0,-1,ConnectError: All connection attempts failed
+32.734497,32.735260,37.988090,5253.593,5252.830,update,0,-1,ConnectError: All connection attempts failed
+33.780107,33.781866,37.988247,4208.139,4206.381,update,0,-1,ConnectError: All connection attempts failed
+33.780741,33.783668,37.988392,4207.651,4204.724,update,0,-1,ConnectError: All connection attempts failed
+36.864167,36.865356,37.988539,1124.372,1123.183,update,0,-1,ConnectError: All connection attempts failed
+35.739353,35.740898,37.988711,2249.358,2247.813,update,0,-1,ConnectError: All connection attempts failed
+35.698300,35.698766,37.988865,2290.565,2290.099,update,0,-1,ConnectError: All connection attempts failed
+34.840130,34.840811,37.989008,3148.878,3148.197,update,0,-1,ConnectError: All connection attempts failed
+34.822321,34.823200,37.989147,3166.826,3165.947,update,0,-1,ConnectError: All connection attempts failed
+33.790006,33.790922,37.989288,4199.282,4198.365,update,0,-1,ConnectError: All connection attempts failed
+32.765391,32.769050,37.989429,5224.038,5220.380,read,0,-1,ConnectError: All connection attempts failed
+32.765227,32.767405,37.989567,5224.340,5222.163,read,0,-1,ConnectError: All connection attempts failed
+33.806150,33.806809,37.989750,4183.600,4182.941,read,0,-1,ConnectError: All connection attempts failed
+34.813879,34.814626,37.989910,3176.031,3175.284,update,0,-1,ConnectError: All connection attempts failed
+30.776102,30.777394,37.990060,7213.958,7212.666,update,0,-1,ConnectError: All connection attempts failed
+32.793231,32.794791,37.990229,5196.997,5195.437,update,0,-1,ConnectError: All connection attempts failed
+33.847639,33.848837,37.990378,4142.738,4141.540,read,0,-1,ConnectError: All connection attempts failed
+34.851817,34.852969,37.990514,3138.697,3137.544,read,0,-1,ConnectError: All connection attempts failed
+36.910437,36.911590,37.990661,1080.223,1079.070,read,0,-1,ConnectError: All connection attempts failed
+32.820331,32.821476,37.990822,5170.492,5169.346,update,0,-1,ConnectError: All connection attempts failed
+35.764207,35.767030,37.991074,2226.867,2224.044,update,0,-1,ConnectError: All connection attempts failed
+35.767446,35.768838,37.991240,2223.794,2222.402,read,0,-1,ConnectError: All connection attempts failed
+36.925944,36.926756,37.991384,1065.439,1064.628,update,0,-1,ConnectError: All connection attempts failed
+33.862038,33.862743,37.991531,4129.493,4128.788,read,0,-1,ConnectError: All connection attempts failed
+33.869680,33.870223,37.991669,4121.989,4121.447,read,0,-1,ConnectError: All connection attempts failed
+35.779684,35.780936,37.991944,2212.260,2211.008,read,0,-1,ConnectError: All connection attempts failed
+35.799424,35.800936,37.992109,2192.685,2191.173,update,0,-1,ConnectError: All connection attempts failed
+34.883362,34.884461,37.992261,3108.899,3107.800,update,0,-1,ConnectError: All connection attempts failed
+32.853997,32.856356,37.992404,5138.407,5136.048,read,0,-1,ConnectError: All connection attempts failed
+32.836205,32.836833,37.992628,5156.423,5155.795,read,0,-1,ConnectError: All connection attempts failed
+32.827950,32.830310,37.992784,5164.833,5162.474,update,0,-1,ConnectError: All connection attempts failed
+32.827649,32.828800,37.992921,5165.272,5164.121,update,0,-1,ConnectError: All connection attempts failed
+30.810623,30.811062,37.993075,7182.452,7182.013,read,0,-1,ConnectError: All connection attempts failed
+30.812185,30.814662,37.993220,7181.036,7178.558,update,0,-1,ConnectError: All connection attempts failed
+30.819765,30.820924,37.993355,7173.591,7172.431,read,0,-1,ConnectError: All connection attempts failed
+37.853759,37.855287,37.993563,139.804,138.276,update,0,-1,ConnectError: All connection attempts failed
+27.862810,27.863557,37.993825,10131.015,10130.268,read,0,-1,TimeoutError: 
+27.885079,27.886338,37.994005,10108.926,10107.667,read,0,-1,TimeoutError: 
+27.935939,27.938830,37.994571,10058.632,10055.741,update,0,-1,TimeoutError: 
+27.949917,27.951538,37.994734,10044.817,10043.196,update,0,-1,TimeoutError: 
+36.972720,36.973938,37.997894,1025.174,1023.956,read,0,-1,ConnectError: All connection attempts failed
+32.884922,32.885689,37.998065,5113.143,5112.376,update,0,-1,ConnectError: All connection attempts failed
+34.912281,34.912924,37.998216,3085.935,3085.291,read,0,-1,ConnectError: All connection attempts failed
+34.907759,34.909130,37.998386,3090.628,3089.256,read,0,-1,ConnectError: All connection attempts failed
+34.905220,34.906845,37.998538,3093.317,3091.693,update,0,-1,ConnectError: All connection attempts failed
+30.871781,30.872518,37.998680,7126.899,7126.162,read,0,-1,ConnectError: All connection attempts failed
+33.888195,33.889193,37.998822,4110.627,4109.629,update,0,-1,ConnectError: All connection attempts failed
+33.905718,33.906488,37.998963,4093.245,4092.475,read,0,-1,ConnectError: All connection attempts failed
+33.912632,33.913163,37.999101,4086.469,4085.937,read,0,-1,ConnectError: All connection attempts failed
+35.802329,35.804757,37.999245,2196.916,2194.487,read,0,-1,ConnectError: All connection attempts failed
+35.803990,35.806408,37.999384,2195.394,2192.976,update,0,-1,ConnectError: All connection attempts failed
+35.822927,35.823577,37.999520,2176.594,2175.943,read,0,-1,ConnectError: All connection attempts failed
+27.988577,27.989812,37.999690,10011.114,10009.879,update,0,-1,TimeoutError: 
+37.889698,37.982826,38.000094,110.395,17.268,read,0,-1,ConnectError: All connection attempts failed
+37.895516,37.984300,38.000241,104.725,15.941,update,0,-1,ConnectError: All connection attempts failed
+37.902828,37.984896,38.000377,97.549,15.481,read,0,-1,ConnectError: All connection attempts failed
+37.916200,37.985293,38.000543,84.343,15.251,read,0,-1,ConnectError: All connection attempts failed
+37.976440,37.985710,38.000684,24.243,14.974,read,0,-1,ConnectError: All connection attempts failed
+37.983418,37.995595,38.000962,17.544,5.367,read,0,-1,ConnectError: All connection attempts failed
+38.003504,38.004432,38.006957,3.453,2.525,update,0,-1,ConnectError: All connection attempts failed
+38.004500,38.006038,38.007175,2.675,1.137,read,0,-1,ConnectError: All connection attempts failed
+38.015793,38.016717,38.018939,3.146,2.222,read,0,-1,ConnectError: All connection attempts failed
+36.999651,37.000503,38.020688,1021.036,1020.185,read,0,-1,ConnectError: All connection attempts failed
+36.988334,36.990719,38.020896,1032.562,1030.178,read,0,-1,ConnectError: All connection attempts failed
+34.942167,34.942843,38.021050,3078.883,3078.207,read,0,-1,ConnectError: All connection attempts failed
+34.939702,34.940388,38.021188,3081.486,3080.799,update,0,-1,ConnectError: All connection attempts failed
+35.828295,35.828817,38.021355,2193.059,2192.537,read,0,-1,ConnectError: All connection attempts failed
+33.928516,33.929750,38.021506,4092.990,4091.756,read,0,-1,ConnectError: All connection attempts failed
+33.934978,33.936276,38.021669,4086.691,4085.393,read,0,-1,ConnectError: All connection attempts failed
+33.935205,33.938896,38.021808,4086.603,4082.912,read,0,-1,ConnectError: All connection attempts failed
+37.040682,37.041457,38.053779,1013.097,1012.322,read,0,-1,ConnectError: All connection attempts failed
+32.934720,32.936788,38.053947,5119.227,5117.159,update,0,-1,ConnectError: All connection attempts failed
+32.932166,32.934718,38.054199,5122.033,5119.480,update,0,-1,ConnectError: All connection attempts failed
+32.930461,32.932089,38.054410,5123.949,5122.321,update,0,-1,ConnectError: All connection attempts failed
+32.925782,32.926265,38.054569,5128.786,5128.303,read,0,-1,ConnectError: All connection attempts failed
+30.911015,30.912342,38.054733,7143.718,7142.391,update,0,-1,ConnectError: All connection attempts failed
+30.913876,30.915027,38.054868,7140.993,7139.841,update,0,-1,ConnectError: All connection attempts failed
+30.925551,30.926472,38.054998,7129.447,7128.526,update,0,-1,ConnectError: All connection attempts failed
+30.934601,30.935652,38.055157,7120.556,7119.505,read,0,-1,ConnectError: All connection attempts failed
+35.849011,35.849454,38.055309,2206.297,2205.855,read,0,-1,ConnectError: All connection attempts failed
+33.942648,33.944447,38.055480,4112.833,4111.033,update,0,-1,ConnectError: All connection attempts failed
+33.944456,33.949133,38.055604,4111.148,4106.472,update,0,-1,ConnectError: All connection attempts failed
+33.957997,33.958661,38.055723,4097.726,4097.062,read,0,-1,ConnectError: All connection attempts failed
+33.971906,33.972779,38.055983,4084.077,4083.205,update,0,-1,ConnectError: All connection attempts failed
+28.057263,28.058306,38.059673,10002.410,10001.367,read,0,-1,TimeoutError: 
+38.068198,38.070258,38.072487,4.289,2.229,update,0,-1,ConnectError: All connection attempts failed
+38.073101,38.073722,38.075150,2.050,1.428,read,0,-1,ConnectError: All connection attempts failed
+30.962125,30.963408,38.085211,7123.086,7121.803,update,0,-1,ConnectError: All connection attempts failed
+35.003164,35.004550,38.085362,3082.198,3080.812,update,0,-1,ConnectError: All connection attempts failed
+30.962708,30.965230,38.085486,7122.778,7120.255,update,0,-1,ConnectError: All connection attempts failed
+37.070958,37.071389,38.085613,1014.655,1014.224,read,0,-1,ConnectError: All connection attempts failed
+37.058072,37.058597,38.085738,1027.666,1027.141,read,0,-1,ConnectError: All connection attempts failed
+38.081916,38.082788,38.085926,4.010,3.138,update,0,-1,ConnectError: All connection attempts failed
+28.086560,28.087096,38.088613,10002.053,10001.517,read,0,-1,TimeoutError: 
+28.097496,28.099010,38.100725,10003.229,10001.714,update,0,-1,TimeoutError: 
+28.103844,28.104467,38.106212,10002.368,10001.746,read,0,-1,TimeoutError: 
+38.103151,38.104006,38.106393,3.242,2.387,read,0,-1,ConnectError: All connection attempts failed
+28.105901,28.106831,38.108016,10002.115,10001.185,update,0,-1,TimeoutError: 
+35.054060,35.055556,38.117475,3063.416,3061.920,update,0,-1,ConnectError: All connection attempts failed
+37.107008,37.108238,38.117647,1010.639,1009.409,read,0,-1,ConnectError: All connection attempts failed
+37.105467,37.105886,38.117781,1012.315,1011.895,read,0,-1,ConnectError: All connection attempts failed
+37.111602,37.112838,38.117955,1006.354,1005.117,read,0,-1,ConnectError: All connection attempts failed
+37.094115,37.095056,38.118098,1023.983,1023.042,read,0,-1,ConnectError: All connection attempts failed
+37.085326,37.085999,38.118236,1032.910,1032.237,read,0,-1,ConnectError: All connection attempts failed
+34.012744,34.015328,38.118367,4105.623,4103.039,read,0,-1,ConnectError: All connection attempts failed
+35.048249,35.049269,38.118544,3070.295,3069.275,read,0,-1,ConnectError: All connection attempts failed
+35.041509,35.041889,38.118664,3077.156,3076.775,read,0,-1,ConnectError: All connection attempts failed
+30.997997,30.998437,38.118804,7120.807,7120.367,read,0,-1,ConnectError: All connection attempts failed
+35.036544,35.038581,38.118926,3082.383,3080.345,update,0,-1,ConnectError: All connection attempts failed
+35.852775,35.853769,38.119050,2266.275,2265.281,update,0,-1,ConnectError: All connection attempts failed
+35.891521,35.892996,38.119175,2227.654,2226.179,update,0,-1,ConnectError: All connection attempts failed
+30.970289,30.971344,38.119291,7149.003,7147.947,read,0,-1,ConnectError: All connection attempts failed
+35.898935,35.900465,38.119411,2220.476,2218.946,update,0,-1,ConnectError: All connection attempts failed
+38.119824,38.120599,38.122013,2.189,1.414,read,0,-1,ConnectError: All connection attempts failed
+38.136986,38.137640,38.140249,3.263,2.609,update,0,-1,ConnectError: All connection attempts failed
+28.141462,28.142520,38.144144,10002.682,10001.623,read,0,-1,TimeoutError: 
+28.144238,28.144640,38.145725,10001.488,10001.085,read,0,-1,TimeoutError: 
+33.045743,33.047550,38.150852,5105.109,5103.302,read,0,-1,ConnectError: All connection attempts failed
+34.040304,34.041565,38.151172,4110.869,4109.608,read,0,-1,ConnectError: All connection attempts failed
+37.143263,37.144661,38.151389,1008.125,1006.727,read,0,-1,ConnectError: All connection attempts failed
+35.090173,35.090868,38.151591,3061.418,3060.723,update,0,-1,ConnectError: All connection attempts failed
+33.048490,33.050105,38.151929,5103.439,5101.825,read,0,-1,ConnectError: All connection attempts failed
+37.140395,37.142217,38.152183,1011.788,1009.966,update,0,-1,ConnectError: All connection attempts failed
+33.025005,33.026121,38.152392,5127.387,5126.271,read,0,-1,ConnectError: All connection attempts failed
+35.081560,35.082320,38.152599,3071.040,3070.279,read,0,-1,ConnectError: All connection attempts failed
+35.077227,35.077909,38.152749,3075.523,3074.840,read,0,-1,ConnectError: All connection attempts failed
+35.071426,35.073032,38.152881,3081.456,3079.849,update,0,-1,ConnectError: All connection attempts failed
+35.070770,35.071362,38.153060,3082.290,3081.697,update,0,-1,ConnectError: All connection attempts failed
+35.065052,35.066621,38.153214,3088.161,3086.592,update,0,-1,ConnectError: All connection attempts failed
+38.155744,38.156483,38.158340,2.596,1.857,read,0,-1,ConnectError: All connection attempts failed
+28.160635,28.161868,38.163828,10003.192,10001.959,read,0,-1,TimeoutError: 
+28.172735,28.174601,38.176104,10003.368,10001.503,update,0,-1,TimeoutError: 
+28.173653,28.176417,38.177767,10004.114,10001.350,read,0,-1,TimeoutError: 
+35.102286,35.104013,38.181859,3079.574,3077.846,read,0,-1,ConnectError: All connection attempts failed
+31.042411,31.043333,38.182015,7139.604,7138.682,read,0,-1,ConnectError: All connection attempts failed
+37.170469,37.171368,38.182170,1011.701,1010.803,read,0,-1,ConnectError: All connection attempts failed
+34.067980,34.070385,38.182318,4114.338,4111.933,update,0,-1,ConnectError: All connection attempts failed
+33.071963,33.073105,38.182453,5110.490,5109.348,update,0,-1,ConnectError: All connection attempts failed
+35.910120,35.915021,38.182582,2272.463,2267.561,read,0,-1,ConnectError: All connection attempts failed
+31.041581,31.041818,38.182766,7141.185,7140.948,read,0,-1,ConnectError: All connection attempts failed
+35.926088,35.929309,38.182913,2256.825,2253.604,update,0,-1,ConnectError: All connection attempts failed
+37.161533,37.164436,38.183050,1021.517,1018.613,read,0,-1,ConnectError: All connection attempts failed
+31.060162,31.061141,38.183206,7123.044,7122.065,read,0,-1,ConnectError: All connection attempts failed
+37.160522,37.161858,38.183342,1022.820,1021.484,read,0,-1,ConnectError: All connection attempts failed
+37.151506,37.152608,38.183477,1031.971,1030.870,update,0,-1,ConnectError: All connection attempts failed
+37.147933,37.148615,38.183607,1035.674,1034.992,read,0,-1,ConnectError: All connection attempts failed
+28.178478,28.179801,38.183957,10005.480,10004.156,update,0,-1,TimeoutError: 
+38.178246,38.179005,38.184131,5.885,5.126,read,0,-1,ConnectError: All connection attempts failed
+38.186038,38.186681,38.188749,2.711,2.068,update,0,-1,ConnectError: All connection attempts failed
+38.194707,38.195373,38.197862,3.156,2.489,update,0,-1,ConnectError: All connection attempts failed
+38.204823,38.205498,38.207764,2.940,2.266,update,0,-1,ConnectError: All connection attempts failed
+31.081952,31.083301,38.213004,7131.052,7129.703,update,0,-1,ConnectError: All connection attempts failed
+35.969580,35.970945,38.213216,2243.635,2242.271,read,0,-1,ConnectError: All connection attempts failed
+37.189285,37.189691,38.213452,1024.166,1023.761,read,0,-1,ConnectError: All connection attempts failed
+36.019209,36.019699,38.213680,2194.471,2193.981,read,0,-1,ConnectError: All connection attempts failed
+36.056469,36.057374,38.213874,2157.405,2156.500,read,0,-1,ConnectError: All connection attempts failed
+35.143765,35.144457,38.214047,3070.282,3069.589,read,0,-1,ConnectError: All connection attempts failed
+28.213098,28.215052,38.217189,10004.091,10002.137,read,0,-1,TimeoutError: 
+38.219600,38.220515,38.222807,3.206,2.292,read,0,-1,ConnectError: All connection attempts failed
+28.228570,28.229226,38.231313,10002.743,10002.088,read,0,-1,TimeoutError: 
+38.236341,38.236741,38.239023,2.682,2.282,read,0,-1,ConnectError: All connection attempts failed
+34.165533,34.166757,38.245300,4079.767,4078.544,read,0,-1,ConnectError: All connection attempts failed
+37.211948,37.213473,38.245467,1033.520,1031.994,update,0,-1,ConnectError: All connection attempts failed
+35.184430,35.185344,38.245599,3061.169,3060.255,read,0,-1,ConnectError: All connection attempts failed
+34.159384,34.160087,38.245721,4086.337,4085.634,read,0,-1,ConnectError: All connection attempts failed
+33.136082,33.137310,38.245847,5109.765,5108.537,read,0,-1,ConnectError: All connection attempts failed
+35.165315,35.166812,38.245967,3080.652,3079.155,update,0,-1,ConnectError: All connection attempts failed
+31.123210,31.123950,38.246081,7122.871,7122.130,read,0,-1,ConnectError: All connection attempts failed
+33.160077,33.161346,38.277804,5117.727,5116.458,update,0,-1,ConnectError: All connection attempts failed
+37.254170,37.256554,38.278086,1023.915,1021.532,read,0,-1,ConnectError: All connection attempts failed
+37.252348,37.254728,38.278295,1025.947,1023.567,update,0,-1,ConnectError: All connection attempts failed
+33.154783,33.155664,38.278499,5123.716,5122.835,update,0,-1,ConnectError: All connection attempts failed
+34.174861,34.175794,38.278697,4103.836,4102.903,read,0,-1,ConnectError: All connection attempts failed
+34.180103,34.181456,38.278890,4098.787,4097.433,update,0,-1,ConnectError: All connection attempts failed
+31.134263,31.134935,38.279093,7144.829,7144.158,update,0,-1,ConnectError: All connection attempts failed
+34.182265,34.185121,38.279288,4097.022,4094.167,update,0,-1,ConnectError: All connection attempts failed
+34.196747,34.198235,38.279460,4082.713,4081.225,update,0,-1,ConnectError: All connection attempts failed
+35.224410,35.225428,38.282552,3058.142,3057.123,update,0,-1,ConnectError: All connection attempts failed
+28.280215,28.280995,38.282885,10002.670,10001.890,update,0,-1,TimeoutError: 
+38.277765,38.279926,38.283110,5.345,3.184,update,0,-1,ConnectError: All connection attempts failed
+38.287843,38.288559,38.290876,3.033,2.317,read,0,-1,ConnectError: All connection attempts failed
+38.299772,38.301357,38.303827,4.055,2.470,read,0,-1,ConnectError: All connection attempts failed
+37.279188,37.280299,38.309205,1030.017,1028.906,read,0,-1,ConnectError: All connection attempts failed
+37.274817,37.276087,38.309368,1034.551,1033.281,update,0,-1,ConnectError: All connection attempts failed
+36.079542,36.090487,38.309605,2230.063,2219.119,update,0,-1,ConnectError: All connection attempts failed
+37.287572,37.288529,38.309760,1022.189,1021.232,update,0,-1,ConnectError: All connection attempts failed
+34.211068,34.213865,38.309902,4098.834,4096.037,update,0,-1,ConnectError: All connection attempts failed
+34.213847,34.218836,38.310032,4096.185,4091.195,read,0,-1,ConnectError: All connection attempts failed
+35.245288,35.246108,38.310168,3064.879,3064.060,read,0,-1,ConnectError: All connection attempts failed
+35.234183,35.235348,38.310290,3076.108,3074.942,update,0,-1,ConnectError: All connection attempts failed
+28.327929,28.328538,38.330726,10002.797,10002.188,read,0,-1,TimeoutError: 
+28.329904,28.330643,38.331364,10001.461,10000.722,update,0,-1,TimeoutError: 
+38.335526,38.336780,38.339326,3.800,2.546,read,0,-1,ConnectError: All connection attempts failed
+33.225686,33.226620,38.340776,5115.089,5114.156,read,0,-1,ConnectError: All connection attempts failed
+36.080976,36.094625,38.340929,2259.953,2246.305,update,0,-1,ConnectError: All connection attempts failed
+36.085111,36.099177,38.341055,2255.944,2241.878,read,0,-1,ConnectError: All connection attempts failed
+31.206539,31.208840,38.341189,7134.650,7132.349,update,0,-1,ConnectError: All connection attempts failed
+36.100409,36.102725,38.341316,2240.907,2238.591,read,0,-1,ConnectError: All connection attempts failed
+31.210937,31.212312,38.341455,7130.518,7129.143,update,0,-1,ConnectError: All connection attempts failed
+31.213375,31.214480,38.341639,7128.264,7127.159,update,0,-1,ConnectError: All connection attempts failed
+35.286359,35.286841,38.341856,3055.497,3055.015,update,0,-1,ConnectError: All connection attempts failed
+35.250896,35.251455,38.342051,3091.155,3090.596,read,0,-1,ConnectError: All connection attempts failed
+31.216162,31.217088,38.342247,7126.086,7125.159,read,0,-1,ConnectError: All connection attempts failed
+37.304691,37.305630,38.342481,1037.790,1036.852,read,0,-1,ConnectError: All connection attempts failed
+28.352575,28.353863,38.355555,10002.980,10001.692,read,0,-1,TimeoutError: 
+28.353447,28.355399,38.355910,10002.463,10000.511,update,0,-1,TimeoutError: 
+28.364434,28.365153,38.367076,10002.642,10001.922,read,0,-1,TimeoutError: 
+33.253845,33.255040,38.373382,5119.538,5118.342,update,0,-1,ConnectError: All connection attempts failed
+36.184574,36.185915,38.373575,2189.001,2187.659,read,0,-1,ConnectError: All connection attempts failed
+33.249803,33.251627,38.373743,5123.940,5122.116,update,0,-1,ConnectError: All connection attempts failed
+36.210477,36.211592,38.373891,2163.414,2162.299,update,0,-1,ConnectError: All connection attempts failed
+31.233834,31.234906,38.374020,7140.186,7139.114,update,0,-1,ConnectError: All connection attempts failed
+34.265007,34.265656,38.374147,4109.139,4108.491,read,0,-1,ConnectError: All connection attempts failed
+31.236447,31.237581,38.374261,7137.814,7136.680,update,0,-1,ConnectError: All connection attempts failed
+31.242648,31.243760,38.374371,7131.723,7130.611,update,0,-1,ConnectError: All connection attempts failed
+37.363299,37.364751,38.374543,1011.244,1009.792,update,0,-1,ConnectError: All connection attempts failed
+31.247018,31.248381,38.374725,7127.706,7126.343,update,0,-1,ConnectError: All connection attempts failed
+31.248156,31.250180,38.374893,7126.737,7124.713,read,0,-1,ConnectError: All connection attempts failed
+37.341089,37.342428,38.375091,1034.003,1032.663,update,0,-1,ConnectError: All connection attempts failed
+28.376093,28.377356,38.378848,10002.754,10001.492,read,0,-1,TimeoutError: 
+33.296943,33.298048,38.405300,5108.357,5107.252,read,0,-1,ConnectError: All connection attempts failed
+33.282912,33.283479,38.405551,5122.639,5122.072,read,0,-1,ConnectError: All connection attempts failed
+36.214732,36.215367,38.405882,2191.149,2190.515,update,0,-1,ConnectError: All connection attempts failed
+36.223533,36.224359,38.406039,2182.506,2181.680,update,0,-1,ConnectError: All connection attempts failed
+36.289183,36.292050,38.406187,2117.004,2114.137,read,0,-1,ConnectError: All connection attempts failed
+36.303358,36.304244,38.406320,2102.962,2102.076,read,0,-1,ConnectError: All connection attempts failed
+36.344212,36.345351,38.406446,2062.234,2061.095,read,0,-1,ConnectError: All connection attempts failed
+35.328329,35.329276,38.406566,3078.237,3077.290,read,0,-1,ConnectError: All connection attempts failed
+38.406387,38.406680,38.408345,1.957,1.665,read,0,-1,ConnectError: All connection attempts failed
+38.411952,38.413014,38.415931,3.978,2.916,update,0,-1,ConnectError: All connection attempts failed
+35.376673,35.378347,38.437111,3060.438,3058.764,read,0,-1,ConnectError: All connection attempts failed
+34.341804,34.342969,38.437591,4095.786,4094.622,update,0,-1,ConnectError: All connection attempts failed
+34.343220,34.347059,38.437800,4094.580,4090.740,read,0,-1,ConnectError: All connection attempts failed
+34.343283,34.348976,38.438017,4094.734,4089.041,update,0,-1,ConnectError: All connection attempts failed
+34.344559,34.351040,38.438168,4093.609,4087.127,update,0,-1,ConnectError: All connection attempts failed
+33.330074,33.331516,38.438317,5108.243,5106.801,update,0,-1,ConnectError: All connection attempts failed
+33.323118,33.324016,38.438465,5115.347,5114.449,read,0,-1,ConnectError: All connection attempts failed
+33.314011,33.314974,38.438601,5124.590,5123.627,update,0,-1,ConnectError: All connection attempts failed
+31.313762,31.314939,38.438749,7124.986,7123.809,update,0,-1,ConnectError: All connection attempts failed
+28.438965,28.439671,38.440783,10001.818,10001.112,read,0,-1,TimeoutError: 
+38.438171,38.439078,38.440988,2.818,1.910,update,0,-1,ConnectError: All connection attempts failed
+38.443861,38.444420,38.446384,2.523,1.964,update,0,-1,ConnectError: All connection attempts failed
+28.457058,28.457458,38.459409,10002.351,10001.951,update,0,-1,TimeoutError: 
+28.461273,28.461776,38.463396,10002.123,10001.620,read,0,-1,TimeoutError: 
+37.455656,37.456745,38.469398,1013.742,1012.653,read,0,-1,ConnectError: All connection attempts failed
+36.413693,36.414675,38.469600,2055.906,2054.924,read,0,-1,ConnectError: All connection attempts failed
+36.383249,36.384044,38.469745,2086.496,2085.701,update,0,-1,ConnectError: All connection attempts failed
+36.433419,36.434574,38.469886,2036.467,2035.312,update,0,-1,ConnectError: All connection attempts failed
+37.448058,37.451016,38.470005,1021.948,1018.989,update,0,-1,ConnectError: All connection attempts failed
+35.397664,35.399399,38.470119,3072.455,3070.720,update,0,-1,ConnectError: All connection attempts failed
+37.447695,37.449275,38.470229,1022.534,1020.954,update,0,-1,ConnectError: All connection attempts failed
+35.395247,35.396051,38.470336,3075.090,3074.286,update,0,-1,ConnectError: All connection attempts failed
+33.355932,33.356919,38.470452,5114.520,5113.533,update,0,-1,ConnectError: All connection attempts failed
+31.321919,31.322623,38.470572,7148.653,7147.948,update,0,-1,ConnectError: All connection attempts failed
+33.340984,33.342640,38.470731,5129.747,5128.091,update,0,-1,ConnectError: All connection attempts failed
+34.370874,34.373281,38.470883,4100.009,4097.602,read,0,-1,ConnectError: All connection attempts failed
+38.470889,38.472488,38.474671,3.782,2.183,read,0,-1,ConnectError: All connection attempts failed
+38.471675,38.473523,38.474782,3.107,1.258,update,0,-1,ConnectError: All connection attempts failed
+28.475530,28.476618,38.477362,10001.833,10000.744,update,0,-1,TimeoutError: 
+38.485825,38.488158,38.490457,4.632,2.299,update,0,-1,ConnectError: All connection attempts failed
+28.490285,28.490703,38.492059,10001.774,10001.356,read,0,-1,TimeoutError: 
+28.494675,28.496084,38.498386,10003.710,10002.301,update,0,-1,TimeoutError: 
+37.470562,37.475177,38.501712,1031.149,1026.535,read,0,-1,ConnectError: All connection attempts failed
+36.455342,36.456632,38.502098,2046.756,2045.465,update,0,-1,ConnectError: All connection attempts failed
+37.469486,37.472084,38.502320,1032.834,1030.236,read,0,-1,ConnectError: All connection attempts failed
+37.479701,37.480655,38.502592,1022.892,1021.938,read,0,-1,ConnectError: All connection attempts failed
+37.468749,37.470098,38.502825,1034.076,1032.727,read,0,-1,ConnectError: All connection attempts failed
+35.399164,35.401365,38.503047,3103.883,3101.682,read,0,-1,ConnectError: All connection attempts failed
+33.368309,33.369982,38.503250,5134.941,5133.268,update,0,-1,ConnectError: All connection attempts failed
+34.409156,34.410282,38.503448,4094.292,4093.166,read,0,-1,ConnectError: All connection attempts failed
+34.410525,34.415079,38.503885,4093.361,4088.806,read,0,-1,ConnectError: All connection attempts failed
+34.410705,34.417481,38.504202,4093.497,4086.721,read,0,-1,ConnectError: All connection attempts failed
+28.503592,28.504606,38.506584,10002.991,10001.978,update,0,-1,TimeoutError: 
+38.502703,38.504527,38.506815,4.111,2.288,update,0,-1,ConnectError: All connection attempts failed
+38.526755,38.527478,38.529539,2.783,2.060,update,0,-1,ConnectError: All connection attempts failed
+33.414527,33.415834,38.534206,5119.679,5118.371,update,0,-1,ConnectError: All connection attempts failed
+34.426146,34.426979,38.534511,4108.365,4107.533,read,0,-1,ConnectError: All connection attempts failed
+33.410089,33.411638,38.534704,5124.615,5123.066,read,0,-1,ConnectError: All connection attempts failed
+37.496082,37.497750,38.534878,1038.796,1037.128,read,0,-1,ConnectError: All connection attempts failed
+34.434237,34.436909,38.535037,4100.800,4098.128,update,0,-1,ConnectError: All connection attempts failed
+34.434615,34.438978,38.535178,4100.563,4096.201,read,0,-1,ConnectError: All connection attempts failed
+33.408547,33.409357,38.535324,5126.777,5125.968,read,0,-1,ConnectError: All connection attempts failed
+34.434792,34.441391,38.535560,4100.768,4094.170,update,0,-1,ConnectError: All connection attempts failed
+31.388413,31.389681,38.535814,7147.401,7146.132,read,0,-1,ConnectError: All connection attempts failed
+34.439541,34.445859,38.536001,4096.460,4090.142,update,0,-1,ConnectError: All connection attempts failed
+31.414104,31.415158,38.536163,7122.058,7121.005,read,0,-1,ConnectError: All connection attempts failed
+34.444006,34.447545,38.536318,4092.312,4088.774,read,0,-1,ConnectError: All connection attempts failed
+34.451008,34.452102,38.536461,4085.453,4084.358,read,0,-1,ConnectError: All connection attempts failed
+35.474445,35.475748,38.536624,3062.179,3060.875,read,0,-1,ConnectError: All connection attempts failed
+35.431108,35.432457,38.536782,3105.674,3104.325,update,0,-1,ConnectError: All connection attempts failed
+36.463715,36.464709,38.536940,2073.224,2072.231,update,0,-1,ConnectError: All connection attempts failed
+28.545585,28.546594,38.548213,10002.628,10001.619,update,0,-1,TimeoutError: 
+36.525629,36.526680,38.565687,2040.058,2039.007,read,0,-1,ConnectError: All connection attempts failed
+37.551896,37.554445,38.565876,1013.980,1011.431,update,0,-1,ConnectError: All connection attempts failed
+34.467008,34.468804,38.566015,4099.007,4097.211,read,0,-1,ConnectError: All connection attempts failed
+34.478117,34.479172,38.566127,4088.010,4086.954,update,0,-1,ConnectError: All connection attempts failed
+36.466281,36.467045,38.566240,2099.959,2099.195,update,0,-1,ConnectError: All connection attempts failed
+34.482850,34.483695,38.566347,4083.496,4082.652,update,0,-1,ConnectError: All connection attempts failed
+37.535147,37.536155,38.566452,1031.305,1030.297,read,0,-1,ConnectError: All connection attempts failed
+35.489643,35.490857,38.566560,3076.917,3075.703,read,0,-1,ConnectError: All connection attempts failed
+37.508089,37.509258,38.566663,1058.574,1057.404,read,0,-1,ConnectError: All connection attempts failed
+37.500409,37.502017,38.566767,1066.358,1064.750,read,0,-1,ConnectError: All connection attempts failed
+34.472798,34.473504,38.566863,4094.065,4093.359,update,0,-1,ConnectError: All connection attempts failed
+37.498994,37.500185,38.566961,1067.966,1066.776,update,0,-1,ConnectError: All connection attempts failed
+31.419068,31.419907,38.567074,7148.007,7147.167,update,0,-1,ConnectError: All connection attempts failed
+38.576541,38.577638,38.579539,2.998,1.902,update,0,-1,ConnectError: All connection attempts failed
+33.488703,33.489326,38.598002,5109.299,5108.676,read,0,-1,ConnectError: All connection attempts failed
+33.469980,33.470614,38.598546,5128.565,5127.931,read,0,-1,ConnectError: All connection attempts failed
+31.472994,31.474512,38.598726,7125.732,7124.214,update,0,-1,ConnectError: All connection attempts failed
+31.473182,31.476185,38.598869,7125.687,7122.685,update,0,-1,ConnectError: All connection attempts failed
+35.540350,35.541568,38.599077,3058.728,3057.510,update,0,-1,ConnectError: All connection attempts failed
+36.526292,36.528494,38.599304,2073.012,2070.810,read,0,-1,ConnectError: All connection attempts failed
+36.532610,36.533092,38.599444,2066.834,2066.352,update,0,-1,ConnectError: All connection attempts failed
+36.551643,36.553180,38.599582,2047.938,2046.401,update,0,-1,ConnectError: All connection attempts failed
+38.608245,38.610425,38.612525,4.280,2.101,update,0,-1,ConnectError: All connection attempts failed
+28.625353,28.626474,38.629204,10003.851,10002.730,update,0,-1,TimeoutError: 
+38.624805,38.627010,38.629678,4.873,2.669,read,0,-1,ConnectError: All connection attempts failed
+34.526458,34.527511,38.633084,4106.626,4105.573,read,0,-1,ConnectError: All connection attempts failed
+34.531910,34.533170,38.633338,4101.428,4100.168,update,0,-1,ConnectError: All connection attempts failed
+34.548118,34.549077,38.633560,4085.442,4084.483,read,0,-1,ConnectError: All connection attempts failed
+33.507925,33.508280,38.633813,5125.888,5125.532,read,0,-1,ConnectError: All connection attempts failed
+38.638556,38.639550,38.642412,3.857,2.862,update,0,-1,ConnectError: All connection attempts failed
+38.638822,38.640844,38.642539,3.717,1.695,read,0,-1,ConnectError: All connection attempts failed
+28.655352,28.656040,38.659040,10003.687,10003.000,update,0,-1,TimeoutError: 
+28.656686,28.658324,38.659364,10002.678,10001.040,update,0,-1,TimeoutError: 
+38.654911,38.657182,38.659513,4.602,2.331,update,0,-1,ConnectError: All connection attempts failed
+36.618653,36.619251,38.660427,2041.774,2041.176,read,0,-1,ConnectError: All connection attempts failed
+36.623371,36.624216,38.660640,2037.269,2036.425,update,0,-1,ConnectError: All connection attempts failed
+36.629044,36.630073,38.660771,2031.727,2030.698,update,0,-1,ConnectError: All connection attempts failed
+35.593757,35.594451,38.666058,3072.301,3071.607,read,0,-1,ConnectError: All connection attempts failed
+34.560171,34.561969,38.666326,4106.156,4104.358,update,0,-1,ConnectError: All connection attempts failed
+34.568222,34.569822,38.666517,4098.295,4096.695,update,0,-1,ConnectError: All connection attempts failed
+34.578665,34.579517,38.666716,4088.051,4087.200,read,0,-1,ConnectError: All connection attempts failed
+34.578988,34.581703,38.666875,4087.887,4085.171,read,0,-1,ConnectError: All connection attempts failed
+34.583080,34.584549,38.667083,4084.003,4082.535,update,0,-1,ConnectError: All connection attempts failed
+33.551433,33.552508,38.667338,5115.906,5114.830,read,0,-1,ConnectError: All connection attempts failed
+33.548135,33.548630,38.667530,5119.395,5118.900,update,0,-1,ConnectError: All connection attempts failed
+33.543417,33.544400,38.667895,5124.478,5123.495,read,0,-1,ConnectError: All connection attempts failed
+33.533377,33.534697,38.668095,5134.718,5133.399,update,0,-1,ConnectError: All connection attempts failed
+33.527796,33.529839,38.668270,5140.473,5138.431,update,0,-1,ConnectError: All connection attempts failed
+38.671432,38.672662,38.675045,3.613,2.383,read,0,-1,ConnectError: All connection attempts failed
+35.631125,35.632387,38.693624,3062.499,3061.237,update,0,-1,ConnectError: All connection attempts failed
+35.621867,35.623971,38.693837,3071.970,3069.866,read,0,-1,ConnectError: All connection attempts failed
+34.603521,34.604574,38.694002,4090.481,4089.429,update,0,-1,ConnectError: All connection attempts failed
+37.685398,37.686738,38.694137,1008.739,1007.399,read,0,-1,ConnectError: All connection attempts failed
+37.666815,37.668155,38.694248,1027.433,1026.093,update,0,-1,ConnectError: All connection attempts failed
+31.553150,31.554590,38.694354,7141.204,7139.764,read,0,-1,ConnectError: All connection attempts failed
+31.553806,31.556104,38.694458,7140.652,7138.354,update,0,-1,ConnectError: All connection attempts failed
+31.559648,31.560900,38.694555,7134.907,7133.655,update,0,-1,ConnectError: All connection attempts failed
+31.575705,31.576457,38.694652,7118.947,7118.196,read,0,-1,ConnectError: All connection attempts failed
+31.575890,31.577925,38.694758,7118.868,7116.833,update,0,-1,ConnectError: All connection attempts failed
+38.698536,38.699472,38.701975,3.440,2.503,update,0,-1,ConnectError: All connection attempts failed
+28.703949,28.704132,38.704890,10000.941,10000.758,read,0,-1,TimeoutError: 
+38.702152,38.703264,38.705016,2.864,1.752,read,0,-1,ConnectError: All connection attempts failed
+28.716216,28.717174,38.720094,10003.879,10002.921,update,0,-1,TimeoutError: 
+38.719919,38.720404,38.722782,2.864,2.378,update,0,-1,ConnectError: All connection attempts failed
+38.720978,38.721787,38.723035,2.057,1.248,update,0,-1,ConnectError: All connection attempts failed
+35.651987,35.653816,38.724738,3072.750,3070.921,read,0,-1,ConnectError: All connection attempts failed
+35.643313,35.644480,38.724868,3081.554,3080.388,read,0,-1,ConnectError: All connection attempts failed
+34.632188,34.633441,38.725079,4092.891,4091.638,update,0,-1,ConnectError: All connection attempts failed
+36.666710,36.667577,38.725216,2058.507,2057.640,update,0,-1,ConnectError: All connection attempts failed
+34.637115,34.637890,38.725318,4088.203,4087.428,read,0,-1,ConnectError: All connection attempts failed
+36.674632,36.675604,38.725427,2050.795,2049.823,update,0,-1,ConnectError: All connection attempts failed
+34.641000,34.642697,38.725591,4084.591,4082.894,read,0,-1,ConnectError: All connection attempts failed
+36.684947,36.685901,38.725720,2040.773,2039.819,update,0,-1,ConnectError: All connection attempts failed
+36.693865,36.695359,38.725830,2031.966,2030.471,update,0,-1,ConnectError: All connection attempts failed
+38.746863,38.748507,38.750753,3.890,2.247,update,0,-1,ConnectError: All connection attempts failed
+28.752138,28.752676,38.753625,10001.487,10000.950,update,0,-1,TimeoutError: 
+36.694879,36.697508,38.756725,2061.846,2059.217,read,0,-1,ConnectError: All connection attempts failed
+35.662072,35.663870,38.756943,3094.871,3093.074,update,0,-1,ConnectError: All connection attempts failed
+37.746629,37.747839,38.757061,1010.431,1009.221,update,0,-1,ConnectError: All connection attempts failed
+37.729615,37.730334,38.757163,1027.548,1026.829,read,0,-1,ConnectError: All connection attempts failed
+33.642583,33.643319,38.757270,5114.687,5113.951,read,0,-1,ConnectError: All connection attempts failed
+31.604828,31.607389,38.757381,7152.552,7149.992,read,0,-1,ConnectError: All connection attempts failed
+31.606598,31.610011,38.757488,7150.891,7147.477,update,0,-1,ConnectError: All connection attempts failed
+28.756028,28.756576,38.757852,10001.824,10001.276,read,0,-1,TimeoutError: 
+28.759224,28.760207,38.761534,10002.310,10001.327,read,0,-1,TimeoutError: 
+38.781338,38.782030,38.784202,2.864,2.172,read,0,-1,ConnectError: All connection attempts failed
+36.751764,36.753295,38.789701,2037.937,2036.406,update,0,-1,ConnectError: All connection attempts failed
+35.674820,35.676426,38.789840,3115.021,3113.415,read,0,-1,ConnectError: All connection attempts failed
+37.773268,37.774822,38.790014,1016.746,1015.193,read,0,-1,ConnectError: All connection attempts failed
+37.771968,37.773644,38.790210,1018.241,1016.566,update,0,-1,ConnectError: All connection attempts failed
+37.770485,37.772254,38.790390,1019.905,1018.136,update,0,-1,ConnectError: All connection attempts failed
+37.759743,37.760192,38.790543,1030.799,1030.351,read,0,-1,ConnectError: All connection attempts failed
+34.688224,34.689203,38.790732,4102.509,4101.530,update,0,-1,ConnectError: All connection attempts failed
+34.690282,34.692345,38.790836,4100.555,4098.491,update,0,-1,ConnectError: All connection attempts failed
+33.669821,33.670859,38.790944,5121.123,5120.085,read,0,-1,ConnectError: All connection attempts failed
+31.640572,31.642202,38.791044,7150.472,7148.842,update,0,-1,ConnectError: All connection attempts failed
+31.641287,31.643724,38.791135,7149.848,7147.411,update,0,-1,ConnectError: All connection attempts failed
+31.656309,31.657771,38.791225,7134.916,7133.454,update,0,-1,ConnectError: All connection attempts failed
+31.661009,31.661602,38.791310,7130.301,7129.708,read,0,-1,ConnectError: All connection attempts failed
+31.667825,31.668574,38.791398,7123.574,7122.824,read,0,-1,ConnectError: All connection attempts failed
+38.792856,38.794405,38.796146,3.290,1.741,update,0,-1,ConnectError: All connection attempts failed
+28.806655,28.808331,38.811152,10004.497,10002.821,read,0,-1,TimeoutError: 
+28.813379,28.813876,38.815240,10001.861,10001.364,update,0,-1,TimeoutError: 
+28.814259,28.815643,38.818423,10004.164,10002.780,read,0,-1,TimeoutError: 
+38.816130,38.816997,38.819119,2.989,2.122,update,0,-1,ConnectError: All connection attempts failed
+36.775693,36.776966,38.820646,2044.953,2043.680,read,0,-1,ConnectError: All connection attempts failed
+36.775830,36.778545,38.820836,2045.006,2042.290,read,0,-1,ConnectError: All connection attempts failed
+36.777874,36.779947,38.821046,2043.172,2041.098,read,0,-1,ConnectError: All connection attempts failed
+36.780785,36.781136,38.821240,2040.455,2040.104,read,0,-1,ConnectError: All connection attempts failed
+36.789990,36.790667,38.821396,2031.406,2030.729,read,0,-1,ConnectError: All connection attempts failed
+35.675165,35.679421,38.825091,3149.926,3145.670,update,0,-1,ConnectError: All connection attempts failed
+37.794751,37.796532,38.825346,1030.595,1028.814,read,0,-1,ConnectError: All connection attempts failed
+33.712112,33.714191,38.825466,5113.355,5111.276,update,0,-1,ConnectError: All connection attempts failed
+33.712083,33.712824,38.825574,5113.492,5112.750,read,0,-1,ConnectError: All connection attempts failed
+34.721963,34.722280,38.825679,4103.716,4103.399,read,0,-1,ConnectError: All connection attempts failed
+31.681310,31.682620,38.825939,7144.628,7143.319,update,0,-1,ConnectError: All connection attempts failed
+31.690595,31.691513,38.826058,7135.463,7134.545,read,0,-1,ConnectError: All connection attempts failed
+31.700546,31.701039,38.826155,7125.609,7125.116,read,0,-1,ConnectError: All connection attempts failed
+28.828164,28.829355,38.831224,10003.060,10001.870,read,0,-1,TimeoutError: 
+38.837843,38.838877,38.840731,2.888,1.854,update,0,-1,ConnectError: All connection attempts failed
+38.845080,38.846277,38.850425,5.345,4.147,update,0,-1,ConnectError: All connection attempts failed
+38.846927,38.848523,38.850674,3.747,2.152,update,0,-1,ConnectError: All connection attempts failed
+31.721739,31.723468,38.852749,7131.010,7129.281,update,0,-1,ConnectError: All connection attempts failed
+31.726084,31.727321,38.852875,7126.791,7125.554,update,0,-1,ConnectError: All connection attempts failed
+31.730089,31.731449,38.852990,7122.901,7121.542,read,0,-1,ConnectError: All connection attempts failed
+38.875303,38.876411,38.878421,3.118,2.010,read,0,-1,ConnectError: All connection attempts failed
+38.884138,38.884816,38.886576,2.438,1.761,read,0,-1,ConnectError: All connection attempts failed
+31.753154,31.753632,38.888991,7135.837,7135.359,update,0,-1,ConnectError: All connection attempts failed
+31.760201,31.761514,38.889102,7128.900,7127.588,update,0,-1,ConnectError: All connection attempts failed
+31.814249,31.814548,38.954229,7139.979,7139.680,read,0,-1,ConnectError: All connection attempts failed
+31.825360,31.827498,38.954342,7128.982,7126.844,read,0,-1,ConnectError: All connection attempts failed
+38.887658,38.888156,38.954438,66.780,66.282,read,0,-1,ConnectError: All connection attempts failed
+28.921438,28.922159,38.954826,10033.387,10032.667,read,0,-1,TimeoutError: 
+38.899333,38.952799,38.955487,56.153,2.687,update,0,-1,ConnectError: All connection attempts failed
+38.935121,38.953598,38.955591,20.470,1.994,update,0,-1,ConnectError: All connection attempts failed
+28.957535,28.958657,38.960473,10002.938,10001.816,update,0,-1,TimeoutError: 
+28.967628,28.968840,38.971392,10003.764,10002.552,update,0,-1,TimeoutError: 
+31.838210,31.838617,38.981103,7142.893,7142.486,read,0,-1,ConnectError: All connection attempts failed
+31.838679,31.840783,38.981219,7142.540,7140.436,read,0,-1,ConnectError: All connection attempts failed
+31.839096,31.841950,38.981312,7142.216,7139.362,read,0,-1,ConnectError: All connection attempts failed
+31.841310,31.851540,38.981404,7140.095,7129.865,update,0,-1,ConnectError: All connection attempts failed
+31.860960,31.862330,38.981492,7120.532,7119.162,read,0,-1,ConnectError: All connection attempts failed
+38.996785,38.997894,39.000677,3.892,2.783,read,0,-1,ConnectError: All connection attempts failed
+31.882805,31.883997,39.012762,7129.957,7128.765,update,0,-1,ConnectError: All connection attempts failed
+39.013541,39.014099,39.015947,2.406,1.848,read,0,-1,ConnectError: All connection attempts failed
+29.067076,29.068000,39.069970,10002.893,10001.970,read,0,-1,TimeoutError: 
+31.943619,31.943847,39.081434,7137.815,7137.586,read,0,-1,ConnectError: All connection attempts failed
+31.954948,31.956202,39.081702,7126.754,7125.500,update,0,-1,ConnectError: All connection attempts failed
+39.083577,39.084079,39.086043,2.467,1.965,read,0,-1,ConnectError: All connection attempts failed
+39.087386,39.088331,39.090034,2.648,1.703,read,0,-1,ConnectError: All connection attempts failed
+29.098935,29.099680,39.101118,10002.183,10001.438,read,0,-1,TimeoutError: 
+39.100869,39.101534,39.104148,3.279,2.614,update,0,-1,ConnectError: All connection attempts failed
+39.101037,39.102482,39.104274,3.237,1.792,read,0,-1,ConnectError: All connection attempts failed
+39.106368,39.107544,39.109000,2.632,1.455,read,0,-1,ConnectError: All connection attempts failed
+31.979545,31.980265,39.122961,7143.415,7142.696,update,0,-1,ConnectError: All connection attempts failed
+31.987965,31.989460,39.123140,7135.174,7133.679,update,0,-1,ConnectError: All connection attempts failed
+31.989504,31.991452,39.123261,7133.757,7131.809,read,0,-1,ConnectError: All connection attempts failed
+29.135846,29.137484,39.139284,10003.438,10001.801,update,0,-1,TimeoutError: 
+32.000405,32.001187,39.140657,7140.252,7139.469,read,0,-1,ConnectError: All connection attempts failed
+32.024593,32.025333,39.140781,7116.188,7115.448,update,0,-1,ConnectError: All connection attempts failed
+39.148208,39.149975,39.154060,5.852,4.085,read,0,-1,ConnectError: All connection attempts failed
+39.149433,39.150835,39.154156,4.723,3.321,update,0,-1,ConnectError: All connection attempts failed
+29.156621,29.158064,39.159140,10002.519,10001.077,read,0,-1,TimeoutError: 
+29.166652,29.167073,39.168256,10001.604,10001.183,read,0,-1,TimeoutError: 
+39.170684,39.171652,39.173304,2.620,1.651,read,0,-1,ConnectError: All connection attempts failed
+39.184932,39.185950,39.187891,2.959,1.941,update,0,-1,ConnectError: All connection attempts failed
+32.057209,32.058187,39.204711,7147.502,7146.524,update,0,-1,ConnectError: All connection attempts failed
+29.213879,29.215064,39.216591,10002.712,10001.527,update,0,-1,TimeoutError: 
+29.226600,29.228146,39.229609,10003.009,10001.463,update,0,-1,TimeoutError: 
+32.117933,32.118618,39.236633,7118.700,7118.015,read,0,-1,ConnectError: All connection attempts failed
+39.272696,39.274058,39.275938,3.242,1.881,read,0,-1,ConnectError: All connection attempts failed
+29.281158,29.281634,39.282951,10001.793,10001.317,read,0,-1,TimeoutError: 
+29.297226,29.297753,39.298888,10001.662,10001.135,update,0,-1,TimeoutError: 
+32.153629,32.154362,39.300722,7147.093,7146.360,update,0,-1,ConnectError: All connection attempts failed
+32.170214,32.170949,39.300856,7130.642,7129.907,update,0,-1,ConnectError: All connection attempts failed
+32.186200,32.187591,39.332923,7146.722,7145.332,read,0,-1,ConnectError: All connection attempts failed
+32.200107,32.201581,39.333039,7132.931,7131.458,update,0,-1,ConnectError: All connection attempts failed
+32.213094,32.213524,39.333133,7120.039,7119.609,read,0,-1,ConnectError: All connection attempts failed
+29.345353,29.347363,39.349247,10003.894,10001.884,update,0,-1,TimeoutError: 
+29.358322,29.358924,39.360314,10001.992,10001.390,update,0,-1,TimeoutError: 
+32.235913,32.236984,39.364551,7128.637,7127.566,update,0,-1,ConnectError: All connection attempts failed
+29.369454,29.371129,39.372569,10003.116,10001.440,update,0,-1,TimeoutError: 
+39.373714,39.374876,39.376549,2.835,1.673,read,0,-1,ConnectError: All connection attempts failed
+39.376347,39.376818,39.377926,1.579,1.108,update,0,-1,ConnectError: All connection attempts failed
+39.382425,39.383632,39.385826,3.402,2.194,update,0,-1,ConnectError: All connection attempts failed
+29.387221,29.388221,39.389558,10002.337,10001.337,update,0,-1,TimeoutError: 
+29.394856,29.395366,39.397074,10002.218,10001.708,update,0,-1,TimeoutError: 
+32.253060,32.253835,39.397294,7144.234,7143.459,update,0,-1,ConnectError: All connection attempts failed
+29.398092,29.399298,39.400229,10002.137,10000.931,read,0,-1,TimeoutError: 
+29.415891,29.416891,39.418220,10002.329,10001.330,update,0,-1,TimeoutError: 
+32.291981,32.293674,39.428977,7136.997,7135.304,read,0,-1,ConnectError: All connection attempts failed
+32.303940,32.304464,39.429105,7125.164,7124.641,read,0,-1,ConnectError: All connection attempts failed
+29.453963,29.454486,39.457042,10003.079,10002.556,read,0,-1,TimeoutError: 
+32.316682,32.317919,39.460568,7143.886,7142.649,update,0,-1,ConnectError: All connection attempts failed
+29.460471,29.461495,39.462162,10001.691,10000.667,read,0,-1,TimeoutError: 
+39.477588,39.478570,39.480912,3.324,2.342,read,0,-1,ConnectError: All connection attempts failed
+39.485596,39.486610,39.488365,2.769,1.755,update,0,-1,ConnectError: All connection attempts failed
+32.352367,32.353714,39.492895,7140.527,7139.181,read,0,-1,ConnectError: All connection attempts failed
+32.374885,32.375209,39.493017,7118.131,7117.807,read,0,-1,ConnectError: All connection attempts failed
+39.489577,39.491073,39.493177,3.601,2.104,update,0,-1,ConnectError: All connection attempts failed
+29.500524,29.501752,39.504510,10003.987,10002.758,update,0,-1,TimeoutError: 
+32.389751,32.390539,39.524891,7135.140,7134.352,update,0,-1,ConnectError: All connection attempts failed
+32.406328,32.407708,39.525027,7118.699,7117.319,update,0,-1,ConnectError: All connection attempts failed
+29.531465,29.532127,39.534039,10002.573,10001.911,read,0,-1,TimeoutError: 
+39.538134,39.539804,39.541283,3.149,1.478,update,0,-1,ConnectError: All connection attempts failed
+32.439095,32.439827,39.556765,7117.670,7116.938,update,0,-1,ConnectError: All connection attempts failed
+39.557340,39.558064,39.559824,2.484,1.759,read,0,-1,ConnectError: All connection attempts failed
+29.561358,29.562335,39.563998,10002.640,10001.663,read,0,-1,TimeoutError: 
+39.564707,39.565320,39.566762,2.055,1.442,read,0,-1,ConnectError: All connection attempts failed
+29.572086,29.579341,39.583053,10010.967,10003.711,update,0,-1,TimeoutError: 
+39.580874,39.581763,39.583596,2.722,1.833,update,0,-1,ConnectError: All connection attempts failed
+32.457794,32.458544,39.593616,7135.822,7135.072,update,0,-1,ConnectError: All connection attempts failed
+32.463793,32.465292,39.593716,7129.923,7128.424,update,0,-1,ConnectError: All connection attempts failed
+32.471221,32.472009,39.593800,7122.579,7121.791,update,0,-1,ConnectError: All connection attempts failed
+39.592025,39.592665,39.594392,2.367,1.727,read,0,-1,ConnectError: All connection attempts failed
+39.604274,39.604778,39.606297,2.023,1.519,read,0,-1,ConnectError: All connection attempts failed
+32.489779,32.491054,39.620899,7131.121,7129.845,update,0,-1,ConnectError: All connection attempts failed
+32.490717,32.492846,39.621112,7130.395,7128.266,update,0,-1,ConnectError: All connection attempts failed
+32.502951,32.504482,39.621217,7118.266,7116.736,update,0,-1,ConnectError: All connection attempts failed
+39.620339,39.621313,39.622667,2.328,1.355,read,0,-1,ConnectError: All connection attempts failed
+39.624060,39.625183,39.626493,2.432,1.310,update,0,-1,ConnectError: All connection attempts failed
+39.643182,39.643996,39.648738,5.556,4.742,read,0,-1,ConnectError: All connection attempts failed
+32.547447,32.548000,39.684890,7137.443,7136.890,read,0,-1,ConnectError: All connection attempts failed
+32.552730,32.553974,39.685011,7132.282,7131.037,update,0,-1,ConnectError: All connection attempts failed
+32.564475,32.565407,39.685109,7120.634,7119.702,update,0,-1,ConnectError: All connection attempts failed
+29.705882,29.707203,39.708472,10002.590,10001.269,read,0,-1,TimeoutError: 
+39.705279,39.706734,39.708606,3.327,1.872,update,0,-1,ConnectError: All connection attempts failed
+32.588521,32.589028,39.716811,7128.289,7127.783,read,0,-1,ConnectError: All connection attempts failed
+39.723211,39.724192,39.725994,2.784,1.802,read,0,-1,ConnectError: All connection attempts failed
+29.737179,29.738526,39.740921,10003.742,10002.395,read,0,-1,TimeoutError: 
+29.754323,29.756184,39.757737,10003.414,10001.553,update,0,-1,TimeoutError: 
+39.754187,39.755678,39.757895,3.708,2.218,update,0,-1,ConnectError: All connection attempts failed
+29.756733,29.758672,39.759528,10002.795,10000.856,read,0,-1,TimeoutError: 
+39.760828,39.762045,39.763540,2.713,1.496,update,0,-1,ConnectError: All connection attempts failed
+39.764186,39.765097,39.766956,2.769,1.859,update,0,-1,ConnectError: All connection attempts failed
+39.764316,39.765804,39.767050,2.734,1.246,read,0,-1,ConnectError: All connection attempts failed
+29.773790,29.774587,39.776066,10002.276,10001.480,update,0,-1,TimeoutError: 
+29.774080,29.775714,39.776362,10002.282,10000.648,update,0,-1,TimeoutError: 
+32.640462,32.641667,39.784764,7144.303,7143.097,update,0,-1,ConnectError: All connection attempts failed
+32.664294,32.665693,39.813090,7148.796,7147.397,update,0,-1,ConnectError: All connection attempts failed
+32.683955,32.684581,39.813226,7129.271,7128.645,update,0,-1,ConnectError: All connection attempts failed
+32.693642,32.694018,39.813367,7119.725,7119.349,read,0,-1,ConnectError: All connection attempts failed
+29.820579,29.821690,39.824402,10003.823,10002.712,read,0,-1,TimeoutError: 
+29.828789,29.828894,39.830393,10001.604,10001.499,read,0,-1,TimeoutError: 
+29.837977,29.839073,39.841335,10003.358,10002.262,read,0,-1,TimeoutError: 
+39.843920,39.844716,39.846392,2.471,1.675,read,0,-1,ConnectError: All connection attempts failed
+39.846456,39.847614,39.848935,2.480,1.322,read,0,-1,ConnectError: All connection attempts failed
+29.853987,29.856483,39.859194,10005.208,10002.711,read,0,-1,TimeoutError: 
+39.856017,39.857391,39.859542,3.525,2.152,read,0,-1,ConnectError: All connection attempts failed
+29.874279,29.874951,39.876622,10002.343,10001.671,update,0,-1,TimeoutError: 
+39.877285,39.878149,39.879483,2.198,1.335,update,0,-1,ConnectError: All connection attempts failed
+29.891760,29.892488,39.894309,10002.549,10001.821,update,0,-1,TimeoutError: 
+39.903815,39.904930,39.906505,2.690,1.575,update,0,-1,ConnectError: All connection attempts failed
+29.905028,29.905902,39.906648,10001.619,10000.746,read,0,-1,TimeoutError: 
+39.923069,39.924232,39.925595,2.526,1.364,update,0,-1,ConnectError: All connection attempts failed
+29.925150,29.926623,39.928295,10003.145,10001.672,update,0,-1,TimeoutError: 
+39.934650,39.936057,39.937445,2.795,1.388,update,0,-1,ConnectError: All connection attempts failed
+29.962715,29.964563,39.966361,10003.646,10001.798,update,0,-1,TimeoutError: 
+39.968391,39.968980,39.970526,2.136,1.546,update,0,-1,ConnectError: All connection attempts failed
+29.974535,29.975786,39.977271,10002.737,10001.485,update,0,-1,TimeoutError: 
+39.980072,39.985030,39.988197,8.126,3.167,update,0,-1,ConnectError: All connection attempts failed
+29.988401,29.988939,39.990083,10001.683,10001.144,update,0,-1,TimeoutError: 
+30.021652,30.022556,40.024194,10002.542,10001.638,read,0,-1,TimeoutError: 
+30.021720,30.024546,40.025894,10004.174,10001.348,update,0,-1,TimeoutError: 
+30.025224,30.026455,40.027480,10002.255,10001.024,update,0,-1,TimeoutError: 
+30.033086,30.034338,40.035243,10002.157,10000.905,update,0,-1,TimeoutError: 
+30.037900,30.038666,40.040001,10002.101,10001.335,update,0,-1,TimeoutError: 
+30.083170,30.084762,40.085952,10002.783,10001.190,update,0,-1,TimeoutError: 
+30.086378,30.088304,40.089411,10003.033,10001.107,read,0,-1,TimeoutError: 
+30.088661,30.090912,40.091860,10003.199,10000.948,update,0,-1,TimeoutError: 
+30.096292,30.096798,40.097383,10001.091,10000.585,read,0,-1,TimeoutError: 
+30.110504,30.111788,40.113026,10002.522,10001.239,read,0,-1,TimeoutError: 
+30.144965,30.145499,40.147012,10002.047,10001.514,read,0,-1,TimeoutError: 
+30.253722,30.256067,40.258079,10004.357,10002.012,read,0,-1,TimeoutError: 
+30.291915,30.292790,40.294102,10002.187,10001.312,read,0,-1,TimeoutError: 
+30.310688,30.312172,40.313875,10003.187,10001.703,read,0,-1,TimeoutError: 
+30.311454,30.313966,40.315263,10003.809,10001.297,update,0,-1,TimeoutError: 
+30.312765,30.315532,40.316627,10003.862,10001.095,read,0,-1,TimeoutError: 
+30.332690,30.333076,40.334355,10001.664,10001.279,read,0,-1,TimeoutError: 
+30.366973,30.367594,40.369197,10002.224,10001.603,read,0,-1,TimeoutError: 
+30.373145,30.373992,40.375265,10002.120,10001.273,read,0,-1,TimeoutError: 
+30.442762,30.443638,40.445224,10002.462,10001.586,read,0,-1,TimeoutError: 
+30.458749,30.458906,40.460179,10001.430,10001.273,read,0,-1,TimeoutError: 
+30.475805,30.476965,40.478242,10002.437,10001.277,update,0,-1,TimeoutError: 
+30.495084,30.496751,40.498131,10003.047,10001.380,read,0,-1,TimeoutError: 
+30.496642,30.498644,40.499591,10002.949,10000.947,read,0,-1,TimeoutError: 
+30.500378,30.500736,40.502059,10001.681,10001.323,read,0,-1,TimeoutError: 
+30.555415,30.557547,40.559002,10003.587,10001.455,update,0,-1,TimeoutError: 
+30.561635,30.562652,40.564047,10002.412,10001.395,read,0,-1,TimeoutError: 
+30.563375,30.565104,40.566557,10003.182,10001.453,update,0,-1,TimeoutError: 
+30.570012,30.571087,40.572176,10002.163,10001.088,read,0,-1,TimeoutError: 
+30.595916,30.596815,40.598051,10002.136,10001.236,update,0,-1,TimeoutError: 
+30.602014,30.603054,40.603791,10001.777,10000.737,update,0,-1,TimeoutError: 
+30.606743,30.607902,40.609420,10002.677,10001.517,update,0,-1,TimeoutError: 
+30.613234,30.614572,40.616384,10003.151,10001.812,update,0,-1,TimeoutError: 
+30.626328,30.626834,40.628261,10001.933,10001.427,read,0,-1,TimeoutError: 
+30.653082,30.654761,40.656154,10003.072,10001.393,update,0,-1,TimeoutError: 
+30.660253,30.661541,40.662950,10002.696,10001.408,read,0,-1,TimeoutError: 

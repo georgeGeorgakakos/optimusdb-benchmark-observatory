@@ -1,0 +1,7 @@
+13:45:52 QUICK E3: 1 rep, 10^4 records, short windows, reduced grids, results in /results/quick
+13:45:52 [1/1] E3 block corrosion sql 10000 records: load once, 1 repetitions
+13:45:52   reset corrosion: stop others, wipe, start, join, smoke test
+13:46:02   loading 10000 records (2KB)
+13:46:05   loaded in 3 s
+13:46:26   replicated on every host after 17 s
+13:46:28   done E3 corrosion sql 10000 rep 1

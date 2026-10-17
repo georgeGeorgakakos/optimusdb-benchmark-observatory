@@ -1,0 +1,18 @@
+13:51:36 QUICK E1: 1 rep, 10^4 records, short windows, reduced grids, results in /results/quick
+13:51:36 == block 1/1: gun 2KB, 10000 records, 4 runs on one preload
+13:51:36 [1/4] gun WC 2KB rep 1
+13:51:36   reset gun: stop others, wipe, start, join, smoke test
+13:51:45   loading 10000 records (2KB)
+13:52:23   loaded in 38 s
+13:52:31   replicated on every host after 8 s
+13:52:31   measuring: 10 s warm-up + 30 s at 50 ops/s
+13:53:11   done E1-gun-WC-2KB-1: ops=1488 errors=0 p50=104.208 ms p99=123.933 ms
+13:53:11 [2/4] gun WB 2KB rep 1
+13:53:11   measuring: 10 s warm-up + 30 s at 50 ops/s
+13:53:52   done E1-gun-WB-2KB-1: ops=1488 errors=0 p50=103.919 ms p99=267.498 ms
+13:53:52 [3/4] gun WO 2KB rep 1
+13:53:52   measuring: 10 s warm-up + 30 s at 50 ops/s
+13:54:42   done E1-gun-WO-2KB-1: ops=1488 errors=1064 p50=1462.286 ms p99=10139.915 ms
+13:54:42 [4/4] gun WA 2KB rep 1
+13:54:42   measuring: 10 s warm-up + 30 s at 50 ops/s
+13:55:23   done E1-gun-WA-2KB-1: ops=1488 errors=1483 p50=6091.23 ms p99=8184.477 ms

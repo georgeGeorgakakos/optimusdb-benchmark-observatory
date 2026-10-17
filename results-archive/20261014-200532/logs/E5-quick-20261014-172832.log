@@ -1,0 +1,46 @@
+15:42:56 QUICK E5: 1 rep, 10^4 records, short windows, reduced grids, results in /results/quick
+15:42:56 == block 1/6: gun, 1 runs on one preload
+15:42:56 [1/7] gun 30 30 4|4 rep 1
+15:42:56   reset gun: stop others, wipe, start, join, smoke test
+15:43:00   loading 10000 records (2KB)
+15:43:34   loaded in 34 s
+15:43:42   replicated on every host after 7 s
+15:46:33   done E5-gun-30-30-4v4-1: availability=100.0 lost=0 convergence_s=39.021
+15:46:33 == block 2/6: autobase, 1 runs on one preload
+15:46:33 [2/7] autobase 30 30 4|4 rep 1
+15:46:33   reset autobase: stop others, wipe, start, join, smoke test
+15:46:54   loading 10000 records (2KB)
+15:47:01   loaded in 7 s
+15:47:48   replicated on every host after 46 s
+15:49:34   done E5-autobase-30-30-4v4-1: availability=74.7 lost=5 convergence_s=54.534
+15:49:34 == block 3/6: corrosion, 1 runs on one preload
+15:49:34 [3/7] corrosion 30 30 4|4 rep 1
+15:49:34   reset corrosion: stop others, wipe, start, join, smoke test
+15:49:54   loading 10000 records (2KB)
+15:49:58   loaded in 4 s
+15:50:18   replicated on every host after 19 s
+15:51:11   done E5-corrosion-30-30-4v4-1: availability=100.0 lost=0 convergence_s=17.184
+15:51:11 == block 4/6: iroh, 1 runs on one preload
+15:51:12 [4/7] iroh 30 30 4|4 rep 1
+15:51:12   reset iroh: stop others, wipe, start, join, smoke test
+15:51:21   loading 10000 records (2KB)
+15:51:34   loaded in 13 s
+15:53:35   readable sample keys per host: cloud-a 200/200, cloud-b 195/200, fog-a 200/200, fog-b 200/200, edge-a 200/200, edge-b 195/200, edge-c 200/200, edge-d 194/200
+15:53:35   WARNING: sample not readable on every replica after 120 s; measuring anyway
+15:55:38   WARNING: replicas of iroh not identical after the preload (120 s); running anyway
+15:58:12   done E5-iroh-30-30-4v4-1: availability=100.0 lost=210 convergence_s=120
+15:58:12 == block 5/6: optimusdb, 2 runs on one preload
+15:58:12 [5/7] optimusdb 30 30 4|4 rep 1
+15:58:12   reset optimusdb: stop others, wipe, start, join, smoke test
+15:58:41   loading 10000 records (2KB)
+15:58:47   loaded in 6 s
+15:59:03   replicated on every host after 15 s
+16:00:13   done E5-optimusdb-30-30-4v4-1: availability=99.04 lost=0 convergence_s=20.341
+16:00:13 [6/7] optimusdb 0 30 4|4 rep 1
+16:01:32   done E5-optimusdb-0-30-4v4-1: availability=91.45 lost=0 convergence_s=24.906
+16:01:32 == block 6/6: opendht, 1 runs on one preload
+16:01:32 [7/7] opendht 30 30 4|4 rep 1
+16:01:32   reset opendht: stop others, wipe, start, join, smoke test
+16:01:37   loading 10000 records (2KB)
+16:02:07   loaded in 30 s
+16:02:14   replicated on every host after 7 s

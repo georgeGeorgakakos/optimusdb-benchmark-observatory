@@ -1,0 +1,442 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20261014171958
+Username: IKNOWHOW\ggeorgakakos
+RunAs User: IKNOWHOW\ggeorgakakos
+Configuration Name: 
+Machine: IKH-LP212 (Microsoft Windows NT 10.0.26300.0)
+Host Application: C:\windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -File .\fresh-start.ps1
+Process ID: 38144
+PSVersion: 5.1.26100.9444
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.9444
+BuildVersion: 10.0.26100.9444
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+==> Checking Docker Desktop
+  [OK]   Docker is running
+  [OK]   Limits per data store: cloud 1.5 CPU/3g, fog 1.5 CPU/3g, edge 1.0 CPU/2g
+==> Removing the old testbed
+  [OK]   Stopped any running experiment
+ Container odb-edge-a-optimusdb Stopping
+ Container odb-fog-a-opendht Stopping
+ Container odb-cloud-b-iroh Stopping
+ Container odb-edge-a-gun Stopping
+ Container odb-edge-d-optimusdb Stopping
+ Container odb-cloud-b-optimusdb Stopping
+ Container odb-edge-c-autobase Stopping
+ Container odb-edge-b-corrosion Stopping
+ Container odb-edge-a-iroh Stopping
+ Container odb-edge-d-corrosion Stopping
+ Container odb-fog-b-corrosion Stopping
+ Container odb-fog-b-gun Stopping
+ Container odb-cloud-b-corrosion Stopping
+ Container odb-edge-c-corrosion Stopping
+ Container odb-fog-b-optimusdb Stopping
+ Container odb-edge-d-iroh Stopping
+ Container odb-cloud-b-autobase Stopping
+ Container odb-cloud-b-opendht Stopping
+ Container odb-cloud-a-corrosion Stopping
+ Container odb-edge-c-opendht Stopping
+ Container odb-edge-a-opendht Stopping
+ Container odb-cloud-a-agent Stopping
+ Container odb-cloud-a-optimusdb Stopping
+ Container odb-bench Stopping
+ Container odb-fog-b-opendht Stopping
+ Container odb-cloud-b-gun Stopping
+ Container odb-edge-c-gun Stopping
+ Container odb-edge-b-iroh Stopping
+ Container odb-cloud-a-autobase Stopping
+ Container odb-edge-b-opendht Stopping
+ Container odb-fog-a-corrosion Stopping
+ Container odb-edge-d-gun Stopping
+ Container odb-edge-d-agent Stopping
+ Container odb-cloud-a-gun Stopping
+ Container odb-cloud-b-agent Stopping
+ Container odb-cloud-a-iroh Stopping
+ Container odb-fog-b-agent Stopping
+ Container odb-edge-c-iroh Stopping
+ Container odb-edge-b-optimusdb Stopping
+ Container odb-edge-a-corrosion Stopping
+ Container odb-edge-b-autobase Stopping
+ Container odb-edge-d-autobase Stopping
+ Container odb-fog-b-autobase Stopping
+ Container odb-fog-a-autobase Stopping
+ Container odb-edge-a-autobase Stopping
+ Container odb-edge-c-agent Stopping
+ Container odb-cloud-a-opendht Stopping
+ Container odb-edge-b-gun Stopping
+ Container odb-edge-c-optimusdb Stopping
+ Container odb-fog-a-iroh Stopping
+ Container odb-fog-a-optimusdb Stopping
+ Container odb-fog-a-agent Stopping
+ Container odb-edge-d-opendht Stopping
+ Container odb-fog-b-iroh Stopping
+ Container odb-fog-a-gun Stopping
+ Container odb-edge-a-agent Stopping
+ Container odb-edge-b-agent Stopping
+ Container odb-edge-b-iroh Stopped
+ Container odb-edge-b-iroh Removing
+ Container odb-cloud-b-iroh Stopped
+ Container odb-cloud-b-iroh Removing
+ Container odb-fog-a-opendht Stopped
+ Container odb-fog-a-opendht Removing
+ Container odb-cloud-a-autobase Stopped
+ Container odb-cloud-a-autobase Removing
+ Container odb-fog-b-opendht Stopped
+ Container odb-fog-b-opendht Removing
+ Container odb-edge-d-iroh Stopped
+ Container odb-edge-d-iroh Removing
+ Container odb-fog-a-corrosion Stopped
+ Container odb-fog-a-corrosion Removing
+ Container odb-edge-c-autobase Stopped
+ Container odb-edge-c-autobase Removing
+ Container odb-edge-a-opendht Stopped
+ Container odb-edge-a-opendht Removing
+ Container odb-edge-a-optimusdb Stopped
+ Container odb-edge-a-optimusdb Removing
+ Container odb-edge-a-iroh Stopped
+ Container odb-edge-a-iroh Removing
+ Container odb-edge-b-corrosion Stopped
+ Container odb-edge-b-corrosion Removing
+ Container odb-cloud-b-autobase Stopped
+ Container odb-cloud-b-autobase Removing
+ Container odb-cloud-b-optimusdb Stopped
+ Container odb-cloud-b-optimusdb Removing
+ Container odb-cloud-b-opendht Stopped
+ Container odb-cloud-b-opendht Removing
+ Container odb-cloud-a-corrosion Stopped
+ Container odb-cloud-a-corrosion Removing
+ Container odb-edge-d-optimusdb Stopped
+ Container odb-edge-d-optimusdb Removing
+ Container odb-edge-c-corrosion Stopped
+ Container odb-edge-c-corrosion Removing
+ Container odb-fog-b-iroh Stopped
+ Container odb-fog-b-iroh Removing
+ Container odb-cloud-a-iroh Stopped
+ Container odb-cloud-a-iroh Removing
+ Container odb-cloud-a-optimusdb Stopped
+ Container odb-cloud-a-optimusdb Removing
+ Container odb-edge-c-opendht Stopped
+ Container odb-edge-c-opendht Removing
+ Container odb-fog-a-autobase Stopped
+ Container odb-fog-a-autobase Removing
+ Container odb-edge-c-iroh Stopped
+ Container odb-edge-c-iroh Removing
+ Container odb-edge-a-autobase Stopped
+ Container odb-edge-a-autobase Removing
+ Container odb-edge-d-autobase Stopped
+ Container odb-edge-d-autobase Removing
+ Container odb-edge-b-autobase Stopped
+ Container odb-edge-b-autobase Removing
+ Container odb-fog-b-corrosion Stopped
+ Container odb-fog-b-corrosion Removing
+ Container odb-edge-b-opendht Stopped
+ Container odb-edge-b-opendht Removing
+ Container odb-edge-d-opendht Stopped
+ Container odb-edge-d-opendht Removing
+ Container odb-cloud-b-corrosion Stopped
+ Container odb-cloud-b-corrosion Removing
+ Container odb-fog-b-autobase Stopped
+ Container odb-fog-b-autobase Removing
+ Container odb-fog-b-optimusdb Stopped
+ Container odb-fog-b-optimusdb Removing
+ Container odb-cloud-a-opendht Stopped
+ Container odb-cloud-a-opendht Removing
+ Container odb-fog-a-iroh Stopped
+ Container odb-fog-a-iroh Removing
+ Container odb-edge-c-optimusdb Stopped
+ Container odb-edge-c-optimusdb Removing
+ Container odb-edge-d-corrosion Stopped
+ Container odb-edge-d-corrosion Removing
+ Container odb-fog-a-optimusdb Stopped
+ Container odb-fog-a-optimusdb Removing
+ Container odb-edge-b-optimusdb Stopped
+ Container odb-edge-b-optimusdb Removing
+ Container odb-edge-a-corrosion Stopped
+ Container odb-edge-a-corrosion Removing
+ Container odb-edge-b-iroh Removed
+ Container odb-bench Stopped
+ Container odb-bench Removing
+ Container odb-edge-d-iroh Removed
+ Container odb-cloud-a-autobase Removed
+ Container odb-fog-a-autobase Removed
+ Container odb-edge-a-opendht Removed
+ Container odb-edge-d-opendht Removed
+ Container odb-fog-b-opendht Removed
+ Container odb-cloud-a-optimusdb Removed
+ Container odb-edge-c-opendht Removed
+ Container odb-edge-a-optimusdb Removed
+ Container odb-cloud-a-iroh Removed
+ Container odb-edge-a-autobase Removed
+ Container odb-edge-c-iroh Removed
+ Container odb-edge-c-corrosion Removed
+ Container odb-cloud-b-iroh Removed
+ Container odb-cloud-b-autobase Removed
+ Container odb-edge-c-optimusdb Removed
+ Container odb-fog-a-optimusdb Removed
+ Container odb-edge-a-corrosion Removed
+ Container odb-edge-b-autobase Removed
+ Container odb-fog-b-optimusdb Removed
+ Container odb-edge-c-autobase Removed
+ Container odb-fog-a-opendht Removed
+ Container odb-edge-a-iroh Removed
+ Container odb-cloud-b-optimusdb Removed
+ Container odb-fog-a-iroh Removed
+ Container odb-fog-b-autobase Removed
+ Container odb-edge-d-optimusdb Removed
+ Container odb-cloud-b-opendht Removed
+ Container odb-edge-b-corrosion Removed
+ Container odb-cloud-a-corrosion Removed
+ Container odb-edge-d-corrosion Removed
+ Container odb-cloud-a-opendht Removed
+ Container odb-fog-a-corrosion Removed
+ Container odb-bench Removed
+ Container odb-edge-b-opendht Removed
+ Container odb-fog-b-iroh Removed
+ Container odb-edge-b-optimusdb Removed
+ Container odb-fog-b-corrosion Removed
+ Container odb-edge-d-autobase Removed
+ Container odb-cloud-b-corrosion Removed
+ Container odb-edge-c-agent Stopped
+ Container odb-edge-c-agent Removing
+ Container odb-cloud-a-agent Stopped
+ Container odb-cloud-a-agent Removing
+ Container odb-cloud-b-agent Stopped
+ Container odb-cloud-b-agent Removing
+ Container odb-edge-b-agent Stopped
+ Container odb-edge-b-agent Removing
+ Container odb-edge-d-agent Stopped
+ Container odb-edge-d-agent Removing
+ Container odb-cloud-a-agent Removed
+ Container odb-fog-b-agent Stopped
+ Container odb-fog-b-agent Removing
+ Container odb-fog-a-agent Stopped
+ Container odb-fog-a-agent Removing
+ Container odb-edge-a-agent Stopped
+ Container odb-edge-a-agent Removing
+ Container odb-edge-c-agent Removed
+ Container odb-edge-b-agent Removed
+ Container odb-edge-d-agent Removed
+ Container odb-cloud-b-agent Removed
+ Container odb-fog-b-agent Removed
+ Container odb-fog-a-agent Removed
+ Container odb-edge-a-agent Removed
+ Container odb-edge-a-gun Stopped
+ Container odb-edge-a-gun Removing
+ Container odb-edge-b-gun Stopped
+ Container odb-edge-b-gun Removing
+ Container odb-edge-d-gun Stopped
+ Container odb-edge-d-gun Removing
+ Container odb-edge-a-gun Removed
+ Container odb-edge-a-net Stopping
+ Container odb-edge-c-gun Stopped
+ Container odb-edge-c-gun Removing
+ Container odb-cloud-a-gun Stopped
+ Container odb-cloud-a-gun Removing
+ Container odb-edge-b-gun Removed
+ Container odb-edge-b-net Stopping
+ Container odb-edge-c-gun Removed
+ Container odb-edge-c-net Stopping
+ Container odb-fog-b-gun Stopped
+ Container odb-fog-b-gun Removing
+ Container odb-cloud-b-gun Stopped
+ Container odb-cloud-b-gun Removing
+ Container odb-cloud-a-gun Removed
+ Container odb-cloud-a-net Stopping
+ Container odb-edge-d-gun Removed
+ Container odb-edge-d-net Stopping
+ Container odb-fog-b-gun Removed
+ Container odb-fog-b-net Stopping
+ Container odb-cloud-b-gun Removed
+ Container odb-cloud-b-net Stopping
+ Container odb-edge-a-net Stopped
+ Container odb-edge-a-net Removing
+ Container odb-fog-a-gun Stopped
+ Container odb-fog-a-gun Removing
+ Container odb-edge-a-net Removed
+ Container odb-fog-a-gun Removed
+ Container odb-fog-a-net Stopping
+ Container odb-edge-b-net Stopped
+ Container odb-edge-b-net Removing
+ Container odb-edge-b-net Removed
+ Container odb-edge-c-net Stopped
+ Container odb-edge-c-net Removing
+ Container odb-edge-c-net Removed
+ Container odb-edge-d-net Stopped
+ Container odb-edge-d-net Removing
+ Container odb-cloud-a-net Stopped
+ Container odb-cloud-a-net Removing
+ Container odb-fog-b-net Stopped
+ Container odb-fog-b-net Removing
+ Container odb-edge-d-net Removed
+ Container odb-cloud-b-net Stopped
+ Container odb-cloud-b-net Removing
+ Container odb-cloud-a-net Removed
+ Container odb-fog-a-net Stopped
+ Container odb-fog-a-net Removing
+ Container odb-fog-b-net Removed
+ Container odb-cloud-b-net Removed
+ Container odb-fog-a-net Removed
+ Volume odb-local_edge-b-corrosion-data Removing
+ Volume odb-local_fog-a-optimusdb-root Removing
+ Volume odb-local_fog-a-gun-data Removing
+ Volume odb-local_fog-a-iroh-data Removing
+ Volume odb-local_edge-d-iroh-data Removing
+ Volume odb-local_edge-d-runtime Removing
+ Volume odb-local_edge-b-runtime Removing
+ Volume odb-local_cloud-a-corrosion-data Removing
+ Volume odb-local_cloud-b-iroh-data Removing
+ Volume odb-local_cloud-a-gun-data Removing
+ Volume odb-local_edge-c-optimusdb-root Removing
+ Volume odb-local_edge-c-iroh-data Removing
+ Volume odb-local_fog-b-optimusdb-root Removing
+ Volume odb-local_edge-b-optimusdb-root Removing
+ Volume odb-local_cloud-b-optimusdb-data Removing
+ Volume odb-local_edge-a-optimusdb-data Removing
+ Volume odb-local_cloud-a-runtime Removing
+ Volume odb-local_edge-d-corrosion-data Removing
+ Volume odb-local_edge-d-gun-data Removing
+ Volume odb-local_edge-a-autobase-data Removing
+ Volume odb-local_edge-b-gun-data Removing
+ Volume odb-local_fog-a-autobase-data Removing
+ Volume odb-local_edge-d-optimusdb-root Removing
+ Volume odb-local_cloud-a-autobase-data Removing
+ Volume odb-local_edge-a-iroh-data Removing
+ Volume odb-local_edge-c-optimusdb-data Removing
+ Volume odb-local_cloud-b-runtime Removing
+ Volume odb-local_fog-b-runtime Removing
+ Volume odb-local_fog-a-optimusdb-data Removing
+ Volume odb-local_cloud-a-iroh-data Removing
+ Network odbnet Removing
+ Volume odb-local_cloud-b-gun-data Removing
+ Volume odb-local_fog-a-gun-data Removed
+ Volume odb-local_edge-a-gun-data Removing
+ Volume odb-local_edge-d-optimusdb-data Removing
+ Volume odb-local_edge-c-autobase-data Removing
+ Volume odb-local_edge-b-optimusdb-root Removed
+ Volume odb-local_edge-a-corrosion-data Removing
+ Volume odb-local_fog-b-autobase-data Removing
+ Volume odb-local_fog-a-corrosion-data Removing
+ Volume odb-local_edge-d-autobase-data Removing
+ Volume odb-local_edge-a-optimusdb-root Removing
+ Volume odb-local_fog-b-gun-data Removing
+ Volume odb-local_cloud-a-optimusdb-root Removing
+ Volume odb-local_cloud-b-corrosion-data Removing
+ Volume odb-local_fog-a-runtime Removing
+ Volume odb-local_fog-b-corrosion-data Removing
+ Volume odb-local_fog-b-optimusdb-data Removing
+ Volume odb-local_edge-b-autobase-data Removing
+ Volume odb-local_edge-c-gun-data Removing
+ Volume odb-local_edge-a-runtime Removing
+ Volume odb-local_edge-b-iroh-data Removing
+ Volume odb-local_cloud-b-autobase-data Removing
+ Volume odb-local_edge-b-optimusdb-data Removing
+ Volume odb-local_cloud-a-optimusdb-data Removing
+ Volume odb-local_edge-c-corrosion-data Removing
+ Volume odb-local_edge-c-runtime Removing
+ Volume odb-local_fog-b-iroh-data Removing
+ Volume odb-local_cloud-b-optimusdb-root Removing
+ Volume odb-local_cloud-b-iroh-data Removed
+ Volume odb-local_edge-b-gun-data Removed
+ Volume odb-local_edge-c-optimusdb-root Removed
+ Volume odb-local_fog-b-runtime Removed
+ Volume odb-local_cloud-a-optimusdb-data Removed
+ Volume odb-local_edge-b-corrosion-data Removed
+ Volume odb-local_edge-a-gun-data Removed
+ Volume odb-local_edge-d-optimusdb-data Removed
+ Volume odb-local_cloud-b-optimusdb-data Removed
+ Volume odb-local_cloud-a-autobase-data Removed
+ Volume odb-local_edge-c-optimusdb-data Removed
+ Volume odb-local_edge-d-runtime Removed
+ Volume odb-local_edge-b-runtime Removed
+ Network odbnet Removed
+ Volume odb-local_edge-d-corrosion-data Removed
+ Volume odb-local_cloud-a-gun-data Removed
+ Volume odb-local_fog-b-optimusdb-root Removed
+ Volume odb-local_edge-c-iroh-data Removed
+ Volume odb-local_cloud-a-corrosion-data Removed
+ Volume odb-local_edge-a-optimusdb-data Removed
+ Volume odb-local_fog-a-optimusdb-root Removed
+ Volume odb-local_cloud-b-gun-data Removed
+ Volume odb-local_edge-d-iroh-data Removed
+ Volume odb-local_fog-a-autobase-data Removed
+ Volume odb-local_cloud-b-runtime Removed
+ Volume odb-local_edge-a-autobase-data Removed
+ Volume odb-local_fog-a-iroh-data Removed
+ Volume odb-local_edge-d-gun-data Removed
+ Volume odb-local_cloud-a-runtime Removed
+ Volume odb-local_edge-a-iroh-data Removed
+ Volume odb-local_edge-d-optimusdb-root Removed
+ Volume odb-local_fog-a-optimusdb-data Removed
+ Volume odb-local_cloud-a-iroh-data Removed
+ Volume odb-local_edge-c-corrosion-data Removed
+ Volume odb-local_edge-d-autobase-data Removed
+ Volume odb-local_edge-a-optimusdb-root Removed
+ Volume odb-local_edge-a-corrosion-data Removed
+ Volume odb-local_cloud-a-optimusdb-root Removed
+ Volume odb-local_fog-b-autobase-data Removed
+ Volume odb-local_edge-c-gun-data Removed
+ Volume odb-local_edge-b-iroh-data Removed
+ Volume odb-local_edge-c-autobase-data Removed
+ Volume odb-local_fog-b-gun-data Removed
+ Volume odb-local_fog-a-runtime Removed
+ Volume odb-local_fog-b-iroh-data Removed
+ Volume odb-local_fog-b-optimusdb-data Removed
+ Volume odb-local_cloud-b-autobase-data Removed
+ Volume odb-local_cloud-b-optimusdb-root Removed
+ Volume odb-local_fog-a-corrosion-data Removed
+ Volume odb-local_edge-c-runtime Removed
+ Volume odb-local_fog-b-corrosion-data Removed
+ Volume odb-local_edge-b-autobase-data Removed
+ Volume odb-local_edge-b-optimusdb-data Removed
+ Volume odb-local_edge-a-runtime Removed
+ Volume odb-local_cloud-b-corrosion-data Removed
+docker.exe : Error response from daemon: network odbnet not found
+At C:\odb\optimusdb-deploy\scripts\lib\common.ps1:19 char:16
++         else { & $Exe @Arguments 2>$null }
++                ~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Error response ...dbnet not found:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+exit status 1
+  [OK]   Containers, data volumes and network removed
+  [OK]   Old results moved to results-archive\20261014-171957
+==> Docker Desktop VM: 12 CPUs, 25.4 GB RAM; testbed needs about 11.5 CPUs while one system runs
+==> Building images (first time: 30-60 min, mostly Corrosion, Iroh and OpenDHT)
+
+
+
+==> Checking out main
+PS>TerminatingError(): "The pipeline has been stopped."
+  [OK]   OptimusDB source: 9e7189efc411b621e229600118dd1720a1bc0ccf fix retrieve query delay
+  [OK]   Batched ingestion code found (app\batch_put.go, third_party\go-orbit-db)
+
+
+
+
+
+
+
+==> Checking netem and iptables in the Docker Desktop kernel
+  [OK]   tc netem available
+  [OK]   iptables available
+==> Generating the single-machine layout
+
+==> Starting bench, 8 emulated hosts and their agents
+
+==> Creating 48 data-store containers (stopped)
+
+
+  [OK]   Harness self-test passed
+
+PS>TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+**********************
+Windows PowerShell transcript end
+End time: 20261014172141
+**********************

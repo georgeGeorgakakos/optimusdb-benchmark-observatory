@@ -1,0 +1,25 @@
+run_id,system,workload,doc_size,rep,ops,errors,mean_ms,p50_ms,p95_ms,p99_ms,p999_ms,achieved_ops_s,start_utc,notes
+E1-gun-WB-2KB-1,gun,WB,2KB,1,1488,0,118.379,105.241,259.664,283.15,298.964,49.6,2026-10-14T14:29:17+00:00,dropped=0 records=10000 settled=7s seq=1
+E1-gun-WC-2KB-1,gun,WC,2KB,1,1488,0,106.079,103.511,116.512,118.602,136.044,49.6,2026-10-14T14:29:57+00:00,dropped=0 records=10000 settled=7s seq=2
+E1-gun-WO-2KB-1,gun,WO,2KB,1,1488,967,2442.345,1595.881,8119.662,9906.321,10234.992,17.367,2026-10-14T14:30:37+00:00,dropped=0 records=10000 settled=7s seq=3
+E1-gun-WA-2KB-1,gun,WA,2KB,1,1488,1344,7408.781,7290.404,9635.046,10060.664,10303.679,4.8,2026-10-14T14:31:28+00:00,dropped=0 records=10000 settled=7s seq=4
+E1-autobase-WO-2KB-1,autobase,WO,2KB,1,1488,835,7030.793,7349.343,10631.551,11632.419,11932.369,21.767,2026-10-14T14:33:29+00:00,dropped=0 records=10000 settled=42s seq=1
+E1-autobase-WA-2KB-1,autobase,WA,2KB,1,1488,1488,,,,,,0.0,2026-10-14T14:34:20+00:00,dropped=0 records=10000 settled=42s seq=2
+E1-autobase-WB-2KB-1,autobase,WB,2KB,1,1488,1488,,,,,,0.0,2026-10-14T14:35:11+00:00,dropped=0 records=10000 settled=42s seq=3
+E1-autobase-WC-2KB-1,autobase,WC,2KB,1,1488,1488,,,,,,0.0,2026-10-14T14:35:51+00:00,dropped=0 records=10000 settled=42s seq=4
+E1-corrosion-WA-2KB-1,corrosion,WA,2KB,1,1488,0,4.268,3.935,6.249,11.394,41.021,49.6,2026-10-14T14:37:16+00:00,dropped=0 records=10000 settled=20s seq=1
+E1-corrosion-WC-2KB-1,corrosion,WC,2KB,1,1488,0,3.241,3.225,4.58,5.235,5.919,49.6,2026-10-14T14:37:56+00:00,dropped=0 records=10000 settled=20s seq=2
+E1-corrosion-WO-2KB-1,corrosion,WO,2KB,1,1488,0,4.92,3.84,13.009,16.417,31.664,49.6,2026-10-14T14:38:36+00:00,dropped=0 records=10000 settled=20s seq=3
+E1-corrosion-WB-2KB-1,corrosion,WB,2KB,1,1488,0,3.711,3.52,5.47,6.844,30.998,49.6,2026-10-14T14:39:16+00:00,dropped=0 records=10000 settled=20s seq=4
+E1-iroh-WB-2KB-1,iroh,WB,2KB,1,1488,0,3.337,3.145,5.258,8.38,11.304,49.6,2026-10-14T14:42:23+00:00,dropped=0 records=10000 settled=timeout seq=1
+E1-iroh-WC-2KB-1,iroh,WC,2KB,1,1488,0,3.253,3.138,4.767,5.66,21.447,49.6,2026-10-14T14:43:04+00:00,dropped=0 records=10000 settled=timeout seq=2
+E1-iroh-WO-2KB-1,iroh,WO,2KB,1,1488,0,518.12,8.008,3959.663,7993.192,8462.426,49.6,2026-10-14T14:43:44+00:00,dropped=0 records=10000 settled=timeout seq=3
+E1-iroh-WA-2KB-1,iroh,WA,2KB,1,1488,0,4.371,3.948,8.536,11.192,12.968,49.6,2026-10-14T14:44:30+00:00,dropped=0 records=10000 settled=timeout seq=4
+E1-optimusdb-WO-2KB-1,optimusdb,WO,2KB,1,1488,1481,9792.484,9812.21,9907.894,9932.591,9938.148,0.233,2026-10-14T14:46:03+00:00,dropped=0 records=10000 settled=15s seq=1
+E1-optimusdb-WB-2KB-1,optimusdb,WB,2KB,1,1488,1488,,,,,,0.0,2026-10-14T14:46:54+00:00,dropped=0 records=10000 settled=15s seq=2
+E1-optimusdb-WA-2KB-1,optimusdb,WA,2KB,1,1488,1488,,,,,,0.0,2026-10-14T14:47:44+00:00,dropped=0 records=10000 settled=15s seq=3
+E1-optimusdb-WC-2KB-1,optimusdb,WC,2KB,1,1488,1488,,,,,,0.0,2026-10-14T14:48:34+00:00,dropped=0 records=10000 settled=15s seq=4
+E1-opendht-WC-2KB-1,opendht,WC,2KB,1,1488,0,574.403,448.496,1333.704,1514.713,1798.937,49.6,2026-10-14T14:50:10+00:00,dropped=0 records=10000 settled=7s seq=1
+E1-opendht-WB-2KB-1,opendht,WB,2KB,1,1488,0,605.382,448.678,1409.428,1731.387,2242.415,49.6,2026-10-14T14:50:52+00:00,dropped=0 records=10000 settled=7s seq=2
+E1-opendht-WA-2KB-1,opendht,WA,2KB,1,1488,0,802.178,588.09,1842.047,2516.565,3786.55,49.6,2026-10-14T14:51:33+00:00,dropped=0 records=10000 settled=7s seq=3
+E1-opendht-WO-2KB-1,opendht,WO,2KB,1,1334,0,1438.627,1291.253,2819.625,4000.197,5117.305,44.467,2026-10-14T14:52:15+00:00,dropped=0 records=10000 settled=7s seq=4 unsupported=154

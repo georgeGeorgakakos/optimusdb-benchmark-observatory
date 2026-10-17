@@ -1,0 +1,8 @@
+13:55:24 QUICK E2: 1 rep, 10^4 records, short windows, reduced grids, results in /results/quick
+13:55:24 [1/1] E2 block gun 10000 records: load once, 1 repetitions
+13:55:24   reset gun: stop others, wipe, start, join, smoke test
+13:55:43   loading 10000 records (2KB)
+13:56:25   loaded in 42 s
+13:56:33   replicated on every host after 8 s
+13:56:33   measuring: 10 s warm-up + 30 s at 25 ops/s
+13:57:21   done E2-gun-10000-25-1: ops=712 errors=375 p50=492.984 ms p99=5327.138 ms

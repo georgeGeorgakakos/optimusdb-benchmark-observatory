@@ -1,0 +1,33 @@
+Baseline calibration 2026-10-14 21:08:22 systems autobase, workloads WA,WO, rates [5.0, 10.0, 25.0, 50.0], 20 s each, 10000 records, cluster with link profiles, Autobase indexers 3
+
+=== autobase WA
+  [single WA] started and loaded 10000 documents in 6 s
+  [single WA]    5 ops/s: achieved   5.0  P50      7.7 ms  P99     14.0 ms  errors   0.0 %  CPU max 12.6 % of 100  mem 252.0 MB
+  [single WA]   10 ops/s: achieved  10.6  P50      8.1 ms  P99     14.1 ms  errors   0.0 %  CPU max 6.57 % of 100  mem 208.9 MB
+  [single WA]   25 ops/s: achieved  25.0  P50      7.0 ms  P99     14.4 ms  errors   0.0 %  CPU max 22.8 % of 100  mem 229.1 MB
+  [single WA]   50 ops/s: achieved  48.5  P50      6.3 ms  P99     15.6 ms  errors   0.0 %  CPU max 23.55 % of 100  mem 241.3 MB
+  [cluster + links WA] started and loaded 10000 documents in 25 s
+  [cluster + links WA]    5 ops/s: achieved   5.0  P50      8.3 ms  P99   8314.1 ms  errors   0.0 %  CPU max 110.06 % of 100  mem 544.4 MB
+  [cluster + links WA]   10 ops/s: achieved  10.6  P50      6.0 ms  P99     20.0 ms  errors   0.0 %  CPU max 10.48 % of 100  mem 631.6 MB
+  [cluster + links WA]   25 ops/s: achieved  25.0  P50      5.8 ms  P99     33.5 ms  errors   0.0 %  CPU max 17.29 % of 100  mem 632.1 MB
+  [cluster + links WA]   50 ops/s: achieved  48.5  P50      5.2 ms  P99     17.1 ms  errors   0.0 %  CPU max 29.43 % of 100  mem 493.2 MB
+  VERDICT autobase WA: no failures up to 50 ops/s in either setup
+
+=== autobase WO
+  [single WO] started and loaded 10000 documents in 21 s
+  [single WO]    5 ops/s: achieved   5.0  P50      7.5 ms  P99   1159.8 ms  errors   0.0 %  CPU max 31.23 % of 100  mem 522.6 MB
+  [single WO]   10 ops/s: achieved  10.6  P50      6.6 ms  P99    271.4 ms  errors   0.0 %  CPU max 33.01 % of 100  mem 522.4 MB
+  [single WO]   25 ops/s: achieved  25.0  P50      7.2 ms  P99    154.0 ms  errors   0.0 %  CPU max 56.89 % of 100  mem 545.6 MB
+  [single WO]   50 ops/s: achieved  48.5  P50     10.4 ms  P99    474.2 ms  errors   0.0 %  CPU max 100.02 % of 100  mem 555.7 MB
+  [cluster + links WO] started and loaded 10000 documents in 25 s
+  [cluster + links WO]    5 ops/s: achieved   5.0  P50      7.9 ms  P99   8862.4 ms  errors   0.0 %  CPU max 98.87 % of 100  mem 655.6 MB
+  [cluster + links WO]   10 ops/s: achieved  10.6  P50      5.7 ms  P99    211.6 ms  errors   0.0 %  CPU max 44.26 % of 100  mem 892.6 MB
+  [cluster + links WO]   25 ops/s: achieved  25.0  P50      6.1 ms  P99    146.4 ms  errors   0.0 %  CPU max 64.08 % of 100  mem 892.2 MB
+  [cluster + links WO]   50 ops/s: achieved  48.5  P50     15.6 ms  P99    825.5 ms  errors   0.0 %  CPU max 109.33 % of 100  mem 897.4 MB
+  VERDICT autobase WO: no failures up to 50 ops/s in either setup
+
+=== Summary
+  autobase WA  no failures up to 50 ops/s in either setup
+  autobase WO  no failures up to 50 ops/s in either setup
+
+report: calibration-20261014-210822.txt

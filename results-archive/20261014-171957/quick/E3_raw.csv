@@ -1,0 +1,11 @@
+run_id,system,path,query,dataset_records,rep,mean_ms,p95_ms,rows_returned,rows_expected,correct,notes
+E3-corrosion-sql-Q1-10000-1,corrosion,sql,Q1,10000,1,1.179,1.494,1,1,1,
+E3-corrosion-sql-Q2-10000-1,corrosion,sql,Q2,10000,1,47.573,52.154,2512,2512,1,
+E3-corrosion-sql-Q3-10000-1,corrosion,sql,Q3,10000,1,19.159,22.096,936,936,1,
+E3-corrosion-sql-Q4-10000-1,corrosion,sql,Q4,10000,1,4.47,4.952,4,4,1,
+E3-corrosion-sql-Q5-10000-1,corrosion,sql,Q5,10000,1,23.121,26.634,2500,2500,1,
+E3-gun-client_filter-Q1-10000-1,gun,client_filter,Q1,10000,1,102.293,103.675,1,1,1,
+E3-gun-client_filter-Q2-10000-1,gun,client_filter,Q2,10000,1,7246.384,9081.939,,2512,0,unsupported/failed
+E3-gun-client_filter-Q3-10000-1,gun,client_filter,Q3,10000,1,1107.6,1528.46,936,936,1,
+E3-gun-client_filter-Q4-10000-1,gun,client_filter,Q4,10000,1,1280.894,1378.723,4,4,1,
+E3-gun-client_filter-Q5-10000-1,gun,client_filter,Q5,10000,1,1474.108,1618.276,2502,2500,0,

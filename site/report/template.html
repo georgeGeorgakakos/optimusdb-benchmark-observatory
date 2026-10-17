@@ -1,0 +1,151 @@
+<!-- Fixed chapters of the evaluation report (method text). {n} is replaced by the chapter number. The rest of the report is generated from the run's data by report.js. -->
+<section data-chapter="{n}. Scope and hypotheses" data-src="fixed" data-fixed="scope">
+  <div class="chn">Chapter {n}</div>
+  <h1 class="ch" data-toc="{n}. Scope and hypotheses">Scope, research questions and hypotheses</h1>
+  <p class="lede">The evaluation asks whether OptimusDB, the decentralised data layer of Swarmchestrate, can serve orchestration metadata across edge, fog and cloud as well as established decentralised data stores.</p>
+  <h2>Research questions</h2>
+  <table><thead><tr><th style="width:52px">RQ</th><th>Question</th><th style="width:110px">Experiments</th></tr></thead><tbody>
+    <tr><td><b>RQ1</b></td><td>What does running OptimusDB cost on resource-constrained edge nodes, compared with other decentralised stores?</td><td>E4</td></tr>
+    <tr><td><b>RQ2</b></td><td>How do its latency, throughput and query capability compare under orchestration-style workloads?</td><td>E1, E2, E3</td></tr>
+    <tr><td><b>RQ3</b></td><td>Does it remain available during network partitions, and does it converge without losing acknowledged writes?</td><td>E5</td></tr>
+  </tbody></table>
+  <h2>Hypotheses (registered before the campaign; not changed since)</h2>
+  <table><thead><tr><th style="width:40px">Id</th><th>Statement</th><th style="width:44px">Exp.</th></tr></thead><tbody>
+    <tr><td><b>H1</b></td><td>For WO, OptimusDB's P99 latency is within 25 % of the best baseline, and its tail ratio P99.9/P50 is not larger than the median of the baselines.</td><td>E1</td></tr>
+    <tr><td><b>H2</b></td><td>OptimusDB's saturation throughput is at least the median of the baselines, and its P99 at 50 ops/s grows by less than a factor of two from 10³ to 10⁶ records.</td><td>E2</td></tr>
+    <tr><td><b>H3</b></td><td>For Q1–Q3, OptimusDB returns complete and correct results faster than client-side evaluation over Gun.js, Autobase, Iroh docs and OpenDHT at 10⁵ and 10⁶ records, and within 25 % of Corrosion; Q4 and Q5 are executed natively only by OptimusDB and Corrosion.</td><td>E3</td></tr>
+    <tr><td><b>H4</b></td><td>At 40 ops/s on an edge node, OptimusDB stays below 60 % CPU and 512 MB resident memory per agent.</td><td>E4</td></tr>
+    <tr><td><b>H5</b></td><td>During a partition OptimusDB accepts writes on both sides; after healing it loses no acknowledged write, its replicas reach identical state, and its convergence time is not longer than the median of the fully replicating baselines (Corrosion, Gun.js, Autobase, Iroh docs).</td><td>E5</td></tr>
+  </tbody></table>
+  <h2>Baselines and why they were chosen</h2>
+  <p>All five baselines are decentralised data stores that replicate without a central coordinator, which is the property OptimusDB must offer to a swarm of orchestration agents.
+  They span the design space: a CRDT-replicated SQL database (Corrosion), two JavaScript peer-to-peer stores (Gun.js; Autobase with Hyperbee), a range-reconciled document store (Iroh docs) and a distributed hash table (OpenDHT).
+  Centralised or leader-based databases are excluded on purpose: they solve a different problem.</p>
+  <table><thead><tr><th>System</th><th>Data model and replication</th><th>Query capability</th><th>Version</th></tr></thead><tbody data-tbody="systems"></tbody></table>
+  <h2>What a quick run is for</h2>
+  <p>Quick mode runs every scenario once on 10⁴ records with short windows, in about 80 minutes. It verifies the whole pipeline (deployment, preload, replication checks, load generation, result files, analysis) and gives a first look at each comparison.
+  Verdicts on a quick run are computed exactly as on the campaign, but are labelled indicative. The method chapter lists every difference from the campaign.</p>
+</section>
+<section data-chapter="{n}. Testbed and method" data-src="fixed" data-fixed="method">
+  <div class="chn">Chapter {n}</div>
+  <h1 class="ch" data-toc="{n}. Testbed and method">Testbed and method</h1>
+  <p class="lede">One machine emulates eight hosts in three tiers with cgroup limits and shaped links. Only the system under test runs; the other five are stopped on every host.</p>
+  <h2 data-toc-sub="{n}.1 Testbed">{n}.1 Testbed</h2>
+  <table><tbody>
+    <tr><td style="width:150px"><b>Machine</b></td><td>One Windows PC, Docker Desktop (WSL2), VM with <span data-v="vm"></span></td></tr>
+    <tr><td><b>Emulated hosts</b></td><td>8: cloud-a, cloud-b (cloud); fog-a, fog-b (fog); edge-a … edge-d (edge). Docker bridge 10.88.0.0/24, hosts .11–.18; benchmark client .2</td></tr>
+    <tr><td><b>Limits per data store</b></td><td><span data-v="limits"></span> (Docker <span class="mono">cpus</span> / <span class="mono">mem_limit</span>)</td></tr>
+    <tr><td><b>Isolation</b></td><td>Only the system under test runs; each block starts from wiped volumes and a fresh cluster join</td></tr>
+  </tbody></table>
+  <h2 data-toc-sub="{n}.2 Emulated network">{n}.2 Emulated network (Table 7 of the paper)</h2>
+  <p>Every host shapes its outgoing packets with one HTB class per destination tier (netem delay, normal jitter, loss, rate cap). Values are one-way; a request and its reply each pay them. Client-to-entry-host traffic is not shaped.</p>
+  <table><thead><tr><th>Link</th><th class="n">One-way delay</th><th class="n">Jitter</th><th class="n">Loss</th><th class="n">Rate</th><th>Source</th></tr></thead><tbody>
+    <tr><td>cloud–cloud</td><td class="n">5 ms</td><td class="n">±1 ms</td><td class="n">0 %</td><td class="n">1 Gbit/s</td><td>Table 7</td></tr>
+    <tr><td>cloud–fog</td><td class="n">20 ms</td><td class="n">±4 ms</td><td class="n">0.1 %</td><td class="n">100 Mbit/s</td><td>Table 7</td></tr>
+    <tr><td>fog–fog</td><td class="n">2 ms</td><td class="n">±0.5 ms</td><td class="n">0 %</td><td class="n">1 Gbit/s</td><td>derived (same site)</td></tr>
+    <tr><td>fog–edge</td><td class="n">50 ms</td><td class="n">±10 ms</td><td class="n">0.5 %</td><td class="n">10 Mbit/s</td><td>Table 7</td></tr>
+    <tr><td>cloud–edge</td><td class="n">70 ms</td><td class="n">±11 ms</td><td class="n">0.6 %</td><td class="n">10 Mbit/s</td><td>derived</td></tr>
+    <tr><td>edge–edge</td><td class="n">2 ms</td><td class="n">±0.5 ms</td><td class="n">0 %</td><td class="n">100 Mbit/s</td><td>Table 7</td></tr>
+  </tbody></table>
+  <h2 data-toc-sub="{n}.3 Parity between systems">{n}.3 Parity between systems</h2>
+  <p>A comparison is only meaningful if each system is configured sensibly and asked to do the same work. The measures below were taken for that reason; each is recorded with the results.</p>
+  <ul>
+    <li><b>Same result.</b> Every operation returns the whole documents and the client decodes them, on every system. Until quick run 3, Corrosion's WO query returned only the ids of matching rows while the other systems returned the documents; this was corrected before quick run 4.</li>
+    <li><b>Durability.</b> Corrosion runs SQLite in WAL mode with <span class="mono">synchronous = NORMAL</span> (no flush per commit). OptimusDB runs with the equivalent setting: IPFS blocks and the store-head cache are written without an fsync per write. The other baselines run with their defaults.</li>
+    <li><b>Indexes.</b> OptimusDB indexes <span class="mono">type, status, region, resource_id</span>; Corrosion's schema and OptimusDB's SQLite tables get the same secondary indexes, so no system has an index advantage in E3.</li>
+    <li><b>Runtime limits.</b> The Go 1.19 build of OptimusDB does not read cgroup limits, so <span class="mono">GOMAXPROCS</span> and <span class="mono">GOMEMLIMIT</span> are set to the container's limits; the Rust and Node.js runtimes of the baselines read them themselves.</li>
+    <li><b>Diagnostics off.</b> OptimusDB's provenance annotations, metadata enrichment, semantic index and log shipping are off; no baseline has an equivalent. Logging is at warning level for OptimusDB, Corrosion and Iroh.</li>
+    <li><b>Baseline configuration.</b> Each baseline runs in the configuration that serves it best and was calibrated where it failed at low load: Autobase uses three indexers (eight caused 13–27 % timeouts), Gun.js uses a flat schema (the original wrapper leaked about 9 MB per query).</li>
+  </ul>
+  <h2 data-toc-sub="{n}.4 OptimusDB runtime settings">{n}.4 OptimusDB runtime settings in this run</h2>
+  <div data-table="settings"></div>
+  <h2 data-toc-sub="{n}.5 Workloads and load generation">{n}.5 Workloads, data and load generation</h2>
+  <table><thead><tr><th>Id</th><th class="n">Read</th><th class="n">Update</th><th class="n">Insert</th><th class="n">Query</th><th>Description</th></tr></thead><tbody>
+    <tr><td><b>WA</b></td><td class="n">50 %</td><td class="n">50 %</td><td class="n">–</td><td class="n">–</td><td>YCSB-A, update-heavy</td></tr>
+    <tr><td><b>WB</b></td><td class="n">95 %</td><td class="n">5 %</td><td class="n">–</td><td class="n">–</td><td>YCSB-B, read-mostly</td></tr>
+    <tr><td><b>WC</b></td><td class="n">100 %</td><td class="n">–</td><td class="n">–</td><td class="n">–</td><td>YCSB-C, read-only</td></tr>
+    <tr><td><b>WO</b></td><td class="n">60 %</td><td class="n">20 %</td><td class="n">10 %</td><td class="n">10 %</td><td>Orchestration mix: status reads, status updates, new descriptors, matchmaking queries</td></tr>
+  </tbody></table>
+  <p>Keys follow a scrambled Zipfian distribution (θ = 0.99). The WO query asks for resources in one region with status Running, which matches about 1/16 of the records (about 640 documents at 10⁴).
+  Records are JSON resource descriptors padded to 2 KB; region, CPU, memory and status take independent base-4 digits of the record number, so query predicates are uncorrelated and expected row counts are exact.</p>
+  <p>The load generator is <b>open loop</b>: operations are issued on a Poisson schedule whether or not earlier ones have finished, and latency is measured from the <b>scheduled</b> start, so a slow system cannot hide queueing delay. The per-operation timeout is 10 s; at most 2,000 operations may be in flight.</p>
+  <h2 data-toc-sub="{n}.6 Quick run versus campaign">{n}.6 Quick run versus campaign</h2>
+  <table><caption>What differs in quick mode and the pilot (verdict rules are identical)</caption>
+    <thead><tr><th>Item</th><th>This run (quick)</th><th>Campaign</th></tr></thead><tbody>
+    <tr><td>Repetitions</td><td>1</td><td>10 / 5 / 10 / 5 / 10 (E1–E5)</td></tr>
+    <tr><td>Records</td><td>10⁴ (2 KB) everywhere</td><td>10⁵ (E1, E2 steps); 10³–10⁶ (E2, E3); 10⁴ (E4, E5)</td></tr>
+    <tr><td>E1</td><td>WA, WB, WC, WO at 2 KB; 10 s warm-up + 30 s</td><td>7 cells incl. 256 B, 8 KB, 64 KB; 60 s + 300 s</td></tr>
+    <tr><td>E2</td><td>25, 100, 200 ops/s; 10 s + 30 s per step</td><td>10–200 ops/s in steps of 10; 30 s + 180 s; plus data volume series</td></tr>
+    <tr><td>E3</td><td>7 targets × Q1–Q5 at 10⁴; 2 warm-up + 20 measured queries</td><td>10⁴, 10⁵, 10⁶; 20 + 200 queries</td></tr>
+    <tr><td>E4</td><td>idle and 40 ops/s, 45 s each</td><td>0, 10, 20, 40 ops/s, 300 s each</td></tr>
+    <tr><td>E5</td><td>OptimusDB: 0 % and 30 % contention; baselines: 30 %; 30 s split 4 | 4; 120 s convergence limit</td><td>full grid (40 OptimusDB cells, 4 per baseline); 600 s limit</td></tr>
+    <tr><td>Replication wait after preload</td><td>up to 120 s</td><td>up to 900 s</td></tr>
+  </tbody></table>
+  <h2 data-toc-sub="{n}.7 Verdict rules">{n}.7 Verdict rules</h2>
+  <ul>
+    <li><b>Saturation (E2)</b> is the highest offered load at which a system achieves ≥ 90 % of the operations it supports with &lt; 1 % errors. A system that does not keep up even at the lowest load counts as 0 ops/s in the baselines' median.</li>
+    <li><b>Unsupported operations</b> (OpenDHT cannot enumerate data) are excluded from errors and reported separately; OpenDHT's throughput target is 90 % of the operations it supports.</li>
+    <li><b>Correctness (E3)</b> means the answer has exactly the expected number of rows; latency is only compared for correct answers.</li>
+    <li><b>Lost write (E5)</b>: an acknowledged key whose final value is missing, or older than a write that provably came after it on the same side of the partition. A concurrent write may legitimately win.</li>
+    <li><b>Statistics</b> (campaign only): run-level values; Mann–Whitney with Holm correction; Cliff's δ; 95 % confidence intervals.</li>
+  </ul>
+</section>
+<section data-chapter="{n}. Threats to validity" data-src="fixed" data-fixed="threats">
+  <div class="chn">Chapter {n}</div>
+  <h1 class="ch" data-toc="{n}. Threats to validity">Threats to validity</h1>
+  <p class="lede">What could make results of this testbed wrong or not general, and how each is handled. The observations found in this particular run are listed in the integrity chapter.</p>
+  <table><thead><tr><th style="width:120px">Threat</th><th>Why it matters</th><th>Handling</th></tr></thead><tbody>
+    <tr><td><b>Few repetitions</b></td><td>Without repetitions there is no variance estimate; one slow period of the machine can move a whole system's numbers.</td><td>Campaign: 5–10 repetitions; blocks shuffled with a fixed seed; the start time of every run is recorded.</td></tr>
+    <tr><td><b>Short windows</b></td><td>P99.9 needs thousands of operations; with 1,500 it rests on one or two samples.</td><td>Campaign: 300 s windows (about 15,000 operations per E1 run) and 300 s per E4 level.</td></tr>
+    <tr><td><b>Client saturation</b></td><td>A load generator that falls behind makes every system look slow.</td><td>Generator CPU, issue delay and node CPU recorded per run; client-limited steps are not counted against a system; the generator runs in several processes (busiest one checked).</td></tr>
+    <tr><td><b>Host contention</b></td><td>The testbed's limits (about 11.5 CPUs) nearly fill a 12-CPU Docker VM.</td><td>Give the VM more CPUs where possible and keep the PC otherwise idle; the client-limit check exposes contention.</td></tr>
+    <tr><td><b>Incomplete preload</b></td><td>A system measured before its data reached every host is measured on a partly replicated store.</td><td>The harness waits for a sample of keys on every host (up to 900 s in the campaign) and marks runs that time out.</td></tr>
+    <tr><td><b>Unequal work</b></td><td>Systems must be asked for the same result.</td><td>Every operation returns and decodes whole documents on every system; checked by a test.</td></tr>
+    <tr><td><b>Interface cost</b></td><td>Corrosion's answer format costs the client more to decode (each document is a JSON string inside an NDJSON row).</td><td>Kept, as it is what a client experiences; disclosed.</td></tr>
+    <tr><td><b>Emulation</b></td><td>One machine, cgroup limits and netem stand in for real edge devices and links.</td><td>Stated in the paper; link values from Table 7; edge limits match a Raspberry Pi 4 class device.</td></tr>
+    <tr><td><b>Wrapper effects</b></td><td>Gun.js, Autobase and Iroh are libraries reached through small HTTP wrappers.</td><td>Wrappers calibrated on a single node and in the cluster; a failure on an unsaturated single node is treated as a benchmark defect and fixed first.</td></tr>
+    <tr><td><b>Configuration bias</b></td><td>OptimusDB settings were tuned from profiles.</td><td>Every setting is logged per run and listed in the paper; each has a counterpart in a baseline (durability, indexes) or is a documented default of the component.</td></tr>
+  </tbody></table>
+</section>
+<section data-chapter="{n}. Changes and fixes" data-src="fixed" data-fixed="changes">
+  <div class="chn">Chapter {n}</div>
+  <h1 class="ch" data-toc="{n}. Changes and fixes">Changes to OptimusDB and the benchmark</h1>
+  <p class="lede">The history of this testbed version: what was changed in OptimusDB and in the benchmark, in the order it was made. It is the same in every report of this version; the build used by this run is named in the integrity chapter.</p>
+  <h2>OptimusDB (repository commits)</h2>
+  <table><thead><tr><th style="width:70px">Commit</th><th>Change</th><th>Effect measured</th></tr></thead><tbody>
+    <tr><td class="mono">a8bdfeb</td><td>IPFS node key Ed25519 instead of RSA-2048 (kubo's default since v0.13); no DHT announcement of each written block</td><td>Write-path CPU 12.8 s → 4.1 s in the profile; lock waiting 3.5 s → 0.46 s</td></tr>
+    <tr><td class="mono">b7295e3</td><td>Query path: index intersection, filter before copy, one response encoding, stored JSON returned without decode and re-encode; optional fsync-free writes</td><td>Update P50 11.6 → 4.2 ms; insert 11.2 → 4.2 ms (quick runs 2 → 3)</td></tr>
+    <tr><td class="mono">981ee06</td><td>String-equality queries on indexed fields answered from the index without decoding any document</td><td>Measured in later runs</td></tr>
+    <tr><td class="mono">479504d</td><td>Replicas catch up after a partition: heads re-announced periodically (anti-entropy) and lost peer connections dialled again</td><td>Quick run 5: one E5 cell (0 % contention) did not converge within 120 s; quick run 6: every E5 cell converged, no write lost</td></tr>
+    <tr><td class="mono">next</td><td>Read by id with <span class="mono">GET /&lt;context&gt;/doc/&lt;id&gt;</span> (same answer as the query command, answered in the HTTP handler from the local replica); per-request log messages level-checked</td><td>Quick run 7: Q1 1.21 ms vs Iroh 0.94 ms; client-side cost of a read 1.010 → 0.880 ms in a local check</td></tr>
+  </tbody></table>
+  <p>Earlier commits in the same series added batched loading (<span class="mono">PutAll</span>), an incremental document index with the upstream PUTALL bug fixed, group commit of concurrent writes, field indexes and a decoded-document cache.</p>
+  <h2>Benchmark</h2>
+  <ul>
+    <li>Corrosion's WO query fetches the documents, not only their ids; reads on the wrapper-based systems decode the document (before quick run 4).</li>
+    <li>Corrosion schema and OptimusDB SQLite tables have the same secondary indexes.</li>
+    <li>Gun.js wrapper uses a flat schema (memory leak in the original); Autobase uses three indexers; both wrappers survive failed requests.</li>
+    <li>E1: a run with &gt; 20 % errors or a node that stopped answering is followed by a fresh deployment.</li>
+    <li>E2: a system that cannot keep up at the lowest load counts as 0 in the baselines' median.</li>
+    <li>OpenDHT: queries it cannot express are unsupported, not errors.</li>
+    <li>Load-generator validity check (generator CPU, issue delay, node CPU per run); Corrosion answers decoded in one call per response; an error event from Corrosion counts as an error.</li>
+    <li>Evaluation report generated from each run's files, with a copy saved when the run finishes.</li>
+    <li>After the first pilot at 10⁵ records: the load generator runs in several processes (same operations and scheduled times); the client's connections are renewed after a redeployment; the Gun.js, Autobase and Iroh wrappers evaluate WO queries without holding every document in memory, Gun.js reads its local replica, and Gun.js and Autobase run at most two scans at a time; OptimusDB pinned to commit 479504d. The H1 detail also states the comparison with the baselines that completed the whole WO mix (verdict unchanged).</li>
+  </ul>
+</section>
+<section data-chapter="Appendix B. Glossary" data-src="fixed" data-fixed="glossary">
+  <div class="chn">Appendix B</div>
+  <h1 class="ch" data-toc="Appendix B. Glossary">Glossary</h1>
+  <table><tbody>
+    <tr><td style="width:150px"><b>P50, P99, P99.9</b></td><td>The latency below which 50 %, 99 % and 99.9 % of successful operations completed.</td></tr>
+    <tr><td><b>Tail ratio</b></td><td>P99.9 ÷ P50; how much slower the slowest operations are than a typical one.</td></tr>
+    <tr><td><b>Open loop</b></td><td>Operations are issued on a fixed schedule regardless of earlier ones finishing; latency counts from the scheduled time.</td></tr>
+    <tr><td><b>Issue delay</b></td><td>Time between an operation's scheduled start and the moment the client actually sent it; near zero when the client keeps up.</td></tr>
+    <tr><td><b>Saturation</b></td><td>Highest offered load achieved at ≥ 90 % with &lt; 1 % errors.</td></tr>
+    <tr><td><b>Block</b></td><td>One deployment and preload of one system; all its runs follow on that data in shuffled order (YCSB load and run phases).</td></tr>
+    <tr><td><b>LOCAL_THEN_REMOTE_MERGE</b></td><td>OptimusDB strategy: answer from the local replica; ask peers only when it has no matching rows.</td></tr>
+    <tr><td><b>Convergence</b></td><td>Time from healing a partition until all replicas have identical content hashes.</td></tr>
+    <tr><td><b>Censored value</b></td><td>A measurement stopped at a limit (e.g. 120 s): the true value is at least the limit.</td></tr>
+    <tr><td><b>CRDT</b></td><td>Conflict-free replicated data type: replicas accept writes independently and merge deterministically.</td></tr>
+  </tbody></table>
+</section>

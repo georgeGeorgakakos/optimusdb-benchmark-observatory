@@ -1,0 +1,588 @@
+goroutine profile: total 629
+128 @ 0xd82c96 0xd9335c 0x174ebe5 0xdb5ec1
+#	0x174ebe4	github.com/ipfs/go-libipfs/bitswap/server/internal/decision.(*blockstoreManager).worker+0x124	/go/pkg/mod/github.com/ipfs/go-libipfs@v0.6.2/bitswap/server/internal/decision/blockstoremanager.go:63
+
+26 @ 0xd82c96 0xd9335c 0x16b4898 0xdb5ec1
+#	0x16b4897	github.com/syndtr/goleveldb/leveldb.(*DB).compactionError+0x157	/go/pkg/mod/github.com/syndtr/goleveldb@v1.0.1-0.20210819022825-2ae1ddf74ef7/leveldb/db_compaction.go:91
+
+26 @ 0xd82c96 0xd9335c 0x16b9db3 0xdb5ec1
+#	0x16b9db2	github.com/syndtr/goleveldb/leveldb.(*DB).mCompaction+0x112	/go/pkg/mod/github.com/syndtr/goleveldb@v1.0.1-0.20210819022825-2ae1ddf74ef7/leveldb/db_compaction.go:773
+
+26 @ 0xd82c96 0xd9335c 0x16ba617 0xdb5ec1
+#	0x16ba616	github.com/syndtr/goleveldb/leveldb.(*DB).tCompaction+0x6d6	/go/pkg/mod/github.com/syndtr/goleveldb@v1.0.1-0.20210819022825-2ae1ddf74ef7/leveldb/db_compaction.go:836
+
+26 @ 0xd82c96 0xd9335c 0x16be608 0xdb5ec1
+#	0x16be607	github.com/syndtr/goleveldb/leveldb.(*DB).mpoolDrain+0xa7	/go/pkg/mod/github.com/syndtr/goleveldb@v1.0.1-0.20210819022825-2ae1ddf74ef7/leveldb/db_state.go:101
+
+26 @ 0xd82c96 0xd9335c 0x16cdc7b 0xdb5ec1
+#	0x16cdc7a	github.com/syndtr/goleveldb/leveldb.(*session).refLoop+0x59a	/go/pkg/mod/github.com/syndtr/goleveldb@v1.0.1-0.20210819022825-2ae1ddf74ef7/leveldb/session_util.go:189
+
+21 @ 0xd82c96 0xd9335c 0x12c8445 0xdb5ec1
+#	0x12c8444	github.com/libp2p/go-libp2p-pubsub.(*discover).Advertise.func1+0x264	/go/pkg/mod/github.com/libp2p/go-libp2p-pubsub@v0.9.3/discovery.go:203
+
+14 @ 0xd82c96 0xd7afd7 0xdaf729 0xe31572 0xe32a5a 0xe32a48 0xeb6189 0xeca8a5 0x103185b 0xe29e7a 0x199e55b 0x199e53a 0x199dbcf 0xe29e7a 0x1923417 0x19233f2 0x19232de 0xdb5ec1
+#	0xdaf728	internal/poll.runtime_pollWait+0x88								/usr/local/go/src/runtime/netpoll.go:305
+#	0xe31571	internal/poll.(*pollDesc).wait+0x31								/usr/local/go/src/internal/poll/fd_poll_runtime.go:84
+#	0xe32a59	internal/poll.(*pollDesc).waitRead+0x259							/usr/local/go/src/internal/poll/fd_poll_runtime.go:89
+#	0xe32a47	internal/poll.(*FD).Read+0x247									/usr/local/go/src/internal/poll/fd_unix.go:167
+#	0xeb6188	net.(*netFD).Read+0x28										/usr/local/go/src/net/fd_posix.go:55
+#	0xeca8a4	net.(*conn).Read+0x44										/usr/local/go/src/net/net.go:183
+#	0x103185a	bufio.(*Reader).Read+0x1ba									/usr/local/go/src/bufio/bufio.go:237
+#	0xe29e79	io.ReadAtLeast+0x99										/usr/local/go/src/io/io.go:332
+#	0x199e55a	io.ReadFull+0x3a										/usr/local/go/src/io/io.go:351
+#	0x199e539	github.com/libp2p/go-libp2p/p2p/security/noise.(*secureSession).readNextInsecureMsgLen+0x19	/go/pkg/mod/github.com/libp2p/go-libp2p@v0.27.1/p2p/security/noise/rw.go:133
+#	0x199dbce	github.com/libp2p/go-libp2p/p2p/security/noise.(*secureSession).Read+0x22e			/go/pkg/mod/github.com/libp2p/go-libp2p@v0.27.1/p2p/security/noise/rw.go:52
+#	0xe29e79	io.ReadAtLeast+0x99										/usr/local/go/src/io/io.go:332
+#	0x1923416	io.ReadFull+0xf6										/usr/local/go/src/io/io.go:351
+#	0x19233f1	github.com/libp2p/go-yamux/v4.(*Session).recvLoop+0xd1						/go/pkg/mod/github.com/libp2p/go-yamux/v4@v4.0.0/session.go:668
+#	0x19232dd	github.com/libp2p/go-yamux/v4.(*Session).recv+0x1d						/go/pkg/mod/github.com/libp2p/go-yamux/v4@v4.0.0/session.go:640
+
+14 @ 0xd82c96 0xd9335c 0x1920bd3 0x19282b9 0x18af1ce 0xdb5ec1
+#	0x1920bd2	github.com/libp2p/go-yamux/v4.(*Session).AcceptStream+0xb2		/go/pkg/mod/github.com/libp2p/go-yamux/v4@v4.0.0/session.go:272
+#	0x19282b8	github.com/libp2p/go-libp2p/p2p/muxer/yamux.(*conn).AcceptStream+0x18	/go/pkg/mod/github.com/libp2p/go-libp2p@v0.27.1/p2p/muxer/yamux/conn.go:43
+#	0x18af1cd	github.com/libp2p/go-libp2p/p2p/net/swarm.(*Conn).start.func1+0xad	/go/pkg/mod/github.com/libp2p/go-libp2p@v0.27.1/p2p/net/swarm/swarm_conn.go:114
+
+14 @ 0xd82c96 0xd9335c 0x19213bf 0xdb5ec1
+#	0x19213be	github.com/libp2p/go-yamux/v4.(*Session).startMeasureRTT+0xde	/go/pkg/mod/github.com/libp2p/go-yamux/v4@v4.0.0/session.go:356
+
+14 @ 0xd82c96 0xd9335c 0x1922bb5 0x19225be 0xdb5ec1
+#	0x1922bb4	github.com/libp2p/go-yamux/v4.(*Session).sendLoop+0x5b4	/go/pkg/mod/github.com/libp2p/go-yamux/v4@v4.0.0/session.go:583
+#	0x19225bd	github.com/libp2p/go-yamux/v4.(*Session).send+0x1d	/go/pkg/mod/github.com/libp2p/go-yamux/v4@v4.0.0/session.go:512
+
+12 @ 0xd82c96 0xd9335c 0x12f5045 0xdb5ec1
+#	0x12f5044	github.com/libp2p/go-libp2p-pubsub.(*validation).validateWorker+0xc4	/go/pkg/mod/github.com/libp2p/go-libp2p-pubsub@v0.9.3/validation.go:283
+
+12 @ 0xd82c96 0xd9335c 0x16f46b0 0xdb5ec1
+#	0x16f46af	berty.tech/go-orbit-db/stores/basestore.(*BaseStore).InitBaseStore.func2+0x3cf	/optimusdbKB/third_party/go-orbit-db/stores/basestore/base_store.go:283
+
+11 @ 0xd82c96 0xd4a83b 0xd4a378 0x16fd715 0xdb5ec1
+#	0x16fd714	berty.tech/go-orbit-db/stores/basestore.(*BaseStore).pubSubChanListener.func2+0x54	/optimusdbKB/third_party/go-orbit-db/stores/basestore/base_store.go:1133
+
+11 @ 0xd82c96 0xd4a83b 0xd4a378 0x16fdc37 0xdb5ec1
+#	0x16fdc36	berty.tech/go-orbit-db/stores/basestore.(*BaseStore).pubSubChanListener.func1+0xd6	/optimusdbKB/third_party/go-orbit-db/stores/basestore/base_store.go:1111
+
+11 @ 0xd82c96 0xd9335c 0x12eb0cb 0x1dba526 0x16f1acd 0xdb5ec1
+#	0x12eb0ca	github.com/libp2p/go-libp2p-pubsub.(*Subscription).Next+0x8a			/go/pkg/mod/github.com/libp2p/go-libp2p-pubsub@v0.9.3/subscription.go:26
+#	0x1dba525	github.com/ipfs/kubo/core/coreapi.(*pubSubSubscription).Next+0xe5		/go/pkg/mod/github.com/ipfs/kubo@v0.19.1/core/coreapi/pubsub.go:120
+#	0x16f1acc	berty.tech/go-orbit-db/pubsub/pubsubcoreapi.(*psTopic).WatchMessages.func1+0xcc	/optimusdbKB/third_party/go-orbit-db/pubsub/pubsubcoreapi/pubsub.go:112
+
+11 @ 0xd82c96 0xd9335c 0x16f1434 0xdb5ec1
+#	0x16f1433	berty.tech/go-orbit-db/pubsub/pubsubcoreapi.(*psTopic).WatchPeers.func1+0x173	/optimusdbKB/third_party/go-orbit-db/pubsub/pubsubcoreapi/pubsub.go:90
+
+11 @ 0xd82c96 0xd9335c 0x16fcc2b 0xdb5ec1
+#	0x16fcc2a	berty.tech/go-orbit-db/stores/basestore.(*BaseStore).storeListener.func1+0x14a	/optimusdbKB/third_party/go-orbit-db/stores/basestore/base_store.go:1022
+
+8 @ 0xd82c96 0xd9335c 0x12cf491 0xdb5ec1
+#	0x12cf490	github.com/libp2p/go-libp2p-pubsub.(*GossipSubRouter).connector+0xd0	/go/pkg/mod/github.com/libp2p/go-libp2p-pubsub@v0.9.3/gossipsub.go:947
+
+8 @ 0xd82c96 0xd9335c 0x1751e85 0x175174b 0x1751065 0x1385a36 0xdb5ec1
+#	0x1751e84	github.com/ipfs/go-libipfs/bitswap/server/internal/decision.(*Engine).nextEnvelope+0x4c4	/go/pkg/mod/github.com/ipfs/go-libipfs@v0.6.2/bitswap/server/internal/decision/engine.go:526
+#	0x175174a	github.com/ipfs/go-libipfs/bitswap/server/internal/decision.(*Engine).taskWorker+0x14a		/go/pkg/mod/github.com/ipfs/go-libipfs@v0.6.2/bitswap/server/internal/decision/engine.go:497
+#	0x1751064	github.com/ipfs/go-libipfs/bitswap/server/internal/decision.(*Engine).StartWorkers.func1+0x24	/go/pkg/mod/github.com/ipfs/go-libipfs@v0.6.2/bitswap/server/internal/decision/engine.go:456
+#	0x1385a35	github.com/jbenet/goprocess.(*process).Go.func1+0x35						/go/pkg/mod/github.com/jbenet/goprocess@v0.1.4/impl-mutex.go:134
+
+8 @ 0xd82c96 0xd9335c 0x175b015 0x175ad49 0x1385a36 0xdb5ec1
+#	0x175b014	github.com/ipfs/go-libipfs/bitswap/server.(*Server).taskWorker+0x2b4		/go/pkg/mod/github.com/ipfs/go-libipfs@v0.6.2/bitswap/server/server.go:285
+#	0x175ad48	github.com/ipfs/go-libipfs/bitswap/server.(*Server).startWorkers.func1+0x28	/go/pkg/mod/github.com/ipfs/go-libipfs@v0.6.2/bitswap/server/server.go:261
+#	0x1385a35	github.com/jbenet/goprocess.(*process).Go.func1+0x35				/go/pkg/mod/github.com/jbenet/goprocess@v0.1.4/impl-mutex.go:134
+
+8 @ 0xd82c96 0xd9335c 0x1c2cdce 0xdb5ec1
+#	0x1c2cdcd	github.com/ipfs/go-ipfs-provider/simple.(*Provider).handleAnnouncements.func1+0xad	/go/pkg/mod/github.com/ipfs/go-ipfs-provider@v0.8.1/simple/provider.go:85
+
+7 @ 0xd82c96 0xd9335c 0x12c69cb 0xdb5ec1
+#	0x12c69ca	github.com/libp2p/go-libp2p-pubsub.(*PubSub).handleSendingMessages+0x16a	/go/pkg/mod/github.com/libp2p/go-libp2p-pubsub@v0.9.3/comm.go:175
+
+7 @ 0xd82c96 0xd9335c 0x12eb0cb 0x1dba526 0x16e80ec 0x16e76e8 0xdb5ec1
+#	0x12eb0ca	github.com/libp2p/go-libp2p-pubsub.(*Subscription).Next+0x8a		/go/pkg/mod/github.com/libp2p/go-libp2p-pubsub@v0.9.3/subscription.go:26
+#	0x1dba525	github.com/ipfs/kubo/core/coreapi.(*pubSubSubscription).Next+0xe5	/go/pkg/mod/github.com/ipfs/kubo@v0.19.1/core/coreapi/pubsub.go:120
+#	0x16e80eb	berty.tech/go-orbit-db/pubsub/oneonone.(*channels).monitorTopic+0x8b	/optimusdbKB/third_party/go-orbit-db/pubsub/oneonone/channel.go:138
+#	0x16e76e7	berty.tech/go-orbit-db/pubsub/oneonone.(*channels).Connect.func1+0x47	/optimusdbKB/third_party/go-orbit-db/pubsub/oneonone/channel.go:66
+
+7 @ 0xd82c96 0xd9335c 0x172ac76 0xdb5ec1
+#	0x172ac75	github.com/ipfs/go-libipfs/bitswap/client/internal/messagequeue.(*MessageQueue).runQueue+0x215	/go/pkg/mod/github.com/ipfs/go-libipfs@v0.6.2/bitswap/client/internal/messagequeue/messagequeue.go:424
+
+7 @ 0xd82c96 0xd9335c 0x19252c9 0x192833e 0x18b7b93 0x1b113b8 0x1b0f027 0x12c6786 0xdb5ec1
+#	0x19252c8	github.com/libp2p/go-yamux/v4.(*Stream).Read+0x1a8			/go/pkg/mod/github.com/libp2p/go-yamux/v4@v4.0.0/stream.go:111
+#	0x192833d	github.com/libp2p/go-libp2p/p2p/muxer/yamux.(*stream).Read+0x1d		/go/pkg/mod/github.com/libp2p/go-libp2p@v0.27.1/p2p/muxer/yamux/stream.go:17
+#	0x18b7b92	github.com/libp2p/go-libp2p/p2p/net/swarm.(*Stream).Read+0x32		/go/pkg/mod/github.com/libp2p/go-libp2p@v0.27.1/p2p/net/swarm/swarm_stream.go:55
+#	0x1b113b7	github.com/multiformats/go-multistream.(*lazyClientConn[...]).Read+0xb7	/go/pkg/mod/github.com/multiformats/go-multistream@v0.4.1/lazyClient.go:68
+#	0x1b0f026	github.com/libp2p/go-libp2p/p2p/host/basic.(*streamWrapper).Read+0x26	/go/pkg/mod/github.com/libp2p/go-libp2p@v0.27.1/p2p/host/basic/basic_host.go:1152
+#	0x12c6785	github.com/libp2p/go-libp2p-pubsub.(*PubSub).handlePeerDead+0x85	/go/pkg/mod/github.com/libp2p/go-libp2p-pubsub@v0.9.3/comm.go:147
+
+7 @ 0xd82c96 0xd9335c 0x19252c9 0x192833e 0x18b7b93 0xe29e7a 0x127e0b7 0x127e09a 0xe7195a 0x127d910 0x127dcdc 0x12c596b 0x1b0b916 0xdb5ec1
+#	0x19252c8	github.com/libp2p/go-yamux/v4.(*Stream).Read+0x1a8					/go/pkg/mod/github.com/libp2p/go-yamux/v4@v4.0.0/stream.go:111
+#	0x192833d	github.com/libp2p/go-libp2p/p2p/muxer/yamux.(*stream).Read+0x1d				/go/pkg/mod/github.com/libp2p/go-libp2p@v0.27.1/p2p/muxer/yamux/stream.go:17
+#	0x18b7b92	github.com/libp2p/go-libp2p/p2p/net/swarm.(*Stream).Read+0x32				/go/pkg/mod/github.com/libp2p/go-libp2p@v0.27.1/p2p/net/swarm/swarm_stream.go:55
+#	0xe29e79	io.ReadAtLeast+0x99									/usr/local/go/src/io/io.go:332
+#	0x127e0b6	io.ReadFull+0x36									/usr/local/go/src/io/io.go:351
+#	0x127e099	github.com/libp2p/go-msgio.(*simpleByteReader).ReadByte+0x19				/go/pkg/mod/github.com/libp2p/go-msgio@v0.3.0/varint.go:185
+#	0xe71959	github.com/multiformats/go-varint.ReadUvarint+0x59					/go/pkg/mod/github.com/multiformats/go-varint@v0.0.7/varint.go:80
+#	0x127d90f	github.com/libp2p/go-msgio.(*varintReader).nextMsgLen+0x2f				/go/pkg/mod/github.com/libp2p/go-msgio@v0.3.0/varint.go:119
+#	0x127dcdb	github.com/libp2p/go-msgio.(*varintReader).ReadMsg+0xbb					/go/pkg/mod/github.com/libp2p/go-msgio@v0.3.0/varint.go:149
+#	0x12c596a	github.com/libp2p/go-libp2p-pubsub.(*PubSub).handleNewStream+0x3ea			/go/pkg/mod/github.com/libp2p/go-libp2p-pubsub@v0.9.3/comm.go:66
+#	0x1b0b915	github.com/libp2p/go-libp2p/p2p/host/basic.(*BasicHost).SetStreamHandler.func1+0x75	/go/pkg/mod/github.com/libp2p/go-libp2p@v0.27.1/p2p/host/basic/basic_host.go:596
+
+7 @ 0xd82c96 0xd9335c 0x19252c9 0x192833e 0x18b7b93 0xe29e7a 0x127e0b7 0x127e09a 0xe7195a 0x127d910 0x127dcdc 0x14d7beb 0x14d78e5 0x1b0b916 0xdb5ec1
+#	0x19252c8	github.com/libp2p/go-yamux/v4.(*Stream).Read+0x1a8					/go/pkg/mod/github.com/libp2p/go-yamux/v4@v4.0.0/stream.go:111
+#	0x192833d	github.com/libp2p/go-libp2p/p2p/muxer/yamux.(*stream).Read+0x1d				/go/pkg/mod/github.com/libp2p/go-libp2p@v0.27.1/p2p/muxer/yamux/stream.go:17
+#	0x18b7b92	github.com/libp2p/go-libp2p/p2p/net/swarm.(*Stream).Read+0x32				/go/pkg/mod/github.com/libp2p/go-libp2p@v0.27.1/p2p/net/swarm/swarm_stream.go:55
+#	0xe29e79	io.ReadAtLeast+0x99									/usr/local/go/src/io/io.go:332
+#	0x127e0b6	io.ReadFull+0x36									/usr/local/go/src/io/io.go:351
+#	0x127e099	github.com/libp2p/go-msgio.(*simpleByteReader).ReadByte+0x19				/go/pkg/mod/github.com/libp2p/go-msgio@v0.3.0/varint.go:185
+#	0xe71959	github.com/multiformats/go-varint.ReadUvarint+0x59					/go/pkg/mod/github.com/multiformats/go-varint@v0.0.7/varint.go:80
+#	0x127d90f	github.com/libp2p/go-msgio.(*varintReader).nextMsgLen+0x2f				/go/pkg/mod/github.com/libp2p/go-msgio@v0.3.0/varint.go:119
+#	0x127dcdb	github.com/libp2p/go-msgio.(*varintReader).ReadMsg+0xbb					/go/pkg/mod/github.com/libp2p/go-msgio@v0.3.0/varint.go:149
+#	0x14d7bea	github.com/libp2p/go-libp2p-kad-dht.(*IpfsDHT).handleNewMessage+0x2aa			/go/pkg/mod/github.com/libp2p/go-libp2p-kad-dht@v0.21.1/dht_net.go:52
+#	0x14d78e4	github.com/libp2p/go-libp2p-kad-dht.(*IpfsDHT).handleNewStream+0x24			/go/pkg/mod/github.com/libp2p/go-libp2p-kad-dht@v0.21.1/dht_net.go:26
+#	0x1b0b915	github.com/libp2p/go-libp2p/p2p/host/basic.(*BasicHost).SetStreamHandler.func1+0x75	/go/pkg/mod/github.com/libp2p/go-libp2p@v0.27.1/p2p/host/basic/basic_host.go:596
+
+6 @ 0xd82c96 0xd9335c 0x173475e 0xdb5ec1
+#	0x173475d	github.com/ipfs/go-libipfs/bitswap/client/internal/providerquerymanager.(*ProviderQueryManager).findProviderWorker+0xbd	/go/pkg/mod/github.com/ipfs/go-libipfs@v0.6.2/bitswap/client/internal/providerquerymanager/providerquerymanager.go:228
+
+5 @ 0xd82c96 0xd9335c 0x1437ee6 0xdb5ec1
+#	0x1437ee5	github.com/jbenet/goprocess/context.CloseAfterContext.func1+0x85	/go/pkg/mod/github.com/jbenet/goprocess@v0.1.4/context/context.go:65
+
+4 @ 0xd82c96 0xd4a83b 0xd4a338 0x1f83bdc 0xdb5ec1
+#	0x1f83bdb	optimusdb/app.awaitReplicateForDocStore+0x2fb	/optimusdbKB/app/service.go:2037
+
+4 @ 0xd82c96 0xd7afd7 0xdaf729 0xe31572 0xe32a5a 0xe32a48 0xeb6189 0xeca8a5 0x11a13f1 0x10311ff 0x10313dd 0x11a29f8 0x11a70a5 0xdb5ec1
+#	0xdaf728	internal/poll.runtime_pollWait+0x88		/usr/local/go/src/runtime/netpoll.go:305
+#	0xe31571	internal/poll.(*pollDesc).wait+0x31		/usr/local/go/src/internal/poll/fd_poll_runtime.go:84
+#	0xe32a59	internal/poll.(*pollDesc).waitRead+0x259	/usr/local/go/src/internal/poll/fd_poll_runtime.go:89
+#	0xe32a47	internal/poll.(*FD).Read+0x247			/usr/local/go/src/internal/poll/fd_unix.go:167
+#	0xeb6188	net.(*netFD).Read+0x28				/usr/local/go/src/net/fd_posix.go:55
+#	0xeca8a4	net.(*conn).Read+0x44				/usr/local/go/src/net/net.go:183
+#	0x11a13f0	net/http.(*connReader).Read+0x170		/usr/local/go/src/net/http/server.go:786
+#	0x10311fe	bufio.(*Reader).fill+0xfe			/usr/local/go/src/bufio/bufio.go:106
+#	0x10313dc	bufio.(*Reader).Peek+0x5c			/usr/local/go/src/bufio/bufio.go:144
+#	0x11a29f7	net/http.(*conn).readRequest+0x1f7		/usr/local/go/src/net/http/server.go:991
+#	0x11a70a4	net/http.(*conn).serve+0x344			/usr/local/go/src/net/http/server.go:1916
+
+4 @ 0xd82c96 0xd9335c 0x1a2c859 0xdb5ec1
+#	0x1a2c858	github.com/libp2p/go-libp2p/p2p/transport/quicreuse.(*reuse).gc+0x118	/go/pkg/mod/github.com/libp2p/go-libp2p@v0.27.1/p2p/transport/quicreuse/reuse.go:110
+
+3 @ 0xd82c96 0xd4a83b 0xd4a378 0x1993605 0x18b50fa 0xdb5ec1
+#	0x1993604	github.com/libp2p/go-libp2p/p2p/net/upgrader.(*listener).Accept+0x44		/go/pkg/mod/github.com/libp2p/go-libp2p@v0.27.1/p2p/net/upgrader/listener.go:162
+#	0x18b50f9	github.com/libp2p/go-libp2p/p2p/net/swarm.(*Swarm).AddListenAddr.func2+0xf9	/go/pkg/mod/github.com/libp2p/go-libp2p@v0.27.1/p2p/net/swarm/swarm_listen.go:128
+
+3 @ 0xd82c96 0xd9335c 0x135832d 0xdb5ec1
+#	0x135832c	database/sql.(*DB).connectionOpener+0x8c	/usr/local/go/src/database/sql/sql.go:1224
+
+3 @ 0xd82c96 0xd9335c 0x19252c9 0x192833e 0x18b7b93 0xe29e7a 0x127e0b7 0x127e09a 0xe7195a 0x127d910 0x127dcdc 0x1720a62 0x1726098 0x1b0b916 0xdb5ec1
+#	0x19252c8	github.com/libp2p/go-yamux/v4.(*Stream).Read+0x1a8					/go/pkg/mod/github.com/libp2p/go-yamux/v4@v4.0.0/stream.go:111
+#	0x192833d	github.com/libp2p/go-libp2p/p2p/muxer/yamux.(*stream).Read+0x1d				/go/pkg/mod/github.com/libp2p/go-libp2p@v0.27.1/p2p/muxer/yamux/stream.go:17
+#	0x18b7b92	github.com/libp2p/go-libp2p/p2p/net/swarm.(*Stream).Read+0x32				/go/pkg/mod/github.com/libp2p/go-libp2p@v0.27.1/p2p/net/swarm/swarm_stream.go:55
+#	0xe29e79	io.ReadAtLeast+0x99									/usr/local/go/src/io/io.go:332
+#	0x127e0b6	io.ReadFull+0x36									/usr/local/go/src/io/io.go:351
+#	0x127e099	github.com/libp2p/go-msgio.(*simpleByteReader).ReadByte+0x19				/go/pkg/mod/github.com/libp2p/go-msgio@v0.3.0/varint.go:185
+#	0xe71959	github.com/multiformats/go-varint.ReadUvarint+0x59					/go/pkg/mod/github.com/multiformats/go-varint@v0.0.7/varint.go:80
+#	0x127d90f	github.com/libp2p/go-msgio.(*varintReader).nextMsgLen+0x2f				/go/pkg/mod/github.com/libp2p/go-msgio@v0.3.0/varint.go:119
+#	0x127dcdb	github.com/libp2p/go-msgio.(*varintReader).ReadMsg+0xbb					/go/pkg/mod/github.com/libp2p/go-msgio@v0.3.0/varint.go:149
+#	0x1720a61	github.com/ipfs/go-libipfs/bitswap/message.FromMsgReader+0x41				/go/pkg/mod/github.com/ipfs/go-libipfs@v0.6.2/bitswap/message/message.go:404
+#	0x1726097	github.com/ipfs/go-libipfs/bitswap/network.(*impl).handleNewStream+0x237		/go/pkg/mod/github.com/ipfs/go-libipfs@v0.6.2/bitswap/network/ipfs_impl.go:413
+#	0x1b0b915	github.com/libp2p/go-libp2p/p2p/host/basic.(*BasicHost).SetStreamHandler.func1+0x75	/go/pkg/mod/github.com/libp2p/go-libp2p@v0.27.1/p2p/host/basic/basic_host.go:596
+
+2 @ 0xd82c96 0xd4a83b 0xd4a378 0x157a893 0xdb5ec1
+#	0x157a892	github.com/libp2p/go-libp2p/p2p/discovery/mdns.(*mdnsService).startResolver.func1+0xb2	/go/pkg/mod/github.com/libp2p/go-libp2p@v0.27.1/p2p/discovery/mdns/mdns.go:158
+
+2 @ 0xd82c96 0xd7afd7 0xdaf729 0xe31572 0xe36974 0xe36961 0xeb82f5 0xed4a08 0xed3a7d 0x12b8b93 0x1a47a4d 0x1a474e2 0x1992884 0xdb5ec1
+#	0xdaf728	internal/poll.runtime_pollWait+0x88						/usr/local/go/src/runtime/netpoll.go:305
+#	0xe31571	internal/poll.(*pollDesc).wait+0x31						/usr/local/go/src/internal/poll/fd_poll_runtime.go:84
+#	0xe36973	internal/poll.(*pollDesc).waitRead+0x233					/usr/local/go/src/internal/poll/fd_poll_runtime.go:89
+#	0xe36960	internal/poll.(*FD).Accept+0x220						/usr/local/go/src/internal/poll/fd_unix.go:614
+#	0xeb82f4	net.(*netFD).accept+0x34							/usr/local/go/src/net/fd_unix.go:172
+#	0xed4a07	net.(*TCPListener).accept+0x27							/usr/local/go/src/net/tcpsock_posix.go:142
+#	0xed3a7c	net.(*TCPListener).Accept+0x3c							/usr/local/go/src/net/tcpsock.go:288
+#	0x12b8b92	github.com/multiformats/go-multiaddr/net.(*maListener).Accept+0x32		/go/pkg/mod/github.com/multiformats/go-multiaddr@v0.9.0/net/net.go:243
+#	0x1a47a4c	github.com/libp2p/go-libp2p/p2p/transport/tcp.(*tcpListener).Accept+0x2c	/go/pkg/mod/github.com/libp2p/go-libp2p@v0.27.1/p2p/transport/tcp/tcp.go:80
+#	0x1a474e1	github.com/libp2p/go-libp2p/p2p/transport/tcp.(*tracingListener).Accept+0x21	/go/pkg/mod/github.com/libp2p/go-libp2p@v0.27.1/p2p/transport/tcp/metrics.go:263
+#	0x1992883	github.com/libp2p/go-libp2p/p2p/net/upgrader.(*listener).handleIncoming+0x103	/go/pkg/mod/github.com/libp2p/go-libp2p@v0.27.1/p2p/net/upgrader/listener.go:74
+
+2 @ 0xd82c96 0xd7afd7 0xdaf729 0xe31572 0xe37ec5 0xe37ea9 0xecf2a5 0x14eebd9 0x14f99a8 0x14f9996 0x1572df4 0x1572c70 0xdb5ec1
+#	0xdaf728	internal/poll.runtime_pollWait+0x88			/usr/local/go/src/runtime/netpoll.go:305
+#	0xe31571	internal/poll.(*pollDesc).wait+0x31			/usr/local/go/src/internal/poll/fd_poll_runtime.go:84
+#	0xe37ec4	internal/poll.(*pollDesc).waitRead+0x144		/usr/local/go/src/internal/poll/fd_poll_runtime.go:89
+#	0xe37ea8	internal/poll.(*FD).RawRead+0x128			/usr/local/go/src/internal/poll/fd_unix.go:766
+#	0xecf2a4	net.(*rawConn).Read+0x44				/usr/local/go/src/net/rawconn.go:43
+#	0x14eebd8	golang.org/x/net/internal/socket.(*Conn).recvMsg+0x178	/go/pkg/mod/golang.org/x/net@v0.25.0/internal/socket/rawconn_msg.go:27
+#	0x14f99a7	golang.org/x/net/internal/socket.(*Conn).RecvMsg+0x527	/go/pkg/mod/golang.org/x/net@v0.25.0/internal/socket/socket.go:247
+#	0x14f9995	golang.org/x/net/ipv4.(*payloadHandler).ReadFrom+0x515	/go/pkg/mod/golang.org/x/net@v0.25.0/ipv4/payload_cmsg.go:31
+#	0x1572df3	github.com/libp2p/zeroconf/v2.(*client).recv.func2+0x33	/go/pkg/mod/github.com/libp2p/zeroconf/v2@v2.2.0/client.go:328
+#	0x1572c6f	github.com/libp2p/zeroconf/v2.(*client).recv+0x14f	/go/pkg/mod/github.com/libp2p/zeroconf/v2@v2.2.0/client.go:347
+
+2 @ 0xd82c96 0xd7afd7 0xdaf729 0xe31572 0xe37ec5 0xe37ea9 0xecf2a5 0x14eebd9 0x14f99a8 0x14f9996 0x157520a 0xdb5ec1
+#	0xdaf728	internal/poll.runtime_pollWait+0x88			/usr/local/go/src/runtime/netpoll.go:305
+#	0xe31571	internal/poll.(*pollDesc).wait+0x31			/usr/local/go/src/internal/poll/fd_poll_runtime.go:84
+#	0xe37ec4	internal/poll.(*pollDesc).waitRead+0x144		/usr/local/go/src/internal/poll/fd_poll_runtime.go:89
+#	0xe37ea8	internal/poll.(*FD).RawRead+0x128			/usr/local/go/src/internal/poll/fd_unix.go:766
+#	0xecf2a4	net.(*rawConn).Read+0x44				/usr/local/go/src/net/rawconn.go:43
+#	0x14eebd8	golang.org/x/net/internal/socket.(*Conn).recvMsg+0x178	/go/pkg/mod/golang.org/x/net@v0.25.0/internal/socket/rawconn_msg.go:27
+#	0x14f99a7	golang.org/x/net/internal/socket.(*Conn).RecvMsg+0x527	/go/pkg/mod/golang.org/x/net@v0.25.0/internal/socket/socket.go:247
+#	0x14f9995	golang.org/x/net/ipv4.(*payloadHandler).ReadFrom+0x515	/go/pkg/mod/golang.org/x/net@v0.25.0/ipv4/payload_cmsg.go:31
+#	0x1575209	github.com/libp2p/zeroconf/v2.(*Server).recv4+0xc9	/go/pkg/mod/github.com/libp2p/zeroconf/v2@v2.2.0/server.go:275
+
+2 @ 0xd82c96 0xd7afd7 0xdaf729 0xe31572 0xe37ec5 0xe37ea9 0xecf2a5 0x14eebd9 0x1501a25 0x1501a10 0x1572e74 0x1572c70 0xdb5ec1
+#	0xdaf728	internal/poll.runtime_pollWait+0x88			/usr/local/go/src/runtime/netpoll.go:305
+#	0xe31571	internal/poll.(*pollDesc).wait+0x31			/usr/local/go/src/internal/poll/fd_poll_runtime.go:84
+#	0xe37ec4	internal/poll.(*pollDesc).waitRead+0x144		/usr/local/go/src/internal/poll/fd_poll_runtime.go:89
+#	0xe37ea8	internal/poll.(*FD).RawRead+0x128			/usr/local/go/src/internal/poll/fd_unix.go:766
+#	0xecf2a4	net.(*rawConn).Read+0x44				/usr/local/go/src/net/rawconn.go:43
+#	0x14eebd8	golang.org/x/net/internal/socket.(*Conn).recvMsg+0x178	/go/pkg/mod/golang.org/x/net@v0.25.0/internal/socket/rawconn_msg.go:27
+#	0x1501a24	golang.org/x/net/internal/socket.(*Conn).RecvMsg+0x3c4	/go/pkg/mod/golang.org/x/net@v0.25.0/internal/socket/socket.go:247
+#	0x1501a0f	golang.org/x/net/ipv6.(*payloadHandler).ReadFrom+0x3af	/go/pkg/mod/golang.org/x/net@v0.25.0/ipv6/payload_cmsg.go:31
+#	0x1572e73	github.com/libp2p/zeroconf/v2.(*client).recv.func1+0x33	/go/pkg/mod/github.com/libp2p/zeroconf/v2@v2.2.0/client.go:323
+#	0x1572c6f	github.com/libp2p/zeroconf/v2.(*client).recv+0x14f	/go/pkg/mod/github.com/libp2p/zeroconf/v2@v2.2.0/client.go:347
+
+2 @ 0xd82c96 0xd7afd7 0xdaf729 0xe31572 0xe37ec5 0xe37ea9 0xecf2a5 0x14eebd9 0x1501a25 0x1501a10 0x15753ca 0xdb5ec1
+#	0xdaf728	internal/poll.runtime_pollWait+0x88			/usr/local/go/src/runtime/netpoll.go:305
+#	0xe31571	internal/poll.(*pollDesc).wait+0x31			/usr/local/go/src/internal/poll/fd_poll_runtime.go:84
+#	0xe37ec4	internal/poll.(*pollDesc).waitRead+0x144		/usr/local/go/src/internal/poll/fd_poll_runtime.go:89
+#	0xe37ea8	internal/poll.(*FD).RawRead+0x128			/usr/local/go/src/internal/poll/fd_unix.go:766
+#	0xecf2a4	net.(*rawConn).Read+0x44				/usr/local/go/src/net/rawconn.go:43
+#	0x14eebd8	golang.org/x/net/internal/socket.(*Conn).recvMsg+0x178	/go/pkg/mod/golang.org/x/net@v0.25.0/internal/socket/rawconn_msg.go:27
+#	0x1501a24	golang.org/x/net/internal/socket.(*Conn).RecvMsg+0x3c4	/go/pkg/mod/golang.org/x/net@v0.25.0/internal/socket/socket.go:247
+#	0x1501a0f	golang.org/x/net/ipv6.(*payloadHandler).ReadFrom+0x3af	/go/pkg/mod/golang.org/x/net@v0.25.0/ipv6/payload_cmsg.go:31
+#	0x15753c9	github.com/libp2p/zeroconf/v2.(*Server).recv6+0xc9	/go/pkg/mod/github.com/libp2p/zeroconf/v2@v2.2.0/server.go:300
+
+2 @ 0xd82c96 0xd9335c 0x1438ddf 0x1438abb 0x1385a36 0xdb5ec1
+#	0x1438dde	github.com/libp2p/go-libp2p-kad-dht/providers.(*ProviderManager).run+0x2be	/go/pkg/mod/github.com/libp2p/go-libp2p-kad-dht@v0.21.1/providers/providers_manager.go:156
+#	0x1438aba	github.com/libp2p/go-libp2p-kad-dht/providers.NewProviderManager.func1+0x3a	/go/pkg/mod/github.com/libp2p/go-libp2p-kad-dht@v0.21.1/providers/providers_manager.go:126
+#	0x1385a35	github.com/jbenet/goprocess.(*process).Go.func1+0x35				/go/pkg/mod/github.com/jbenet/goprocess@v0.1.4/impl-mutex.go:134
+
+2 @ 0xd82c96 0xd9335c 0x148cd39 0xdb5ec1
+#	0x148cd38	github.com/libp2p/go-libp2p-kad-dht/rtrefresh.(*RtRefreshManager).loop+0x238	/go/pkg/mod/github.com/libp2p/go-libp2p-kad-dht@v0.21.1/rtrefresh/rt_refresh_manager.go:149
+
+2 @ 0xd82c96 0xd9335c 0x14d34f6 0x1385a36 0xdb5ec1
+#	0x14d34f5	github.com/libp2p/go-libp2p-kad-dht.(*IpfsDHT).fixLowPeersRoutine+0x135	/go/pkg/mod/github.com/libp2p/go-libp2p-kad-dht@v0.21.1/dht.go:462
+#	0x1385a35	github.com/jbenet/goprocess.(*process).Go.func1+0x35			/go/pkg/mod/github.com/jbenet/goprocess@v0.1.4/impl-mutex.go:134
+
+2 @ 0xd82c96 0xd9335c 0x14d3b45 0xdb5ec1
+#	0x14d3b44	github.com/libp2p/go-libp2p-kad-dht.(*IpfsDHT).persistRTPeersInPeerStore+0x104	/go/pkg/mod/github.com/libp2p/go-libp2p-kad-dht@v0.21.1/dht.go:540
+
+2 @ 0xd82c96 0xd9335c 0x14d4455 0x1385a36 0xdb5ec1
+#	0x14d4454	github.com/libp2p/go-libp2p-kad-dht.(*IpfsDHT).rtPeerLoop+0x134	/go/pkg/mod/github.com/libp2p/go-libp2p-kad-dht@v0.21.1/dht.go:591
+#	0x1385a35	github.com/jbenet/goprocess.(*process).Go.func1+0x35		/go/pkg/mod/github.com/jbenet/goprocess@v0.1.4/impl-mutex.go:134
+
+2 @ 0xd82c96 0xd9335c 0x14eaa5e 0x1385a36 0xdb5ec1
+#	0x14eaa5d	github.com/libp2p/go-libp2p-kad-dht.(*subscriberNotifee).subscribe+0x1bd	/go/pkg/mod/github.com/libp2p/go-libp2p-kad-dht@v0.21.1/subscriber_notifee.go:68
+#	0x1385a35	github.com/jbenet/goprocess.(*process).Go.func1+0x35				/go/pkg/mod/github.com/jbenet/goprocess@v0.1.4/impl-mutex.go:134
+
+2 @ 0xd82c96 0xd9335c 0x1571359 0x1570d68 0xdb5ec1
+#	0x1571358	github.com/libp2p/zeroconf/v2.(*client).mainloop+0x3b8	/go/pkg/mod/github.com/libp2p/zeroconf/v2@v2.2.0/client.go:187
+#	0x1570d67	github.com/libp2p/zeroconf/v2.(*client).run.func1+0x67	/go/pkg/mod/github.com/libp2p/zeroconf/v2@v2.2.0/client.go:118
+
+2 @ 0xd82c96 0xd9335c 0x157304a 0x1570c88 0x1570af9 0x157a6dc 0xdb5ec1
+#	0x1573049	github.com/libp2p/zeroconf/v2.(*client).periodicQuery+0x189				/go/pkg/mod/github.com/libp2p/zeroconf/v2@v2.2.0/client.go:382
+#	0x1570c87	github.com/libp2p/zeroconf/v2.(*client).run+0x107					/go/pkg/mod/github.com/libp2p/zeroconf/v2@v2.2.0/client.go:123
+#	0x1570af8	github.com/libp2p/zeroconf/v2.Browse+0x198						/go/pkg/mod/github.com/libp2p/zeroconf/v2@v2.2.0/client.go:80
+#	0x157a6db	github.com/libp2p/go-libp2p/p2p/discovery/mdns.(*mdnsService).startResolver.func2+0x9b	/go/pkg/mod/github.com/libp2p/go-libp2p@v0.27.1/p2p/discovery/mdns/mdns.go:189
+
+2 @ 0xd82c96 0xd9335c 0x18b06aa 0xdb5ec1
+#	0x18b06a9	github.com/libp2p/go-libp2p/p2p/net/swarm.(*DialBackoff).background+0xe9	/go/pkg/mod/github.com/libp2p/go-libp2p@v0.27.1/p2p/net/swarm/swarm_dial.go:129
+
+2 @ 0xd82c96 0xd9335c 0x191434c 0xdb5ec1
+#	0x191434b	github.com/libp2p/go-libp2p/p2p/host/peerstore/pstoremem.(*memoryAddrBook).background+0x12b	/go/pkg/mod/github.com/libp2p/go-libp2p@v0.27.1/p2p/host/peerstore/pstoremem/addr_book.go:116
+
+1 @ 0xd501d4 0xdb246f 0x1384539 0xdb5ec1
+#	0xdb246e	os/signal.signal_recv+0x2e	/usr/local/go/src/runtime/sigqueue.go:152
+#	0x1384538	os/signal.loop+0x18		/usr/local/go/src/os/signal/signal_unix.go:23
+
+1 @ 0xd76d36 0xdaf205 0x1448e35 0x1448c4d 0x1445bab 0x2019745 0x201a2de 0x11a888f 0x11aa5a9 0x11ac16c 0x11a7367 0xdb5ec1
+#	0xdaf204	runtime/pprof.runtime_goroutineProfileWithLabels+0x24	/usr/local/go/src/runtime/mprof.go:846
+#	0x1448e34	runtime/pprof.writeRuntimeProfile+0xb4			/usr/local/go/src/runtime/pprof/pprof.go:723
+#	0x1448c4c	runtime/pprof.writeGoroutine+0x4c			/usr/local/go/src/runtime/pprof/pprof.go:683
+#	0x1445baa	runtime/pprof.(*Profile).WriteTo+0x14a			/usr/local/go/src/runtime/pprof/pprof.go:330
+#	0x2019744	net/http/pprof.handler.ServeHTTP+0x4a4			/usr/local/go/src/net/http/pprof/pprof.go:253
+#	0x201a2dd	net/http/pprof.Index+0x13d				/usr/local/go/src/net/http/pprof/pprof.go:371
+#	0x11a888e	net/http.HandlerFunc.ServeHTTP+0x2e			/usr/local/go/src/net/http/server.go:2109
+#	0x11aa5a8	net/http.(*ServeMux).ServeHTTP+0x148			/usr/local/go/src/net/http/server.go:2487
+#	0x11ac16b	net/http.serverHandler.ServeHTTP+0x30b			/usr/local/go/src/net/http/server.go:2947
+#	0x11a7366	net/http.(*conn).serve+0x606				/usr/local/go/src/net/http/server.go:1991
+
+1 @ 0xd82c96 0xd4a83b 0xd4a338 0x174670d 0xdb5ec1
+#	0x174670c	github.com/ipfs/go-libipfs/bitswap/client.New.func6+0x4c	/go/pkg/mod/github.com/ipfs/go-libipfs@v0.6.2/bitswap/client/client.go:173
+
+1 @ 0xd82c96 0xd4a83b 0xd4a338 0x1750c37 0x1385a36 0xdb5ec1
+#	0x1750c36	github.com/ipfs/go-libipfs/bitswap/server/internal/decision.(*Engine).startScoreLedger.func2+0x36	/go/pkg/mod/github.com/ipfs/go-libipfs@v0.6.2/bitswap/server/internal/decision/engine.go:433
+#	0x1385a35	github.com/jbenet/goprocess.(*process).Go.func1+0x35							/go/pkg/mod/github.com/jbenet/goprocess@v0.1.4/impl-mutex.go:134
+
+1 @ 0xd82c96 0xd4a83b 0xd4a338 0x1750e17 0x1385a36 0xdb5ec1
+#	0x1750e16	github.com/ipfs/go-libipfs/bitswap/server/internal/decision.(*Engine).startBlockstoreManager.func1+0x36	/go/pkg/mod/github.com/ipfs/go-libipfs@v0.6.2/bitswap/server/internal/decision/engine.go:441
+#	0x1385a35	github.com/jbenet/goprocess.(*process).Go.func1+0x35							/go/pkg/mod/github.com/jbenet/goprocess@v0.1.4/impl-mutex.go:134
+
+1 @ 0xd82c96 0xd4a83b 0xd4a338 0x175a3f2 0xdb5ec1
+#	0x175a3f1	github.com/ipfs/go-libipfs/bitswap/server.New.func2+0x31	/go/pkg/mod/github.com/ipfs/go-libipfs@v0.6.2/bitswap/server/server.go:83
+
+1 @ 0xd82c96 0xd4a83b 0xd4a338 0x1f7b8e5 0xdb5ec1
+#	0x1f7b8e4	optimusdb/app.Service+0x2e4	/optimusdbKB/app/service.go:205
+
+1 @ 0xd82c96 0xd4a83b 0xd4a338 0x1f7f2df 0xdb5ec1
+#	0x1f7f2de	optimusdb/app.awaitWriteEvent+0x27e	/optimusdbKB/app/service.go:631
+
+1 @ 0xd82c96 0xd4a83b 0xd4a338 0x1f83365 0xdb5ec1
+#	0x1f83364	optimusdb/app.awaitReplicateForStore+0x324	/optimusdbKB/app/service.go:1973
+
+1 @ 0xd82c96 0xd4a83b 0xd4a338 0x201f63b 0xdb5ec1
+#	0x201f63a	main.main.func2+0x3a	/optimusdbKB/main.go:285
+
+1 @ 0xd82c96 0xd4a83b 0xd4a338 0x201f768 0xdb5ec1
+#	0x201f767	main.main.func1+0x27	/optimusdbKB/main.go:173
+
+1 @ 0xd82c96 0xd4a83b 0xd4a378 0x170de1d 0xdb5ec1
+#	0x170de1c	github.com/cskr/pubsub.(*PubSub).start+0x15c	/go/pkg/mod/github.com/cskr/pubsub@v1.0.2/pubsub.go:130
+
+1 @ 0xd82c96 0xd4a83b 0xd4a378 0x1f7e65f 0xdb5ec1
+#	0x1f7e65e	optimusdb/app.awaitConnected+0x15e	/optimusdbKB/app/service.go:517
+
+1 @ 0xd82c96 0xd4a83b 0xd4a378 0x1fa1e34 0xdb5ec1
+#	0x1fa1e33	optimusdb/contextualmetadata.(*MetadataCache).cleanup+0xb3	/optimusdbKB/contextualmetadata/cachellama.go:72
+
+1 @ 0xd82c96 0xd4a83b 0xd4a378 0x1fc5e88 0xdb5ec1
+#	0x1fc5e87	optimusdb/election.(*Node).CheckLeaderFailure+0xe7	/optimusdbKB/election/reputationBasedElection.go:1577
+
+1 @ 0xd82c96 0xd4a83b 0xd4a378 0x1fd2d90 0xdb5ec1
+#	0x1fd2d8f	optimusdb/api.PrintDiscoveredPeers+0xcf	/optimusdbKB/api/discovery.go:667
+
+1 @ 0xd82c96 0xd4a83b 0xd4a378 0x201f245 0xdb5ec1
+#	0x201f244	main.main.func3+0x64	/optimusdbKB/main.go:298
+
+1 @ 0xd82c96 0xd7afd7 0xdaf729 0xe31572 0xe32a5a 0xe32a48 0xeb6189 0xeca8a5 0x11a0dff 0xdb5ec1
+#	0xdaf728	internal/poll.runtime_pollWait+0x88		/usr/local/go/src/runtime/netpoll.go:305
+#	0xe31571	internal/poll.(*pollDesc).wait+0x31		/usr/local/go/src/internal/poll/fd_poll_runtime.go:84
+#	0xe32a59	internal/poll.(*pollDesc).waitRead+0x259	/usr/local/go/src/internal/poll/fd_poll_runtime.go:89
+#	0xe32a47	internal/poll.(*FD).Read+0x247			/usr/local/go/src/internal/poll/fd_unix.go:167
+#	0xeb6188	net.(*netFD).Read+0x28				/usr/local/go/src/net/fd_posix.go:55
+#	0xeca8a4	net.(*conn).Read+0x44				/usr/local/go/src/net/net.go:183
+#	0x11a0dfe	net/http.(*connReader).backgroundRead+0x3e	/usr/local/go/src/net/http/server.go:678
+
+1 @ 0xd82c96 0xd7afd7 0xdaf729 0xe31572 0xe36974 0xe36961 0xeb82f5 0xed4a08 0xed3a7d 0x11ac7a5 0x11ac2fd 0x1fe4f2d 0x1fe4e9c 0xdb5ec1
+#	0xdaf728	internal/poll.runtime_pollWait+0x88		/usr/local/go/src/runtime/netpoll.go:305
+#	0xe31571	internal/poll.(*pollDesc).wait+0x31		/usr/local/go/src/internal/poll/fd_poll_runtime.go:84
+#	0xe36973	internal/poll.(*pollDesc).waitRead+0x233	/usr/local/go/src/internal/poll/fd_poll_runtime.go:89
+#	0xe36960	internal/poll.(*FD).Accept+0x220		/usr/local/go/src/internal/poll/fd_unix.go:614
+#	0xeb82f4	net.(*netFD).accept+0x34			/usr/local/go/src/net/fd_unix.go:172
+#	0xed4a07	net.(*TCPListener).accept+0x27			/usr/local/go/src/net/tcpsock_posix.go:142
+#	0xed3a7c	net.(*TCPListener).Accept+0x3c			/usr/local/go/src/net/tcpsock.go:288
+#	0x11ac7a4	net/http.(*Server).Serve+0x384			/usr/local/go/src/net/http/server.go:3070
+#	0x11ac2fc	net/http.(*Server).ListenAndServe+0x7c		/usr/local/go/src/net/http/server.go:2999
+#	0x1fe4f2c	net/http.ListenAndServe+0x9cc			/usr/local/go/src/net/http/server.go:3255
+#	0x1fe4e9b	optimusdb/api.ServeHTTP+0x93b			/optimusdbKB/api/http.go:1909
+
+1 @ 0xd82c96 0xd7afd7 0xdaf729 0xe31572 0xe36974 0xe36961 0xeb82f5 0xed4a08 0xed3a7d 0x11ac7a5 0x11ac2fd 0x2020018 0x201ffa6 0xdb5ec1
+#	0xdaf728	internal/poll.runtime_pollWait+0x88		/usr/local/go/src/runtime/netpoll.go:305
+#	0xe31571	internal/poll.(*pollDesc).wait+0x31		/usr/local/go/src/internal/poll/fd_poll_runtime.go:84
+#	0xe36973	internal/poll.(*pollDesc).waitRead+0x233	/usr/local/go/src/internal/poll/fd_poll_runtime.go:89
+#	0xe36960	internal/poll.(*FD).Accept+0x220		/usr/local/go/src/internal/poll/fd_unix.go:614
+#	0xeb82f4	net.(*netFD).accept+0x34			/usr/local/go/src/net/fd_unix.go:172
+#	0xed4a07	net.(*TCPListener).accept+0x27			/usr/local/go/src/net/tcpsock_posix.go:142
+#	0xed3a7c	net.(*TCPListener).Accept+0x3c			/usr/local/go/src/net/tcpsock.go:288
+#	0x11ac7a4	net/http.(*Server).Serve+0x384			/usr/local/go/src/net/http/server.go:3070
+#	0x11ac2fc	net/http.(*Server).ListenAndServe+0x7c		/usr/local/go/src/net/http/server.go:2999
+#	0x2020017	net/http.ListenAndServe+0xd7			/usr/local/go/src/net/http/server.go:3255
+#	0x201ffa5	main.init.1.func2+0x65				/optimusdbKB/pprof.go:36
+
+1 @ 0xd82c96 0xd92b8c 0x1f82b05 0xdb5ec1
+#	0x1f82b04	optimusdb/app.awaitReplicateEvent+0x104	/optimusdbKB/app/service.go:1950
+
+1 @ 0xd82c96 0xd9335c 0x12230ee 0xdb5ec1
+#	0x12230ed	github.com/libp2p/go-libp2p-pubsub/timecache.background+0x14d	/go/pkg/mod/github.com/libp2p/go-libp2p-pubsub@v0.9.3/timecache/util.go:16
+
+1 @ 0xd82c96 0xd9335c 0x12c5047 0xdb5ec1
+#	0x12c5046	github.com/libp2p/go-libp2p-pubsub.(*backoff).cleanupLoop+0xe6	/go/pkg/mod/github.com/libp2p/go-libp2p-pubsub@v0.9.3/backoff.go:100
+
+1 @ 0xd82c96 0xd9335c 0x12c795c 0xdb5ec1
+#	0x12c795b	github.com/libp2p/go-libp2p-pubsub.(*discover).pollTimer+0x27b	/go/pkg/mod/github.com/libp2p/go-libp2p-pubsub@v0.9.3/discovery.go:126
+
+1 @ 0xd82c96 0xd9335c 0x12c7d6b 0xdb5ec1
+#	0x12c7d6a	github.com/libp2p/go-libp2p-pubsub.(*discover).discoverLoop+0xea	/go/pkg/mod/github.com/libp2p/go-libp2p-pubsub@v0.9.3/discovery.go:149
+
+1 @ 0xd82c96 0xd9335c 0x12d318a 0xdb5ec1
+#	0x12d3189	github.com/libp2p/go-libp2p-pubsub.(*GossipSubRouter).heartbeatTimer+0x1e9	/go/pkg/mod/github.com/libp2p/go-libp2p-pubsub@v0.9.3/gossipsub.go:1332
+
+1 @ 0xd82c96 0xd9335c 0x12de3bf 0xdb5ec1
+#	0x12de3be	github.com/libp2p/go-libp2p-pubsub.(*PubSub).processLoop+0x4de	/go/pkg/mod/github.com/libp2p/go-libp2p-pubsub@v0.9.3/pubsub.go:573
+
+1 @ 0xd82c96 0xd9335c 0x12eb0cb 0x1dba526 0x1f7ec16 0xdb5ec1
+#	0x12eb0ca	github.com/libp2p/go-libp2p-pubsub.(*Subscription).Next+0x8a		/go/pkg/mod/github.com/libp2p/go-libp2p-pubsub@v0.9.3/subscription.go:26
+#	0x1dba525	github.com/ipfs/kubo/core/coreapi.(*pubSubSubscription).Next+0xe5	/go/pkg/mod/github.com/ipfs/kubo@v0.19.1/core/coreapi/pubsub.go:120
+#	0x1f7ec15	optimusdb/app.awaitStoreExchange+0x135					/optimusdbKB/app/service.go:558
+
+1 @ 0xd82c96 0xd9335c 0x12eb0cb 0x1dba526 0x1f825f7 0xdb5ec1
+#	0x12eb0ca	github.com/libp2p/go-libp2p-pubsub.(*Subscription).Next+0x8a		/go/pkg/mod/github.com/libp2p/go-libp2p-pubsub@v0.9.3/subscription.go:26
+#	0x1dba525	github.com/ipfs/kubo/core/coreapi.(*pubSubSubscription).Next+0xe5	/go/pkg/mod/github.com/ipfs/kubo@v0.19.1/core/coreapi/pubsub.go:120
+#	0x1f825f6	optimusdb/app.awaitValidationReq+0x136					/optimusdbKB/app/service.go:1843
+
+1 @ 0xd82c96 0xd9335c 0x12eb0cb 0x1fc151c 0xdb5ec1
+#	0x12eb0ca	github.com/libp2p/go-libp2p-pubsub.(*Subscription).Next+0x8a	/go/pkg/mod/github.com/libp2p/go-libp2p-pubsub@v0.9.3/subscription.go:26
+#	0x1fc151b	optimusdb/election.(*Node).ListenForElectionEvents.func1+0x5b	/optimusdbKB/election/reputationBasedElection.go:1095
+
+1 @ 0xd82c96 0xd9335c 0x14254df 0xdb5ec1
+#	0x14254de	github.com/ipfs/go-log/writer.(*MirrorWriter).logRoutine+0x11e	/go/pkg/mod/github.com/ipfs/go-log@v1.0.5/writer/writer.go:71
+
+1 @ 0xd82c96 0xd9335c 0x147c40d 0xdb5ec1
+#	0x147c40c	go.opencensus.io/stats/view.(*worker).start+0xac	/go/pkg/mod/go.opencensus.io@v0.24.0/stats/view/worker.go:292
+
+1 @ 0xd82c96 0xd9335c 0x16effb6 0xdb5ec1
+#	0x16effb5	berty.tech/go-orbit-db/baseorbitdb.(*orbitDB).monitorDirectChannel.func1+0xf5	/optimusdbKB/third_party/go-orbit-db/baseorbitdb/orbitdb.go:824
+
+1 @ 0xd82c96 0xd9335c 0x1709ddc 0x1709c5a 0x1384b56 0xdb5ec1
+#	0x1709ddb	github.com/jbenet/goprocess/periodic.callOnTicker.func1+0x9b	/go/pkg/mod/github.com/jbenet/goprocess@v0.1.4/periodic/periodic.go:143
+#	0x1709c59	github.com/jbenet/goprocess/periodic.Tick.func1+0x59		/go/pkg/mod/github.com/jbenet/goprocess@v0.1.4/periodic/periodic.go:99
+#	0x1384b55	github.com/jbenet/goprocess.Go.func1+0x35			/go/pkg/mod/github.com/jbenet/goprocess@v0.1.4/goprocess.go:188
+
+1 @ 0xd82c96 0xd9335c 0x1735155 0xdb5ec1
+#	0x1735154	github.com/ipfs/go-libipfs/bitswap/client/internal/providerquerymanager.(*ProviderQueryManager).providerRequestBufferWorker+0x114	/go/pkg/mod/github.com/ipfs/go-libipfs@v0.6.2/bitswap/client/internal/providerquerymanager/providerquerymanager.go:295
+
+1 @ 0xd82c96 0xd9335c 0x1735605 0xdb5ec1
+#	0x1735604	github.com/ipfs/go-libipfs/bitswap/client/internal/providerquerymanager.(*ProviderQueryManager).run+0x244	/go/pkg/mod/github.com/ipfs/go-libipfs@v0.6.2/bitswap/client/internal/providerquerymanager/providerquerymanager.go:327
+
+1 @ 0xd82c96 0xd9335c 0x1758285 0xdb5ec1
+#	0x1758284	github.com/ipfs/go-libipfs/bitswap/server/internal/decision.(*DefaultScoreLedger).scoreWorker+0x1c4	/go/pkg/mod/github.com/ipfs/go-libipfs@v0.6.2/bitswap/server/internal/decision/scoreledger.go:155
+
+1 @ 0xd82c96 0xd9335c 0x175c3c5 0x175ad05 0x1385a36 0xdb5ec1
+#	0x175c3c4	github.com/ipfs/go-libipfs/bitswap/server.(*Server).provideCollector+0x1a4	/go/pkg/mod/github.com/ipfs/go-libipfs@v0.6.2/bitswap/server/server.go:443
+#	0x175ad04	github.com/ipfs/go-libipfs/bitswap/server.(*Server).startWorkers.func2+0x24	/go/pkg/mod/github.com/ipfs/go-libipfs@v0.6.2/bitswap/server/server.go:268
+#	0x1385a35	github.com/jbenet/goprocess.(*process).Go.func1+0x35				/go/pkg/mod/github.com/jbenet/goprocess@v0.1.4/impl-mutex.go:134
+
+1 @ 0xd82c96 0xd9335c 0x175c8f1 0x1385a36 0xdb5ec1
+#	0x175c8f0	github.com/ipfs/go-libipfs/bitswap/server.(*Server).provideWorker+0x250	/go/pkg/mod/github.com/ipfs/go-libipfs@v0.6.2/bitswap/server/server.go:504
+#	0x1385a35	github.com/jbenet/goprocess.(*process).Go.func1+0x35			/go/pkg/mod/github.com/jbenet/goprocess@v0.1.4/impl-mutex.go:134
+
+1 @ 0xd82c96 0xd9335c 0x179b33c 0xdb5ec1
+#	0x179b33b	github.com/libp2p/go-libp2p/p2p/host/resource-manager.(*resourceManager).background+0x11b	/go/pkg/mod/github.com/libp2p/go-libp2p@v0.27.1/p2p/host/resource-manager/rcmgr.go:348
+
+1 @ 0xd82c96 0xd9335c 0x17d5d0d 0x17d5916 0xdb5ec1
+#	0x17d5d0c	github.com/libp2p/go-flow-metrics.(*sweeper).runActive+0x1ec	/go/pkg/mod/github.com/libp2p/go-flow-metrics@v0.1.0/sweeper.go:78
+#	0x17d5915	github.com/libp2p/go-flow-metrics.(*sweeper).run+0x35		/go/pkg/mod/github.com/libp2p/go-flow-metrics@v0.1.0/sweeper.go:52
+
+1 @ 0xd82c96 0xd9335c 0x190da37 0xdb5ec1
+#	0x190da36	go.uber.org/fx.(*signalReceivers).relayer+0xb6	/go/pkg/mod/go.uber.org/fx@v1.19.2/signal.go:87
+
+1 @ 0xd82c96 0xd9335c 0x1982c65 0xdb5ec1
+#	0x1982c64	github.com/libp2p/go-libp2p/p2p/net/connmgr.(*BasicConnMgr).background+0x144	/go/pkg/mod/github.com/libp2p/go-libp2p@v0.27.1/p2p/net/connmgr/connmgr.go:347
+
+1 @ 0xd82c96 0xd9335c 0x1986e8f 0xdb5ec1
+#	0x1986e8e	github.com/libp2p/go-libp2p/p2p/net/connmgr.(*decayer).process+0x22e	/go/pkg/mod/github.com/libp2p/go-libp2p@v0.27.1/p2p/net/connmgr/decay.go:164
+
+1 @ 0xd82c96 0xd9335c 0x1aa4cf8 0xdb5ec1
+#	0x1aa4cf7	github.com/libp2p/go-libp2p/p2p/host/autonat.(*AmbientAutoNAT).background+0x2f7	/go/pkg/mod/github.com/libp2p/go-libp2p@v0.27.1/p2p/host/autonat/autonat.go:173
+
+1 @ 0xd82c96 0xd9335c 0x1aab005 0xdb5ec1
+#	0x1aab004	github.com/libp2p/go-libp2p/p2p/host/autonat.(*autoNATService).background+0x164	/go/pkg/mod/github.com/libp2p/go-libp2p@v0.27.1/p2p/host/autonat/svc.go:283
+
+1 @ 0xd82c96 0xd9335c 0x1aac559 0xdb5ec1
+#	0x1aac558	github.com/libp2p/go-libp2p/p2p/host/pstoremanager.(*PeerstoreManager).background+0x2b8	/go/pkg/mod/github.com/libp2p/go-libp2p@v0.27.1/p2p/host/pstoremanager/pstoremanager.go:96
+
+1 @ 0xd82c96 0xd9335c 0x1ab9f4d 0xdb5ec1
+#	0x1ab9f4c	github.com/libp2p/go-libp2p/p2p/host/relaysvc.(*RelayManager).background+0x24c	/go/pkg/mod/github.com/libp2p/go-libp2p@v0.27.1/p2p/host/relaysvc/relay.go:51
+
+1 @ 0xd82c96 0xd9335c 0x1af3bd4 0xdb5ec1
+#	0x1af3bd3	github.com/libp2p/go-libp2p/p2p/protocol/identify.(*idService).loop+0x473	/go/pkg/mod/github.com/libp2p/go-libp2p@v0.27.1/p2p/protocol/identify/id.go:247
+
+1 @ 0xd82c96 0xd9335c 0x1af3df4 0xdb5ec1
+#	0x1af3df3	github.com/libp2p/go-libp2p/p2p/protocol/identify.(*idService).loop.func1+0xf3	/go/pkg/mod/github.com/libp2p/go-libp2p@v0.27.1/p2p/protocol/identify/id.go:237
+
+1 @ 0xd82c96 0xd9335c 0x1afcc13 0xdb5ec1
+#	0x1afcc12	github.com/libp2p/go-libp2p/p2p/protocol/identify.(*ObservedAddrManager).worker+0x1d2	/go/pkg/mod/github.com/libp2p/go-libp2p@v0.27.1/p2p/protocol/identify/obsaddr.go:258
+
+1 @ 0xd82c96 0xd9335c 0x1b03dc8 0xdb5ec1
+#	0x1b03dc7	github.com/libp2p/go-libp2p/p2p/protocol/holepunch.(*Service).watchForPublicAddr+0x247	/go/pkg/mod/github.com/libp2p/go-libp2p@v0.27.1/p2p/protocol/holepunch/svc.go:114
+
+1 @ 0xd82c96 0xd9335c 0x1b0b1eb 0xdb5ec1
+#	0x1b0b1ea	github.com/libp2p/go-libp2p/p2p/host/basic.(*BasicHost).background+0x20a	/go/pkg/mod/github.com/libp2p/go-libp2p@v0.27.1/p2p/host/basic/basic_host.go:548
+
+1 @ 0xd82c96 0xd9335c 0x1b1679d 0x1992884 0xdb5ec1
+#	0x1b1679c	github.com/libp2p/go-libp2p/p2p/protocol/circuitv2/client.(*Listener).Accept+0x13c	/go/pkg/mod/github.com/libp2p/go-libp2p@v0.27.1/p2p/protocol/circuitv2/client/listen.go:21
+#	0x1992883	github.com/libp2p/go-libp2p/p2p/net/upgrader.(*listener).handleIncoming+0x103		/go/pkg/mod/github.com/libp2p/go-libp2p@v0.27.1/p2p/net/upgrader/listener.go:74
+
+1 @ 0xd82c96 0xd9335c 0x1b1b14a 0x1b1ae36 0xdb5ec1
+#	0x1b1b149	github.com/libp2p/go-libp2p/p2p/host/autorelay.(*AutoRelay).background+0x269	/go/pkg/mod/github.com/libp2p/go-libp2p@v0.27.1/p2p/host/autorelay/autorelay.go:76
+#	0x1b1ae35	github.com/libp2p/go-libp2p/p2p/host/autorelay.(*AutoRelay).Start.func1+0x55	/go/pkg/mod/github.com/libp2p/go-libp2p@v0.27.1/p2p/host/autorelay/autorelay.go:63
+
+1 @ 0xd82c96 0xd9335c 0x1b39d5e 0xdb5ec1
+#	0x1b39d5d	github.com/cenkalti/backoff/v4.(*Ticker).run+0x15d	/go/pkg/mod/github.com/cenkalti/backoff/v4@v4.1.3/ticker.go:70
+
+1 @ 0xd82c96 0xd9335c 0x1b51c4d 0xdb5ec1
+#	0x1b51c4c	github.com/ipfs/kubo/core/node/libp2p.(*loggingResourceManager).start.func1+0x10c	/go/pkg/mod/github.com/ipfs/kubo@v0.19.1/core/node/libp2p/rcmgr_logging.go:46
+
+1 @ 0xd82c96 0xd9335c 0x1b5821f 0xdb5ec1
+#	0x1b5821e	github.com/ipfs/kubo/core/node/libp2p.autoRelayFeeder.func1.2+0x1de	/go/pkg/mod/github.com/ipfs/kubo@v0.19.1/core/node/libp2p/routing.go:264
+
+1 @ 0xd82c96 0xd9335c 0x1b8945c 0xdb5ec1
+#	0x1b8945b	github.com/ipfs/go-mfs.(*Republisher).Run+0x1fb	/go/pkg/mod/github.com/ipfs/go-mfs@v0.2.1/repub.go:114
+
+1 @ 0xd82c96 0xd9335c 0x1c25d8a 0x1385a36 0xdb5ec1
+#	0x1c25d89	github.com/ipfs/go-namesys/republisher.(*Republisher).Run+0x129	/go/pkg/mod/github.com/ipfs/go-namesys@v0.7.0/republisher/repub.go:79
+#	0x1385a35	github.com/jbenet/goprocess.(*process).Go.func1+0x35		/go/pkg/mod/github.com/jbenet/goprocess@v0.1.4/impl-mutex.go:134
+
+1 @ 0xd82c96 0xd9335c 0x1c2a7b7 0xdb5ec1
+#	0x1c2a7b6	github.com/ipfs/go-ipfs-provider/queue.(*Queue).work.func1+0x376	/go/pkg/mod/github.com/ipfs/go-ipfs-provider@v0.8.1/queue/queue.go:118
+
+1 @ 0xd82c96 0xd9335c 0x1c2d5dd 0xdb5ec1
+#	0x1c2d5dc	github.com/ipfs/go-ipfs-provider/simple.(*Reprovider).Run+0x25c	/go/pkg/mod/github.com/ipfs/go-ipfs-provider@v0.8.1/simple/reprovide.go:95
+
+1 @ 0xd82c96 0xd9335c 0x1c41e85 0xdb5ec1
+#	0x1c41e84	github.com/ipfs/kubo/core.NewNode.func2+0xa4	/go/pkg/mod/github.com/ipfs/kubo@v0.19.1/core/builder.go:111
+
+1 @ 0xd82c96 0xd9335c 0x1c7e946 0xdb5ec1
+#	0x1c7e945	optimusdb/logger.(*Logger).dbWriter+0x1c5	/optimusdbKB/logger/logger.go:194
+
+1 @ 0xd82c96 0xd9335c 0x1eeb571 0xdb5ec1
+#	0x1eeb570	github.com/ipfs/go-ds-flatfs.(*Datastore).checkpointLoop+0x110	/go/pkg/mod/github.com/ipfs/go-ds-flatfs@v0.5.1/flatfs.go:990
+
+1 @ 0xd82c96 0xd9335c 0x1fc6a1b 0xdb5ec1
+#	0x1fc6a1a	optimusdb/election.(*Node).PeriodicReputationPublisher+0x13a	/optimusdbKB/election/reputationBasedElection.go:1684
+
+1 @ 0xd82c96 0xd9335c 0x1fc8725 0xdb5ec1
+#	0x1fc8724	optimusdb/election.(*Node).MonitorAndHealMesh+0x124	/optimusdbKB/election/reputationBasedElection.go:1916
+
+1 @ 0xd82c96 0xd9335c 0x1fcd189 0xdb5ec1
+#	0x1fcd188	optimusdb/election.(*Node).LogRoleStatus+0x108	/optimusdbKB/election/reputationBasedElection.go:2511
+
+1 @ 0xd82c96 0xd9335c 0x1fcffa8 0xdb5ec1
+#	0x1fcffa7	optimusdb/api.(*Service).StartConnectionHealing+0x107	/optimusdbKB/api/discovery.go:240
+
+1 @ 0xd82c96 0xd9335c 0x1fd1da8 0xdb5ec1
+#	0x1fd1da7	optimusdb/api.(*Service).StartStatusReporter+0x107	/optimusdbKB/api/discovery.go:490
+
+1 @ 0xd82c96 0xd9335c 0x2018076 0x2018765 0x11a888f 0x11aa5a9 0x11ac16c 0x11a7367 0xdb5ec1
+#	0x2018075	net/http/pprof.sleep+0x95		/usr/local/go/src/net/http/pprof/pprof.go:98
+#	0x2018764	net/http/pprof.Profile+0x324		/usr/local/go/src/net/http/pprof/pprof.go:142
+#	0x11a888e	net/http.HandlerFunc.ServeHTTP+0x2e	/usr/local/go/src/net/http/server.go:2109
+#	0x11aa5a8	net/http.(*ServeMux).ServeHTTP+0x148	/usr/local/go/src/net/http/server.go:2487
+#	0x11ac16b	net/http.serverHandler.ServeHTTP+0x30b	/usr/local/go/src/net/http/server.go:2947
+#	0x11a7366	net/http.(*conn).serve+0x606		/usr/local/go/src/net/http/server.go:1991
+
+1 @ 0xd82c96 0xd9335c 0x201b705 0xdb5ec1
+#	0x201b704	main.MonitorMeshStatus+0x124	/optimusdbKB/main.go:90
+
+1 @ 0xd82c96 0xdb200c 0xdb1fec 0xdc144c 0x1722a87 0x1722854 0xdb5ec1
+#	0xdb1feb	sync.runtime_notifyListWait+0x12b							/usr/local/go/src/runtime/sema.go:517
+#	0xdc144b	sync.(*Cond).Wait+0x8b									/usr/local/go/src/sync/cond.go:70
+#	0x1722a86	github.com/ipfs/go-libipfs/bitswap/network.(*connectEventManager).waitChange+0x306	/go/pkg/mod/github.com/ipfs/go-libipfs@v0.6.2/bitswap/network/connecteventmanager.go:87
+#	0x1722853	github.com/ipfs/go-libipfs/bitswap/network.(*connectEventManager).worker+0xd3		/go/pkg/mod/github.com/ipfs/go-libipfs@v0.6.2/bitswap/network/connecteventmanager.go:97
+
+1 @ 0xd82c96 0xdb2cb5 0x144936c 0xdb5ec1
+#	0xdb2cb4	time.Sleep+0x134			/usr/local/go/src/runtime/time.go:195
+#	0x144936b	runtime/pprof.profileWriter+0x4b	/usr/local/go/src/runtime/pprof/pprof.go:798
+
+1 @ 0xd82c96 0xdb2cb5 0x1c906b5 0xdb5ec1
+#	0xdb2cb4	time.Sleep+0x134			/usr/local/go/src/runtime/time.go:195
+#	0x1c906b4	optimusdb/mq.(*EMSService).loop+0xf4	/optimusdbKB/mq/ems_service.go:91
+
+1 @ 0xd82c96 0xdb2cb5 0x1fca915 0x201dcff 0xd828d2 0xdb5ec1
+#	0xdb2cb4	time.Sleep+0x134			/usr/local/go/src/runtime/time.go:195
+#	0x1fca914	optimusdb/election.RunFullNode+0xfb4	/optimusdbKB/election/reputationBasedElection.go:2293
+#	0x201dcfe	main.main+0x217e			/optimusdbKB/main.go:516
+#	0xd828d1	runtime.main+0x211			/usr/local/go/src/runtime/proc.go:250
+
+1 @ 0xdcf2c7 0xdcd225 0xe32a85 0xe32a6d 0xe32825 0xeb6189 0xeca8a5 0x11a0dff 0xdb5ec1
+#	0xdcf2c6	syscall.Syscall+0x26				/usr/local/go/src/syscall/syscall_linux.go:68
+#	0xdcd224	syscall.read+0x44				/usr/local/go/src/syscall/zsyscall_linux_amd64.go:696
+#	0xe32a84	syscall.Read+0x284				/usr/local/go/src/syscall/syscall_unix.go:183
+#	0xe32a6c	internal/poll.ignoringEINTRIO+0x26c		/usr/local/go/src/internal/poll/fd_unix.go:794
+#	0xe32824	internal/poll.(*FD).Read+0x24			/usr/local/go/src/internal/poll/fd_unix.go:163
+#	0xeb6188	net.(*netFD).Read+0x28				/usr/local/go/src/net/fd_posix.go:55
+#	0xeca8a4	net.(*conn).Read+0x44				/usr/local/go/src/net/net.go:183
+#	0x11a0dfe	net/http.(*connReader).backgroundRead+0x3e	/usr/local/go/src/net/http/server.go:678
+

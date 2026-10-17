@@ -1,0 +1,28 @@
+# Bench host: overlay endpoint 10.88.0.2 + the experiment driver. Started by deploy-bench.
+name: odb-bench
+
+services:
+  net:
+    image: odb-net:latest
+    build: { context: .., dockerfile: images/net/Dockerfile }
+    container_name: odb-bench-net
+    hostname: bench
+    cap_add: [NET_ADMIN]
+    sysctls: [net.ipv4.conf.all.src_valid_mark=1]
+    devices: ["/dev/net/tun:/dev/net/tun"]
+    ports: ["${WG_PORT:-51820}:${WG_PORT:-51820}/udp"]
+    environment: { WG_USERSPACE: "${WG_USERSPACE:-auto}" }
+    volumes: ["${HOST_DIR}/wg:/etc/wireguard:ro"]
+    restart: unless-stopped
+
+  bench:
+    image: odb-bench:latest
+    build: { context: .., dockerfile: images/bench/Dockerfile }
+    container_name: odb-bench
+    network_mode: "service:net"
+    depends_on: [net]
+    volumes:
+      - "${HOST_DIR}/config:/config:ro"
+      - "${RESULTS_DIR}:/results"
+      - "${TRACE_DIR}:/trace:ro"
+    restart: unless-stopped

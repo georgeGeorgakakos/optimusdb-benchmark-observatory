@@ -1,0 +1,29 @@
+# --- secrets and generated per-machine files (never commit) ---
+out/
+out-local/
+compose/local.compose.yml
+*.key
+.env
+hosts.csv
+testbed-overrides.json
+# OptimusDB source checkout used for the image build
+.src/
+
+# --- per-operation files of full campaigns are large (hundreds of MB); the published site does not need them ---
+# quick and pilot ops (results/quick/ops, results/pilot/ops) are small and are kept
+results/ops/
+results-archive/*/ops/
+# node container logs can be large
+results/**/node-logs/
+results-archive/**/node-logs/
+
+# --- tools ---
+__pycache__/
+*.pyc
+.pytest_cache/
+.idea/
+.venv/
+venv/
+node_modules/
+Thumbs.db
+.DS_Store

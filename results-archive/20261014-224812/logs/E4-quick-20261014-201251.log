@@ -1,0 +1,58 @@
+18:05:22 QUICK E4: 1 rep, 10^4 records, short windows, reduced grids, results in /results/quick
+18:05:22 OptimusDB runtime (cloud): GOGC=200 GOMAXPROCS=2 GOMEMLIMIT=2457MiB OPTIMUSDB_ARGS=-metrics=false OPTIMUSDB_LOG_LEVEL=WARN
+18:05:22 OptimusDB runtime (fog): GOGC=200 GOMAXPROCS=2 GOMEMLIMIT=2457MiB OPTIMUSDB_ARGS=-metrics=false OPTIMUSDB_LOG_LEVEL=WARN
+18:05:22 OptimusDB runtime (edge): GOGC=200 GOMAXPROCS=1 GOMEMLIMIT=1638MiB OPTIMUSDB_ARGS=-metrics=false OPTIMUSDB_LOG_LEVEL=WARN
+18:05:22 [1/6] E4 block gun: edge deployment, load once, 1 repetitions
+18:05:22   reset gun_edge: stop others, wipe, start, join, smoke test
+18:05:42   loading 10000 records (2KB)
+18:06:13   loaded in 31 s
+18:06:17   replicated on every host after 4 s
+18:06:17   E4 gun rep 1: 0 ops/s for 45 s
+18:07:03   E4 gun rep 1: 40 ops/s for 45 s
+18:07:03   measuring: 0 s warm-up + 45 s at 40 ops/s
+18:07:56   done E4-gun-40-1: ops=1789 errors=886 p50=1357.518 ms p99=9651.118 ms
+18:07:56 [2/6] E4 block autobase: edge deployment, load once, 1 repetitions
+18:07:56   reset autobase_edge: stop others, wipe, start, join, smoke test
+18:08:18   loading 10000 records (2KB)
+18:08:24   loaded in 6 s
+18:08:44   replicated on every host after 19 s
+18:08:44   E4 autobase rep 1: 0 ops/s for 45 s
+18:09:30   E4 autobase rep 1: 40 ops/s for 45 s
+18:09:30   measuring: 0 s warm-up + 45 s at 40 ops/s
+18:10:16   done E4-autobase-40-1: ops=1789 errors=0 p50=282.177 ms p99=3015.341 ms
+18:10:16 [3/6] E4 block corrosion: edge deployment, load once, 1 repetitions
+18:10:16   reset corrosion_edge: stop others, wipe, start, join, smoke test
+18:10:35   loading 10000 records (2KB)
+18:10:39   loaded in 3 s
+18:10:53   replicated on every host after 14 s
+18:10:53   E4 corrosion rep 1: 0 ops/s for 45 s
+18:11:40   E4 corrosion rep 1: 40 ops/s for 45 s
+18:11:40   measuring: 0 s warm-up + 45 s at 40 ops/s
+18:12:25   done E4-corrosion-40-1: ops=1789 errors=0 p50=4.007 ms p99=16.304 ms
+18:12:27 [4/6] E4 block iroh: edge deployment, load once, 1 repetitions
+18:12:27   reset iroh_edge: stop others, wipe, start, join, smoke test
+18:12:38   loading 10000 records (2KB)
+18:12:49   loaded in 12 s
+18:12:52   replicated on every host after 3 s
+18:12:52   E4 iroh rep 1: 0 ops/s for 45 s
+18:13:39   E4 iroh rep 1: 40 ops/s for 45 s
+18:13:39   measuring: 0 s warm-up + 45 s at 40 ops/s
+18:14:33   done E4-iroh-40-1: ops=1789 errors=70 p50=17.589 ms p99=8136.648 ms
+18:14:33 [5/6] E4 block optimusdb: edge deployment, load once, 1 repetitions
+18:14:33   reset optimusdb_edge: stop others, wipe, start, join, smoke test
+18:14:57   loading 10000 records (2KB)
+18:15:00   loaded in 3 s
+18:15:03   replicated on every host after 3 s
+18:15:03   E4 optimusdb rep 1: 0 ops/s for 45 s
+18:15:49   E4 optimusdb rep 1: 40 ops/s for 45 s
+18:15:49   measuring: 0 s warm-up + 45 s at 40 ops/s
+18:16:35   done E4-optimusdb-40-1: ops=1789 errors=0 p50=5.378 ms p99=49.444 ms
+18:16:36 [6/6] E4 block opendht: edge deployment, load once, 1 repetitions
+18:16:36   reset opendht_edge: stop others, wipe, start, join, smoke test
+18:16:41   loading 10000 records (2KB)
+18:17:06   loaded in 25 s
+18:17:10   replicated on every host after 4 s
+18:17:10   E4 opendht rep 1: 0 ops/s for 45 s
+18:17:57   E4 opendht rep 1: 40 ops/s for 45 s
+18:17:57   measuring: 0 s warm-up + 45 s at 40 ops/s
+18:18:43   done E4-opendht-40-1: ops=1613 errors=0 p50=13.173 ms p99=20.496 ms unsupported=176

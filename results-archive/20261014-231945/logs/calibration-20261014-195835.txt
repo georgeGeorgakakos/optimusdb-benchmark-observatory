@@ -1,0 +1,44 @@
+Baseline calibration 2026-10-14 19:58:35 systems gun,autobase,opendht, WA, rates [5.0, 10.0, 25.0, 50.0], 20 s each, 10000 records
+
+=== gun
+  [single] started and loaded 10000 documents in 60 s
+  [single]    5 ops/s: achieved   5.0  P50    113.7 ms  P99    284.5 ms  errors   0.0 %  CPU max 19.85 % of 150  mem 392.6 MB
+  [single]   10 ops/s: achieved  10.6  P50    260.0 ms  P99    280.9 ms  errors   0.0 %  CPU max 31.39 % of 150  mem 409.3 MB
+  [single]   25 ops/s: achieved  25.0  P50    135.8 ms  P99    280.7 ms  errors   0.0 %  CPU max 41.66 % of 150  mem 439.1 MB
+  [single]   50 ops/s: achieved  48.5  P50    116.1 ms  P99    282.6 ms  errors   0.0 %  CPU max 51.86 % of 150  mem 434.0 MB
+  [cluster] started and loaded 10000 documents in 51 s
+  [cluster]    5 ops/s: achieved   5.0  P50    131.8 ms  P99    309.1 ms  errors   0.0 %  CPU max 50.75 % of 150  mem 201.6 MB
+  [cluster]   10 ops/s: achieved  10.6  P50    261.0 ms  P99    311.4 ms  errors   0.0 %  CPU max 35.83 % of 150  mem 201.3 MB
+  [cluster]   25 ops/s: achieved  25.0  P50    144.3 ms  P99    307.5 ms  errors   0.0 %  CPU max 77.86 % of 150  mem 203.7 MB
+  [cluster]   50 ops/s: achieved  48.5  P50    128.5 ms  P99    325.0 ms  errors   0.0 %  CPU max 84.52 % of 150  mem 218.0 MB
+  VERDICT gun: no failures up to 50 ops/s in either setup
+
+=== autobase
+  [single] started and loaded 10000 documents in 21 s
+  [single]    5 ops/s: achieved   5.0  P50      8.2 ms  P99     15.7 ms  errors   0.0 %  CPU max 12.16 % of 150  mem 258.9 MB
+  [single]   10 ops/s: achieved  10.6  P50      8.5 ms  P99     17.8 ms  errors   0.0 %  CPU max 8.85 % of 150  mem 228.1 MB
+  [single]   25 ops/s: achieved  25.0  P50      7.5 ms  P99     17.7 ms  errors   0.0 %  CPU max 24.22 % of 150  mem 246.2 MB
+  [single]   50 ops/s: achieved  48.5  P50      6.9 ms  P99     17.3 ms  errors   0.0 %  CPU max 32.19 % of 150  mem 254.5 MB
+  [cluster] started and loaded 10000 documents in 26 s
+  [cluster]    5 ops/s: achieved   5.0  P50      8.1 ms  P99     23.5 ms  errors   0.0 %  CPU max 45.48 % of 150  mem 266.4 MB
+  [cluster]   10 ops/s: achieved   9.2  P50     20.6 ms  P99   9627.5 ms  errors  12.7 % (TimeoutError x27)  CPU max 122.8 % of 150  mem 579.7 MB
+  [cluster]   25 ops/s: achieved  19.7  P50      8.1 ms  P99   9675.3 ms  errors  21.2 % (TimeoutError x106)  CPU max 94.3 % of 150  mem 717.1 MB
+  [cluster]   50 ops/s: achieved  35.5  P50      9.1 ms  P99   9657.4 ms  errors  26.8 % (TimeoutError x260)  CPU max 104.04 % of 150  mem 782.4 MB
+  VERDICT autobase: REAL (replication cost): fine on a single node up to 50 ops/s, fails at 10 ops/s with 7 peers
+
+=== opendht
+  [single] could not run: HTTPStatusError: Server error '502 Bad Gateway' for url 'http://10.88.0.11:8000/key/bench:res-000000000'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/502
+  [cluster] started and loaded 10000 documents in 30 s
+  [cluster]    5 ops/s: achieved   5.0  P50      5.1 ms  P99     10.6 ms  errors   0.0 %  CPU max 2.55 % of 150  mem 193.9 MB
+  [cluster]   10 ops/s: achieved  10.6  P50      5.2 ms  P99      8.4 ms  errors   0.0 %  CPU max 4.18 % of 150  mem 194.5 MB
+  [cluster]   25 ops/s: achieved  25.0  P50      4.5 ms  P99     13.3 ms  errors   0.0 %  CPU max 8.98 % of 150  mem 197.5 MB
+  [cluster]   50 ops/s: achieved  48.5  P50      4.2 ms  P99     34.3 ms  errors   0.0 %  CPU max 21.04 % of 150  mem 208.1 MB
+  VERDICT opendht: single setup did not run: no verdict
+
+=== Summary
+  gun       no failures up to 50 ops/s in either setup
+  autobase  REAL (replication cost): fine on a single node up to 50 ops/s, fails at 10 ops/s with 7 peers
+  opendht   single setup did not run: no verdict
+
+report: calibration-20261014-195835.txt

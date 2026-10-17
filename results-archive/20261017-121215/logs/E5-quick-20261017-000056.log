@@ -1,0 +1,68 @@
+22:05:16 QUICK E5: 1 rep, 10^4 records, short windows, reduced grids, results in /results/quick
+22:05:16 OptimusDB runtime (cloud): GOGC=200 GOMAXPROCS=2 GOMEMLIMIT=2457MiB OPTIMUSDB_ARGS=-metrics=false OPTIMUSDB_HEADS_INTERVAL=10 OPTIMUSDB_IPFS_KEY=ed25519 OPTIMUSDB_IPFS_PROVIDE=false OPTIMUSDB_IPFS_SYNC=false OPTIMUSDB_LOG_LEVEL=WARN OPTIMUSDB_RECONNECT_INTERVAL=10
+22:05:16 OptimusDB runtime (fog): GOGC=200 GOMAXPROCS=2 GOMEMLIMIT=2457MiB OPTIMUSDB_ARGS=-metrics=false OPTIMUSDB_HEADS_INTERVAL=10 OPTIMUSDB_IPFS_KEY=ed25519 OPTIMUSDB_IPFS_PROVIDE=false OPTIMUSDB_IPFS_SYNC=false OPTIMUSDB_LOG_LEVEL=WARN OPTIMUSDB_RECONNECT_INTERVAL=10
+22:05:16 OptimusDB runtime (edge): GOGC=200 GOMAXPROCS=1 GOMEMLIMIT=1638MiB OPTIMUSDB_ARGS=-metrics=false OPTIMUSDB_HEADS_INTERVAL=10 OPTIMUSDB_IPFS_KEY=ed25519 OPTIMUSDB_IPFS_PROVIDE=false OPTIMUSDB_IPFS_SYNC=false OPTIMUSDB_LOG_LEVEL=WARN OPTIMUSDB_RECONNECT_INTERVAL=10
+22:05:17 == block 1/6: gun, 1 runs on one preload
+22:05:17 [1/7] gun 30 30 4|4 rep 1
+22:05:17   reset gun: stop others, wipe, start, join, smoke test
+22:05:20   loading 10000 records (2KB)
+22:05:39   loaded in 19 s
+22:05:45   replicated on every host after 5 s
+22:06:21   partition healed; waiting for the replicas to converge
+22:07:22   waiting for convergence: 61 s since heal (limit 120 s)
+22:08:23   replicas not identical: cloud-a=10001 docs #94b6f8, cloud-b=10001 docs #4d085d, fog-a=10001 docs #5a6e6e, fog-b=10002 docs #fa4176, edge-a=10002 docs #fa4176, edge-b=10002 docs #fa4176, edge-c=10002 docs #fa4176, edge-d=10002 docs #fa4176
+22:08:23   checking 404 acknowledged keys for lost writes
+22:08:24   done E5-gun-30-30-4v4-1: availability=100.0 lost=4 convergence_s=120
+22:08:24 == block 2/6: autobase, 1 runs on one preload
+22:08:24 [2/7] autobase 30 30 4|4 rep 1
+22:08:24   reset autobase: stop others, wipe, start, join, smoke test
+22:08:46   loading 10000 records (2KB)
+22:08:52   loaded in 6 s
+22:09:21   replicated on every host after 29 s
+22:09:58   partition healed; waiting for the replicas to converge
+22:10:20   checking 404 acknowledged keys for lost writes
+22:10:20   done E5-autobase-30-30-4v4-1: availability=100.0 lost=0 convergence_s=22.011
+22:10:20 == block 3/6: corrosion, 1 runs on one preload
+22:10:20 [3/7] corrosion 30 30 4|4 rep 1
+22:10:20   reset corrosion: stop others, wipe, start, join, smoke test
+22:10:40   loading 10000 records (2KB)
+22:10:45   loaded in 5 s
+22:11:03   replicated on every host after 17 s
+22:11:39   partition healed; waiting for the replicas to converge
+22:11:57   checking 404 acknowledged keys for lost writes
+22:11:58   done E5-corrosion-30-30-4v4-1: availability=100.0 lost=0 convergence_s=17.748
+22:11:58 == block 4/6: iroh, 1 runs on one preload
+22:11:58 [4/7] iroh 30 30 4|4 rep 1
+22:11:58   reset iroh: stop others, wipe, start, join, smoke test
+22:12:06   loading 10000 records (2KB)
+22:12:18   loaded in 11 s
+22:14:18   readable sample keys per host: cloud-a 200/200, cloud-b 195/200, fog-a 200/200, fog-b 200/200, edge-a 200/200, edge-b 200/200, edge-c 197/200, edge-d 196/200
+22:14:19   WARNING: sample not readable on every replica after 120 s; measuring anyway
+22:15:20   waiting for convergence: 62 s since heal (limit 120 s)
+22:16:19   WARNING: replicas of iroh not identical after the preload (120 s); running anyway
+22:16:52   partition healed; waiting for the replicas to converge
+22:17:54   waiting for convergence: 63 s since heal (limit 120 s)
+22:18:55   replicas not identical: cloud-a=9848 docs #dd4cc4, cloud-b=9651 docs #f18805, fog-a=9848 docs #2cadbe, fog-b=9848 docs #dd4cc4, edge-a=9807 docs #a64a63, edge-b=10001 docs #4ce970, edge-c=9775 docs #91ed90, edge-d=9911 docs #356b27
+22:18:55   checking 404 acknowledged keys for lost writes
+22:18:56   done E5-iroh-30-30-4v4-1: availability=100.0 lost=153 convergence_s=120
+22:18:56 == block 5/6: optimusdb, 2 runs on one preload
+22:18:56 [5/7] optimusdb 30 30 4|4 rep 1
+22:18:56   reset optimusdb: stop others, wipe, start, join, smoke test
+22:19:18   loading 10000 records (2KB)
+22:19:21   loaded in 3 s
+22:19:27   replicated on every host after 6 s
+22:20:02   partition healed; waiting for the replicas to converge
+22:20:17   checking 404 acknowledged keys for lost writes
+22:20:18   done E5-optimusdb-30-30-4v4-1: availability=100.0 lost=0 convergence_s=15.635
+22:20:18 [6/7] optimusdb 0 30 4|4 rep 1
+22:20:51   partition healed; waiting for the replicas to converge
+22:21:03   checking 478 acknowledged keys for lost writes
+22:21:04   done E5-optimusdb-0-30-4v4-1: availability=100.0 lost=0 convergence_s=12.257
+22:21:04 == block 6/6: opendht, 1 runs on one preload
+22:21:04 [7/7] opendht 30 30 4|4 rep 1
+22:21:04   reset opendht: stop others, wipe, start, join, smoke test
+22:21:10   loading 10000 records (2KB)
+22:21:37   loaded in 28 s
+22:21:46   replicated on every host after 8 s
+22:22:37   checking 404 acknowledged keys for lost writes
+22:22:40   done E5-opendht-30-30-4v4-1: availability=100.0 lost=164 convergence_s=

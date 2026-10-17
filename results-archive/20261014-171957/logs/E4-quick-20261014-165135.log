@@ -1,0 +1,10 @@
+14:01:06 QUICK E4: 1 rep, 10^4 records, short windows, reduced grids, results in /results/quick
+14:01:06 [1/1] E4 block gun: edge deployment, load once, 1 repetitions
+14:01:06   reset gun_edge: stop others, wipe, start, join, smoke test
+14:01:24   loading 10000 records (2KB)
+14:02:05   loaded in 41 s
+14:02:09   replicated on every host after 4 s
+14:02:09   E4 gun rep 1: 0 ops/s for 45 s
+14:02:56   E4 gun rep 1: 40 ops/s for 45 s
+14:02:56   measuring: 0 s warm-up + 45 s at 40 ops/s
+14:03:50   done E4-gun-40-1: ops=1789 errors=919 p50=1314.773 ms p99=8794.312 ms

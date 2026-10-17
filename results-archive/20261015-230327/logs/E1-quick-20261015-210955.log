@@ -1,0 +1,107 @@
+18:09:56 QUICK E1: 1 rep, 10^4 records, short windows, reduced grids, results in /results/quick
+18:09:56 OptimusDB runtime (cloud): GOGC=200 GOMAXPROCS=2 GOMEMLIMIT=2457MiB OPTIMUSDB_ARGS=-metrics=false OPTIMUSDB_IPFS_KEY=ed25519 OPTIMUSDB_IPFS_PROVIDE=false OPTIMUSDB_IPFS_SYNC=false OPTIMUSDB_LOG_LEVEL=WARN
+18:09:56 OptimusDB runtime (fog): GOGC=200 GOMAXPROCS=2 GOMEMLIMIT=2457MiB OPTIMUSDB_ARGS=-metrics=false OPTIMUSDB_IPFS_KEY=ed25519 OPTIMUSDB_IPFS_PROVIDE=false OPTIMUSDB_IPFS_SYNC=false OPTIMUSDB_LOG_LEVEL=WARN
+18:09:56 OptimusDB runtime (edge): GOGC=200 GOMAXPROCS=1 GOMEMLIMIT=1638MiB OPTIMUSDB_ARGS=-metrics=false OPTIMUSDB_IPFS_KEY=ed25519 OPTIMUSDB_IPFS_PROVIDE=false OPTIMUSDB_IPFS_SYNC=false OPTIMUSDB_LOG_LEVEL=WARN
+18:09:56 == block 1/6: gun 2KB, 10000 records, 4 runs on one preload
+18:09:56 [1/24] gun WB 2KB rep 1
+18:09:56   reset gun: stop others, wipe, start, join, smoke test
+18:09:59   loading 10000 records (2KB)
+18:10:17   loaded in 17 s
+18:10:23   replicated on every host after 5 s
+18:10:23   measuring: 10 s warm-up + 30 s at 50 ops/s
+18:11:03   done E1-gun-WB-2KB-1: ops=1488 errors=0 p50=3.68 ms p99=262.26 ms
+18:11:04 [2/24] gun WC 2KB rep 1
+18:11:05   measuring: 10 s warm-up + 30 s at 50 ops/s
+18:11:45   done E1-gun-WC-2KB-1: ops=1488 errors=0 p50=3.935 ms p99=7.028 ms
+18:11:46 [3/24] gun WO 2KB rep 1
+18:11:47   measuring: 10 s warm-up + 30 s at 50 ops/s
+18:12:32   done E1-gun-WO-2KB-1: ops=1488 errors=52 p50=184.562 ms p99=7224.572 ms
+18:12:33 [4/24] gun WA 2KB rep 1
+18:12:34   measuring: 10 s warm-up + 30 s at 50 ops/s
+18:13:14   done E1-gun-WA-2KB-1: ops=1488 errors=0 p50=13.457 ms p99=275.429 ms
+18:13:15 == block 2/6: autobase 2KB, 10000 records, 4 runs on one preload
+18:13:15 [5/24] autobase WO 2KB rep 1
+18:13:15   reset autobase: stop others, wipe, start, join, smoke test
+18:13:36   loading 10000 records (2KB)
+18:13:42   loaded in 6 s
+18:14:12   replicated on every host after 30 s
+18:14:12   measuring: 10 s warm-up + 30 s at 50 ops/s
+18:15:02   done E1-autobase-WO-2KB-1: ops=1488 errors=191 p50=1176.392 ms p99=9128.833 ms
+18:15:02 [6/24] autobase WA 2KB rep 1
+18:15:03   measuring: 10 s warm-up + 30 s at 50 ops/s
+18:15:43   done E1-autobase-WA-2KB-1: ops=1488 errors=0 p50=13.407 ms p99=1009.191 ms
+18:15:43 [7/24] autobase WB 2KB rep 1
+18:15:43   measuring: 10 s warm-up + 30 s at 50 ops/s
+18:16:23   done E1-autobase-WB-2KB-1: ops=1488 errors=0 p50=3.36 ms p99=8.995 ms
+18:16:23 [8/24] autobase WC 2KB rep 1
+18:16:24   measuring: 10 s warm-up + 30 s at 50 ops/s
+18:17:04   done E1-autobase-WC-2KB-1: ops=1488 errors=0 p50=3.958 ms p99=7.152 ms
+18:17:04 == block 3/6: corrosion 2KB, 10000 records, 4 runs on one preload
+18:17:04 [9/24] corrosion WA 2KB rep 1
+18:17:04   reset corrosion: stop others, wipe, start, join, smoke test
+18:17:24   loading 10000 records (2KB)
+18:17:27   loaded in 3 s
+18:17:52   replicated on every host after 25 s
+18:17:52   measuring: 10 s warm-up + 30 s at 50 ops/s
+18:18:32   done E1-corrosion-WA-2KB-1: ops=1488 errors=0 p50=3.15 ms p99=10.644 ms
+18:18:32 [10/24] corrosion WC 2KB rep 1
+18:18:32   measuring: 10 s warm-up + 30 s at 50 ops/s
+18:19:13   done E1-corrosion-WC-2KB-1: ops=1488 errors=0 p50=2.557 ms p99=4.962 ms
+18:19:13 [11/24] corrosion WO 2KB rep 1
+18:19:13   measuring: 10 s warm-up + 30 s at 50 ops/s
+18:19:53   done E1-corrosion-WO-2KB-1: ops=1488 errors=0 p50=3.183 ms p99=13.648 ms
+18:19:53 [12/24] corrosion WB 2KB rep 1
+18:19:53   measuring: 10 s warm-up + 30 s at 50 ops/s
+18:20:33   done E1-corrosion-WB-2KB-1: ops=1488 errors=0 p50=2.658 ms p99=5.626 ms
+18:20:33 == block 4/6: iroh 2KB, 10000 records, 4 runs on one preload
+18:20:33 [13/24] iroh WB 2KB rep 1
+18:20:33   reset iroh: stop others, wipe, start, join, smoke test
+18:20:43   loading 10000 records (2KB)
+18:20:57   loaded in 14 s
+18:22:58   readable sample keys per host: cloud-a 200/200, cloud-b 198/200, fog-a 200/200, fog-b 186/200, edge-a 196/200, edge-b 200/200, edge-c 183/200, edge-d 200/200
+18:22:58   WARNING: sample not readable on every replica after 120 s; measuring anyway
+18:22:58   measuring: 10 s warm-up + 30 s at 50 ops/s
+18:23:38   done E1-iroh-WB-2KB-1: ops=1488 errors=0 p50=3.014 ms p99=7.183 ms
+18:23:38 [14/24] iroh WC 2KB rep 1
+18:23:39   measuring: 10 s warm-up + 30 s at 50 ops/s
+18:24:19   done E1-iroh-WC-2KB-1: ops=1488 errors=0 p50=3.497 ms p99=5.973 ms
+18:24:19 [15/24] iroh WO 2KB rep 1
+18:24:19   measuring: 10 s warm-up + 30 s at 50 ops/s
+18:25:00   done E1-iroh-WO-2KB-1: ops=1488 errors=0 p50=5.468 ms p99=2440.033 ms
+18:25:00 [16/24] iroh WA 2KB rep 1
+18:25:00   measuring: 10 s warm-up + 30 s at 50 ops/s
+18:25:40   done E1-iroh-WA-2KB-1: ops=1488 errors=0 p50=3.601 ms p99=10.561 ms
+18:25:40 == block 5/6: optimusdb 2KB, 10000 records, 4 runs on one preload
+18:25:40 [17/24] optimusdb WO 2KB rep 1
+18:25:40   reset optimusdb: stop others, wipe, start, join, smoke test
+18:26:04   loading 10000 records (2KB)
+18:26:07   loaded in 3 s
+18:26:14   replicated on every host after 6 s
+18:26:14   measuring: 10 s warm-up + 30 s at 50 ops/s
+18:26:54   done E1-optimusdb-WO-2KB-1: ops=1488 errors=0 p50=3.374 ms p99=22.903 ms
+18:26:54 [18/24] optimusdb WB 2KB rep 1
+18:26:54   measuring: 10 s warm-up + 30 s at 50 ops/s
+18:27:35   done E1-optimusdb-WB-2KB-1: ops=1488 errors=0 p50=2.687 ms p99=6.2 ms
+18:27:35 [19/24] optimusdb WA 2KB rep 1
+18:27:35   measuring: 10 s warm-up + 30 s at 50 ops/s
+18:28:15   done E1-optimusdb-WA-2KB-1: ops=1488 errors=0 p50=3.344 ms p99=6.999 ms
+18:28:15 [20/24] optimusdb WC 2KB rep 1
+18:28:15   measuring: 10 s warm-up + 30 s at 50 ops/s
+18:28:55   done E1-optimusdb-WC-2KB-1: ops=1488 errors=0 p50=2.855 ms p99=5.676 ms
+18:28:55 == block 6/6: opendht 2KB, 10000 records, 4 runs on one preload
+18:28:55 [21/24] opendht WC 2KB rep 1
+18:28:55   reset opendht: stop others, wipe, start, join, smoke test
+18:29:00   loading 10000 records (2KB)
+18:29:28   loaded in 28 s
+18:29:36   replicated on every host after 7 s
+18:29:36   measuring: 10 s warm-up + 30 s at 50 ops/s
+18:30:18   done E1-opendht-WC-2KB-1: ops=1488 errors=0 p50=455.66 ms p99=1521.026 ms
+18:30:18 [22/24] opendht WB 2KB rep 1
+18:30:18   measuring: 10 s warm-up + 30 s at 50 ops/s
+18:30:59   done E1-opendht-WB-2KB-1: ops=1488 errors=0 p50=460.56 ms p99=1750.503 ms
+18:30:59 [23/24] opendht WA 2KB rep 1
+18:30:59   measuring: 10 s warm-up + 30 s at 50 ops/s
+18:31:42   done E1-opendht-WA-2KB-1: ops=1488 errors=0 p50=595.456 ms p99=2699.891 ms
+18:31:42 [24/24] opendht WO 2KB rep 1
+18:31:42   measuring: 10 s warm-up + 30 s at 50 ops/s
+18:32:25   done E1-opendht-WO-2KB-1: ops=1334 errors=0 p50=1514.148 ms p99=5912.601 ms unsupported=154

@@ -1,0 +1,63 @@
+18:32:26 QUICK E2: 1 rep, 10^4 records, short windows, reduced grids, results in /results/quick
+18:32:26 OptimusDB runtime (cloud): GOGC=200 GOMAXPROCS=2 GOMEMLIMIT=2457MiB OPTIMUSDB_ARGS=-metrics=false OPTIMUSDB_IPFS_KEY=ed25519 OPTIMUSDB_IPFS_PROVIDE=false OPTIMUSDB_IPFS_SYNC=false OPTIMUSDB_LOG_LEVEL=WARN
+18:32:26 OptimusDB runtime (fog): GOGC=200 GOMAXPROCS=2 GOMEMLIMIT=2457MiB OPTIMUSDB_ARGS=-metrics=false OPTIMUSDB_IPFS_KEY=ed25519 OPTIMUSDB_IPFS_PROVIDE=false OPTIMUSDB_IPFS_SYNC=false OPTIMUSDB_LOG_LEVEL=WARN
+18:32:26 OptimusDB runtime (edge): GOGC=200 GOMAXPROCS=1 GOMEMLIMIT=1638MiB OPTIMUSDB_ARGS=-metrics=false OPTIMUSDB_IPFS_KEY=ed25519 OPTIMUSDB_IPFS_PROVIDE=false OPTIMUSDB_IPFS_SYNC=false OPTIMUSDB_LOG_LEVEL=WARN
+18:32:26 [1/6] E2 block gun 10000 records: load once, 1 repetitions
+18:32:26   reset gun: stop others, wipe, start, join, smoke test
+18:32:30   loading 10000 records (2KB)
+18:32:46   loaded in 16 s
+18:32:52   replicated on every host after 5 s
+18:32:53   measuring: 10 s warm-up + 30 s at 25 ops/s
+18:33:33   done E2-gun-10000-25-1: ops=712 errors=0 p50=17.444 ms p99=1736.491 ms
+18:33:35   measuring: 10 s warm-up + 30 s at 100 ops/s
+18:34:25   done E2-gun-10000-100-1: ops=3017 errors=1719 p50=6723.822 ms p99=11988.632 ms
+18:34:31 [2/6] E2 block autobase 10000 records: load once, 1 repetitions
+18:34:31   reset autobase: stop others, wipe, start, join, smoke test
+18:34:53   loading 10000 records (2KB)
+18:34:59   loaded in 7 s
+18:35:32   replicated on every host after 32 s
+18:35:32   measuring: 10 s warm-up + 30 s at 25 ops/s
+18:36:12   done E2-autobase-10000-25-1: ops=712 errors=49 p50=90.316 ms p99=9295.976 ms
+18:36:17 [3/6] E2 block corrosion 10000 records: load once, 1 repetitions
+18:36:17   reset corrosion: stop others, wipe, start, join, smoke test
+18:36:38   loading 10000 records (2KB)
+18:36:41   loaded in 3 s
+18:37:00   replicated on every host after 19 s
+18:37:00   measuring: 10 s warm-up + 30 s at 25 ops/s
+18:37:41   done E2-corrosion-10000-25-1: ops=712 errors=0 p50=3.551 ms p99=14.818 ms
+18:37:41   measuring: 10 s warm-up + 30 s at 100 ops/s
+18:38:21   done E2-corrosion-10000-100-1: ops=3017 errors=0 p50=3.37 ms p99=21.93 ms
+18:38:21   measuring: 10 s warm-up + 30 s at 200 ops/s
+18:39:01   done E2-corrosion-10000-200-1: ops=5995 errors=0 p50=3.824 ms p99=108.105 ms
+18:39:06 [4/6] E2 block iroh 10000 records: load once, 1 repetitions
+18:39:06   reset iroh: stop others, wipe, start, join, smoke test
+18:39:15   loading 10000 records (2KB)
+18:39:29   loaded in 14 s
+18:41:31   readable sample keys per host: cloud-a 200/200, cloud-b 187/200, fog-a 182/200, fog-b 200/200, edge-a 199/200, edge-b 200/200, edge-c 200/200, edge-d 169/200
+18:41:32   WARNING: sample not readable on every replica after 120 s; measuring anyway
+18:41:32   measuring: 10 s warm-up + 30 s at 25 ops/s
+18:42:13   done E2-iroh-10000-25-1: ops=712 errors=0 p50=3.741 ms p99=827.767 ms
+18:42:13   measuring: 10 s warm-up + 30 s at 100 ops/s
+18:43:03   done E2-iroh-10000-100-1: ops=3017 errors=301 p50=20.089 ms p99=434.886 ms
+18:43:03   measuring: 10 s warm-up + 30 s at 200 ops/s
+18:43:54   done E2-iroh-10000-200-1: ops=5785 errors=4081 p50=5922.654 ms p99=11408.247 ms
+18:43:59 [5/6] E2 block optimusdb 10000 records: load once, 1 repetitions
+18:43:59   reset optimusdb: stop others, wipe, start, join, smoke test
+18:44:23   loading 10000 records (2KB)
+18:44:27   loaded in 4 s
+18:44:33   replicated on every host after 6 s
+18:44:33   measuring: 10 s warm-up + 30 s at 25 ops/s
+18:45:13   done E2-optimusdb-10000-25-1: ops=712 errors=0 p50=3.502 ms p99=18.932 ms
+18:45:13   measuring: 10 s warm-up + 30 s at 100 ops/s
+18:45:53   done E2-optimusdb-10000-100-1: ops=3017 errors=0 p50=3.731 ms p99=39.456 ms
+18:45:53   measuring: 10 s warm-up + 30 s at 200 ops/s
+18:46:34   done E2-optimusdb-10000-200-1: ops=5995 errors=0 p50=6.987 ms p99=400.602 ms
+18:46:39 [6/6] E2 block opendht 10000 records: load once, 1 repetitions
+18:46:39   reset opendht: stop others, wipe, start, join, smoke test
+18:46:45   loading 10000 records (2KB)
+18:47:12   loaded in 27 s
+18:47:19   replicated on every host after 7 s
+18:47:19   measuring: 10 s warm-up + 30 s at 25 ops/s
+18:48:01   done E2-opendht-10000-25-1: ops=634 errors=0 p50=429.88 ms p99=1687.123 ms unsupported=78
+18:48:01   measuring: 10 s warm-up + 30 s at 100 ops/s
+18:48:52   done E2-opendht-10000-100-1: ops=2712 errors=515 p50=1639.003 ms p99=10424.195 ms unsupported=305

@@ -1,0 +1,13 @@
+# Shell scripts and entry points must keep LF line endings (they run inside Linux containers)
+*.sh   text eol=lf
+*.py   text eol=lf
+*.mjs  text eol=lf
+*.yml  text eol=lf
+*.yaml text eol=lf
+Dockerfile text eol=lf
+# PowerShell scripts for Windows
+*.ps1  text eol=crlf
+# binary
+*.png  binary
+*.docx binary
+*.xlsx binary

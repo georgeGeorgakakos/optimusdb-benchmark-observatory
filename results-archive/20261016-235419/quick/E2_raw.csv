@@ -1,0 +1,16 @@
+run_id,system,dataset_records,offered_ops_s,rep,achieved_ops_s,p99_ms,error_rate,bottleneck,notes
+E2-gun-10000-25-1,gun,10000,25,1,23.733,729.333,0.0,node CPU,client_cpu=7.0 lag_p50=1.0 lag_p99=2.6 node_cpu=114.4/100 node_cpu_bound=1
+E2-gun-10000-100-1,gun,10000,100,1,41.967,14022.623,0.5827,node CPU,client_cpu=76.4 lag_p50=1085.8 lag_p99=4039.7 node_cpu=152.7/100 node_cpu_bound=1
+E2-autobase-10000-25-1,autobase,10000,25,1,23.3,8937.968,0.01826,node CPU,client_cpu=8.9 lag_p50=1.0 lag_p99=7.3 node_cpu=146.0/100 node_cpu_bound=1
+E2-autobase-10000-100-1,autobase,10000,100,1,49.9,12148.197,0.50381,node CPU,client_cpu=86.0 lag_p50=206.4 lag_p99=3487.3 node_cpu=136.9/100 node_cpu_bound=1
+E2-corrosion-10000-25-1,corrosion,10000,25,1,23.733,21.875,0.0,,client_cpu=8.3 lag_p50=0.9 lag_p99=5.4 node_cpu=13.9/150
+E2-corrosion-10000-100-1,corrosion,10000,100,1,100.567,41.598,0.0,,client_cpu=30.7 lag_p50=0.9 lag_p99=10.3 node_cpu=35.1/150
+E2-corrosion-10000-200-1,corrosion,10000,200,1,199.833,92.365,0.0,,client_cpu=62.2 lag_p50=1.1 lag_p99=19.4 node_cpu=57.3/150
+E2-iroh-10000-25-1,iroh,10000,25,1,23.733,760.859,0.0,node CPU,client_cpu=5.8 lag_p50=1.0 lag_p99=2.5 node_cpu=137.4/150 node_cpu_bound=1
+E2-iroh-10000-100-1,iroh,10000,100,1,90.4,264.268,0.10109,node CPU,client_cpu=18.8 lag_p50=1.0 lag_p99=3.4 node_cpu=145.5/150 node_cpu_bound=1
+E2-iroh-10000-200-1,iroh,10000,200,1,59.8,11534.435,0.69276,node CPU,client_cpu=88.6 lag_p50=166.0 lag_p99=1925.0 node_cpu=146.7/150 node_cpu_bound=1
+E2-optimusdb-10000-25-1,optimusdb,10000,25,1,23.733,16.329,0.0,,client_cpu=7.2 lag_p50=1.0 lag_p99=2.7 node_cpu=8.3/150
+E2-optimusdb-10000-100-1,optimusdb,10000,100,1,100.567,28.084,0.0,,client_cpu=27.7 lag_p50=0.9 lag_p99=5.3 node_cpu=21.6/150
+E2-optimusdb-10000-200-1,optimusdb,10000,200,1,199.833,64.447,0.0,,client_cpu=57.0 lag_p50=1.1 lag_p99=9.6 node_cpu=39.3/150
+E2-opendht-10000-25-1,opendht,10000,25,1,21.133,1727.131,0.0,,supported_share=0.8904 client_cpu=4.5 lag_p50=0.8 lag_p99=2.3 node_cpu=11.2/150
+E2-opendht-10000-100-1,opendht,10000,100,1,71.2,10354.593,0.21239,load generator,supported_share=0.8989 client_cpu=66.0 lag_p50=58.4 lag_p99=1080.7 node_cpu=74.4/150 client_limited=1

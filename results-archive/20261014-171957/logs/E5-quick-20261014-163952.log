@@ -1,0 +1,8 @@
+13:48:30 QUICK E5: 1 rep, 10^4 records, short windows, reduced grids, results in /results/quick
+13:48:30 == block 1/1: corrosion, 1 runs on one preload
+13:48:30 [1/1] corrosion 30 30 4|4 rep 1
+13:48:30   reset corrosion: stop others, wipe, start, join, smoke test
+13:48:40   loading 10000 records (2KB)
+13:48:44   loaded in 4 s
+13:49:02   replicated on every host after 18 s
+13:49:58   done E5-corrosion-30-30-4v4-1: availability=100.0 lost=29 convergence_s=19.263

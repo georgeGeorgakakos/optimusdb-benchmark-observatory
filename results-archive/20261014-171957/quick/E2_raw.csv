@@ -1,0 +1,5 @@
+run_id,system,dataset_records,offered_ops_s,rep,achieved_ops_s,p99_ms,error_rate,bottleneck,notes
+E2-corrosion-10000-25-1,corrosion,10000,25,1,23.733,16.868,0.0,,
+E2-corrosion-10000-100-1,corrosion,10000,100,1,100.567,23.975,0.0,,
+E2-corrosion-10000-200-1,corrosion,10000,200,1,199.833,29.756,0.0,,
+E2-gun-10000-25-1,gun,10000,25,1,11.233,5327.138,0.52669,,

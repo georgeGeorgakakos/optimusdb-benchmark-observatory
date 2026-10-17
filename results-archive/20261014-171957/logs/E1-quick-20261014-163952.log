@@ -1,0 +1,18 @@
+13:39:53 QUICK E1: 1 rep, 10^4 records, short windows, reduced grids, results in /results/quick
+13:39:53 == block 1/1: corrosion 2KB, 10000 records, 4 runs on one preload
+13:39:53 [1/4] corrosion WC 2KB rep 1
+13:39:53   reset corrosion: stop others, wipe, start, join, smoke test
+13:39:58   loading 10000 records (2KB)
+13:40:04   loaded in 6 s
+13:40:23   replicated on every host after 18 s
+13:40:23   measuring: 10 s warm-up + 30 s at 50 ops/s
+13:41:03   done E1-corrosion-WC-2KB-1: ops=1488 errors=0 p50=3.228 ms p99=5.992 ms
+13:41:03 [2/4] corrosion WB 2KB rep 1
+13:41:03   measuring: 10 s warm-up + 30 s at 50 ops/s
+13:41:43   done E1-corrosion-WB-2KB-1: ops=1488 errors=0 p50=3.436 ms p99=6.379 ms
+13:41:43 [3/4] corrosion WO 2KB rep 1
+13:41:43   measuring: 10 s warm-up + 30 s at 50 ops/s
+13:42:23   done E1-corrosion-WO-2KB-1: ops=1488 errors=0 p50=3.931 ms p99=16.248 ms
+13:42:23 [4/4] corrosion WA 2KB rep 1
+13:42:23   measuring: 10 s warm-up + 30 s at 50 ops/s
+13:43:04   done E1-corrosion-WA-2KB-1: ops=1488 errors=0 p50=3.852 ms p99=10.569 ms

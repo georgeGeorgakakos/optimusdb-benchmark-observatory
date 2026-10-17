@@ -1,0 +1,47 @@
+12:07:05 QUICK E3: 1 rep, 10^4 records, short windows, reduced grids, results in /results/quick
+12:07:05 OptimusDB runtime (cloud): GOGC=200 GOMAXPROCS=2 GOMEMLIMIT=2457MiB OPTIMUSDB_ARGS=-metrics=false OPTIMUSDB_IPFS_KEY=ed25519 OPTIMUSDB_IPFS_PROVIDE=false OPTIMUSDB_LOG_LEVEL=WARN
+12:07:05 OptimusDB runtime (fog): GOGC=200 GOMAXPROCS=2 GOMEMLIMIT=2457MiB OPTIMUSDB_ARGS=-metrics=false OPTIMUSDB_IPFS_KEY=ed25519 OPTIMUSDB_IPFS_PROVIDE=false OPTIMUSDB_LOG_LEVEL=WARN
+12:07:05 OptimusDB runtime (edge): GOGC=200 GOMAXPROCS=1 GOMEMLIMIT=1638MiB OPTIMUSDB_ARGS=-metrics=false OPTIMUSDB_IPFS_KEY=ed25519 OPTIMUSDB_IPFS_PROVIDE=false OPTIMUSDB_LOG_LEVEL=WARN
+12:07:05 [1/7] E3 block optimusdb sqlite 10000 records: load once, 1 repetitions
+12:07:05   reset optimusdb: stop others, wipe, start, join, smoke test
+12:07:15   loading 10000 records (2KB)
+12:07:19   loaded in 4 s
+12:07:30   replicated on every host after 9 s
+12:07:36   done E3 optimusdb sqlite 10000 rep 1
+12:07:36 [2/7] E3 block corrosion sql 10000 records: load once, 1 repetitions
+12:07:36   reset corrosion: stop others, wipe, start, join, smoke test
+12:07:57   loading 10000 records (2KB)
+12:08:05   loaded in 8 s
+12:08:32   replicated on every host after 25 s
+12:08:35   done E3 corrosion sql 10000 rep 1
+12:08:35 [3/7] E3 block autobase range_client_filter 10000 records: load once, 1 repetitions
+12:08:35   reset autobase: stop others, wipe, start, join, smoke test
+12:08:47   loading 10000 records (2KB)
+12:09:00   loaded in 12 s
+12:10:03   replicated on every host after 54 s
+12:11:04   done E3 autobase range_client_filter 10000 rep 1
+12:11:04 [4/7] E3 block gun client_filter 10000 records: load once, 1 repetitions
+12:11:04   reset gun: stop others, wipe, start, join, smoke test
+12:11:24   loading 10000 records (2KB)
+12:11:45   loaded in 21 s
+12:12:11   replicated on every host after 8 s
+12:13:15   done E3 gun client_filter 10000 rep 1
+12:13:15 [5/7] E3 block opendht key_only 10000 records: load once, 1 repetitions
+12:13:15   reset opendht: stop others, wipe, start, join, smoke test
+12:13:33   loading 10000 records (2KB)
+12:14:20   loaded in 47 s
+12:15:06   replicated on every host after 10 s
+12:15:17   done E3 opendht key_only 10000 rep 1
+12:15:17 [6/7] E3 block optimusdb crdt 10000 records: load once, 1 repetitions
+12:15:17   reset optimusdb: stop others, wipe, start, join, smoke test
+12:15:27   loading 10000 records (2KB)
+12:15:34   loaded in 7 s
+12:15:46   replicated on every host after 10 s
+12:16:12   done E3 optimusdb crdt 10000 rep 1
+12:16:12 [7/7] E3 block iroh prefix_client_filter 10000 records: load once, 1 repetitions
+12:16:12   reset iroh: stop others, wipe, start, join, smoke test
+12:16:32   loading 10000 records (2KB)
+12:16:53   loaded in 22 s
+12:19:21   readable sample keys per host: cloud-a 200/200, cloud-b 190/200, fog-a 196/200, fog-b 200/200, edge-a 198/200, edge-b 200/200, edge-c 199/200, edge-d 200/200
+12:19:22   WARNING: sample not readable on every replica after 120 s; measuring anyway
+12:23:01   done E3 iroh prefix_client_filter 10000 rep 1

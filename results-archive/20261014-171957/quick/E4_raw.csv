@@ -1,0 +1,5 @@
+run_id,system,offered_ops_s,rep,started_ok,cpu_pct,rss_mb,disk_mb_per_1k_docs,net_kb_per_op,power_w,notes
+E4-corrosion-0-1,corrosion,0,1,1,0.75,140.5,7.225,,,documents=10000; power: no meter
+E4-corrosion-40-1,corrosion,40,1,1,4.92,152.2,7.155,7.36,,documents=10202; power: no meter
+E4-gun-0-1,gun,0,1,1,0.46,143.3,2.1,,,documents=10000; power: no meter
+E4-gun-40-1,gun,40,1,1,41.69,368.8,2.058,23.626,,documents=10202; power: no meter

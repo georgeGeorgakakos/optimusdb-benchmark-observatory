@@ -1,0 +1,1028 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OptimusDB evaluation report · pilot · 479504d</title>
+<style>/* OptimusDB benchmark dashboard - ICCS look: silver ring, charcoal, white; data in a validated categorical palette */
+:root {
+  color-scheme: light;
+  --page: #f4f4f2; --surface: #fcfcfb; --surface-2: #ffffff; --ink: #0b0b0b; --ink-2: #52514e; --muted: #898781;
+  --grid: #e1e0d9; --axis: #c3c2b7; --ring: rgba(11,11,11,0.10);
+  --charcoal: #1d1d1f; --charcoal-2: #2b2b2e;
+  --silver-1: #f7f7f7; --silver-2: #c9c9cb; --silver-3: #8e8e93; --silver-4: #5a5a5f;
+  --s1: #2a78d6; --s2: #eb6834; --s3: #1baf7a; --s4: #eda100; --s5: #e87ba4; --s6: #008300;
+  --good: #0ca30c; --warning: #fab219; --serious: #ec835a; --critical: #d03b3b;
+  --seq-0: #cde2fb; --seq-1: #86b6ef; --seq-2: #3987e5; --seq-3: #1c5cab; --seq-4: #0d366b;
+  --shadow: 0 1px 2px rgba(0,0,0,.05), 0 8px 24px rgba(0,0,0,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --page: #0d0d0d; --surface: #1a1a19; --surface-2: #202020; --ink: #f0efec; --ink-2: #c3c2b7; --muted: #898781;
+    --grid: #2c2c2a; --axis: #383835; --ring: rgba(255,255,255,0.10);
+    --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500; --s5: #d55181; --s6: #008300;
+    --shadow: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --page: #0d0d0d; --surface: #1a1a19; --surface-2: #202020; --ink: #f0efec; --ink-2: #c3c2b7; --muted: #898781;
+  --grid: #2c2c2a; --axis: #383835; --ring: rgba(255,255,255,0.10);
+  --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500; --s5: #d55181; --s6: #008300;
+  --shadow: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.35);
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { background: var(--page); color: var(--ink); font: 14px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
+a { color: inherit; }
+button { font: inherit; color: inherit; }
+
+/* ---------------------------------------------------------------- header */
+.masthead {
+  position: sticky; top: 0; z-index: 20; display: flex; align-items: center; gap: 18px; padding: 10px 24px;
+  background: radial-gradient(1200px 120px at 10% -40px, #3a3a3e 0%, var(--charcoal) 60%), var(--charcoal);
+  color: #f2f2f2; border-bottom: 1px solid #000;
+}
+.masthead::after { content: ""; position: absolute; left: 0; right: 0; bottom: -3px; height: 3px;
+  background: linear-gradient(90deg, #6d6d72, #e9e9ea 30%, #8e8e93 55%, #f2f2f2 75%, #5a5a5f); }
+.brand { display: flex; align-items: center; gap: 14px; min-width: 0; }
+.logo-ring { width: 54px; height: 54px; border-radius: 50%; display: grid; place-items: center; flex: none;
+  background: conic-gradient(from 210deg, #f5f5f5, #9a9a9e, #e8e8e9, #5d5d62, #f5f5f5); padding: 3px; }
+.logo-ring span { width: 100%; height: 100%; border-radius: 50%; background: #fff; display: grid; place-items: center; overflow: hidden; }
+.logo-ring img { width: 92%; height: auto; }
+.brand-text { min-width: 0; }
+.brand-text .kicker { font-size: 11px; letter-spacing: .28em; text-transform: uppercase; color: #bdbdc0; }
+.brand-text h1 { margin: 0; font-size: 19px; font-weight: 650; letter-spacing: .01em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.brand-text h1 b { font-weight: 800; background: linear-gradient(180deg, #ffffff, #b8b8bb); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.mast-right { margin-left: auto; display: flex; align-items: center; gap: 10px; }
+.pill { display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px; border-radius: 999px; font-size: 12px; font-weight: 600;
+  background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.14); color: #eee; white-space: nowrap; }
+.dot { width: 9px; height: 9px; border-radius: 50%; background: var(--silver-3); flex: none; }
+.dot.live { background: var(--good); box-shadow: 0 0 0 0 rgba(12,163,12,.6); animation: pulse 1.8s infinite; }
+.dot.warn { background: var(--warning); }
+.dot.bad { background: var(--critical); }
+@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(12,163,12,.55); } 70% { box-shadow: 0 0 0 10px rgba(12,163,12,0); } 100% { box-shadow: 0 0 0 0 rgba(12,163,12,0); } }
+select.mode, .iconbtn { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.14); color: #eee; border-radius: 8px; padding: 6px 10px; cursor: pointer; }
+select.mode option { color: #111; }
+.iconbtn { display: inline-grid; place-items: center; }
+.iconbtn:hover, select.mode:hover { background: rgba(255,255,255,.14); }
+
+/* ---------------------------------------------------------------- layout */
+.shell { display: grid; grid-template-columns: 232px minmax(0, 1fr); min-height: calc(100vh - 77px); }
+nav.side { background: var(--surface); border-right: 1px solid var(--ring); padding: 18px 12px; position: sticky; top: 77px; height: calc(100vh - 77px); overflow: auto; }
+nav.side .group { font-size: 10.5px; letter-spacing: .22em; text-transform: uppercase; color: var(--muted); margin: 16px 10px 6px; }
+nav.side button { display: flex; width: 100%; align-items: center; gap: 10px; padding: 9px 10px; border: 0; background: none; border-radius: 9px; cursor: pointer; text-align: left; color: var(--ink-2); }
+nav.side button svg { width: 18px; height: 18px; flex: none; stroke: currentColor; fill: none; stroke-width: 1.8; }
+nav.side button:hover { background: color-mix(in srgb, var(--ink) 6%, transparent); color: var(--ink); }
+nav.side button.on { background: var(--charcoal); color: #fff; box-shadow: inset 3px 0 0 #d9d9db; }
+nav.side button .count { margin-left: auto; font-size: 11px; color: inherit; opacity: .7; font-variant-numeric: tabular-nums; }
+nav.side .foot { margin: 22px 10px 0; font-size: 11.5px; color: var(--muted); line-height: 1.45; }
+main { padding: 26px 28px 60px; min-width: 0; }
+.page-head { display: flex; align-items: flex-end; gap: 16px; margin-bottom: 18px; flex-wrap: wrap; }
+.page-head h2 { margin: 0; font-size: 24px; font-weight: 700; letter-spacing: -.01em; }
+.page-head .sub { color: var(--ink-2); max-width: 820px; }
+.page-head .tag { font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); }
+.grid { display: grid; gap: 16px; }
+.g4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.g3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.g2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.span2 { grid-column: span 2; } .span3 { grid-column: span 3; } .span4 { grid-column: 1 / -1; }
+@media (max-width: 1200px) { .g4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } .g3 { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 860px) { .shell { grid-template-columns: 1fr; } nav.side { position: static; height: auto; display: flex; flex-wrap: wrap; gap: 4px; }
+  nav.side .group, nav.side .foot { display: none; } nav.side button { width: auto; } .g4, .g3, .g2 { grid-template-columns: 1fr; } .span2, .span3 { grid-column: auto; }
+  main { padding: 18px 16px 50px; } .brand-text .kicker { display: none; } }
+
+/* ---------------------------------------------------------------- cards */
+.card { background: var(--surface); border: 1px solid var(--ring); border-radius: 14px; box-shadow: var(--shadow); padding: 16px 18px; min-width: 0; }
+.card h3 { margin: 0 0 2px; font-size: 14px; font-weight: 650; }
+.card .hint { color: var(--muted); font-size: 12px; margin-bottom: 10px; }
+.card-head { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; }
+.card-head .tools { margin-left: auto; display: flex; gap: 6px; flex-wrap: wrap; }
+.seg { display: inline-flex; border: 1px solid var(--ring); border-radius: 8px; overflow: hidden; }
+.seg button { border: 0; background: none; padding: 4px 10px; font-size: 12px; cursor: pointer; color: var(--ink-2); }
+.seg button.on { background: var(--charcoal); color: #fff; }
+.kpi { position: relative; overflow: hidden; }
+.kpi .label { font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+.kpi .value { font-size: 30px; font-weight: 700; letter-spacing: -.02em; margin-top: 4px; }
+.kpi .note { color: var(--ink-2); font-size: 12.5px; }
+.kpi::before { content: ""; position: absolute; right: -52px; top: -52px; width: 110px; height: 110px; border-radius: 50%;
+  border: 10px solid transparent; background: conic-gradient(from 200deg, var(--silver-1), var(--silver-2), var(--silver-3), var(--silver-1)) border-box;
+  -webkit-mask: linear-gradient(#000 0 0) padding-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; opacity: .35; pointer-events: none; }
+
+/* progress ring */
+.ring-wrap { display: flex; align-items: center; gap: 22px; }
+.ring { width: 150px; height: 150px; flex: none; }
+.ring .track { stroke: var(--grid); }
+.ring .bar { stroke: url(#silver); transition: stroke-dashoffset .8s ease; }
+.ring text { fill: var(--ink); }
+.big-state { font-size: 22px; font-weight: 700; }
+.muted { color: var(--muted); } .ink2 { color: var(--ink-2); }
+.mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 12px; }
+
+/* pipeline */
+.pipeline { display: flex; align-items: center; gap: 0; flex-wrap: wrap; }
+.stage { display: flex; align-items: center; gap: 10px; padding: 10px 14px; border-radius: 12px; border: 1px solid var(--ring); background: var(--surface-2); min-width: 128px; }
+.stage .n { width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; font-weight: 700; font-size: 12px; background: var(--grid); color: var(--ink-2); }
+.stage.done .n { background: var(--charcoal); color: #fff; }
+.stage.run .n { background: conic-gradient(var(--good) var(--p, 0%), var(--grid) 0); color: var(--ink); }
+.stage.fail .n { background: var(--critical); color: #fff; }
+.stage small { display: block; color: var(--muted); font-size: 11.5px; }
+.link { flex: 1 1 18px; min-width: 18px; height: 2px; background: linear-gradient(90deg, var(--silver-2), var(--silver-3)); }
+
+/* log console */
+.console { background: #111113; color: #d8d8d8; border-radius: 10px; padding: 12px 14px; height: 300px; overflow: auto; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 12px; line-height: 1.55; white-space: pre-wrap; word-break: break-word; }
+.console .w { color: #fab219; } .console .d { color: #7fd17f; } .console .e { color: #ff8a80; } .console .b { color: #9ec5f4; }
+
+/* tables */
+table.t { width: 100%; border-collapse: collapse; font-size: 12.5px; font-variant-numeric: tabular-nums; }
+table.t th { text-align: left; font-weight: 600; color: var(--muted); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; border-bottom: 1px solid var(--axis); padding: 6px 8px; position: sticky; top: 0; background: var(--surface); }
+table.t td { border-bottom: 1px solid var(--grid); padding: 6px 8px; }
+table.t td.num, table.t th.num { text-align: right; }
+table.t tr.click { cursor: pointer; } table.t tr.click:hover td { background: color-mix(in srgb, var(--ink) 4%, transparent); }
+.scroll { max-height: 420px; overflow: auto; }
+.sw { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; }
+
+/* heat cells */
+.heat td.cell { text-align: center; border-radius: 6px; padding: 8px 4px; border: 2px solid var(--surface); font-weight: 600; cursor: default; }
+
+/* status badges (icon + label, never colour alone) */
+.badge { white-space: nowrap; display: inline-flex; align-items: center; gap: 6px; padding: 3px 9px; border-radius: 999px; font-size: 12px; font-weight: 650; border: 1px solid var(--ring); background: var(--surface-2); }
+.badge i { width: 16px; height: 16px; border-radius: 50%; display: grid; place-items: center; font-style: normal; font-size: 11px; color: #fff; }
+.badge.good i { background: var(--good); } .badge.bad i { background: var(--critical); } .badge.na i { background: var(--silver-3); } .badge.warn i { background: var(--warning); color: #111; }
+
+/* explanations */
+.explain { border-left: 3px solid var(--silver-3); background: color-mix(in srgb, var(--surface-2) 70%, var(--page)); padding: 12px 14px; border-radius: 0 10px 10px 0; }
+.explain h4 { margin: 0 0 6px; font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); }
+.explain ul { margin: 0; padding-left: 18px; } .explain li { margin: 3px 0; }
+.findings li::marker { color: var(--silver-3); }
+.callout { display: flex; gap: 10px; align-items: flex-start; padding: 10px 12px; border-radius: 10px; border: 1px solid var(--ring); background: var(--surface-2); font-size: 13px; }
+.callout .ic { flex: none; width: 20px; height: 20px; border-radius: 50%; display: grid; place-items: center; font-size: 12px; font-weight: 800; color: #111; background: var(--warning); }
+
+/* charts */
+.chart { width: 100%; position: relative; }
+.chart svg { display: block; width: 100%; height: auto; overflow: visible; }
+.chart .gridline { stroke: var(--grid); stroke-width: 1; }
+.chart .axis { stroke: var(--axis); stroke-width: 1; }
+.chart text { fill: var(--muted); font-size: 11px; font-variant-numeric: tabular-nums; }
+.chart text.lbl { fill: var(--ink-2); font-size: 11.5px; }
+.chart .hit { fill: transparent; cursor: pointer; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 12px; color: var(--ink-2); margin: 4px 0 8px; }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.legend .sw { margin: 0; }
+.tip { position: fixed; z-index: 50; pointer-events: none; background: var(--surface-2); color: var(--ink); border: 1px solid var(--ring); box-shadow: var(--shadow);
+  border-radius: 10px; padding: 8px 10px; font-size: 12px; min-width: 140px; opacity: 0; transition: opacity .08s; }
+.tip b { font-weight: 650; } .tip .r { display: flex; justify-content: space-between; gap: 14px; font-variant-numeric: tabular-nums; }
+.empty { display: grid; place-items: center; min-height: 160px; color: var(--muted); text-align: center; padding: 20px; }
+.empty svg { width: 56px; height: 56px; opacity: .5; margin-bottom: 6px; }
+
+/* matrix */
+.matrix td.m { text-align: center; }
+.mbox { display: inline-grid; place-items: center; min-width: 34px; height: 26px; border-radius: 7px; font-weight: 650; font-size: 12px; background: var(--grid); color: var(--ink-2); }
+.mbox.has { background: var(--charcoal); color: #fff; }
+
+/* modal */
+.modal { position: fixed; inset: 0; background: rgba(0,0,0,.45); display: none; place-items: center; z-index: 60; padding: 20px; }
+.modal.open { display: grid; }
+.modal .box { background: var(--surface); border-radius: 16px; max-width: 1000px; width: 100%; max-height: 92vh; overflow: auto; padding: 20px 22px; box-shadow: var(--shadow); border: 1px solid var(--ring); }
+.modal .x { float: right; border: 1px solid var(--ring); background: var(--surface-2); border-radius: 8px; padding: 4px 10px; cursor: pointer; }
+footer.foot { color: var(--muted); font-size: 11.5px; margin-top: 30px; display: flex; gap: 12px; align-items: center; }
+footer.foot img { width: 22px; opacity: .8; }
+
+/* dark-mode accents: selected controls must stand out from the dark surface */
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .seg button.on, :root:not([data-theme="light"]) nav.side button.on { background: #e8e8e9; color: #111; } }
+:root[data-theme="dark"] .seg button.on, :root[data-theme="dark"] nav.side button.on { background: #e8e8e9; color: #111; }
+:root[data-theme="dark"] .mbox.has { background: #e8e8e9; color: #111; }
+:root[data-theme="dark"] .stage.done .n { background: #e8e8e9; color: #111; }
+@media (max-width: 860px) {
+  .masthead { flex-wrap: wrap; padding: 10px 16px; gap: 10px; position: static; }
+  .mast-right { margin-left: 0; width: 100%; flex-wrap: wrap; }
+  .brand-text h1 { font-size: 16px; white-space: normal; }
+  .ring-wrap { flex-direction: column; align-items: flex-start; }
+}
+
+/* finished / stopped banner, buttons, done dot */
+.dot.done { background: var(--good); }
+.banner { display: flex; gap: 12px; align-items: center; padding: 12px 16px; margin: 0 0 16px; border-radius: 12px; border: 1px solid var(--ring); background: var(--surface); box-shadow: var(--shadow); border-left: 5px solid var(--good); }
+.banner.warn { border-left-color: var(--warning); }
+.banner .ic { flex: none; width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; font-weight: 800; color: #fff; background: var(--good); }
+.banner.warn .ic { background: var(--warning); color: #111; }
+.banner .bt { flex: 1; min-width: 0; font-size: 13px; } .banner .bt b { font-size: 15px; display: block; margin-bottom: 2px; }
+.banner .ba { display: flex; gap: 8px; flex-wrap: wrap; }
+.btn { font: inherit; font-size: 12px; font-weight: 650; padding: 6px 12px; border-radius: 8px; border: 1px solid var(--ring); background: var(--charcoal); color: #fff; cursor: pointer; }
+.btn.ghost { background: transparent; color: var(--ink); } .btn.on { opacity: .6; cursor: default; }
+@media (max-width: 700px) { .banner { flex-wrap: wrap; } }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .btn:not(.ghost) { background: #e8e8e9; color: #111; } }
+:root[data-theme="dark"] .btn:not(.ghost) { background: #e8e8e9; color: #111; }
+
+/* Evaluation report page (dashboard) and the saved copy. Sheets are paper and stay light in both themes, so what is on
+   screen is what prints and exports. Everything is scoped under .rpt so it cannot collide with dashboard styles. */
+/* Mockup of the Report page inside the dashboard: dashboard shell and tokens unchanged; report sheets scoped under .rpt */
+:root { --paper: #ffffff; --p-ink: #111111; --p-ink-2: #4a4945; --p-muted: #85837d; --p-rule: #e3e2dc; --p-axis: #bdbcb2; --p-fill: #f6f6f3;
+  --src-data: #2a78d6; --src-rule: #1baf7a; --src-fixed: #8e8e93; --src-notes: #eda100; --desk: #e9e8e3; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --desk: #121211; } }
+:root[data-theme="dark"] { --desk: #121211; }
+.rpt-top { margin-bottom: 16px; }
+.rpt-src { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px 22px; }
+.rpt-src .l { font-size: 10.5px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+.rpt-src .v { font-size: 13px; margin-top: 2px; overflow-wrap: anywhere; }
+.rpt-actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--grid); }
+.rpt-actions .sp { flex: 1; }
+.abtn { font: 600 12.5px system-ui, -apple-system, "Segoe UI", sans-serif; padding: 7px 13px; border-radius: 9px; border: 1px solid var(--ring); background: var(--charcoal); color: #fff; cursor: pointer; }
+.abtn.ghost { background: transparent; color: var(--ink); }
+.abtn:focus-visible, .srcsw input:focus-visible, .rpt-outline a:focus-visible { outline: 2px solid var(--s1); outline-offset: 2px; }
+.srcsw { display: inline-flex; gap: 7px; align-items: center; font-size: 12.5px; color: var(--ink-2); cursor: pointer; }
+.srclegend { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-top: 10px; font-size: 12px; color: var(--ink-2); }
+.srclegend i { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 6px; vertical-align: -2px; }
+.rpt-layout { display: grid; grid-template-columns: 232px minmax(0, 1fr); gap: 16px; align-items: start; }
+.rpt-outline { position: sticky; top: 92px; max-height: calc(100vh - 110px); overflow: auto; padding: 14px 12px; }
+.rpt-outline ol { list-style: none; margin: 8px 0 0; padding: 0; }
+.rpt-outline li a { display: flex; gap: 8px; align-items: baseline; padding: 5px 8px; border-radius: 7px; color: var(--ink-2); text-decoration: none; font-size: 12.5px; }
+.rpt-outline li.sub a { padding-left: 20px; font-size: 11.5px; color: var(--muted); }
+.rpt-outline li a span:first-child { flex: 1; min-width: 0; }
+.rpt-outline li a .pg { font-variant-numeric: tabular-nums; font-size: 11px; color: var(--muted); }
+.rpt-outline li a:hover { background: color-mix(in srgb, var(--ink) 6%, transparent); color: var(--ink); }
+.rpt-outline li a.on { background: var(--charcoal); color: #fff; } .rpt-outline li a.on .pg { color: #ddd; }
+.rpt-pages { background: var(--desk); border-radius: 14px; border: 1px solid var(--ring); min-width: 0; }
+.rpt #pages { display: flex; flex-direction: column; align-items: center; gap: 22px; padding: 22px 16px 40px; }
+.rpt.show-src .sheet [data-src] { outline-offset: 3px; border-radius: 2px; }
+.rpt.show-src .sheet [data-src="data"] { outline: 2px solid color-mix(in srgb, var(--src-data) 70%, transparent); }
+.rpt.show-src .sheet [data-src="rule"] { outline: 2px solid color-mix(in srgb, var(--src-rule) 70%, transparent); }
+.rpt.show-src .sheet [data-src="fixed"] { outline: 2px dashed color-mix(in srgb, var(--src-fixed) 70%, transparent); }
+.rpt.show-src .sheet [data-src="notes"] { outline: 2px solid var(--src-notes); background: color-mix(in srgb, var(--src-notes) 7%, transparent); }
+@media (max-width: 1100px) { .rpt-layout { grid-template-columns: 1fr; } .rpt-outline { display: none; } .rpt-src { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .rpt-src { grid-template-columns: 1fr; } .masthead { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); flex-wrap: wrap; } .mast-right { flex-wrap: wrap; } }
+
+.rpt .sheet .kpi::before { content: none; }
+.srclegend[hidden] { display: none; }
+.rpt .wrap { position: relative; flex: none; }
+.rpt .sheet { position: absolute; left: 0; top: 0; width: 794px; height: 1123px; transform-origin: 0 0; background: var(--paper); color: var(--p-ink);
+  box-shadow: 0 1px 2px rgba(0,0,0,.12), 0 10px 30px rgba(0,0,0,.14); overflow: hidden; font-size: 12.3px; line-height: 1.52; }
+.rpt .sheet .hd, .rpt .sheet .ft { position: absolute; left: 60px; right: 60px; display: flex; justify-content: space-between; gap: 12px; font-size: 9.5px; color: var(--p-muted); letter-spacing: .04em; }
+.rpt .sheet .hd { top: 26px; border-bottom: 1px solid var(--p-rule); padding-bottom: 6px; text-transform: uppercase; letter-spacing: .12em; }
+.rpt .sheet .ft { bottom: 24px; border-top: 1px solid var(--p-rule); padding-top: 6px; }
+.rpt .sheet .body { position: absolute; left: 60px; right: 60px; top: 62px; bottom: 58px; display: flow-root; }
+.rpt .body h1.ch { font-size: 25px; line-height: 1.15; margin: 4px 0 4px; font-weight: 760; letter-spacing: -.01em; text-wrap: balance; }
+.rpt .body .chn { font: 700 10.5px var(--font); letter-spacing: .2em; text-transform: uppercase; color: var(--p-muted); margin-top: 6px; }
+.rpt .body .lede { font-size: 13.3px; color: var(--p-ink-2); margin: 6px 0 14px; max-width: 62ch; }
+.rpt .body h2 { font-size: 15px; margin: 16px 0 6px; font-weight: 720; text-wrap: balance; }
+.rpt .body h3 { font-size: 12.5px; margin: 12px 0 4px; font-weight: 720; text-transform: uppercase; letter-spacing: .06em; color: var(--p-ink-2); }
+.rpt .body p { margin: 0 0 8px; max-width: 72ch; }
+.rpt .body ul { margin: 0 0 8px; padding-left: 18px; max-width: 72ch; }
+.rpt .body li { margin-bottom: 3px; }
+.rpt .body .note { font-size: 11px; color: var(--p-ink-2); background: var(--p-fill); border-left: 3px solid var(--p-axis); padding: 7px 10px; margin: 6px 0 10px; }
+.rpt .body .note.warn { border-left-color: var(--warning); }
+.rpt .body .note.bad { border-left-color: var(--critical); }
+.rpt .body .note.ok { border-left-color: var(--good); }
+.rpt .body table { width: 100%; border-collapse: collapse; font-size: 10.8px; margin: 4px 0 10px; font-variant-numeric: tabular-nums; }
+.rpt .body th { text-align: left; font-weight: 650; color: var(--p-ink-2); border-bottom: 1.5px solid var(--p-ink); padding: 4px 6px; font-size: 10px; text-transform: uppercase; letter-spacing: .05em; }
+.rpt .body td { border-bottom: 1px solid var(--p-rule); padding: 3.5px 6px; vertical-align: top; }
+.rpt .body td.n, .rpt .body th.n { text-align: right; }
+.rpt .body caption { caption-side: top; text-align: left; font-size: 10.5px; color: var(--p-ink-2); padding-bottom: 4px; font-weight: 600; }
+.rpt .body .mono { font-family: var(--mono); font-size: 10.5px; }
+.rpt .chip { display: inline-flex; align-items: center; gap: 5px; font-weight: 700; font-size: 10.5px; padding: 1px 8px; border-radius: 999px; border: 1px solid; white-space: nowrap; }
+.rpt .chip.ok { color: #0a7a0a; border-color: #0ca30c; background: #eefaee; }
+.rpt .chip.no { color: #b02e2e; border-color: #d03b3b; background: #fdf0f0; }
+.rpt .chip.na { color: #6b6a64; border-color: #bdbcb2; background: #f6f6f3; }
+.rpt .chip.warn { color: #8a5d00; border-color: #c98a00; background: #fff7e3; }
+.rpt .sw { display: inline-block; width: 9px; height: 9px; border-radius: 2px; margin-right: 6px; vertical-align: 0; }
+.rpt figure.fig { margin: 8px 0 12px; break-inside: avoid; }
+.rpt figure.fig .fh { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+.rpt figure.fig .ft2 { font-weight: 700; font-size: 11.5px; }
+.rpt figure.fig .fn { color: var(--p-muted); font-weight: 600; margin-right: 6px; }
+.rpt figure.fig .ex { display: flex; gap: 4px; flex: none; }
+.rpt figure.fig .ex button { font: 600 9.5px var(--font); padding: 2px 7px; border-radius: 6px; border: 1px solid var(--p-axis); background: #fff; color: var(--p-ink-2); cursor: pointer; }
+.rpt figure.fig .ex button:hover { border-color: var(--p-ink); color: var(--p-ink); }
+.rpt figure.fig svg { display: block; width: 100%; height: auto; margin-top: 4px; }
+.rpt figure.fig figcaption { font-size: 10.5px; color: var(--p-ink-2); margin-top: 4px; max-width: 80ch; }
+.rpt .legend { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 10.5px; color: var(--p-ink-2); margin-top: 4px; }
+.rpt .kpis { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin: 8px 0 12px; }
+.rpt .kpi { border: 1px solid var(--p-rule); border-radius: 8px; padding: 8px 9px; }
+.rpt .kpi .l { font-size: 9.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--p-muted); font-weight: 700; }
+.rpt .kpi .v { margin-top: 4px; }
+.rpt .kpi .t { font-size: 10.5px; color: var(--p-ink-2); margin-top: 4px; line-height: 1.35; }
+.rpt .toc { list-style: none; padding: 0; margin: 8px 0; max-width: none; }
+.rpt .toc li { display: flex; gap: 8px; align-items: baseline; padding: 3.5px 0; border-bottom: 1px dotted var(--p-rule); margin: 0; }
+.rpt .toc li.sub { padding-left: 18px; font-size: 11.3px; color: var(--p-ink-2); }
+.rpt .toc .t { flex: 1; }
+.rpt .toc .pg { font-variant-numeric: tabular-nums; color: var(--p-ink-2); }
+.rpt .toc li.ch0 { font-weight: 700; margin-top: 6px; }
+.rpt .cover { position: absolute; inset: 0; background: var(--paper); }
+.rpt .cover .band { height: 330px; background: radial-gradient(900px 260px at 15% -60px, #3a3a3e 0%, #1d1d1f 62%), #1d1d1f; color: #fff; padding: 64px 60px 0; position: relative; }
+.rpt .cover .band .k { font-size: 11px; letter-spacing: .26em; text-transform: uppercase; color: #c9c9cb; }
+.rpt .cover .band h1 { font-size: 40px; line-height: 1.05; margin: 18px 0 10px; font-weight: 300; letter-spacing: -.015em; }
+.rpt .cover .band h1 b { font-weight: 780; }
+.rpt .cover .band .sub { font-size: 15px; color: #d9d9db; max-width: 34em; }
+.rpt .cover .band .ring { position: absolute; right: 60px; bottom: -52px; width: 104px; height: 104px; border-radius: 50%;
+  background: conic-gradient(from 210deg, #5a5a5f, #d9d9db, #8e8e93, #3f3f44, #d9d9db, #5a5a5f); display: grid; place-items: center; box-shadow: 0 6px 20px rgba(0,0,0,.25); }
+.rpt .cover .band .ring span { width: 84px; height: 84px; border-radius: 50%; background: #fff; display: grid; place-items: center; font: 800 15px var(--font); color: #1d1d1f; letter-spacing: .08em; }
+.rpt .cover .meta { position: absolute; left: 60px; right: 60px; top: 400px; display: grid; grid-template-columns: 1fr 1fr; gap: 14px 30px; }
+.rpt .cover .meta > div { border-top: 1px solid var(--p-rule); padding-top: 7px; }
+.rpt .cover .meta .l { font-size: 9.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--p-muted); font-weight: 700; }
+.rpt .cover .meta .v { font-size: 13px; margin-top: 2px; }
+.rpt .cover .verdicts { position: absolute; left: 60px; right: 60px; top: 690px; }
+.rpt .cover .verdicts .row { display: grid; grid-template-columns: 44px 1fr auto; gap: 10px; align-items: center; padding: 7px 0; border-bottom: 1px solid var(--p-rule); font-size: 12px; }
+.rpt .cover .verdicts .h { font-weight: 800; font-size: 14px; }
+.rpt .cover .foot { position: absolute; left: 60px; right: 60px; bottom: 40px; font-size: 10px; color: var(--p-muted); display: flex; justify-content: space-between; gap: 20px; }
+.rpt .cover .stamp { position: absolute; left: 60px; top: 350px; transform: rotate(-4deg); border: 2px solid #c98a00; color: #8a5d00; font: 800 11px var(--font); letter-spacing: .16em; text-transform: uppercase; padding: 5px 10px; border-radius: 4px; }
+.rpt #measure { position: absolute; left: -10000px; top: 0; visibility: hidden; }
+.rpt .toast { position: fixed; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); left: 50%; transform: translateX(-50%); background: var(--charcoal); color: #fff; padding: 8px 14px; border-radius: 8px; font-size: 12.5px; opacity: 0; transition: opacity .2s; pointer-events: none; z-index: 20; }
+.rpt .toast.on { opacity: 1; }
+
+.rpt .rpt-empty { padding: 40px 16px; text-align: center; color: var(--muted); }
+.rpt .notes-md p { margin: 0 0 8px; } .rpt .notes-md ul { margin: 0 0 8px; }
+.rpt .obs { list-style: none; padding: 0; margin: 4px 0 10px; max-width: none; }
+.rpt .obs li { display: grid; grid-template-columns: 70px 1fr; gap: 8px; padding: 4px 0; border-bottom: 1px solid var(--p-rule); font-size: 11px; margin: 0; }
+.rpt .obs .lv { font-weight: 700; font-size: 10px; letter-spacing: .06em; text-transform: uppercase; }
+.rpt .obs .lv.warn { color: #8a5d00; } .rpt .obs .lv.bad { color: #b02e2e; }
+
+/* printing: keep the sheet colours (cover band, swatches, chips) and drop the screen chrome; last so it wins */
+.rpt .sheet, .rpt .sheet * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.rpt .note-row td { border-bottom: 1px solid var(--p-rule); padding-top: 0; color: var(--p-muted); font-size: 9.5px; }
+.rpt .rawid { font-family: var(--mono); font-size: 9.5px; word-break: break-all; }
+@media print {
+  @page { size: A4; margin: 0; }
+  body.on-report, body.saved { background: #fff; }
+  body.on-report .masthead, body.on-report nav.side, body.on-report .page-head, body.on-report .banner, body.on-report main > .foot, body.on-report .tip, body.on-report .modal,
+  .rpt-top, .rpt-outline, .rpt .toast, .saved-bar { display: none !important; }
+  body.on-report .shell, .rpt-layout { display: block; } body.on-report main, body.saved main.rpt { padding: 0 !important; max-width: none !important; } .rpt-pages { background: none; border: 0; }
+  .rpt #pages { display: block; padding: 0; } .rpt .wrap { width: 210mm !important; height: 297mm !important; break-after: page; } .rpt .wrap:last-child { break-after: auto; }
+  .rpt .sheet { transform: none !important; box-shadow: none; } .rpt figure.fig .ex { display: none !important; }
+}
+
+body.saved main.rpt { padding: 20px 24px 40px; max-width: 1100px; margin: 0 auto; }
+.saved-bar { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; margin-bottom: 14px; }
+.saved-bar h1 { font-size: 18px; margin: 0; flex: 1; min-width: 240px; }
+</style></head>
+<body class="saved"><main class="rpt">
+<div class="saved-bar"><h1>OptimusDB evaluation report</h1><span class="muted" id="pgcount"></span>
+<button class="abtn" type="button" onclick="window.print()">Print / Save as PDF</button>
+<button class="abtn ghost" type="button" onclick="OptimusReport.exportAll()">Export all figures (SVG)</button></div>
+<div class="rpt-pages"><div id="pages"></div></div><div id="measure"></div><div class="toast" id="toast"></div>
+</main>
+<template id="tpl"><!-- Fixed chapters of the evaluation report (method text). {n} is replaced by the chapter number. The rest of the report is generated from the run's data by report.js. -->
+<section data-chapter="{n}. Scope and hypotheses" data-src="fixed" data-fixed="scope">
+  <div class="chn">Chapter {n}</div>
+  <h1 class="ch" data-toc="{n}. Scope and hypotheses">Scope, research questions and hypotheses</h1>
+  <p class="lede">The evaluation asks whether OptimusDB, the decentralised data layer of Swarmchestrate, can serve orchestration metadata across edge, fog and cloud as well as established decentralised data stores.</p>
+  <h2>Research questions</h2>
+  <table><thead><tr><th style="width:52px">RQ</th><th>Question</th><th style="width:110px">Experiments</th></tr></thead><tbody>
+    <tr><td><b>RQ1</b></td><td>What does running OptimusDB cost on resource-constrained edge nodes, compared with other decentralised stores?</td><td>E4</td></tr>
+    <tr><td><b>RQ2</b></td><td>How do its latency, throughput and query capability compare under orchestration-style workloads?</td><td>E1, E2, E3</td></tr>
+    <tr><td><b>RQ3</b></td><td>Does it remain available during network partitions, and does it converge without losing acknowledged writes?</td><td>E5</td></tr>
+  </tbody></table>
+  <h2>Hypotheses (registered before the campaign; not changed since)</h2>
+  <table><thead><tr><th style="width:40px">Id</th><th>Statement</th><th style="width:44px">Exp.</th></tr></thead><tbody>
+    <tr><td><b>H1</b></td><td>For WO, OptimusDB's P99 latency is within 25 % of the best baseline, and its tail ratio P99.9/P50 is not larger than the median of the baselines.</td><td>E1</td></tr>
+    <tr><td><b>H2</b></td><td>OptimusDB's saturation throughput is at least the median of the baselines, and its P99 at 50 ops/s grows by less than a factor of two from 10³ to 10⁶ records.</td><td>E2</td></tr>
+    <tr><td><b>H3</b></td><td>For Q1–Q3, OptimusDB returns complete and correct results faster than client-side evaluation over Gun.js, Autobase, Iroh docs and OpenDHT at 10⁵ and 10⁶ records, and within 25 % of Corrosion; Q4 and Q5 are executed natively only by OptimusDB and Corrosion.</td><td>E3</td></tr>
+    <tr><td><b>H4</b></td><td>At 40 ops/s on an edge node, OptimusDB stays below 60 % CPU and 512 MB resident memory per agent.</td><td>E4</td></tr>
+    <tr><td><b>H5</b></td><td>During a partition OptimusDB accepts writes on both sides; after healing it loses no acknowledged write, its replicas reach identical state, and its convergence time is not longer than the median of the fully replicating baselines (Corrosion, Gun.js, Autobase, Iroh docs).</td><td>E5</td></tr>
+  </tbody></table>
+  <h2>Baselines and why they were chosen</h2>
+  <p>All five baselines are decentralised data stores that replicate without a central coordinator, which is the property OptimusDB must offer to a swarm of orchestration agents.
+  They span the design space: a CRDT-replicated SQL database (Corrosion), two JavaScript peer-to-peer stores (Gun.js; Autobase with Hyperbee), a range-reconciled document store (Iroh docs) and a distributed hash table (OpenDHT).
+  Centralised or leader-based databases are excluded on purpose: they solve a different problem.</p>
+  <table><thead><tr><th>System</th><th>Data model and replication</th><th>Query capability</th><th>Version</th></tr></thead><tbody data-tbody="systems"></tbody></table>
+  <h2>What a quick run is for</h2>
+  <p>Quick mode runs every scenario once on 10⁴ records with short windows, in about 80 minutes. It verifies the whole pipeline (deployment, preload, replication checks, load generation, result files, analysis) and gives a first look at each comparison.
+  Verdicts on a quick run are computed exactly as on the campaign, but are labelled indicative. The method chapter lists every difference from the campaign.</p>
+</section>
+<section data-chapter="{n}. Testbed and method" data-src="fixed" data-fixed="method">
+  <div class="chn">Chapter {n}</div>
+  <h1 class="ch" data-toc="{n}. Testbed and method">Testbed and method</h1>
+  <p class="lede">One machine emulates eight hosts in three tiers with cgroup limits and shaped links. Only the system under test runs; the other five are stopped on every host.</p>
+  <h2 data-toc-sub="{n}.1 Testbed">{n}.1 Testbed</h2>
+  <table><tbody>
+    <tr><td style="width:150px"><b>Machine</b></td><td>One Windows PC, Docker Desktop (WSL2), VM with <span data-v="vm"></span></td></tr>
+    <tr><td><b>Emulated hosts</b></td><td>8: cloud-a, cloud-b (cloud); fog-a, fog-b (fog); edge-a … edge-d (edge). Docker bridge 10.88.0.0/24, hosts .11–.18; benchmark client .2</td></tr>
+    <tr><td><b>Limits per data store</b></td><td><span data-v="limits"></span> (Docker <span class="mono">cpus</span> / <span class="mono">mem_limit</span>)</td></tr>
+    <tr><td><b>Isolation</b></td><td>Only the system under test runs; each block starts from wiped volumes and a fresh cluster join</td></tr>
+  </tbody></table>
+  <h2 data-toc-sub="{n}.2 Emulated network">{n}.2 Emulated network (Table 7 of the paper)</h2>
+  <p>Every host shapes its outgoing packets with one HTB class per destination tier (netem delay, normal jitter, loss, rate cap). Values are one-way; a request and its reply each pay them. Client-to-entry-host traffic is not shaped.</p>
+  <table><thead><tr><th>Link</th><th class="n">One-way delay</th><th class="n">Jitter</th><th class="n">Loss</th><th class="n">Rate</th><th>Source</th></tr></thead><tbody>
+    <tr><td>cloud–cloud</td><td class="n">5 ms</td><td class="n">±1 ms</td><td class="n">0 %</td><td class="n">1 Gbit/s</td><td>Table 7</td></tr>
+    <tr><td>cloud–fog</td><td class="n">20 ms</td><td class="n">±4 ms</td><td class="n">0.1 %</td><td class="n">100 Mbit/s</td><td>Table 7</td></tr>
+    <tr><td>fog–fog</td><td class="n">2 ms</td><td class="n">±0.5 ms</td><td class="n">0 %</td><td class="n">1 Gbit/s</td><td>derived (same site)</td></tr>
+    <tr><td>fog–edge</td><td class="n">50 ms</td><td class="n">±10 ms</td><td class="n">0.5 %</td><td class="n">10 Mbit/s</td><td>Table 7</td></tr>
+    <tr><td>cloud–edge</td><td class="n">70 ms</td><td class="n">±11 ms</td><td class="n">0.6 %</td><td class="n">10 Mbit/s</td><td>derived</td></tr>
+    <tr><td>edge–edge</td><td class="n">2 ms</td><td class="n">±0.5 ms</td><td class="n">0 %</td><td class="n">100 Mbit/s</td><td>Table 7</td></tr>
+  </tbody></table>
+  <h2 data-toc-sub="{n}.3 Parity between systems">{n}.3 Parity between systems</h2>
+  <p>A comparison is only meaningful if each system is configured sensibly and asked to do the same work. The measures below were taken for that reason; each is recorded with the results.</p>
+  <ul>
+    <li><b>Same result.</b> Every operation returns the whole documents and the client decodes them, on every system. Until quick run 3, Corrosion's WO query returned only the ids of matching rows while the other systems returned the documents; this was corrected before quick run 4.</li>
+    <li><b>Durability.</b> Corrosion runs SQLite in WAL mode with <span class="mono">synchronous = NORMAL</span> (no flush per commit). OptimusDB runs with the equivalent setting: IPFS blocks and the store-head cache are written without an fsync per write. The other baselines run with their defaults.</li>
+    <li><b>Indexes.</b> OptimusDB indexes <span class="mono">type, status, region, resource_id</span>; Corrosion's schema and OptimusDB's SQLite tables get the same secondary indexes, so no system has an index advantage in E3.</li>
+    <li><b>Runtime limits.</b> The Go 1.19 build of OptimusDB does not read cgroup limits, so <span class="mono">GOMAXPROCS</span> and <span class="mono">GOMEMLIMIT</span> are set to the container's limits; the Rust and Node.js runtimes of the baselines read them themselves.</li>
+    <li><b>Diagnostics off.</b> OptimusDB's provenance annotations, metadata enrichment, semantic index and log shipping are off; no baseline has an equivalent. Logging is at warning level for OptimusDB, Corrosion and Iroh.</li>
+    <li><b>Baseline configuration.</b> Each baseline runs in the configuration that serves it best and was calibrated where it failed at low load: Autobase uses three indexers (eight caused 13–27 % timeouts), Gun.js uses a flat schema (the original wrapper leaked about 9 MB per query).</li>
+  </ul>
+  <h2 data-toc-sub="{n}.4 OptimusDB runtime settings">{n}.4 OptimusDB runtime settings in this run</h2>
+  <div data-table="settings"></div>
+  <h2 data-toc-sub="{n}.5 Workloads and load generation">{n}.5 Workloads, data and load generation</h2>
+  <table><thead><tr><th>Id</th><th class="n">Read</th><th class="n">Update</th><th class="n">Insert</th><th class="n">Query</th><th>Description</th></tr></thead><tbody>
+    <tr><td><b>WA</b></td><td class="n">50 %</td><td class="n">50 %</td><td class="n">–</td><td class="n">–</td><td>YCSB-A, update-heavy</td></tr>
+    <tr><td><b>WB</b></td><td class="n">95 %</td><td class="n">5 %</td><td class="n">–</td><td class="n">–</td><td>YCSB-B, read-mostly</td></tr>
+    <tr><td><b>WC</b></td><td class="n">100 %</td><td class="n">–</td><td class="n">–</td><td class="n">–</td><td>YCSB-C, read-only</td></tr>
+    <tr><td><b>WO</b></td><td class="n">60 %</td><td class="n">20 %</td><td class="n">10 %</td><td class="n">10 %</td><td>Orchestration mix: status reads, status updates, new descriptors, matchmaking queries</td></tr>
+  </tbody></table>
+  <p>Keys follow a scrambled Zipfian distribution (θ = 0.99). The WO query asks for resources in one region with status Running, which matches about 1/16 of the records (about 640 documents at 10⁴).
+  Records are JSON resource descriptors padded to 2 KB; region, CPU, memory and status take independent base-4 digits of the record number, so query predicates are uncorrelated and expected row counts are exact.</p>
+  <p>The load generator is <b>open loop</b>: operations are issued on a Poisson schedule whether or not earlier ones have finished, and latency is measured from the <b>scheduled</b> start, so a slow system cannot hide queueing delay. The per-operation timeout is 10 s; at most 2,000 operations may be in flight.</p>
+  <h2 data-toc-sub="{n}.6 Quick run versus campaign">{n}.6 Quick run versus campaign</h2>
+  <table><caption>What differs in quick mode and the pilot (verdict rules are identical)</caption>
+    <thead><tr><th>Item</th><th>This run (quick)</th><th>Campaign</th></tr></thead><tbody>
+    <tr><td>Repetitions</td><td>1</td><td>10 / 5 / 10 / 5 / 10 (E1–E5)</td></tr>
+    <tr><td>Records</td><td>10⁴ (2 KB) everywhere</td><td>10⁵ (E1, E2 steps); 10³–10⁶ (E2, E3); 10⁴ (E4, E5)</td></tr>
+    <tr><td>E1</td><td>WA, WB, WC, WO at 2 KB; 10 s warm-up + 30 s</td><td>7 cells incl. 256 B, 8 KB, 64 KB; 60 s + 300 s</td></tr>
+    <tr><td>E2</td><td>25, 100, 200 ops/s; 10 s + 30 s per step</td><td>10–200 ops/s in steps of 10; 30 s + 180 s; plus data volume series</td></tr>
+    <tr><td>E3</td><td>7 targets × Q1–Q5 at 10⁴; 2 warm-up + 20 measured queries</td><td>10⁴, 10⁵, 10⁶; 20 + 200 queries</td></tr>
+    <tr><td>E4</td><td>idle and 40 ops/s, 45 s each</td><td>0, 10, 20, 40 ops/s, 300 s each</td></tr>
+    <tr><td>E5</td><td>OptimusDB: 0 % and 30 % contention; baselines: 30 %; 30 s split 4 | 4; 120 s convergence limit</td><td>full grid (40 OptimusDB cells, 4 per baseline); 600 s limit</td></tr>
+    <tr><td>Replication wait after preload</td><td>up to 120 s</td><td>up to 900 s</td></tr>
+  </tbody></table>
+  <h2 data-toc-sub="{n}.7 Verdict rules">{n}.7 Verdict rules</h2>
+  <ul>
+    <li><b>Saturation (E2)</b> is the highest offered load at which a system achieves ≥ 90 % of the operations it supports with &lt; 1 % errors. A system that does not keep up even at the lowest load counts as 0 ops/s in the baselines' median.</li>
+    <li><b>Unsupported operations</b> (OpenDHT cannot enumerate data) are excluded from errors and reported separately; OpenDHT's throughput target is 90 % of the operations it supports.</li>
+    <li><b>Correctness (E3)</b> means the answer has exactly the expected number of rows; latency is only compared for correct answers.</li>
+    <li><b>Lost write (E5)</b>: an acknowledged key whose final value is missing, or older than a write that provably came after it on the same side of the partition. A concurrent write may legitimately win.</li>
+    <li><b>Statistics</b> (campaign only): run-level values; Mann–Whitney with Holm correction; Cliff's δ; 95 % confidence intervals.</li>
+  </ul>
+</section>
+<section data-chapter="{n}. Threats to validity" data-src="fixed" data-fixed="threats">
+  <div class="chn">Chapter {n}</div>
+  <h1 class="ch" data-toc="{n}. Threats to validity">Threats to validity</h1>
+  <p class="lede">What could make results of this testbed wrong or not general, and how each is handled. The observations found in this particular run are listed in the integrity chapter.</p>
+  <table><thead><tr><th style="width:120px">Threat</th><th>Why it matters</th><th>Handling</th></tr></thead><tbody>
+    <tr><td><b>Few repetitions</b></td><td>Without repetitions there is no variance estimate; one slow period of the machine can move a whole system's numbers.</td><td>Campaign: 5–10 repetitions; blocks shuffled with a fixed seed; the start time of every run is recorded.</td></tr>
+    <tr><td><b>Short windows</b></td><td>P99.9 needs thousands of operations; with 1,500 it rests on one or two samples.</td><td>Campaign: 300 s windows (about 15,000 operations per E1 run) and 300 s per E4 level.</td></tr>
+    <tr><td><b>Client saturation</b></td><td>A load generator that falls behind makes every system look slow.</td><td>Generator CPU, issue delay and node CPU recorded per run; client-limited steps are not counted against a system; the generator runs in several processes (busiest one checked).</td></tr>
+    <tr><td><b>Host contention</b></td><td>The testbed's limits (about 11.5 CPUs) nearly fill a 12-CPU Docker VM.</td><td>Give the VM more CPUs where possible and keep the PC otherwise idle; the client-limit check exposes contention.</td></tr>
+    <tr><td><b>Incomplete preload</b></td><td>A system measured before its data reached every host is measured on a partly replicated store.</td><td>The harness waits for a sample of keys on every host (up to 900 s in the campaign) and marks runs that time out.</td></tr>
+    <tr><td><b>Unequal work</b></td><td>Systems must be asked for the same result.</td><td>Every operation returns and decodes whole documents on every system; checked by a test.</td></tr>
+    <tr><td><b>Interface cost</b></td><td>Corrosion's answer format costs the client more to decode (each document is a JSON string inside an NDJSON row).</td><td>Kept, as it is what a client experiences; disclosed.</td></tr>
+    <tr><td><b>Emulation</b></td><td>One machine, cgroup limits and netem stand in for real edge devices and links.</td><td>Stated in the paper; link values from Table 7; edge limits match a Raspberry Pi 4 class device.</td></tr>
+    <tr><td><b>Wrapper effects</b></td><td>Gun.js, Autobase and Iroh are libraries reached through small HTTP wrappers.</td><td>Wrappers calibrated on a single node and in the cluster; a failure on an unsaturated single node is treated as a benchmark defect and fixed first.</td></tr>
+    <tr><td><b>Configuration bias</b></td><td>OptimusDB settings were tuned from profiles.</td><td>Every setting is logged per run and listed in the paper; each has a counterpart in a baseline (durability, indexes) or is a documented default of the component.</td></tr>
+  </tbody></table>
+</section>
+<section data-chapter="{n}. Changes and fixes" data-src="fixed" data-fixed="changes">
+  <div class="chn">Chapter {n}</div>
+  <h1 class="ch" data-toc="{n}. Changes and fixes">Changes to OptimusDB and the benchmark</h1>
+  <p class="lede">The history of this testbed version: what was changed in OptimusDB and in the benchmark, in the order it was made. It is the same in every report of this version; the build used by this run is named in the integrity chapter.</p>
+  <h2>OptimusDB (repository commits)</h2>
+  <table><thead><tr><th style="width:70px">Commit</th><th>Change</th><th>Effect measured</th></tr></thead><tbody>
+    <tr><td class="mono">a8bdfeb</td><td>IPFS node key Ed25519 instead of RSA-2048 (kubo's default since v0.13); no DHT announcement of each written block</td><td>Write-path CPU 12.8 s → 4.1 s in the profile; lock waiting 3.5 s → 0.46 s</td></tr>
+    <tr><td class="mono">b7295e3</td><td>Query path: index intersection, filter before copy, one response encoding, stored JSON returned without decode and re-encode; optional fsync-free writes</td><td>Update P50 11.6 → 4.2 ms; insert 11.2 → 4.2 ms (quick runs 2 → 3)</td></tr>
+    <tr><td class="mono">981ee06</td><td>String-equality queries on indexed fields answered from the index without decoding any document</td><td>Measured in later runs</td></tr>
+    <tr><td class="mono">479504d</td><td>Replicas catch up after a partition: heads re-announced periodically (anti-entropy) and lost peer connections dialled again</td><td>Quick run 5: one E5 cell (0 % contention) did not converge within 120 s; quick run 6: every E5 cell converged, no write lost</td></tr>
+  </tbody></table>
+  <p>Earlier commits in the same series added batched loading (<span class="mono">PutAll</span>), an incremental document index with the upstream PUTALL bug fixed, group commit of concurrent writes, field indexes and a decoded-document cache.</p>
+  <h2>Benchmark</h2>
+  <ul>
+    <li>Corrosion's WO query fetches the documents, not only their ids; reads on the wrapper-based systems decode the document (before quick run 4).</li>
+    <li>Corrosion schema and OptimusDB SQLite tables have the same secondary indexes.</li>
+    <li>Gun.js wrapper uses a flat schema (memory leak in the original); Autobase uses three indexers; both wrappers survive failed requests.</li>
+    <li>E1: a run with &gt; 20 % errors or a node that stopped answering is followed by a fresh deployment.</li>
+    <li>E2: a system that cannot keep up at the lowest load counts as 0 in the baselines' median.</li>
+    <li>OpenDHT: queries it cannot express are unsupported, not errors.</li>
+    <li>Load-generator validity check (generator CPU, issue delay, node CPU per run); Corrosion answers decoded in one call per response; an error event from Corrosion counts as an error.</li>
+    <li>Evaluation report generated from each run's files, with a copy saved when the run finishes.</li>
+    <li>After the first pilot at 10⁵ records: the load generator runs in several processes (same operations and scheduled times); the client's connections are renewed after a redeployment; the Gun.js, Autobase and Iroh wrappers evaluate WO queries without holding every document in memory, Gun.js reads its local replica, and Gun.js and Autobase run at most two scans at a time; OptimusDB pinned to commit 479504d. The H1 detail also states the comparison with the baselines that completed the whole WO mix (verdict unchanged).</li>
+  </ul>
+</section>
+<section data-chapter="Appendix B. Glossary" data-src="fixed" data-fixed="glossary">
+  <div class="chn">Appendix B</div>
+  <h1 class="ch" data-toc="Appendix B. Glossary">Glossary</h1>
+  <table><tbody>
+    <tr><td style="width:150px"><b>P50, P99, P99.9</b></td><td>The latency below which 50 %, 99 % and 99.9 % of successful operations completed.</td></tr>
+    <tr><td><b>Tail ratio</b></td><td>P99.9 ÷ P50; how much slower the slowest operations are than a typical one.</td></tr>
+    <tr><td><b>Open loop</b></td><td>Operations are issued on a fixed schedule regardless of earlier ones finishing; latency counts from the scheduled time.</td></tr>
+    <tr><td><b>Issue delay</b></td><td>Time between an operation's scheduled start and the moment the client actually sent it; near zero when the client keeps up.</td></tr>
+    <tr><td><b>Saturation</b></td><td>Highest offered load achieved at ≥ 90 % with &lt; 1 % errors.</td></tr>
+    <tr><td><b>Block</b></td><td>One deployment and preload of one system; all its runs follow on that data in shuffled order (YCSB load and run phases).</td></tr>
+    <tr><td><b>LOCAL_THEN_REMOTE_MERGE</b></td><td>OptimusDB strategy: answer from the local replica; ask peers only when it has no matching rows.</td></tr>
+    <tr><td><b>Convergence</b></td><td>Time from healing a partition until all replicas have identical content hashes.</td></tr>
+    <tr><td><b>Censored value</b></td><td>A measurement stopped at a limit (e.g. 120 s): the true value is at least the limit.</td></tr>
+    <tr><td><b>CRDT</b></td><td>Conflict-free replicated data type: replicas accept writes independently and merge deterministically.</td></tr>
+  </tbody></table>
+</section>
+</template>
+<script>window.REPORT_DATA = {"mode":"pilot","kind":"pilot","hypotheses":{"H1":{"state":"not_supported","text":"OptimusDB WO P99 208 ms vs best baseline Autobase 154 ms (outside 25 %); tail ratio P99.9/P50 115.7 vs baseline median 37.0.","detail":"1 repetition(s); 1 E1 run(s) were client-limited (see Run health); note: Autobase failed 10.0 % of its WO operations, so its P99 covers only the operations it completed; among baselines that completed the whole mix (<= 1 % errors, nothing unsupported) the best is Corrosion 313 ms (within 25 %)"},"H2":{"state":"insufficient","text":"No E2 results yet.","detail":""},"H3":{"state":"insufficient","text":"No E3 results yet.","detail":""},"H4":{"state":"insufficient","text":"No CPU/memory figures for OptimusDB at 40 ops/s.","detail":""},"H5":{"state":"insufficient","text":"No E5 results for OptimusDB yet.","detail":""}},"completion":{"optimusdb":{"E1":5,"E2":0,"E3":0,"E4":0,"E5":0},"corrosion":{"E1":5,"E2":0,"E3":0,"E4":0,"E5":0},"gun":{"E1":5,"E2":0,"E3":0,"E4":0,"E5":0},"autobase":{"E1":5,"E2":0,"E3":0,"E4":0,"E5":0},"iroh":{"E1":5,"E2":0,"E3":0,"E4":0,"E5":0},"opendht":{"E1":5,"E2":0,"E3":0,"E4":0,"E5":0}},"flags":{"E1":{"settle_timeout":5,"unsupported":2,"dropped":0,"node_down":2,"client_limited":1},"E2":{"settle_timeout":0,"unsupported":0,"dropped":0,"node_down":0,"client_limited":0},"E3":{"settle_timeout":0,"unsupported":0,"dropped":0,"node_down":0,"client_limited":0},"E4":{"settle_timeout":0,"unsupported":0,"dropped":0,"node_down":0,"client_limited":0},"E5":{"settle_timeout":0,"unsupported":0,"dropped":0,"node_down":0,"client_limited":0}},"max_reps":1,"errors":{},"meta":{"label":"pilot","archive":"","folder":"results/pilot","generated":"2026-10-17 12:11:53","commit":"479504d17e1d85ffbba6ee31ef173a9a98ac119c","commit_msg":"major change for H5 and replication","vm":"12 CPUs, 25.4 GB RAM","limits":"cloud 1.5 CPU/3g, fog 1.5 CPU/3g, edge 1.0 CPU/2g","settings":{"optimusdb":{"cloud":{"OPTIMUSDB_LOG_LEVEL":"WARN","GOGC":"200","GOMAXPROCS":"2","GOMEMLIMIT":"2457MiB","OPTIMUSDB_ARGS":"-metrics=false","OPTIMUSDB_IPFS_KEY":"ed25519","OPTIMUSDB_IPFS_PROVIDE":"false","OPTIMUSDB_IPFS_SYNC":"false","OPTIMUSDB_HEADS_INTERVAL":"10","OPTIMUSDB_RECONNECT_INTERVAL":"10"},"fog":{"OPTIMUSDB_LOG_LEVEL":"WARN","GOGC":"200","GOMAXPROCS":"2","GOMEMLIMIT":"2457MiB","OPTIMUSDB_ARGS":"-metrics=false","OPTIMUSDB_IPFS_KEY":"ed25519","OPTIMUSDB_IPFS_PROVIDE":"false","OPTIMUSDB_IPFS_SYNC":"false","OPTIMUSDB_HEADS_INTERVAL":"10","OPTIMUSDB_RECONNECT_INTERVAL":"10"},"edge":{"OPTIMUSDB_LOG_LEVEL":"WARN","GOGC":"200","GOMAXPROCS":"1","GOMEMLIMIT":"1638MiB","OPTIMUSDB_ARGS":"-metrics=false","OPTIMUSDB_IPFS_KEY":"ed25519","OPTIMUSDB_IPFS_PROVIDE":"false","OPTIMUSDB_IPFS_SYNC":"false","OPTIMUSDB_HEADS_INTERVAL":"10","OPTIMUSDB_RECONNECT_INTERVAL":"10"}},"corrosion":{"RUST_LOG":"warn"},"autobase":{"indexers":3}},"campaign":{"log":"campaign-pilot-20261017-122016.log","kind":"pilot","planned":["E1"],"ended":{"E1":0},"finished":true,"current":null,"failed":[],"start":1792228816.0,"end":1792239113.0,"last_write":1792239113.3653922},"campaign_lines":["2026-10-17_09:20:16 start E1-pilot","2026-10-17_09:20:16 begin E1","2026-10-17_12:11:53 end E1 exit=0","2026-10-17_12:11:53 finished"],"records":{"E2":[],"E3":[]},"saved":[],"files":{"results":1,"ops":30,"logs":4}},"E1":[{"system":"autobase","workload":"WA","doc_size":"2KB","reps":1,"unsupported":false,"p50":6.019,"p95":12.292,"p99":57.188,"p999":197.608,"achieved":49.975,"error_pct":0.0,"unsupported_ops":0},{"system":"autobase","workload":"WB","doc_size":"2KB","reps":1,"unsupported":false,"p50":4.112,"p95":9.294,"p99":17.847,"p999":60.932,"achieved":49.975,"error_pct":0.0,"unsupported_ops":0},{"system":"autobase","workload":"WC","doc_size":"2KB","reps":1,"unsupported":false,"p50":3.986,"p95":7.609,"p99":11.081,"p999":61.993,"achieved":49.975,"error_pct":0.0,"unsupported_ops":0},{"system":"autobase","workload":"WO","doc_size":"2KB","reps":1,"unsupported":false,"p50":6.776,"p95":73.09,"p99":153.687,"p999":278.252,"achieved":44.992,"error_pct":9.971652492913123,"unsupported_ops":0},{"system":"autobase","workload":"WO","doc_size":"8KB","reps":1,"unsupported":false,"p50":null,"p95":null,"p99":null,"p999":null,"achieved":0.0,"error_pct":100.0,"unsupported_ops":0},{"system":"corrosion","workload":"WA","doc_size":"2KB","reps":1,"unsupported":false,"p50":3.214,"p95":4.525,"p99":6.114,"p999":18.138,"achieved":49.975,"error_pct":0.0,"unsupported_ops":0},{"system":"corrosion","workload":"WB","doc_size":"2KB","reps":1,"unsupported":false,"p50":2.91,"p95":4.104,"p99":4.671,"p999":11.99,"achieved":49.975,"error_pct":0.0,"unsupported_ops":0},{"system":"corrosion","workload":"WC","doc_size":"2KB","reps":1,"unsupported":false,"p50":2.807,"p95":3.941,"p99":4.477,"p999":6.92,"achieved":49.975,"error_pct":0.0,"unsupported_ops":0},{"system":"corrosion","workload":"WO","doc_size":"2KB","reps":1,"unsupported":false,"p50":4.022,"p95":180.837,"p99":313.275,"p999":509.541,"achieved":49.975,"error_pct":0.0,"unsupported_ops":0},{"system":"corrosion","workload":"WO","doc_size":"8KB","reps":1,"unsupported":false,"p50":5151.949,"p95":9818.956,"p99":11384.167,"p999":13659.173,"achieved":29.458,"error_pct":41.05386026346507,"unsupported_ops":0},{"system":"gun","workload":"WA","doc_size":"2KB","reps":1,"unsupported":false,"p50":61.344,"p95":263.896,"p99":273.075,"p999":568.166,"achieved":49.975,"error_pct":0.0,"unsupported_ops":0},{"system":"gun","workload":"WB","doc_size":"2KB","reps":1,"unsupported":false,"p50":3.339,"p95":258.276,"p99":261.31,"p999":266.725,"achieved":49.975,"error_pct":0.0,"unsupported_ops":0},{"system":"gun","workload":"WC","doc_size":"2KB","reps":1,"unsupported":false,"p50":3.651,"p95":5.278,"p99":6.019,"p999":29.253,"achieved":49.975,"error_pct":0.0,"unsupported_ops":0},{"system":"gun","workload":"WO","doc_size":"2KB","reps":1,"unsupported":false,"p50":1304.826,"p95":4755.43,"p99":6452.891,"p999":9244.797,"achieved":33.767,"error_pct":32.43288310822078,"unsupported_ops":0},{"system":"gun","workload":"WO","doc_size":"8KB","reps":1,"unsupported":false,"p50":1222.03,"p95":6141.736,"p99":8880.836,"p999":9842.843,"achieved":11.85,"error_pct":76.28814407203602,"unsupported_ops":0},{"system":"iroh","workload":"WA","doc_size":"2KB","reps":1,"unsupported":false,"p50":3.42,"p95":6.309,"p99":11.005,"p999":25.471,"achieved":49.975,"error_pct":0.0,"unsupported_ops":0},{"system":"iroh","workload":"WB","doc_size":"2KB","reps":1,"unsupported":false,"p50":3.138,"p95":4.947,"p99":6.115,"p999":9.448,"achieved":49.975,"error_pct":0.0,"unsupported_ops":0},{"system":"iroh","workload":"WC","doc_size":"2KB","reps":1,"unsupported":false,"p50":3.451,"p95":4.943,"p99":5.623,"p999":6.66,"achieved":49.975,"error_pct":0.0,"unsupported_ops":0},{"system":"iroh","workload":"WO","doc_size":"2KB","reps":1,"unsupported":false,"p50":38.386,"p95":272.315,"p99":683.9,"p999":1419.9,"achieved":45.0,"error_pct":9.954977488744372,"unsupported_ops":0},{"system":"iroh","workload":"WO","doc_size":"8KB","reps":1,"unsupported":false,"p50":33.113,"p95":93.648,"p99":156.216,"p999":239.338,"achieved":44.958,"error_pct":10.038352509588128,"unsupported_ops":0},{"system":"opendht","workload":"WA","doc_size":"2KB","reps":1,"unsupported":false,"p50":1433.644,"p95":4441.679,"p99":7489.095,"p999":9707.951,"achieved":49.85,"error_pct":0.25012506253126565,"unsupported_ops":0},{"system":"opendht","workload":"WB","doc_size":"2KB","reps":1,"unsupported":false,"p50":2420.703,"p95":9236.479,"p99":9865.423,"p999":9988.879,"achieved":40.008,"error_pct":19.943304985826245,"unsupported_ops":0},{"system":"opendht","workload":"WC","doc_size":"2KB","reps":1,"unsupported":false,"p50":3025.675,"p95":5130.446,"p99":5228.905,"p999":5251.058,"achieved":0.058,"error_pct":99.88327497081875,"unsupported_ops":0},{"system":"opendht","workload":"WO","doc_size":"2KB","reps":1,"unsupported":false,"p50":678.214,"p95":2045.024,"p99":2727.078,"p999":4410.936,"achieved":44.992,"error_pct":0.0,"unsupported_ops":598},{"system":"opendht","workload":"WO","doc_size":"8KB","reps":1,"unsupported":false,"p50":2363.573,"p95":7610.042,"p99":9453.194,"p999":9927.56,"achieved":43.442,"error_pct":3.3734939759036147,"unsupported_ops":602},{"system":"optimusdb","workload":"WA","doc_size":"2KB","reps":1,"unsupported":false,"p50":3.471,"p95":5.195,"p99":6.431,"p999":9.836,"achieved":49.975,"error_pct":0.0,"unsupported_ops":0},{"system":"optimusdb","workload":"WB","doc_size":"2KB","reps":1,"unsupported":false,"p50":2.916,"p95":4.302,"p99":5.223,"p999":7.876,"achieved":49.975,"error_pct":0.0,"unsupported_ops":0},{"system":"optimusdb","workload":"WC","doc_size":"2KB","reps":1,"unsupported":false,"p50":2.742,"p95":3.98,"p99":4.747,"p999":6.491,"achieved":49.975,"error_pct":0.0,"unsupported_ops":0},{"system":"optimusdb","workload":"WO","doc_size":"2KB","reps":1,"unsupported":false,"p50":3.687,"p95":131.549,"p99":208.009,"p999":426.742,"achieved":49.975,"error_pct":0.0,"unsupported_ops":0},{"system":"optimusdb","workload":"WO","doc_size":"8KB","reps":1,"unsupported":false,"p50":117.437,"p95":1591.826,"p99":10236.956,"p999":11349.027,"achieved":46.142,"error_pct":7.670501917625479,"unsupported_ops":0}],"E1_raw":[{"run_id":"E1-gun-WC-2KB-1","system":"gun","workload":"WC","doc_size":"2KB","rep":1.0,"ops":5997.0,"errors":0.0,"mean_ms":3.721,"p50_ms":3.651,"p95_ms":5.278,"p99_ms":6.019,"p999_ms":29.253,"achieved_ops_s":49.975,"start_utc":"2026-10-17T09:23:04+00:00","notes":"dropped=0 records=100000 settled=5s seq=1 client_cpu=2.6 lag_p50=1.2 lag_p99=2.7 workers=4 node_cpu=7.0/100"},{"run_id":"E1-gun-WO-2KB-1","system":"gun","workload":"WO","doc_size":"2KB","rep":1.0,"ops":5997.0,"errors":1945.0,"mean_ms":1810.625,"p50_ms":1304.826,"p95_ms":4755.43,"p99_ms":6452.891,"p999_ms":9244.797,"achieved_ops_s":33.767,"start_utc":"2026-10-17T09:25:38+00:00","notes":"dropped=0 records=100000 settled=5s seq=2 client_cpu=8.2 lag_p50=0.9 lag_p99=25.6 workers=4 node_cpu=137.3/100 node_cpu_bound=1"},{"run_id":"E1-gun-WA-2KB-1","system":"gun","workload":"WA","doc_size":"2KB","rep":1.0,"ops":5997.0,"errors":0.0,"mean_ms":130.189,"p50_ms":61.344,"p95_ms":263.896,"p99_ms":273.075,"p999_ms":568.166,"achieved_ops_s":49.975,"start_utc":"2026-10-17T09:31:24+00:00","notes":"dropped=0 records=100000 settled=5s seq=1 client_cpu=2.8 lag_p50=0.9 lag_p99=2.3 workers=4 node_cpu=89.0/100 node_cpu_bound=1"},{"run_id":"E1-gun-WB-2KB-1","system":"gun","workload":"WB","doc_size":"2KB","rep":1.0,"ops":5997.0,"errors":0.0,"mean_ms":17.365,"p50_ms":3.339,"p95_ms":258.276,"p99_ms":261.31,"p999_ms":266.725,"achieved_ops_s":49.975,"start_utc":"2026-10-17T09:33:59+00:00","notes":"dropped=0 records=100000 settled=5s seq=2 client_cpu=2.5 lag_p50=1.0 lag_p99=2.7 workers=4 node_cpu=46.2/100"},{"run_id":"E1-corrosion-WB-2KB-1","system":"corrosion","workload":"WB","doc_size":"2KB","rep":1.0,"ops":5997.0,"errors":0.0,"mean_ms":3.017,"p50_ms":2.91,"p95_ms":4.104,"p99_ms":4.671,"p999_ms":11.99,"achieved_ops_s":49.975,"start_utc":"2026-10-17T09:38:09+00:00","notes":"dropped=0 records=100000 settled=30s seq=1 client_cpu=2.5 lag_p50=0.9 lag_p99=2.2 workers=4 node_cpu=7.3/150"},{"run_id":"E1-corrosion-WC-2KB-1","system":"corrosion","workload":"WC","doc_size":"2KB","rep":1.0,"ops":5997.0,"errors":0.0,"mean_ms":2.904,"p50_ms":2.807,"p95_ms":3.941,"p99_ms":4.477,"p999_ms":6.92,"achieved_ops_s":49.975,"start_utc":"2026-10-17T09:40:41+00:00","notes":"dropped=0 records=100000 settled=30s seq=2 client_cpu=2.4 lag_p50=0.9 lag_p99=2.2 workers=4 node_cpu=5.1/150"},{"run_id":"E1-corrosion-WA-2KB-1","system":"corrosion","workload":"WA","doc_size":"2KB","rep":1.0,"ops":5997.0,"errors":0.0,"mean_ms":3.387,"p50_ms":3.214,"p95_ms":4.525,"p99_ms":6.114,"p999_ms":18.138,"achieved_ops_s":49.975,"start_utc":"2026-10-17T09:43:14+00:00","notes":"dropped=0 records=100000 settled=30s seq=3 client_cpu=2.6 lag_p50=0.9 lag_p99=2.2 workers=4 node_cpu=10.3/150"},{"run_id":"E1-corrosion-WO-2KB-1","system":"corrosion","workload":"WO","doc_size":"2KB","rep":1.0,"ops":5997.0,"errors":0.0,"mean_ms":31.855,"p50_ms":4.022,"p95_ms":180.837,"p99_ms":313.275,"p999_ms":509.541,"achieved_ops_s":49.975,"start_utc":"2026-10-17T09:45:46+00:00","notes":"dropped=0 records=100000 settled=30s seq=4 client_cpu=23.1 lag_p50=1.0 lag_p99=82.0 workers=4 node_cpu=111.1/150"},{"run_id":"E1-corrosion-WO-8KB-1","system":"corrosion","workload":"WO","doc_size":"8KB","rep":1.0,"ops":5997.0,"errors":2462.0,"mean_ms":5230.437,"p50_ms":5151.949,"p95_ms":9818.956,"p99_ms":11384.167,"p999_ms":13659.173,"achieved_ops_s":29.458,"start_utc":"2026-10-17T09:52:08+00:00","notes":"dropped=0 records=100000 settled=84s seq=1 client_cpu=73.0 lag_p50=22.8 lag_p99=2312.2 workers=4 node_cpu=154.1/150 node_cpu_bound=1"},{"run_id":"E1-iroh-WO-8KB-1","system":"iroh","workload":"WO","doc_size":"8KB","rep":1.0,"ops":5997.0,"errors":602.0,"mean_ms":40.915,"p50_ms":33.113,"p95_ms":93.648,"p99_ms":156.216,"p999_ms":239.338,"achieved_ops_s":44.958,"start_utc":"2026-10-17T10:13:51+00:00","notes":"dropped=0 records=100000 settled=timeout seq=1 client_cpu=2.9 lag_p50=0.9 lag_p99=2.2 workers=4 node_cpu=150.9/150 node_cpu_bound=1"},{"run_id":"E1-iroh-WC-2KB-1","system":"iroh","workload":"WC","doc_size":"2KB","rep":1.0,"ops":5997.0,"errors":0.0,"mean_ms":3.536,"p50_ms":3.451,"p95_ms":4.943,"p99_ms":5.623,"p999_ms":6.66,"achieved_ops_s":49.975,"start_utc":"2026-10-17T10:33:55+00:00","notes":"dropped=0 records=100000 settled=timeout seq=1 client_cpu=2.5 lag_p50=1.1 lag_p99=2.7 workers=4 node_cpu=4.0/150"},{"run_id":"E1-iroh-WO-2KB-1","system":"iroh","workload":"WO","doc_size":"2KB","rep":1.0,"ops":5997.0,"errors":597.0,"mean_ms":74.782,"p50_ms":38.386,"p95_ms":272.315,"p99_ms":683.9,"p999_ms":1419.9,"achieved_ops_s":45.0,"start_utc":"2026-10-17T10:36:27+00:00","notes":"dropped=0 records=100000 settled=timeout seq=2 client_cpu=2.8 lag_p50=0.9 lag_p99=2.2 workers=4 node_cpu=153.2/150 node_cpu_bound=1"},{"run_id":"E1-iroh-WB-2KB-1","system":"iroh","workload":"WB","doc_size":"2KB","rep":1.0,"ops":5997.0,"errors":0.0,"mean_ms":3.325,"p50_ms":3.138,"p95_ms":4.947,"p99_ms":6.115,"p999_ms":9.448,"achieved_ops_s":49.975,"start_utc":"2026-10-17T10:39:10+00:00","notes":"dropped=0 records=100000 settled=timeout seq=3 client_cpu=2.4 lag_p50=1.0 lag_p99=2.5 workers=4 node_cpu=5.4/150"},{"run_id":"E1-iroh-WA-2KB-1","system":"iroh","workload":"WA","doc_size":"2KB","rep":1.0,"ops":5997.0,"errors":0.0,"mean_ms":3.847,"p50_ms":3.42,"p95_ms":6.309,"p99_ms":11.005,"p999_ms":25.471,"achieved_ops_s":49.975,"start_utc":"2026-10-17T10:41:42+00:00","notes":"dropped=0 records=100000 settled=timeout seq=4 client_cpu=2.4 lag_p50=0.9 lag_p99=2.2 workers=4 node_cpu=11.9/150"},{"run_id":"E1-autobase-WO-8KB-1","system":"autobase","workload":"WO","doc_size":"8KB","rep":1.0,"ops":5997.0,"errors":5997.0,"mean_ms":null,"p50_ms":null,"p95_ms":null,"p99_ms":null,"p999_ms":null,"achieved_ops_s":0.0,"start_utc":"2026-10-17T10:52:44+00:00","notes":"dropped=0 records=100000 settled=349s seq=1 node_down_after_run=cloud-a+cloud-b+fog-a+fog-b+edge-a+edge-b+edge-c+edge-d client_cpu=2.2 lag_p50=1.1 lag_p99=2.6 workers=4 node_cpu=0.0/100"},{"run_id":"E1-gun-WO-8KB-1","system":"gun","workload":"WO","doc_size":"8KB","rep":1.0,"ops":5997.0,"errors":4575.0,"mean_ms":1844.056,"p50_ms":1222.03,"p95_ms":6141.736,"p99_ms":8880.836,"p999_ms":9842.843,"achieved_ops_s":11.85,"start_utc":"2026-10-17T11:02:02+00:00","notes":"dropped=0 records=100000 settled=5s seq=1 node_down_after_run=cloud-a client_cpu=9.9 lag_p50=0.9 lag_p99=114.3 workers=4 node_cpu=138.1/100 node_cpu_bound=1"},{"run_id":"E1-optimusdb-WC-2KB-1","system":"optimusdb","workload":"WC","doc_size":"2KB","rep":1.0,"ops":5997.0,"errors":0.0,"mean_ms":2.848,"p50_ms":2.742,"p95_ms":3.98,"p99_ms":4.747,"p999_ms":6.491,"achieved_ops_s":49.975,"start_utc":"2026-10-17T11:06:21+00:00","notes":"dropped=0 records=100000 settled=8s seq=1 client_cpu=2.4 lag_p50=0.9 lag_p99=2.3 workers=4 node_cpu=8.9/150"},{"run_id":"E1-optimusdb-WA-2KB-1","system":"optimusdb","workload":"WA","doc_size":"2KB","rep":1.0,"ops":5997.0,"errors":0.0,"mean_ms":3.592,"p50_ms":3.471,"p95_ms":5.195,"p99_ms":6.431,"p999_ms":9.836,"achieved_ops_s":49.975,"start_utc":"2026-10-17T11:08:54+00:00","notes":"dropped=0 records=100000 settled=8s seq=2 client_cpu=2.7 lag_p50=0.9 lag_p99=2.2 workers=4 node_cpu=22.4/150"},{"run_id":"E1-optimusdb-WB-2KB-1","system":"optimusdb","workload":"WB","doc_size":"2KB","rep":1.0,"ops":5997.0,"errors":0.0,"mean_ms":3.044,"p50_ms":2.916,"p95_ms":4.302,"p99_ms":5.223,"p999_ms":7.876,"achieved_ops_s":49.975,"start_utc":"2026-10-17T11:11:26+00:00","notes":"dropped=0 records=100000 settled=8s seq=3 client_cpu=2.6 lag_p50=0.9 lag_p99=2.3 workers=4 node_cpu=16.3/150"},{"run_id":"E1-optimusdb-WO-2KB-1","system":"optimusdb","workload":"WO","doc_size":"2KB","rep":1.0,"ops":5997.0,"errors":0.0,"mean_ms":20.733,"p50_ms":3.687,"p95_ms":131.549,"p99_ms":208.009,"p999_ms":426.742,"achieved_ops_s":49.975,"start_utc":"2026-10-17T11:13:59+00:00","notes":"dropped=0 records=100000 settled=8s seq=4 client_cpu=18.0 lag_p50=0.9 lag_p99=64.8 workers=4 node_cpu=47.2/150"},{"run_id":"E1-autobase-WB-2KB-1","system":"autobase","workload":"WB","doc_size":"2KB","rep":1.0,"ops":5997.0,"errors":0.0,"mean_ms":5.032,"p50_ms":4.112,"p95_ms":9.294,"p99_ms":17.847,"p999_ms":60.932,"achieved_ops_s":49.975,"start_utc":"2026-10-17T11:27:02+00:00","notes":"dropped=0 records=100000 settled=547s seq=1 client_cpu=2.8 lag_p50=0.9 lag_p99=2.3 workers=4 node_cpu=70.4/100"},{"run_id":"E1-autobase-WC-2KB-1","system":"autobase","workload":"WC","doc_size":"2KB","rep":1.0,"ops":5997.0,"errors":0.0,"mean_ms":4.464,"p50_ms":3.986,"p95_ms":7.609,"p99_ms":11.081,"p999_ms":61.993,"achieved_ops_s":49.975,"start_utc":"2026-10-17T11:29:40+00:00","notes":"dropped=0 records=100000 settled=547s seq=2 client_cpu=2.6 lag_p50=1.1 lag_p99=2.6 workers=4 node_cpu=35.6/100"},{"run_id":"E1-autobase-WA-2KB-1","system":"autobase","workload":"WA","doc_size":"2KB","rep":1.0,"ops":5997.0,"errors":0.0,"mean_ms":7.825,"p50_ms":6.019,"p95_ms":12.292,"p99_ms":57.188,"p999_ms":197.608,"achieved_ops_s":49.975,"start_utc":"2026-10-17T11:32:12+00:00","notes":"dropped=0 records=100000 settled=547s seq=3 client_cpu=3.0 lag_p50=0.9 lag_p99=2.2 workers=4 node_cpu=72.6/100"},{"run_id":"E1-autobase-WO-2KB-1","system":"autobase","workload":"WO","doc_size":"2KB","rep":1.0,"ops":5997.0,"errors":598.0,"mean_ms":17.847,"p50_ms":6.776,"p95_ms":73.09,"p99_ms":153.687,"p999_ms":278.252,"achieved_ops_s":44.992,"start_utc":"2026-10-17T11:34:45+00:00","notes":"dropped=0 records=100000 settled=547s seq=4 client_cpu=3.0 lag_p50=0.9 lag_p99=2.2 workers=4 node_cpu=151.5/100 node_cpu_bound=1"},{"run_id":"E1-opendht-WO-2KB-1","system":"opendht","workload":"WO","doc_size":"2KB","rep":1.0,"ops":5399.0,"errors":0.0,"mean_ms":917.953,"p50_ms":678.214,"p95_ms":2045.024,"p99_ms":2727.078,"p999_ms":4410.936,"achieved_ops_s":44.992,"start_utc":"2026-10-17T11:42:24+00:00","notes":"dropped=0 records=100000 settled=9s seq=1 unsupported=598 client_cpu=3.0 lag_p50=0.8 lag_p99=2.2 workers=4 node_cpu=103.9/150"},{"run_id":"E1-opendht-WB-2KB-1","system":"opendht","workload":"WB","doc_size":"2KB","rep":1.0,"ops":5997.0,"errors":1196.0,"mean_ms":3713.047,"p50_ms":2420.703,"p95_ms":9236.479,"p99_ms":9865.423,"p999_ms":9988.879,"achieved_ops_s":40.008,"start_utc":"2026-10-17T11:45:00+00:00","notes":"dropped=0 records=100000 settled=9s seq=2 client_cpu=4.5 lag_p50=0.9 lag_p99=2.3 workers=4 node_cpu=111.9/150"},{"run_id":"E1-opendht-WC-2KB-1","system":"opendht","workload":"WC","doc_size":"2KB","rep":1.0,"ops":5997.0,"errors":5990.0,"mean_ms":3284.079,"p50_ms":3025.675,"p95_ms":5130.446,"p99_ms":5228.905,"p999_ms":5251.058,"achieved_ops_s":0.058,"start_utc":"2026-10-17T11:47:42+00:00","notes":"dropped=0 records=100000 settled=9s seq=3 client_cpu=4.5 lag_p50=0.8 lag_p99=2.2 workers=4 node_cpu=117.9/150"},{"run_id":"E1-opendht-WA-2KB-1","system":"opendht","workload":"WA","doc_size":"2KB","rep":1.0,"ops":5997.0,"errors":15.0,"mean_ms":1770.572,"p50_ms":1433.644,"p95_ms":4441.679,"p99_ms":7489.095,"p999_ms":9707.951,"achieved_ops_s":49.85,"start_utc":"2026-10-17T11:55:18+00:00","notes":"dropped=0 records=100000 settled=8s seq=1 client_cpu=3.5 lag_p50=0.8 lag_p99=2.2 workers=4 node_cpu=110.4/150"},{"run_id":"E1-optimusdb-WO-8KB-1","system":"optimusdb","workload":"WO","doc_size":"8KB","rep":1.0,"ops":5997.0,"errors":460.0,"mean_ms":526.018,"p50_ms":117.437,"p95_ms":1591.826,"p99_ms":10236.956,"p999_ms":11349.027,"achieved_ops_s":46.142,"start_utc":"2026-10-17T12:00:33+00:00","notes":"dropped=0 records=100000 settled=10s seq=1 client_cpu=94.2 lag_p50=30.5 lag_p99=1338.9 workers=4 node_cpu=116.7/150 client_limited=1"},{"run_id":"E1-opendht-WO-8KB-1","system":"opendht","workload":"WO","doc_size":"8KB","rep":1.0,"ops":5395.0,"errors":182.0,"mean_ms":3064.33,"p50_ms":2363.573,"p95_ms":7610.042,"p99_ms":9453.194,"p999_ms":9927.56,"achieved_ops_s":43.442,"start_utc":"2026-10-17T12:09:08+00:00","notes":"dropped=0 records=100000 settled=12s seq=1 unsupported=602 client_cpu=3.7 lag_p50=0.9 lag_p99=2.3 workers=4 node_cpu=96.7/150"}],"E1_stats":[{"workload":"WA","baseline":"autobase","p":null,"p_holm":null,"cliffs_delta":null},{"workload":"WA","baseline":"corrosion","p":null,"p_holm":null,"cliffs_delta":null},{"workload":"WA","baseline":"gun","p":null,"p_holm":null,"cliffs_delta":null},{"workload":"WA","baseline":"iroh","p":null,"p_holm":null,"cliffs_delta":null},{"workload":"WA","baseline":"opendht","p":null,"p_holm":null,"cliffs_delta":null},{"workload":"WB","baseline":"autobase","p":null,"p_holm":null,"cliffs_delta":null},{"workload":"WB","baseline":"corrosion","p":null,"p_holm":null,"cliffs_delta":null},{"workload":"WB","baseline":"gun","p":null,"p_holm":null,"cliffs_delta":null},{"workload":"WB","baseline":"iroh","p":null,"p_holm":null,"cliffs_delta":null},{"workload":"WB","baseline":"opendht","p":null,"p_holm":null,"cliffs_delta":null},{"workload":"WC","baseline":"autobase","p":null,"p_holm":null,"cliffs_delta":null},{"workload":"WC","baseline":"corrosion","p":null,"p_holm":null,"cliffs_delta":null},{"workload":"WC","baseline":"gun","p":null,"p_holm":null,"cliffs_delta":null},{"workload":"WC","baseline":"iroh","p":null,"p_holm":null,"cliffs_delta":null},{"workload":"WC","baseline":"opendht","p":null,"p_holm":null,"cliffs_delta":null},{"workload":"WO","baseline":"autobase","p":null,"p_holm":null,"cliffs_delta":null},{"workload":"WO","baseline":"corrosion","p":null,"p_holm":null,"cliffs_delta":null},{"workload":"WO","baseline":"gun","p":null,"p_holm":null,"cliffs_delta":null},{"workload":"WO","baseline":"iroh","p":null,"p_holm":null,"cliffs_delta":null},{"workload":"WO","baseline":"opendht","p":null,"p_holm":null,"cliffs_delta":null}],"E1_kinds":{"optimusdb":{"read":{"n":3591,"err":0,"p50":3.046,"p95":16.293,"p99":71.206},"update":{"n":1224,"err":0,"p50":4.618,"p95":19.647,"p99":57.467},"insert":{"n":584,"err":0,"p50":4.349,"p95":28.178,"p99":106.281},"query":{"n":598,"err":0,"p50":128.281,"p95":262.391,"p99":432.161}},"corrosion":{"read":{"n":3591,"err":0,"p50":3.641,"p95":68.018,"p99":115.134},"update":{"n":1224,"err":0,"p50":4.046,"p95":65.984,"p99":108.946},"insert":{"n":584,"err":0,"p50":4.075,"p95":59.257,"p99":98.13},"query":{"n":598,"err":0,"p50":179.246,"p95":377.898,"p99":515.138}},"gun":{"read":{"n":2420,"err":1171,"p50":831.535,"p95":2187.558,"p99":2654.465},"update":{"n":801,"err":423,"p50":2822.845,"p95":5155.865,"p99":5888.355},"insert":{"n":410,"err":174,"p50":2769.084,"p95":4944.176,"p99":5740.113},"query":{"n":421,"err":177,"p50":3356.866,"p95":7454.194,"p99":9260.186}},"autobase":{"read":{"n":3591,"err":0,"p50":4.769,"p95":66.839,"p99":110.329},"update":{"n":1224,"err":0,"p50":9.125,"p95":89.877,"p99":194.349},"insert":{"n":584,"err":0,"p50":8.728,"p95":87.703,"p99":230.214},"query":{"n":0,"err":598,"p50":null,"p95":null,"p99":null}},"iroh":{"read":{"n":3591,"err":0,"p50":39.02,"p95":367.01,"p99":798.766},"update":{"n":1224,"err":0,"p50":36.745,"p95":109.613,"p99":187.442},"insert":{"n":584,"err":0,"p50":38.97,"p95":117.863,"p99":177.873},"query":{"n":1,"err":597,"p50":9421.493,"p95":9421.493,"p99":9421.493}},"opendht":{"read":{"n":3591,"err":0,"p50":777.763,"p95":2090.585,"p99":2659.369},"update":{"n":1224,"err":0,"p50":486.185,"p95":1551.059,"p99":2309.798},"insert":{"n":584,"err":0,"p50":712.017,"p95":2312.394,"p99":3073.801},"query":{"n":0,"err":598,"p50":null,"p95":null,"p99":null}}},"E1_wo_quantiles":{"optimusdb":{"p":[0.5,0.75,0.9,0.95,0.98,0.99,0.995,0.999],"v":[3.687,5.608,101.758,131.639,171.646,208.094,280.098,432.161]},"corrosion":{"p":[0.5,0.75,0.9,0.95,0.98,0.99,0.995,0.999],"v":[4.022,15.639,134.124,180.885,244.129,314.305,377.898,515.138]},"gun":{"p":[0.5,0.75,0.9,0.95,0.98,0.99,0.995,0.999],"v":[1305.153,2599.457,3897.218,4755.53,5537.382,6472.252,7568.594,9260.186]},"autobase":{"p":[0.5,0.75,0.9,0.95,0.98,0.99,0.995,0.999],"v":[6.776,13.012,51.85,73.111,104.864,156.221,210.071,279.97]},"iroh":{"p":[0.5,0.75,0.9,0.95,0.98,0.99,0.995,0.999],"v":[38.386,68.419,148.974,272.92,485.141,686.396,921.874,1421.524]},"opendht":{"p":[0.5,0.75,0.9,0.95,0.98,0.99,0.995,0.999],"v":[678.214,1321.011,1701.485,2045.751,2413.354,2743.362,3054.837,4441.469]}},"E1_lag":{"optimusdb":0.922000000002754,"corrosion":0.8610000000004447,"gun":0.9199999999935926,"autobase":0.9069999999979927,"iroh":0.8859999999941692,"opendht":0.8369999999970901},"E2":[],"E2_series":[],"E2_lag":{},"E2_timelines":{},"E3":[],"E3_raw":[],"E4":[],"E4_raw":[],"E5":[],"E5_raw":[],"E5_states":[],"observations":[{"level":"warn","exp":"E1","text":"Iroh docs: preload not readable on every host before measuring (E1-iroh-WO-8KB-1)."},{"level":"warn","exp":"E1","text":"Iroh docs: preload not readable on every host before measuring (E1-iroh-WC-2KB-1)."},{"level":"warn","exp":"E1","text":"Iroh docs: preload not readable on every host before measuring (E1-iroh-WO-2KB-1)."},{"level":"warn","exp":"E1","text":"Iroh docs: preload not readable on every host before measuring (E1-iroh-WB-2KB-1)."},{"level":"warn","exp":"E1","text":"Iroh docs: preload not readable on every host before measuring (E1-iroh-WA-2KB-1)."},{"level":"bad","exp":"E1","text":"Autobase: a node stopped answering during E1-autobase-WO-8KB-1."},{"level":"bad","exp":"E1","text":"Gun.js: a node stopped answering during E1-gun-WO-8KB-1."},{"level":"warn","exp":"E1","text":"E1-optimusdb-WO-8KB-1: the load generator was the limit (marked client-limited)."}],"notes":null,"notes_path":"results\\pilot\\report-notes.md"};</script>
+<script>/* OptimusDB evaluation report: figures, tables and rule-based text from one run's data (report_data.build), then A4
+   pagination. Used by the dashboard's Report page and by the copy saved when a run finishes. No libraries.
+   Text rules state facts computed from the data; interpretation comes only from the run's analyst notes file. */
+'use strict';
+window.OptimusReport = (function () {
+  const SYS = ['optimusdb', 'corrosion', 'gun', 'autobase', 'iroh', 'opendht'];
+  const LBL = { optimusdb: 'OptimusDB', corrosion: 'Corrosion', gun: 'Gun.js', autobase: 'Autobase', iroh: 'Iroh docs', opendht: 'OpenDHT' };
+  const COL = { optimusdb: '#2a78d6', corrosion: '#eb6834', gun: '#1baf7a', autobase: '#eda100', iroh: '#e87ba4', opendht: '#008300' };
+  const INK = '#111111', INK2 = '#4a4945', MUTED = '#85837d', RULE = '#e3e2dc', AXIS = '#bdbcb2', GOOD = '#0ca30c', BAD = '#d03b3b', WARN = '#c98a00';
+  const FONT = 'system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif';
+  const W = 674, PAGE_W = 794, PAGE_H = 1123;
+  const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const f1 = v => v == null || isNaN(v) ? '–' : Math.abs(v) >= 1000 ? Math.round(v).toLocaleString('en-US') : Math.abs(v) >= 100 ? (+v).toFixed(0) : Math.abs(v) >= 10 ? (+v).toFixed(1) : (+v).toFixed(2);
+  const ms = v => v == null ? '–' : f1(v) + ' ms';
+  const fo = v => v == null || isNaN(v) ? '–' : Math.abs(v - Math.round(v)) < 1e-9 ? Math.round(v).toLocaleString('en-US') : f1(v);
+  const pct = v => v == null ? '–' : (+v).toFixed(v >= 10 ? 0 : 1) + ' %';
+  const L = s => LBL[s] || s;
+  const med = xs => { xs = xs.filter(x => typeof x === 'number' && !isNaN(x)).sort((a, b) => a - b); const n = xs.length; return n ? (n % 2 ? xs[(n - 1) / 2] : (xs[n / 2 - 1] + xs[n / 2]) / 2) : null; };
+  const list = a => a.length <= 1 ? (a[0] || '') : a.slice(0, -1).join(', ') + ' and ' + a[a.length - 1];
+  const recs = n => n >= 1e6 ? '10⁶' : n >= 1e5 ? '10⁵' : n >= 1e4 ? '10⁴' : n >= 1e3 ? '10³' : String(n);
+  let D = null, BUILT = {}, figN = 0, tabN = 0;
+
+  /* ---------------------------------------------------------------- svg primitives */
+  const T = (x, y, s, o = {}) => `<text x="${x}" y="${y}" font-size="${o.size || 10}" fill="${o.fill || INK2}"${o.anchor ? ` text-anchor="${o.anchor}"` : ''}${o.weight ? ` font-weight="${o.weight}"` : ''}>${esc(s)}</text>`;
+  const LN = (x1, y1, x2, y2, c = RULE, w = 1, dash = '') => `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${c}" stroke-width="${w}"${dash ? ` stroke-dasharray="${dash}"` : ''}/>`;
+  const R = (x, y, w, h, fill, o = {}) => `<rect x="${x}" y="${y}" width="${Math.max(0, w)}" height="${Math.max(0, h)}" fill="${fill}" rx="${o.rx ?? 2}"${o.op ? ` fill-opacity="${o.op}"` : ''}${o.stroke ? ` stroke="${o.stroke}" stroke-width="${o.sw || 1}"` : ''}/>`;
+  const svgWrap = (w, h, inner) => `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${w} ${h}" width="${w}" height="${h}" font-family="${FONT}"><defs><pattern id="hatch" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="5" stroke="#ffffff" stroke-width="2"/></pattern></defs><rect width="${w}" height="${h}" fill="#ffffff"/>${inner}</svg>`;
+  const logS = (min, max, a, b) => { const l0 = Math.log10(min), l1 = Math.log10(max); return v => a + (Math.log10(Math.max(v, min)) - l0) / (l1 - l0) * (b - a); };
+  const linS = (min, max, a, b) => v => a + (v - min) / (max - min) * (b - a);
+  function logTicks(min, max, decades) { const t = []; for (let e = Math.floor(Math.log10(min)); e <= Math.ceil(Math.log10(max)); e++) for (const m of (decades ? [1] : [1, 3])) { const v = +(m * 10 ** e).toPrecision(3); if (v >= min * 0.999 && v <= max * 1.001) t.push(v); } return t; }
+  const tickMs = v => v >= 1000 ? (v / 1000) + ' s' : v + ' ms';
+  function niceMax(v) { if (!(v > 0)) return 1; const p = 10 ** Math.floor(Math.log10(v)); for (const m of [1, 1.5, 2, 2.5, 3, 4, 5, 6, 8, 10]) if (m * p >= v) return m * p; return 10 * p; }
+  function linTicks(max, n = 5) { const st = niceMax(max / n); const t = []; for (let v = 0; v <= max + 1e-9; v += st) t.push(+v.toFixed(6)); return t; }
+  function hbars(x0, y0, w, rows, o = {}) {
+    const lw = o.labelW ?? 92, rowH = o.rowH ?? 15, ax0 = x0 + lw, ax1 = x0 + w - 52;
+    const vals = rows.filter(r => r.v != null).map(r => r.v); if (!vals.length) vals.push(1);
+    const lo = o.min ?? (o.log ? 10 ** Math.floor(Math.log10(Math.min(...vals) * 0.9)) : 0);
+    const hi = o.max ?? (o.log ? 10 ** Math.ceil(Math.log10(Math.max(...vals, o.ref ?? 0) * 1.05)) : niceMax(Math.max(...vals, o.ref ?? 0) * 1.08));
+    const sx = o.log ? logS(lo, hi, ax0, ax1) : linS(lo, hi, ax0, ax1);
+    let s = o.title ? T(x0, y0 + 9, o.title, { size: 10.5, fill: INK, weight: 700 }) : '';
+    const top = y0 + (o.title ? 16 : 2), bot = top + rows.length * rowH;
+    (o.log ? logTicks(lo, hi, o.decades) : linTicks(hi, 4)).forEach(t => { const x = sx(t); s += LN(x, top - 2, x, bot) + T(x, bot + 11, o.log ? tickMs(t) : (o.fmt ? o.fmt(t) : t), { size: 8.5, fill: MUTED, anchor: 'middle' }); });
+    if (o.ref != null) { const x = sx(o.ref); s += LN(x, top - 4, x, bot + 2, o.refColor || INK, 1.2, '3 2') + T(x + 3, top - 5, o.refLabel || '', { size: 8.5, fill: o.refColor || INK, weight: 650 }); }
+    rows.forEach((r, i) => {
+      const y = top + i * rowH, h = rowH - 5;
+      s += T(ax0 - 6, y + h / 2 + 3.5, r.label, { size: 9.5, anchor: 'end' });
+      if (r.v == null) { s += T(ax0 + 4, y + h / 2 + 3.5, r.note || 'n/a', { size: 9, fill: MUTED }); return; }
+      const x1 = sx(Math.min(Math.max(r.v, lo), hi));
+      s += r.hollow ? R(ax0, y, x1 - ax0, h, '#ffffff', { stroke: r.color, sw: 1.4 }) : R(ax0, y, x1 - ax0, h, r.color, { op: r.op });
+      if (r.hatch) s += R(ax0, y, x1 - ax0, h, 'url(#hatch)', { op: 0.9 });
+      s += T(x1 + 4, y + h / 2 + 3.5, (r.prefix || '') + (o.vfmt ? o.vfmt(r.v) : f1(r.v)) + (r.note ? ' ' + r.note : ''), { size: 9, fill: INK, weight: r.bold ? 700 : 400 });
+    });
+    return { svg: s + LN(ax0, top - 2, ax0, bot, AXIS), h: bot + 16 - y0 };
+  }
+  const present = arr => SYS.filter(s => arr.some(x => x.system === s));
+
+  /* ---------------------------------------------------------------- derived values */
+  const e1c = (s, w, size = '2KB') => (D.E1 || []).find(c => c.system === s && c.workload === w && c.doc_size === size);
+  function h1v() {
+    const wo = SYS.map(s => e1c(s, 'WO')).filter(c => c && c.p99 != null);
+    const od = wo.find(c => c.system === 'optimusdb'), base = wo.filter(c => c.system !== 'optimusdb');
+    if (!od || !base.length) return null;
+    const best = base.reduce((a, b) => a.p99 < b.p99 ? a : b), tr = c => c.p999 && c.p50 ? c.p999 / c.p50 : null;
+    const mtr = med(base.map(tr)); return { od, best, base, tr, mtr, limit: 1.25 * best.p99, rank: [...wo].sort((a, b) => a.p99 - b.p99).indexOf(od) + 1, n: wo.length };
+  }
+  const e3recs = () => [...new Set((D.E3 || []).map(c => c.records))].sort((a, b) => a - b);
+  const e3reg = () => e3recs().filter(n => n === 1e5 || n === 1e6);
+  const e3show = () => { const r = e3recs(); return r.length ? r[r.length - 1] : null; };
+  const e3c = (s, p, q, n) => (D.E3 || []).find(c => c.system === s && c.path === p && c.query === q && c.records === n);
+  const TARGETS = [['optimusdb', 'sqlite', 'OptimusDB sqlite'], ['optimusdb', 'crdt', 'OptimusDB crdt'], ['corrosion', 'sql', 'Corrosion'], ['gun', 'client_filter', 'Gun.js'], ['autobase', 'range_client_filter', 'Autobase'], ['iroh', 'prefix_client_filter', 'Iroh docs'], ['opendht', 'key_only', 'OpenDHT']];
+  function h3rows(n) {
+    return ['Q1', 'Q2', 'Q3'].map(q => {
+      const ods = ['sqlite', 'crdt'].map(p => e3c('optimusdb', p, q, n)).filter(c => c && c.mean != null && (c.correct || 0) >= 0.5);
+      const cor = e3c('corrosion', 'sql', q, n);
+      const cl = TARGETS.slice(3).map(([s, p]) => e3c(s, p, q, n)).filter(c => c && c.mean != null && (c.correct || 0) >= 0.5);
+      if (!ods.length) return null;
+      const o = ods.reduce((a, b) => a.mean < b.mean ? a : b), fast = cl.length ? cl.reduce((a, b) => a.mean < b.mean ? a : b) : null;
+      return { q, n, o, cor, fast, rc: cor && cor.mean ? o.mean / cor.mean : null, rf: fast ? o.mean / fast.mean : null };
+    }).filter(Boolean);
+  }
+  const e4c = (s, o) => (D.E4 || []).find(c => c.system === s && c.offered === o);
+  const e4load = () => { const o = [...new Set((D.E4 || []).map(c => c.offered))].filter(x => x > 0); return o.length ? Math.max(...o) : null; };
+  function e5cell(s) {
+    const cs = (D.E5 || []).filter(c => c.system === s); if (!cs.length) return null;
+    const maxCont = Math.max(...cs.map(c => c.contention || 0)); const pick = cs.filter(c => (c.contention || 0) === (cs.some(c => c.contention === 30) ? 30 : maxCont) && (c.shape || '4|4') === '4|4');
+    const pool = pick.length ? pick : cs; const maxP = Math.max(...pool.map(c => c.partition_s || 0)); return pool.find(c => c.partition_s === maxP) || pool[0];
+  }
+  const e5limit = () => D.kind === 'campaign' ? 600 : 120;
+  const sat = () => { const ser = D.E2_series || []; if (!ser.length) return null; const big = Math.max(...ser.map(s => s.records || 0)); return ser.filter(s => (s.records || 0) === big); };
+  function satOf(s) { const ss = (sat() || []).find(x => x.system === s); if (!ss) return null; return { v: ss.saturation, lower: ss.lower_bound, pts: ss.points }; }
+  function limitsNote(r) { const n = r.notes || ''; const m = /node_cpu=([\d.]+)\/(\d+)/.exec(n); return { client: /client_limited=1/.test(n), node: /node_cpu_bound=1/.test(n), nodeCpu: m ? +m[1] : null, nodeLim: m ? +m[2] : null, recorded: /client_cpu=/.test(n) }; }
+  const verdictState = h => h === 'H3' && !e3reg().length && D.hypotheses.H3.state !== 'insufficient' ? 'indicative' : D.hypotheses[h].state;
+  const modeNote = () => D.kind === 'campaign' ? (D.max_reps >= 10 ? '' : `campaign in progress (${D.max_reps} of 10 repetitions)`) : `indicative (${D.kind} mode)`;
+
+  /* ---------------------------------------------------------------- figures */
+  const FIGS = {};
+  const fig = (id, title, caption, build) => { FIGS[id] = { title, caption, build }; };
+  fig('timeline', 'Run timeline', () => 'Start and end of each scenario from the run log (container clock, UTC; Athens time is UTC+3).', () => {
+    const ev = (D.meta.campaign_lines || []).map(l => { const m = /^(\S+)_(\S+) (\w+)(?: (E\d))?/.exec(l); return m && { t: new Date(m[1] + 'T' + m[2] + 'Z').getTime(), k: m[3], e: m[4] }; }).filter(Boolean);
+    if (ev.length < 2) return null;
+    const t0 = ev[0].t, span = Math.max(1, (ev[ev.length - 1].t - t0) / 60000);
+    const bars = [...new Set(ev.filter(x => x.e).map(x => x.e))].map(e => { const b = ev.find(x => x.k === 'begin' && x.e === e), en = ev.find(x => x.k === 'end' && x.e === e); return b && { e, b: (b.t - t0) / 60000, d: ((en || ev[ev.length - 1]).t - t0) / 60000, open: !en }; }).filter(Boolean);
+    const mx = niceMax(span), sx = linS(0, mx, 90, W - 50); let s = ''; const top = 6, names = { E1: 'E1 Latency', E2: 'E2 Throughput', E3: 'E3 Queries', E4: 'E4 Edge cost', E5: 'E5 Partitions', E6: 'E6 Trace' };
+    linTicks(mx, 6).forEach(t => { s += LN(sx(t), top, sx(t), top + bars.length * 20) + T(sx(t), top + bars.length * 20 + 12, mx > 600 ? (t / 60).toFixed(t % 60 ? 1 : 0) + ' h' : t + ' min', { size: 8.5, fill: MUTED, anchor: 'middle' }); });
+    bars.forEach((b, i) => { const y = top + i * 20 + 3; s += T(84, y + 10, names[b.e] || b.e, { size: 9.5, anchor: 'end' }) + R(sx(b.b), y, sx(b.d) - sx(b.b), 13, b.open ? '#8e8e93' : '#3a3a3e') + T(sx(b.d) + 5, y + 10, (b.d - b.b >= 120 ? ((b.d - b.b) / 60).toFixed(1) + ' h' : Math.round(b.d - b.b) + ' min') + (b.open ? ' (not finished)' : ''), { size: 9, fill: INK }); });
+    return { svg: svgWrap(W, top + bars.length * 20 + 18, s), csv: [['experiment', 'start_min', 'end_min'], ...bars.map(b => [b.e, b.b.toFixed(1), b.d.toFixed(1)])] };
+  });
+  fig('lag', 'Load-generator issue delay per run', () => 'Median delay between each operation\'s scheduled and actual issue time (log scale). Dashed: the 10 ms limit of the load-generator check. Hatched: runs in which more than 1 % of operations failed. E1 shows the median over each system\'s runs.', () => {
+    const rows = [];
+    SYS.forEach(s => { if (D.E1_lag && D.E1_lag[s] != null) rows.push({ label: 'E1 · ' + L(s), v: Math.max(0.5, D.E1_lag[s]), color: COL[s] }); });
+    const e2 = [...(D.E2 || [])].sort((a, b) => SYS.indexOf(a.system) - SYS.indexOf(b.system) || a.offered_ops_s - b.offered_ops_s || a.rep - b.rep);
+    const showRep = D.max_reps > 1;
+    e2.forEach(r => { const lg = D.E2_lag[r.run_id]; if (lg && lg.p50 != null) rows.push({ label: `E2 · ${L(r.system)} · ${r.offered_ops_s}${r.dataset_records !== (sat() || [{}])[0].records ? ' · ' + recs(r.dataset_records) : ''}${showRep ? ' · r' + r.rep : ''}`, v: Math.max(0.5, lg.p50), color: COL[r.system], hatch: (r.error_rate || 0) > 0.01 }); });
+    if (!rows.length) return null;
+    const cut = rows.slice(0, 60); const p = hbars(0, 0, W, cut, { log: true, min: 0.5, max: 1000, labelW: 170, rowH: 13, ref: 10, refLabel: '10 ms', refColor: WARN });
+    return { svg: svgWrap(W, p.h, p.svg), csv: [['run', 'issue_delay_p50_ms'], ...rows.map(r => [r.label, r.v])], note: rows.length > 60 ? `${rows.length - 60} more runs in the CSV.` : '' };
+  });
+  fig('e1p99', 'P99 latency by workload and system (2 KB)', () => `${D.max_reps > 1 ? 'Median over repetitions' : 'One run per cell'}; 50 ops/s; log scale, one grid line per factor of 10. WO includes the matchmaking query.`, () => {
+    const wls = ['WA', 'WB', 'WC', 'WO'].filter(w => SYS.some(s => e1c(s, w))); if (!wls.length) return null;
+    const names = { WA: 'WA · 50 % read, 50 % update', WB: 'WB · 95 % read', WC: 'WC · read only', WO: 'WO · orchestration mix' };
+    const pw = (W - 24) / 2; let s = '', hmax = 0;
+    wls.forEach((w, i) => { const p = hbars((i % 2) * (pw + 24), Math.floor(i / 2) * 140, pw, SYS.filter(sy => e1c(sy, w)).map(sy => ({ label: L(sy), v: e1c(sy, w).p99, color: COL[sy], bold: sy === 'optimusdb' })), { log: true, min: 1, max: 30000, title: names[w], labelW: 64, decades: true }); s += p.svg; hmax = Math.max(hmax, Math.floor(i / 2) * 140 + p.h); });
+    return { svg: svgWrap(W, hmax, s), csv: [['system', 'workload', 'doc_size', 'reps', 'p50_ms', 'p99_ms', 'p999_ms'], ...(D.E1 || []).map(c => [c.system, c.workload, c.doc_size, c.reps, c.p50, c.p99, c.p999])] };
+  });
+  fig('e1size', 'WO P99 by document size', () => 'Median P99 per system and document size (log scale). The 64 KB series uses 1.25 × 10⁴ records, keeping the data volume per replica equal to the 8 KB series.', () => {
+    const sizes = ['256B', '2KB', '8KB', '64KB'].filter(z => SYS.some(s => e1c(s, 'WO', z))); if (sizes.length < 2) return null;
+    const h = 230, x0 = 50, x1 = W - 90, y0 = 8, y1 = h - 28, sy = logS(1, 30000, y1, y0), sx = i => x0 + i * (x1 - x0) / (sizes.length - 1); let s = '';
+    logTicks(1, 30000, true).forEach(t => { s += LN(x0, sy(t), x1, sy(t)) + T(x0 - 6, sy(t) + 3, tickMs(t), { size: 8.5, fill: MUTED, anchor: 'end' }); });
+    sizes.forEach((z, i) => { s += T(sx(i), y1 + 14, z.replace('B', ' B'), { size: 8.5, fill: MUTED, anchor: 'middle' }); });
+    SYS.forEach(k => { const pts = sizes.map((z, i) => [i, e1c(k, 'WO', z)?.p99]).filter(p => p[1] != null); if (!pts.length) return;
+      s += `<polyline fill="none" stroke="${COL[k]}" stroke-width="${k === 'optimusdb' ? 2.4 : 1.6}" points="${pts.map(p => sx(p[0]) + ',' + sy(p[1])).join(' ')}"/>` + pts.map(p => `<circle cx="${sx(p[0])}" cy="${sy(p[1])}" r="2.6" fill="${COL[k]}"/>`).join('');
+      const l = pts[pts.length - 1]; s += T(sx(l[0]) + 8, sy(l[1]) + 3, L(k), { size: 9, fill: INK }); });
+    return { svg: svgWrap(W, h, s + LN(x0, y1, x1, y1, AXIS)), legend: SYS, csv: [['system', ...sizes], ...SYS.map(k => [k, ...sizes.map(z => e1c(k, 'WO', z)?.p99)])] };
+  });
+  fig('e1q', 'WO latency at increasing percentiles', () => 'Latency of successful WO operations at P50 … P99.9 (log scale), pooled over the runs\' per-operation files. A flat line means a short tail.', () => {
+    const Q = D.E1_wo_quantiles || {}; const ks = SYS.filter(k => Q[k] && Q[k].v[0] != null); if (!ks.length) return null;
+    const ps = Q[ks[0]].p, h = 240, x0 = 50, x1 = W - 80, y0 = 8, y1 = h - 28, sy = logS(1, 30000, y1, y0), sx = i => x0 + i * (x1 - x0) / (ps.length - 1); let s = '';
+    logTicks(1, 30000).forEach(t => { s += LN(x0, sy(t), x1, sy(t)) + T(x0 - 6, sy(t) + 3, tickMs(t), { size: 8.5, fill: MUTED, anchor: 'end' }); });
+    ps.forEach((p, i) => { s += T(sx(i), y1 + 14, 'P' + String(+(p * 100).toFixed(1)), { size: 8.5, fill: MUTED, anchor: 'middle' }); });
+    const ends = [];
+    ks.forEach(k => { const v = Q[k].v; s += `<polyline fill="none" stroke="${COL[k]}" stroke-width="${k === 'optimusdb' ? 2.4 : 1.6}" points="${v.map((y, i) => sx(i) + ',' + sy(y)).join(' ')}"/>` + v.map((y, i) => `<circle cx="${sx(i)}" cy="${sy(y)}" r="2.6" fill="${COL[k]}" stroke="#fff" stroke-width="1"/>`).join(''); ends.push({ k, y: sy(v[v.length - 1]) }); });
+    ends.sort((a, b) => a.y - b.y); for (let i = 1; i < ends.length; i++) if (ends[i].y - ends[i - 1].y < 11) ends[i].y = ends[i - 1].y + 11;
+    ends.forEach(e => { s += T(x1 + 8, e.y + 3, L(e.k), { size: 9, fill: INK, weight: e.k === 'optimusdb' ? 700 : 400 }); });
+    return { svg: svgWrap(W, h, s + LN(x0, y1, x1, y1, AXIS)), legend: ks, csv: [['system', ...ps.map(p => 'p' + p)], ...ks.map(k => [k, ...Q[k].v])] };
+  });
+  fig('e1kinds', 'WO by operation kind: OptimusDB and the best baseline', () => { const v = h1v(); return `Bars: P99; white tick: P50. Best baseline = lowest WO P99 among the baselines (${v ? L(v.best.system) : '–'}).`; }, () => {
+    const v = h1v(); if (!v) return null; const pair = ['optimusdb', v.best.system], K = D.E1_kinds || {};
+    if (!K.optimusdb || !K[v.best.system]) return null;
+    const kinds = ['read', 'update', 'insert', 'query'].filter(k => K.optimusdb[k] && K[v.best.system][k]);
+    const h = 210, x0 = 40, x1 = W - 10, y0 = 14, y1 = h - 34, mx = niceMax(Math.max(...pair.flatMap(s => kinds.map(k => K[s][k].p99 || 0))) * 1.1);
+    const sy = linS(0, mx, y1, y0), gw = (x1 - x0) / kinds.length, bw = Math.min(46, gw / 2 - 8); let s = '';
+    linTicks(mx, 5).forEach(t => { s += LN(x0, sy(t), x1, sy(t)) + T(x0 - 6, sy(t) + 3, t + ' ms', { size: 8.5, fill: MUTED, anchor: 'end' }); });
+    kinds.forEach((k, i) => { const cx = x0 + gw * i + gw / 2;
+      pair.forEach((sys, j) => { const d = K[sys][k], x = cx - bw - 2 + j * (bw + 4); s += R(x, sy(d.p99), bw, y1 - sy(d.p99), COL[sys]) + LN(x + 4, sy(d.p50), x + bw - 4, sy(d.p50), '#ffffff', 2.4) + T(x + bw / 2, sy(d.p99) - 4, f1(d.p99), { size: 9, fill: INK, anchor: 'middle' }) + T(x + bw / 2, y1 + 11, 'P50 ' + f1(d.p50), { size: 8, fill: MUTED, anchor: 'middle' }); });
+      s += T(cx, y1 + 25, `${k} (${K.optimusdb[k].n})`, { size: 10, fill: INK, anchor: 'middle', weight: 650 }); });
+    return { svg: svgWrap(W, h, s + LN(x0, y1, x1, y1, AXIS)), legend: pair, csv: [['system', 'kind', 'n', 'p50_ms', 'p95_ms', 'p99_ms'], ...pair.flatMap(sy => kinds.map(k => [sy, k, K[sy][k].n, K[sy][k].p50, K[sy][k].p95, K[sy][k].p99]))] };
+  });
+  fig('h1', 'H1: the two conditions', () => 'Shaded green: the range that satisfies each condition. Top: OptimusDB\'s WO P99 against 1.25 × the best baseline. Bottom: its tail ratio P99.9/P50 against the baselines\' median.', () => {
+    const v = h1v(); if (!v || v.mtr == null || v.tr(v.od) == null) return null; let s = '';
+    const row = (y, title, val, ref, lim, unit, refLabel) => {
+      const mx = niceMax(Math.max(val, lim, ref) * 1.2), sx = linS(0, mx, 150, W - 60); let r = T(0, y + 12, title, { size: 10, fill: INK, weight: 650 });
+      r += R(150, y, sx(lim) - 150, 20, '#eefaee', { rx: 0 }) + R(sx(lim), y, W - 60 - sx(lim), 20, '#fdf0f0', { rx: 0 });
+      linTicks(mx, 5).forEach(t => { r += LN(sx(t), y + 20, sx(t), y + 24, AXIS) + T(sx(t), y + 34, t + unit, { size: 8.5, fill: MUTED, anchor: 'middle' }); });
+      r += LN(sx(lim), y - 4, sx(lim), y + 24, GOOD, 1.4, '3 2') + T(sx(lim) + 3, y - 6, 'limit ' + f1(lim) + unit + (ref === lim ? ' (= ' + refLabel + ')' : ''), { size: 8.5, fill: GOOD, weight: 650 });
+      if (ref !== lim) r += LN(sx(ref), y - 4, sx(ref), y + 24, INK2, 1.6) + T(sx(ref) - 3, y - 6, refLabel + ' ' + f1(ref) + unit, { size: 8.5, fill: INK2, anchor: 'end' });
+      return r + R(150, y + 6, sx(val) - 150, 8, COL.optimusdb) + T(sx(val) + 4, y + 13, 'OptimusDB ' + f1(val) + unit, { size: 9.5, fill: INK, weight: 700 });
+    };
+    s += row(16, 'WO P99 (ms)', v.od.p99, v.best.p99, v.limit, ' ms', L(v.best.system)) + row(78, 'Tail ratio P99.9/P50', v.tr(v.od), v.mtr, v.mtr, '×', 'median');
+    return { svg: svgWrap(W, 120, s), csv: [['quantity', 'optimusdb', 'reference', 'limit'], ['wo_p99_ms', v.od.p99, v.best.p99, v.limit], ['tail_ratio', v.tr(v.od), v.mtr, v.mtr]] };
+  });
+  fig('e2', 'Achieved versus offered load (WO)', () => `Dashed diagonal: achieved = offered. Hollow markers: steps with more than 1 % failed operations. ${D.max_reps > 1 ? 'Medians over repetitions. ' : ''}Records: ${recs((sat() || [{}])[0].records || 0)}.`, () => {
+    const ser = sat(); if (!ser || !ser.length) return null;
+    const mxo = Math.max(...ser.flatMap(s => s.points.map(p => p.offered))), mx = niceMax(mxo * 1.05), h = 256, x0 = 46, x1 = W - 110, y0 = 16, y1 = h - 30, sx = linS(0, mx, x0, x1), sy = linS(0, mx, y1, y0); let s = '';
+    linTicks(mx, 5).forEach(t => { s += LN(x0, sy(t), x1, sy(t)) + T(x0 - 6, sy(t) + 3, t, { size: 8.5, fill: MUTED, anchor: 'end' }) + LN(sx(t), y0, sx(t), y1) + T(sx(t), y1 + 13, t, { size: 8.5, fill: MUTED, anchor: 'middle' }); });
+    s += LN(sx(0), sy(0), sx(mx), sy(mx), AXIS, 1, '4 3') + T(x0 + 4, y0 - 4, 'achieved ops/s', { size: 8.5, fill: MUTED }) + T(x1, y1 + 25, 'offered ops/s', { size: 8.5, fill: MUTED, anchor: 'end' });
+    const ends = [];
+    SYS.forEach(k => { const ss = ser.find(x => x.system === k); if (!ss) return; const pts = ss.points.filter(p => p.achieved != null);
+      s += `<polyline fill="none" stroke="${COL[k]}" stroke-width="${k === 'optimusdb' ? 2.4 : 1.6}" points="${pts.map(p => sx(p.offered) + ',' + sy(p.achieved)).join(' ')}"/>`;
+      pts.forEach(p => { const bad = (p.error_rate || 0) > 0.01; s += `<circle cx="${sx(p.offered)}" cy="${sy(p.achieved)}" r="4" fill="${bad ? '#ffffff' : COL[k]}" stroke="${COL[k]}" stroke-width="${bad ? 1.8 : 1}"/>`; });
+      const l = pts[pts.length - 1]; if (l) ends.push({ k, x: sx(l.offered), y: sy(l.achieved), v: l }); });
+    ends.sort((a, b) => a.y - b.y); for (let i = 1; i < ends.length; i++) if (Math.abs(ends[i].y - ends[i - 1].y) < 11 && Math.abs(ends[i].x - ends[i - 1].x) < 70) ends[i].y = ends[i - 1].y + 11;
+    ends.forEach(e => { s += T(e.x + 8, e.y + 3, L(e.k) + ' ' + f1(e.v.achieved), { size: 9, fill: INK, weight: e.k === 'optimusdb' ? 700 : 400 }); });
+    return { svg: svgWrap(W, h, s + LN(x0, y1, x1, y1, AXIS)), legend: SYS.filter(k => ser.some(x => x.system === k)), csv: [['system', 'records', 'offered', 'achieved', 'p99_ms', 'error_rate', 'client_limited'], ...ser.flatMap(x => x.points.map(p => [x.system, x.records, p.offered, p.achieved, p.p99, p.error_rate, p.client_limited ? 1 : 0]))] };
+  });
+  fig('e2tl', 'Failed steps over time: OptimusDB and Corrosion', () => 'Left: median issue delay of the load generator per 2 s interval. Right: failed operations per 2 s interval. Each line is one failed step (system · offered load).', () => {
+    const tl = D.E2_timelines || {}; const ids = Object.keys(tl).slice(0, 4); if (!ids.length) return null;
+    const pw = (W - 30) / 2, h = 190, y0 = 18, y1 = h - 28; let s = '';
+    const tmax = Math.max(...ids.flatMap(id => tl[id].map(p => p.t + 2))), tmin = Math.min(...ids.flatMap(id => tl[id].map(p => p.t)));
+    const sysOf = id => id.split('-')[1], dash = (id, i) => ids.filter(x => sysOf(x) === sysOf(id)).indexOf(id) ? '4 2' : '';
+    const panel = (px, key, title, unit) => {
+      const mx = niceMax(Math.max(1, ...ids.flatMap(id => tl[id].map(p => p[key] || 0)))), sx = linS(tmin, tmax, px + 40, px + pw - 8), sy = linS(0, mx, y1, y0); let r = T(px, 10, title, { size: 10.5, fill: INK, weight: 700 });
+      linTicks(mx, 4).forEach(t => { r += LN(px + 40, sy(t), px + pw - 8, sy(t)) + T(px + 34, sy(t) + 3, t + unit, { size: 8.5, fill: MUTED, anchor: 'end' }); });
+      linTicks(tmax, 4).filter(t => t >= tmin).forEach(t => { r += T(sx(t), y1 + 13, t + ' s', { size: 8.5, fill: MUTED, anchor: 'middle' }); });
+      ids.forEach((id, i) => { r += `<polyline fill="none" stroke="${COL[sysOf(id)]}" stroke-width="2"${dash(id, i) ? ` stroke-dasharray="${dash(id, i)}"` : ''} points="${tl[id].map(p => sx(p.t + 1) + ',' + sy(p[key] || 0)).join(' ')}"/>`; });
+      return r + LN(px + 40, y1, px + pw - 8, y1, AXIS);
+    };
+    s += panel(0, 'lag50', 'Issue delay (median)', ' ms') + panel(pw + 30, 'err', 'Failed operations', '');
+    return { svg: svgWrap(W, h, s), legend: [...new Set(ids.map(sysOf))], csv: [['run', 't_s', 'ok', 'failed', 'issue_delay_p50_ms'], ...ids.flatMap(id => tl[id].map(p => [id, p.t, p.ok, p.err, p.lag50]))], note: 'Steps: ' + ids.map(id => `${L(sysOf(id))} ${id.split('-')[3]} ops/s`).join(', ') + '.' };
+  });
+  fig('e3', 'Mean query latency', () => `Records: ${recs(e3show() || 0)}. ${D.max_reps > 1 ? 'Median over repetitions of the mean' : 'Mean'} of the measured executions (log scale). Hatched: wrong number of rows. Light bar: OptimusDB's sqlite path.`, () => {
+    const n = e3show(); if (n == null) return null; const qs = { Q1: 'Q1 · point lookup', Q2: 'Q2 · status = Running', Q3: 'Q3 · conjunctive range', Q4: 'Q4 · GROUP BY', Q5: 'Q5 · join' };
+    const pw = (W - 24) / 2; let s = '', hmax = 0;
+    Object.keys(qs).forEach((q, i) => { const rows = TARGETS.filter(([sy, p]) => e3c(sy, p, q, n)).map(([sy, p, l]) => { const c = e3c(sy, p, q, n); return { label: l, v: c.mean, color: COL[sy], op: p === 'sqlite' ? 0.55 : 1, hatch: c.mean != null && (c.correct || 0) < 0.5, note: c.mean == null ? (c.unsupported ? 'unsupported' : 'failed') : '', bold: sy === 'optimusdb' }; });
+      if (!rows.length) return; const y = Math.floor(i / 2) * 136, p = hbars((i % 2) * (pw + 24), y, pw, rows, { log: true, min: 0.5, max: 30000, title: qs[q], labelW: 92, rowH: 14, decades: true }); s += p.svg; hmax = Math.max(hmax, y + p.h); });
+    return { svg: svgWrap(W, hmax, s), csv: [['system', 'path', 'query', 'records', 'mean_ms', 'p95_ms', 'rows', 'expected', 'correct'], ...(D.E3 || []).map(c => [c.system, c.path, c.query, c.records, c.mean, c.p95, c.rows_returned, c.rows_expected, c.correct])] };
+  });
+  fig('h3', 'H3: OptimusDB relative to the references', () => `Ratio of OptimusDB's fastest correct path to Corrosion (must be ≤ 1.25) and to the fastest correct client-side system (must be < 1). Log scale. Records: ${list((e3reg().length ? e3reg() : [e3show()]).map(recs))}.`, () => {
+    const ns = e3reg().length ? e3reg() : (e3show() != null ? [e3show()] : []); const rows = [];
+    ns.forEach(n => h3rows(n).forEach(r => { const sfx = ns.length > 1 ? ` @${recs(n)}` : ''; if (r.rc != null) rows.push({ label: `${r.q}${sfx} vs Corrosion`, v: r.rc, lim: 1.25 }); if (r.rf != null) rows.push({ label: `${r.q}${sfx} vs ${L(r.fast.system)}`, v: r.rf, lim: 1 }); }));
+    if (!rows.length) return null;
+    const rowH = 20, top = 16, sx = logS(0.01, 4, 170, W - 190), h = top + rows.length * rowH + 22; let s = '';
+    [0.01, 0.03, 0.1, 0.3, 1, 3].forEach(t => { s += LN(sx(t), top - 4, sx(t), top + rows.length * rowH) + T(sx(t), top + rows.length * rowH + 12, t + '×', { size: 8.5, fill: MUTED, anchor: 'middle' }); });
+    rows.forEach((r, i) => { const y = top + i * rowH + 9, ok = r.lim === 1.25 ? r.v <= r.lim : r.v < r.lim;
+      s += T(164, y + 3, r.label, { size: 9.5, anchor: 'end' }) + LN(sx(r.lim), y - 8, sx(r.lim), y + 8, ok ? GOOD : BAD, 1.4, '3 2') + `<circle cx="${sx(Math.min(Math.max(r.v, 0.01), 4))}" cy="${y}" r="5" fill="${ok ? GOOD : BAD}" stroke="#fff" stroke-width="1"/>` + T(W - 180, y + 3, `${f1(r.v)}×  ${ok ? 'meets' : 'fails'} (limit ${r.lim === 1 ? '< 1' : '≤ 1.25'}×)`, { size: 9, fill: ok ? INK : BAD, weight: ok ? 400 : 700 }); });
+    return { svg: svgWrap(W, h, s), csv: [['comparison', 'ratio', 'limit'], ...rows.map(r => [r.label, r.v, r.lim])] };
+  });
+  fig('e4', 'Edge CPU and memory', () => `Median over the four edge containers (limit 1 CPU, 2 GB). Light bar: idle; solid bar: ${e4load()} ops/s WO. Dashed: H4 limits for OptimusDB.`, () => {
+    const lo = e4load(); if (lo == null) return null; const pw = (W - 24) / 2, ss = SYS.filter(s => e4c(s, lo));
+    const rows = key => ss.flatMap(sy => [{ label: L(sy) + ' idle', v: e4c(sy, 0)?.[key], color: COL[sy], op: 0.4 }, { label: `${L(sy)} ${lo}/s`, v: e4c(sy, lo)?.[key], color: COL[sy], bold: sy === 'optimusdb' }]);
+    const a = hbars(0, 0, pw, rows('cpu'), { title: 'CPU (% of one core)', max: 100, labelW: 96, rowH: 13, ref: 60, refLabel: 'H4 60 %', refColor: BAD, vfmt: v => f1(v) + ' %' });
+    const b = hbars(pw + 24, 0, pw, rows('rss'), { title: 'Memory (MB)', labelW: 96, rowH: 13, ref: 512, refLabel: 'H4 512 MB', refColor: BAD });
+    return { svg: svgWrap(W, Math.max(a.h, b.h), a.svg + b.svg), csv: [['system', 'offered', 'cpu_pct', 'rss_mb', 'disk_mb_per_1k', 'net_kb_per_op'], ...(D.E4 || []).map(c => [c.system, c.offered, c.cpu, c.rss, c.disk, c.net])] };
+  });
+  fig('e4b', 'Edge disk and network cost under load', () => `At ${e4load()} ops/s. Disk: data volume per 1,000 stored documents. Network: bytes per operation. OpenDHT keeps its data in memory.`, () => {
+    const lo = e4load(); if (lo == null) return null; const pw = (W - 24) / 2, ss = SYS.filter(s => e4c(s, lo));
+    const a = hbars(0, 0, pw, ss.map(sy => ({ label: L(sy), v: e4c(sy, lo).disk, color: COL[sy], note: e4c(sy, lo).disk == null ? 'in memory' : '', bold: sy === 'optimusdb' })), { title: 'Disk (MB per 1,000 documents)', labelW: 70 });
+    const b = hbars(pw + 24, 0, pw, ss.map(sy => ({ label: L(sy), v: e4c(sy, lo).net, color: COL[sy], bold: sy === 'optimusdb' })), { title: 'Network (KB per operation)', labelW: 70 });
+    return { svg: svgWrap(W, Math.max(a.h, b.h), a.svg + b.svg), csv: [['system', 'disk_mb_per_1k_docs', 'net_kb_per_op'], ...ss.map(sy => [sy, e4c(sy, lo).disk, e4c(sy, lo).net])] };
+  });
+  fig('e5', 'Partition behaviour', () => { const ex = SYS.map(e5cell).filter(Boolean); const c0 = ex[0]; return `Per system: the cell with ${c0 ? c0.contention : 30} % contention, split 4 | 4, longest partition measured${D.max_reps > 1 ? ' (medians over repetitions)' : ''}. Hatched: stopped at the ${e5limit()} s convergence limit (true value at least the limit). Right: acknowledged keys not readable at their acknowledged version.`; }, () => {
+    const cells = SYS.map(e5cell).filter(Boolean); if (!cells.length) return null; const pw = (W - 24) / 2, lim = e5limit();
+    const a = hbars(0, 0, pw, cells.map(c => ({ label: L(c.system), v: c.convergence, color: COL[c.system], hatch: c.convergence >= lim, prefix: c.convergence >= lim ? '≥ ' : '', note: c.convergence == null ? 'not defined' : '', bold: c.system === 'optimusdb' })), { title: 'Convergence (s)', max: niceMax(lim * 1.1), labelW: 70, vfmt: v => f1(v) + ' s' });
+    const b = hbars(pw + 24, 0, pw, cells.map(c => ({ label: L(c.system), v: c.ack ? Math.max(0.001, 100 * c.lost / c.ack) : null, color: COL[c.system], bold: c.system === 'optimusdb', note: c.ack ? `(${c.lost}/${c.ack})` : '' })), { title: 'Not readable at acknowledged version (%)', max: 100, labelW: 70, vfmt: v => v < 0.01 ? '0 %' : f1(v) + ' %' });
+    return { svg: svgWrap(W, Math.max(a.h, b.h), a.svg + b.svg), csv: [['system', 'contention', 'partition_s', 'shape', 'reps', 'availability', 'ack', 'lost', 'convergence_s', 'identical_share'], ...(D.E5 || []).map(c => [c.system, c.contention, c.partition_s, c.shape, c.reps, c.availability, c.ack, c.lost, c.convergence, c.identical])] };
+  });
+
+  /* ---------------------------------------------------------------- tables */
+  function table(cols, rows, caption) {
+    return `<table>${caption ? `<caption>${caption}</caption>` : ''}<thead><tr>${cols.map(c => `<th class="${c.n ? 'n' : ''}"${c.w ? ` style="width:${c.w}"` : ''}>${c.h}</th>`).join('')}</tr></thead><tbody>${rows.map(r => `<tr>${cols.map((c, i) => `<td class="${c.n ? 'n' : ''}">${r[i] ?? '–'}</td>`).join('')}</tr>`).join('')}</tbody></table>`;
+  }
+  const chip = st => st === 'supported' ? '<span class="chip ok">✓ Supported</span>' : st === 'not_supported' ? '<span class="chip no">✕ Not supported</span>' : st === 'indicative' ? '<span class="chip warn">? Undecided</span>' : '<span class="chip na">? Insufficient data</span>';
+  const okc = (b, t) => b ? `<span class="chip ok">✓ ${t || 'met'}</span>` : `<span class="chip no">✕ ${t || 'not met'}</span>`;
+  const sw = s => `<i class="sw" style="background:${COL[s]}"></i>${L(s)}`;
+  const kpiText = { H1: () => { const v = h1v(); return v ? `WO P99 ${ms(v.od.p99)}, ${v.rank === 1 ? 'best' : 'rank ' + v.rank} of ${v.n}` : 'needs E1'; },
+    H2: () => { const o = satOf('optimusdb'); return o ? `${o.lower ? '≥ ' : ''}${fo(o.v ?? 0)} ops/s saturation` : 'needs E2'; },
+    H3: () => e3reg().length ? `at ${list(e3reg().map(recs))}` : (e3show() ? `decided at 10⁵ and 10⁶` : 'needs E3'),
+    H4: () => { const c = e4c('optimusdb', e4load()); return c ? `${pct(c.cpu)} CPU · ${f1(c.rss)} MB` : 'needs E4'; },
+    H5: () => { const c = e5cell('optimusdb'); return c ? `${c.lost} lost · ${f1(c.convergence)} s` : 'needs E5'; } };
+  const TABLES = {
+    hyp: () => table([{ h: 'Hyp.', w: '38px' }, { h: 'Verdict', w: '118px' }, { h: 'Evidence (computed)' }], ['H1', 'H2', 'H3', 'H4', 'H5'].map(h => [`<b>${h}</b>`, chip(verdictState(h)), esc(D.hypotheses[h].text) + (D.hypotheses[h].detail ? `<div class="muted" style="font-size:.92em;margin-top:3px">${esc(D.hypotheses[h].detail)}</div>` : '')])),
+    systems: () => [['optimusdb', 'Documents in a Merkle-CRDT log over IPFS (OrbitDB); embedded SQLite', 'Criteria queries with operators; SQL on its SQLite store', (D.meta.commit || '').slice(0, 7) || '–'],
+      ['corrosion', 'SQLite tables replicated with cr-sqlite CRDTs over gossip', 'SQL', 'ef243dd'], ['gun', 'Graph of nodes with HAM conflict resolution', 'Key lookup; client filtering', '0.2020.1239'],
+      ['autobase', 'Multi-writer append-only logs (Hypercore) with a Hyperbee view', 'Key and range scans; client filtering', '7.28.2'], ['iroh', 'Key-value documents with range-based set reconciliation', 'Key and prefix; client filtering', '0.101.0'],
+      ['opendht', 'Distributed hash table (Kademlia); values on the closest nodes', 'Key lookup only', 'v4.4.1']].map(r => `<tr><td>${sw(r[0])}</td><td>${r[1]}</td><td>${r[2]}</td><td class="mono">${r[3]}</td></tr>`).join(''),
+    settings: () => { const s = D.meta.settings && D.meta.settings.optimusdb; if (!s) return '<p class="note">No runtime-settings.json in this run.</p>';
+      const why = { OPTIMUSDB_LOG_LEVEL: 'warnings only, as for Corrosion and Iroh', GOGC: 'fewer garbage collections at moderate memory cost', GOMAXPROCS: 'container CPU limit, rounded up (Go 1.19 ignores cgroups)', GOMEMLIMIT: '80 % of the container memory limit', OPTIMUSDB_ARGS: 'internal metrics sampling off', OPTIMUSDB_IPFS_KEY: 'Ed25519 node key (kubo default since v0.13)', OPTIMUSDB_IPFS_PROVIDE: 'no DHT announcement per block; peers are connected directly', OPTIMUSDB_IPFS_SYNC: 'no fsync per write, like Corrosion\'s synchronous=NORMAL', OPTIMUSDB_HEADS_INTERVAL: 'latest log entries re-announced every 10 s (large ones when changed, at least every 60 s), so replicas catch up after a partition', OPTIMUSDB_RECONNECT_INTERVAL: 'lost peer connections dialled again every 10 s' };
+      const tiers = Object.keys(s); const keys = Object.keys(s[tiers[0]]);
+      return table([{ h: 'Setting' }, ...tiers.map(t => ({ h: t })), { h: 'Reason' }], keys.map(k => [`<span class="mono">${k}</span>`, ...tiers.map(t => `<span class="mono">${esc(s[t][k])}</span>`), why[k] || ''])); },
+    build: () => { const c = D.meta.campaign; return table([{ h: 'Check', w: '160px' }, { h: 'Value' }, { h: 'Result', w: '74px' }], [
+      ['OptimusDB source', D.meta.commit ? `<span class="mono">${esc(D.meta.commit)}</span><br>${esc(D.meta.commit_msg)}` : 'not found in the fresh-start log', D.meta.commit ? okc(true, 'found') : okc(false, 'missing')],
+      ['Runtime settings', D.meta.settings ? 'recorded in runtime-settings.json' : 'not recorded', okc(!!D.meta.settings, D.meta.settings ? 'recorded' : 'missing')],
+      ['Run log', c ? `${esc(c.log)} · planned ${esc(c.planned.join(', '))}` : 'no run log', c ? okc(c.finished && !c.failed.length, c.finished ? (c.failed.length ? 'errors' : 'finished') : 'not finished') : okc(false, 'missing')],
+      ['Result files', `${D.meta.files.results} experiments · ${D.meta.files.ops} per-operation files · ${D.meta.files.logs} logs`, okc(D.meta.files.results > 0, 'present')],
+      ['Analysis', Object.keys(D.errors || {}).length ? esc(Object.entries(D.errors).map(([k, v]) => k + ': ' + v).join('; ')) : 'every result file analysed', okc(!Object.keys(D.errors || {}).length, Object.keys(D.errors || {}).length ? 'errors' : 'ok')]]); },
+    completion: () => table([{ h: 'System' }, ...['E1', 'E2', 'E3', 'E4', 'E5'].map(e => ({ h: e, n: 1 }))], SYS.map(s => [sw(s), ...['E1', 'E2', 'E3', 'E4', 'E5'].map(e => (D.completion[s] || {})[e] || 0)]), 'Finished runs per system and experiment'),
+    flags: () => table([{ h: 'Exp.' }, { h: 'Not replicated in time', n: 1 }, { h: 'Unsupported', n: 1 }, { h: 'Dropped ops', n: 1 }, { h: 'Node died', n: 1 }, { h: 'Client-limited', n: 1 }], ['E1', 'E2', 'E3', 'E4', 'E5'].map(e => { const f = D.flags[e] || {}; return [e, f.settle_timeout || 0, f.unsupported || 0, f.dropped || 0, f.node_down || 0, f.client_limited || 0]; }), 'Data-quality flags counted from the notes column'),
+    e1: () => table([{ h: 'System' }, { h: 'Workload' }, { h: 'Size' }, { h: 'Reps', n: 1 }, { h: 'Errors', n: 1 }, { h: 'P50', n: 1 }, { h: 'P95', n: 1 }, { h: 'P99', n: 1 }, { h: 'P99.9', n: 1 }, { h: 'ops/s', n: 1 }],
+      [...(D.E1 || [])].sort((a, b) => SYS.indexOf(a.system) - SYS.indexOf(b.system) || a.workload.localeCompare(b.workload)).map(c => [sw(c.system), c.workload, c.doc_size, c.reps, c.error_pct == null ? '–' : pct(c.error_pct), f1(c.p50), f1(c.p95), f1(c.p99), f1(c.p999), f1(c.achieved)]), `E1 results in milliseconds (${D.max_reps > 1 ? 'medians over repetitions' : 'one run per cell'})`),
+    h1: () => { const v = h1v(); if (!v) return '<p class="note">H1 needs E1 WO results for OptimusDB and at least one baseline.</p>'; const t = v.tr(v.od);
+      return table([{ h: 'Condition' }, { h: 'OptimusDB', n: 1 }, { h: 'Reference', n: 1 }, { h: 'Limit', n: 1 }, { h: 'Result' }], [
+        ['WO P99 within 25 % of the best baseline', ms(v.od.p99), `${L(v.best.system)} ${ms(v.best.p99)}`, '≤ ' + ms(v.limit), okc(v.od.p99 <= v.limit)],
+        ['Tail ratio P99.9/P50 not above the baselines\' median', t == null ? '–' : f1(t) + '×', 'median ' + f1(v.mtr) + '× of ' + v.base.map(c => L(c.system) + ' ' + f1(v.tr(c))).join(', '), '≤ ' + f1(v.mtr) + '×', okc(t != null && v.mtr != null && t <= v.mtr)]]); },
+    e2: () => { const rows = [...(D.E2 || [])].sort((a, b) => SYS.indexOf(a.system) - SYS.indexOf(b.system) || (a.dataset_records || 0) - (b.dataset_records || 0) || a.offered_ops_s - b.offered_ops_s || a.rep - b.rep);
+      return table([{ h: 'System' }, { h: 'Records', n: 1 }, { h: 'Offered', n: 1 }, { h: 'Rep', n: 1 }, { h: 'Achieved', n: 1 }, { h: 'P99 (ms)', n: 1 }, { h: 'Errors', n: 1 }, { h: 'Issue delay', n: 1 }, { h: 'Limit' }],
+        rows.map(r => { const ln = limitsNote(r), lg = D.E2_lag[r.run_id]; return [sw(r.system), recs(r.dataset_records), r.offered_ops_s, r.rep, f1(r.achieved_ops_s), f1(r.p99_ms), pct(100 * (r.error_rate || 0)), lg ? ms(lg.p50) : '–', ln.client ? '<span class="chip warn">client</span>' : ln.node ? '<span class="chip no">node CPU</span>' : ln.recorded ? '<span class="chip na">neither</span>' : '<span style="color:#85837d">not recorded</span>']; }), 'E2 runs; “Limit” is the load-generator check (client = generator was the limit, node CPU = node at its CPU limit)'); },
+    h2: () => { const ser = sat(); if (!ser) return '<p class="note">H2 needs E2 results.</p>'; const base = ser.filter(s => s.system !== 'optimusdb');
+      const vals = base.map(s => s.saturation == null ? (s.lower_bound ? null : 0) : s.saturation).filter(v => v != null); const m = med(vals), o = satOf('optimusdb');
+      return table([{ h: 'System' }, { h: 'Saturation (ops/s)', n: 1 }, { h: 'Note' }], [...ser.sort((a, b) => SYS.indexOf(a.system) - SYS.indexOf(b.system)).map(s => [sw(s.system), s.saturation == null ? (s.lower_bound ? 'not measurable' : '0') : (s.lower_bound ? '≥ ' : '') + fo(s.saturation),
+        s.saturation == null ? (s.lower_bound ? 'load generator was the limit from the first step' : 'did not keep up at the lowest load (counts as 0)') : s.lower_bound ? 'next step failed while the load generator was the limit' : (() => { const f = s.points.find(p => p.offered > s.saturation); return f ? `fails at ${f.offered} ops/s (${pct(100 * (f.error_rate || 0))} errors)` : 'kept up at every step'; })()]),
+        ['<b>Baselines\' median</b>', `<b>${fo(m)}</b>`, o && o.v != null && m != null ? `OptimusDB ${fo(o.v)} vs ${fo(m)}: first clause ${okc(o.v >= m)}` : '–']]); },
+    e3: () => { const n = e3show(); return table([{ h: 'Target' }, ...['Q1', 'Q2', 'Q3', 'Q4', 'Q5'].map(q => ({ h: q + ' mean / P95', n: 1 }))], TARGETS.filter(([s, p]) => (D.E3 || []).some(c => c.system === s && c.path === p && c.records === n)).map(([s, p, l]) => [`<i class="sw" style="background:${COL[s]}"></i>${l}`, ...['Q1', 'Q2', 'Q3', 'Q4', 'Q5'].map(q => { const c = e3c(s, p, q, n); if (!c || c.mean == null) return `<span style="color:#85837d">${c && c.unsupported ? 'unsupported' : 'failed'}</span>`; return `${f1(c.mean)} / ${f1(c.p95)}${(c.correct || 0) < 0.5 ? ` <span class="chip no">${f1(c.rows_returned)} rows</span>` : ''}`; })]), `E3 latency in milliseconds at ${recs(n || 0)} records; a red chip marks a wrong row count`); },
+    h3: () => { const ns = e3reg().length ? e3reg() : (e3show() != null ? [e3show()] : []); const rows = ns.flatMap(n => h3rows(n));
+      if (!rows.length) return '<p class="note">H3 needs correct E3 answers from OptimusDB.</p>';
+      return table([{ h: 'Query' }, { h: 'Records', n: 1 }, { h: 'OptimusDB best (path)', n: 1 }, { h: 'Corrosion', n: 1 }, { h: 'Ratio', n: 1 }, { h: 'Fastest client-side', n: 1 }, { h: 'Result' }], rows.map(r => [r.q, recs(r.n), `${ms(r.o.mean)} (${r.o.path})`, r.cor ? ms(r.cor.mean) : '–', r.rc == null ? '–' : f1(r.rc) + '×', r.fast ? `${L(r.fast.system)} ${ms(r.fast.mean)}` : '–',
+        (r.rc == null || r.rc <= 1.25) && (r.rf == null || r.rf < 1) ? okc(true, 'both') : okc(false, r.rc != null && r.rc > 1.25 ? 'over 1.25 × Corrosion' : 'client-side faster')])); },
+    e4: () => { const lo = e4load(); return table([{ h: 'System' }, { h: 'CPU idle', n: 1 }, { h: `CPU ${lo}/s`, n: 1 }, { h: 'RSS idle (MB)', n: 1 }, { h: `RSS ${lo}/s (MB)`, n: 1 }, { h: 'Disk MB / 1k docs', n: 1 }, { h: 'KB / op', n: 1 }], SYS.filter(s => e4c(s, lo)).map(s => [sw(s), pct(e4c(s, 0)?.cpu), pct(e4c(s, lo).cpu), f1(e4c(s, 0)?.rss), f1(e4c(s, lo).rss), f1(e4c(s, lo).disk), f1(e4c(s, lo).net)]), 'E4 medians over the four edge containers'); },
+    h4: () => { const c = e4c('optimusdb', e4load()); if (!c) return '<p class="note">H4 needs E4 results for OptimusDB.</p>'; return table([{ h: 'Condition' }, { h: `OptimusDB at ${e4load()} ops/s`, n: 1 }, { h: 'Limit', n: 1 }, { h: 'Margin', n: 1 }, { h: 'Result' }], [
+      ['CPU', pct(c.cpu), '60 %', f1(60 - c.cpu) + ' points', okc(c.cpu < 60)], ['Resident memory', f1(c.rss) + ' MB', '512 MB', f1(512 - c.rss) + ' MB', okc(c.rss < 512)]]); },
+    e5: () => table([{ h: 'System' }, { h: 'Cont.', n: 1 }, { h: 'Part.', n: 1 }, { h: 'Shape' }, { h: 'Reps', n: 1 }, { h: 'Avail.', n: 1 }, { h: 'Ack. keys', n: 1 }, { h: 'Lost', n: 1 }, { h: 'Convergence', n: 1 }, { h: 'Identical', n: 1 }],
+      [...(D.E5 || [])].sort((a, b) => SYS.indexOf(a.system) - SYS.indexOf(b.system)).map(c => [sw(c.system), (c.contention ?? '–') + ' %', (c.partition_s ?? '–') + ' s', esc(c.shape || ''), c.reps, pct(c.availability), c.ack, c.lost, c.convergence == null ? 'n/a' : (c.convergence >= e5limit() ? '≥ ' + e5limit() + ' s' : f1(c.convergence) + ' s'), c.identical == null ? 'n/a' : Math.round(100 * c.identical) + ' %']), 'E5 cells (sums of keys over repetitions; medians of availability and convergence)'),
+    e5states: () => (D.E5_states || []).length ? table([{ h: 'Run', w: '120px' }, { h: 'Documents and content hash per host when the limit was reached' }], D.E5_states.map(x => [`<span class="mono">${esc(x.run)}</span>`, `<span class="mono">${esc(x.states)}</span>`])) : '',
+    h5: () => { const os = (D.E5 || []).filter(c => c.system === 'optimusdb'); if (!os.length) return '<p class="note">H5 needs E5 results for OptimusDB.</p>';
+      const bc = SYS.filter(s => ['corrosion', 'gun', 'autobase', 'iroh'].includes(s)).map(e5cell).filter(c => c && c.convergence != null); const m = med(bc.map(c => c.convergence)); const oc = med(os.map(c => c.convergence));
+      return table([{ h: 'Condition' }, { h: 'OptimusDB', n: 1 }, { h: 'Reference', n: 1 }, { h: 'Result' }], [
+        ['Accepts writes on both sides', 'min ' + pct(Math.min(...os.map(c => c.availability ?? 0))), '> 0 %', okc(Math.min(...os.map(c => c.availability ?? 0)) > 0)],
+        ['No acknowledged write lost', String(os.reduce((a, c) => a + c.lost, 0)), '0', okc(os.every(c => c.lost === 0))],
+        ['Replicas identical in every run', os.every(c => (c.identical || 0) === 1) ? 'yes' : 'no', 'yes', okc(os.every(c => (c.identical || 0) === 1))],
+        ['Convergence not above the replicating baselines\' median', f1(oc) + ' s', `median ${f1(m)} s of ${bc.map(c => `${L(c.system)} ${c.convergence >= e5limit() ? '≥ ' : ''}${f1(c.convergence)}`).join(', ')}`, okc(oc != null && (m == null || oc <= m))]]); },
+    stats: () => { const st = (D.E1_stats || []).filter(r => r.p != null); if (!st.length) return ''; return table([{ h: 'Workload' }, { h: 'Baseline' }, { h: 'p (Mann–Whitney)', n: 1 }, { h: 'p (Holm)', n: 1 }, { h: 'Cliff\'s δ', n: 1 }, { h: 'Reading' }], st.map(r => [r.workload, sw(r.baseline), r.p.toFixed(4), r.p_holm == null ? '–' : r.p_holm.toFixed(4), r.cliffs_delta == null ? '–' : r.cliffs_delta.toFixed(2), r.p_holm != null && r.p_holm < 0.05 ? (r.cliffs_delta < 0 ? 'OptimusDB lower P99' : 'baseline lower P99') : 'no significant difference'])); },
+    raw: e => { const rows = D[e + '_raw'] || []; if (!rows.length) return '';
+      const want = { E1: ['run_id', 'ops', 'errors', 'mean_ms', 'p50_ms', 'p95_ms', 'p99_ms', 'p999_ms', 'achieved_ops_s'], E2: ['run_id', 'achieved_ops_s', 'p99_ms', 'error_rate', 'bottleneck'],
+        E3: ['run_id', 'mean_ms', 'p95_ms', 'rows_returned', 'rows_expected', 'correct'], E4: ['run_id', 'started_ok', 'cpu_pct', 'rss_mb', 'disk_mb_per_1k_docs', 'net_kb_per_op'],
+        E5: ['run_id', 'write_availability_pct', 'ack_writes', 'lost_ack_writes', 'divergent_entries', 'convergence_s', 'replicas_identical', 'keys_readable_pct'] }[e] || Object.keys(rows[0]);
+      const cols = want.filter(k => k in rows[0]); const num = v => typeof v === 'number' ? (Number.isInteger(v) ? v.toLocaleString('en-US') : f1(v)) : esc(v ?? '');
+      const head = `<thead><tr>${cols.map(k => `<th class="${k === 'run_id' ? '' : 'n'}"${k === 'run_id' ? ' style="width:150px"' : ''}>${esc(k.replace(/_/g, ' '))}</th>`).join('')}</tr></thead>`;
+      const body = rows.map(r => `<tr>${cols.map(k => k === 'run_id' ? `<td class="rawid">${esc(r[k])}</td>` : `<td class="n">${num(r[k])}</td>`).join('')}</tr>` + (r.notes ? `<tr class="note-row"><td colspan="${cols.length}"><span class="mono">${esc(r.notes)}</span></td></tr>` : '')).join('');
+      return `<table><caption>${e}_raw.csv (notes on the line below each run)</caption>${head}<tbody>${body}</tbody></table>`; },
+  };
+
+  /* ---------------------------------------------------------------- rule-based text */
+  const P = s => `<p>${s}</p>`, NOTE = (cls, s) => `<div class="note ${cls}">${s}</div>`;
+  function sumE1() { const v = h1v(); if (!v) return null; const K = D.E1_kinds || {}; const b = v.best.system;
+    let s = `<b>Latency (E1).</b> Under the orchestration mix WO at 50 ops/s, OptimusDB's P99 was ${ms(v.od.p99)}, ${v.rank === 1 ? `the lowest of the ${v.n} systems` : `rank ${v.rank} of ${v.n}`}; the best baseline was ${L(b)} at ${ms(v.best.p99)}.`;
+    if (K.optimusdb && K[b]) { const kinds = ['read', 'update', 'insert', 'query'].filter(k => K.optimusdb[k] && K[b][k]); const faster = kinds.filter(k => K.optimusdb[k].p50 < K[b][k].p50), slower = kinds.filter(k => K.optimusdb[k].p50 > K[b][k].p50);
+      if (faster.length) s += ` At P50, OptimusDB is faster on ${list(faster)}`; if (slower.length) s += `${faster.length ? ' and' : ' At P50,'} ${L(b)} is faster on ${list(slower)}`; if (faster.length || slower.length) s += '.'; }
+    return s; }
+  function sumE2() { const ser = sat(); if (!ser) return null; const o = satOf('optimusdb'); const base = ser.filter(s => s.system !== 'optimusdb');
+    const m = med(base.map(s => s.saturation == null ? (s.lower_bound ? null : 0) : s.saturation).filter(x => x != null));
+    let s = `<b>Throughput (E2).</b> At ${recs(ser[0].records || 0)} records OptimusDB kept up to ${o ? (o.lower ? 'at least ' : '') + fo(o.v ?? 0) : '–'} ops/s; the baselines' median is ${fo(m)} ops/s (${base.map(x => `${L(x.system)} ${x.saturation == null ? (x.lower_bound ? 'n/a' : 0) : (x.lower_bound ? '≥ ' : '') + fo(x.saturation)}`).join(', ')}).`;
+    const late = (D.E2 || []).filter(r => (r.error_rate || 0) > 0.01 && D.E2_lag[r.run_id] && D.E2_lag[r.run_id].p50 > 10);
+    if (late.length) s += ` In ${late.length} failed step${late.length > 1 ? 's' : ''} the load generator issued operations more than 10 ms late (chapter on E2).`;
+    return s; }
+  function sumE3() { const n = e3show(); if (n == null) return null; const od = (D.E3 || []).filter(c => c.system === 'optimusdb' && c.records === n);
+    const wrong = od.filter(c => c.mean != null && (c.correct || 0) < 0.5), un = od.filter(c => c.mean == null);
+    let s = `<b>Queries (E3).</b> ${wrong.length || un.length ? `OptimusDB answered ${od.length - wrong.length - un.length} of ${od.length} query–path combinations correctly` : 'OptimusDB answered every query correctly on both of its query paths'} at ${recs(n)} records.`;
+    const ns = e3reg().length ? e3reg() : [n]; const rows = ns.flatMap(x => h3rows(x));
+    const cor = rows.filter(r => r.rc != null), fail = rows.filter(r => r.rf != null && r.rf >= 1);
+    if (cor.length) s += ` Against Corrosion its ratios on Q1–Q3 are ${cor.map(r => f1(r.rc)).join(', ')} (limit 1.25).`;
+    if (fail.length) s += ` Client-side evaluation was faster on ${list(fail.map(r => `${r.q} (${L(r.fast.system)} ${ms(r.fast.mean)} vs ${ms(r.o.mean)})`))}.`;
+    if (!e3reg().length) s += ` H3 is registered at 10⁵ and 10⁶ records, so at ${recs(n)} the verdict is indicative.`;
+    return s; }
+  function sumE4() { const lo = e4load(), c = e4c('optimusdb', lo); if (!c) return null; const rank = SYS.filter(s => e4c(s, lo) && e4c(s, lo).rss != null).sort((a, b) => e4c(b, lo).rss - e4c(a, lo).rss).indexOf('optimusdb') + 1;
+    return `<b>Edge cost (E4).</b> At ${lo} ops/s on an edge-sized container OptimusDB used ${pct(c.cpu)} CPU and ${f1(c.rss)} MB (H4 limits 60 % and 512 MB); its memory ranks ${rank} of ${SYS.filter(s => e4c(s, lo)).length}, highest first.`; }
+  function sumE5() { const os = (D.E5 || []).filter(c => c.system === 'optimusdb'); if (!os.length) return null; const c = e5cell('optimusdb');
+    const bc = ['corrosion', 'gun', 'autobase', 'iroh'].map(e5cell).filter(x => x && x.convergence != null); const fastest = bc.length ? bc.reduce((a, b) => a.convergence < b.convergence ? a : b) : null;
+    return `<b>Partitions (E5).</b> OptimusDB accepted ${pct(Math.min(...os.map(x => x.availability ?? 0)))} of writes during the split (lowest over its cells), lost ${os.reduce((a, x) => a + x.lost, 0)} acknowledged writes in total and converged in ${f1(c.convergence)} s in its main cell${fastest ? `; the fastest replicating baseline took ${f1(fastest.convergence)} s (${L(fastest.system)})` : ''}.`; }
+  function supportText() {
+    if (D.kind === 'campaign' && D.max_reps >= 10) return P('All cells have the campaign\'s repetitions; the statistics chapter tests the differences. Verdicts are as registered.');
+    return P(`${D.max_reps <= 1 ? 'One repetition per cell' : `Up to ${D.max_reps} repetitions per cell`}${D.kind !== 'campaign' ? ', short measurement windows and reduced grids make every number indicative' : ', so the campaign is not complete'}. This report is suited to checking the pipeline and spotting problems; it does not support significance claims, which need the campaign (10 repetitions, 300 s windows, 10⁵–10⁶ records).`);
+  }
+  function md(text) {   // tiny Markdown subset for the analyst notes: headings, bullets, bold, paragraphs
+    const inl = s => esc(s).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>').replace(/`([^`]+)`/g, '<span class="mono">$1</span>');
+    const out = []; let ul = null;
+    text.split(/\r?\n/).forEach(l => { const t = l.trim();
+      if (/^[-*] /.test(t)) { if (!ul) { ul = []; } ul.push(`<li>${inl(t.slice(2))}</li>`); return; }
+      if (ul) { out.push(`<ul>${ul.join('')}</ul>`); ul = null; }
+      if (!t) return; const h = /^(#{1,3}) (.*)$/.exec(t); out.push(h ? `<h${h[1].length + 1}>${inl(h[2])}</h${h[1].length + 1}>` : `<p>${inl(t)}</p>`); });
+    if (ul) out.push(`<ul>${ul.join('')}</ul>`); return out;
+  }
+
+  /* ---------------------------------------------------------------- chapters */
+  function sec(name, src, inner) { return `<section data-chapter="${esc(name)}" data-src="${src}">${inner}</section>`; }
+  const FIG = id => `<figure class="fig" data-fig="${id}"></figure>`, TAB = id => `<div data-table="${id}"></div>`;
+  function buildChapters(tpl) {
+    const fixed = {}; const t = document.createElement('div'); t.innerHTML = tpl; t.querySelectorAll('section[data-fixed]').forEach(s => { fixed[s.dataset.fixed] = s.outerHTML; });
+    const out = []; let n = 0; const num = () => ++n; const fx = k => { const c = num(); return (fixed[k] || '').replace(/\{n\}/g, c); };
+    const has = e => (D.completion && SYS.some(s => (D.completion[s] || {})[e] > 0));
+    out.push(sec('Contents', 'fixed', `<div class="chn">Report structure</div><h1 class="ch">Contents</h1><ol class="toc" id="toc"></ol><div class="note">Every figure and table is computed from the result files of this run (${esc(D.meta.folder)}). Verdicts use the same code as the dashboard's “Findings &amp; hypotheses” page. Each figure exports as SVG or PNG and its data as CSV.</div>`));
+    let c = num();
+    out.push(sec(`${c}. Executive summary`, 'rule', `<div class="chn">Chapter ${c}</div><h1 class="ch" data-toc="${c}. Executive summary">Executive summary</h1>
+      <p class="lede">This ${esc(D.meta.label)} ran ${esc(list(['E1', 'E2', 'E3', 'E4', 'E5'].filter(has)))} on the eight-host emulated edge–fog–cloud testbed${D.max_reps > 1 ? `, up to ${D.max_reps} repetitions per cell` : ', once per cell'}.${D.meta.campaign && !D.meta.campaign.finished ? ' The run did not reach its end; finished experiments are reported.' : ''}</p>
+      <div data-block="kpis"></div><h2>Hypotheses at a glance</h2>${TAB('hyp')}<h2>Main findings</h2><ul>${[sumE1(), sumE2(), sumE3(), sumE4(), sumE5()].filter(Boolean).map(x => `<li>${x}</li>`).join('')}</ul>
+      <h2>What this run can and cannot support</h2>${supportText()}${(D.observations || []).length ? P(`<b>${D.observations.length} automatic observation${D.observations.length > 1 ? 's' : ''}</b> about this run are listed in the integrity chapter.`) : ''}`));
+    if (D.notes) out.push(sec('Analyst notes', 'notes', `<div class="chn">Written after review · ${esc(D.notes_path)}</div><h1 class="ch" data-toc="Analyst notes">Analyst notes</h1><p class="lede">Interpretation that the data alone cannot establish, written by a person after reviewing this run and shown unchanged. Everything else in the report is generated from the result files.</p>${md(D.notes).join('')}`));
+    out.push(fx('scope')); out.push(fx('method'));
+    c = num();
+    const obs = D.observations || [];
+    out.push(sec(`${c}. Run integrity`, 'rule', `<div class="chn">Chapter ${c}</div><h1 class="ch" data-toc="${c}. Run integrity">Run integrity</h1><p class="lede">Was the intended code built, did every scenario finish, and did anything happen during the run that limits what a result can show?</p>
+      <h2>Build and configuration</h2>${TAB('build')}${FIGS.timeline.build() ? `<h2>Timeline</h2>${FIG('timeline')}` : ''}<h2>Completion and data-quality flags</h2>${TAB('completion')}${TAB('flags')}
+      <h2>Automatic observations</h2>${obs.length ? `<p>Facts found in the result files and logs, without interpretation. Causes, where known, are in the analyst notes.</p><ul class="obs">${obs.map(o => `<li><span class="lv ${o.level}">${o.level === 'bad' ? 'Problem' : 'Check'}${o.exp ? ' · ' + o.exp : ''}</span><span>${esc(o.text)}</span></li>`).join('')}</ul>` : P('None: no flags, failed checks or warnings in the result files and logs.')}
+      ${FIGS.lag.build() ? `<h2>Was the load generator keeping up?</h2>${P('The load generator is one Python process; if it runs short of CPU it issues operations late and every system looks slow. The delay between each operation\'s scheduled and actual issue time shows this directly.')}${FIG('lag')}` : ''}`));
+    if (has('E1')) { c = num(); const v = h1v();
+      const y = ['WA', 'WB', 'WC'].map(w => SYS.map(s => e1c(s, w)).filter(x => x && x.p99 != null).sort((a, b) => a.p99 - b.p99)).filter(a => a.length);
+      const yText = y.length ? P(`On the YCSB workloads the lowest P99 belongs to ${list(y.map(a => `${L(a[0].system)} under ${a[0].workload} (${ms(a[0].p99)})`))}; OptimusDB's P99 is ${list(['WA', 'WB', 'WC'].map(w => e1c('optimusdb', w)).filter(Boolean).map(x => `${ms(x.p99)} (${x.workload})`))}.`) : '';
+      const bad = (D.E1 || []).filter(x => (x.error_pct || 0) > 1);
+      out.push(sec(`${c}. E1 Latency`, 'rule', `<div class="chn">Chapter ${c} · RQ2 · H1</div><h1 class="ch" data-toc="${c}. E1 · Latency and tail behaviour">E1 · Latency and tail behaviour</h1><p class="lede">How fast does each system answer at a moderate, steady load of 50 operations per second, including its slowest requests?</p>
+        <h2>Design</h2>${P('Each system runs on all eight hosts with the preloaded documents; the client sends every operation to cloud-a. OptimusDB answers reads and queries from its local replica first (<span class="mono">LOCAL_THEN_REMOTE_MERGE</span>) and asks peers only when it has no matching rows.')}
+        <h2>Results</h2>${FIG('e1p99')}${TAB('e1')}${yText}${bad.length ? NOTE('warn', `More than 1 % of operations failed in ${list(bad.map(x => `${L(x.system)} ${x.workload} ${x.doc_size} (${pct(x.error_pct)})`))}; their latency describes only the operations that succeeded.`) : ''}
+        ${FIGS.e1size.build() ? FIG('e1size') : ''}${FIG('e1q')}${v && FIGS.e1kinds.build() ? `<h2>Where the WO tail comes from</h2>${P('WO mixes single-document operations with a matchmaking query that returns about 1/16 of the records. Queries are 10 % of operations, so the WO P99 falls inside the query distribution when queries are the slowest kind.')}${FIG('e1kinds')}` : ''}
+        <h2>Hypothesis H1</h2>${FIGS.h1.build() ? FIG('h1') : ''}${TAB('h1')}${D.hypotheses.H1.detail && /note:/.test(D.hypotheses.H1.detail) ? P(`<b>Comparison detail (does not change the verdict).</b> ${esc(D.hypotheses.H1.detail.slice(D.hypotheses.H1.detail.indexOf('note:') + 5).trim())}`) : ''}${v ? NOTE(D.hypotheses.H1.state === 'supported' ? 'ok' : 'bad', `<b>H1 ${D.hypotheses.H1.state === 'supported' ? 'supported' : 'not supported'}${modeNote() ? ' (' + modeNote() + ')' : ''}.</b> OptimusDB's WO P99 is ${f1(Math.abs(100 * (v.od.p99 / v.best.p99 - 1)))} % ${v.od.p99 <= v.best.p99 ? 'below' : 'above'} the best baseline (limit: 25 % above).`) + P(`<b>How much the verdict depends on the numbers.</b> ${v.od.p99 <= v.limit ? `The P99 condition would still hold if ${L(v.best.system)}'s P99 were up to ${f1(Math.max(0, 100 * (1 - v.od.p99 / 1.25 / v.best.p99)))} % lower than measured.` : `OptimusDB's P99 would need to fall by ${f1(100 * (1 - v.limit / v.od.p99))} % to meet the limit.`} ${(() => { const ops = med((D.E1_raw || []).filter(r => r.system === 'optimusdb' && r.workload === 'WO' && r.doc_size === '2KB').map(r => r.ops)) || 0; const k = Math.max(1, Math.round(ops / 1000)); return ops >= 10000 ? `P99.9 rests on about ${k} samples per run (${f1(ops)} operations).` : `P99.9 rests on about ${k} sample${k > 1 ? 's' : ''} per run (${f1(ops)} operations); the campaign's 15,000 operations per run are needed before the tail-ratio condition can be claimed.`; })()}`) : ''}`));
+    }
+    if (has('E2')) { c = num(); const fails = (D.E2 || []).filter(r => (r.error_rate || 0) > 0.01 && ['optimusdb', 'corrosion'].includes(r.system));
+      const failText = fails.map(r => { const ln = limitsNote(r), lg = D.E2_lag[r.run_id]; return `${L(r.system)} at ${r.offered_ops_s} ops/s (${pct(100 * r.error_rate)} errors): ${ln.client ? 'marked client-limited, so not counted against the system' : ln.node ? `node CPU at its limit (${f1(ln.nodeCpu)} of ${ln.nodeLim} %), a limit of the system` : ln.recorded ? 'neither the generator nor the node CPU was at its limit' : `load-generator check not recorded in this run; operations issued a median ${lg ? ms(lg.p50) : '–'} late`}.`; });
+      out.push(sec(`${c}. E2 Throughput`, 'rule', `<div class="chn">Chapter ${c} · RQ2 · H2</div><h1 class="ch" data-toc="${c}. E2 · Throughput and saturation">E2 · Throughput and saturation</h1><p class="lede">How much load can each system sustain before it falls behind?</p>
+        <h2>Design</h2>${P('WO runs at rising offered loads on one deployment per system; stepping stops after the first step where a system achieves less than 90 % of the offered load. Saturation is the highest step achieved at ≥ 90 % with &lt; 1 % errors.')}
+        <h2>Results</h2>${FIG('e2')}${TAB('e2')}${fails.length ? `<h2>Failed steps of OptimusDB and Corrosion</h2><ul>${failText.map(x => `<li>${x}</li>`).join('')}</ul>${FIGS.e2tl.build() ? FIG('e2tl') : ''}` : ''}
+        <h2>Hypothesis H2</h2>${TAB('h2')}${P('H2\'s second clause (P99 growth from 10³ to 10⁶ records at 50 ops/s) needs the campaign\'s data-volume series' + ((D.meta.records.E2 || []).length > 1 ? '; the records measured here are ' + list(D.meta.records.E2.map(recs)) + '.' : '.'))}`));
+    }
+    if (has('E3')) { c = num(); const n = e3show();
+      const nat = ['Q4', 'Q5'].map(q => { const sq = e3c('optimusdb', 'sqlite', q, n), cr = e3c('optimusdb', 'crdt', q, n), co = e3c('corrosion', 'sql', q, n); return sq || co ? `${q}: OptimusDB sqlite ${ms(sq?.mean)}, Corrosion ${ms(co?.mean)}${cr ? `, OptimusDB crdt (client-evaluated) ${ms(cr.mean)}` : ''}` : null; }).filter(Boolean);
+      const cl = TARGETS.slice(3).map(([s, p]) => ['Q2', 'Q3', 'Q4', 'Q5'].map(q => e3c(s, p, q, n)?.mean).filter(x => x != null)).flat();
+      out.push(sec(`${c}. E3 Queries`, 'rule', `<div class="chn">Chapter ${c} · RQ2 · H3</div><h1 class="ch" data-toc="${c}. E3 · Query expressiveness and cost">E3 · Query expressiveness and cost</h1><p class="lede">Which orchestration queries can each system answer, are the answers correct, and how long do they take?</p>
+        <h2>Queries and query paths</h2><table><thead><tr><th>Id</th><th>Kind</th><th>SQL form</th></tr></thead><tbody><tr><td><b>Q1</b></td><td>point lookup</td><td class="mono">… WHERE id = 'res-&lt;N/2&gt;'</td></tr><tr><td><b>Q2</b></td><td>single predicate</td><td class="mono">… WHERE status = 'Running'</td></tr><tr><td><b>Q3</b></td><td>conjunctive range</td><td class="mono">… region = 'eu-west' AND cpu ≥ 4 AND memory ≥ 8192</td></tr><tr><td><b>Q4</b></td><td>aggregation</td><td class="mono">region, COUNT(*), AVG(cpu) … GROUP BY region</td></tr><tr><td><b>Q5</b></td><td>two-table join</td><td class="mono">resources ⋈ allocations WHERE region = 'eu-west'</td></tr></tbody></table>
+        ${P('OptimusDB is measured on its <b>sqlite</b> path (SQL through <span class="mono">sqldml</span>) and its <b>crdt</b> path (document query on the replicated store; GROUP BY and the join are evaluated in the client). Corrosion answers in SQL. Gun.js, Autobase, Iroh and OpenDHT have no query language: the client reads the data and filters it.')}
+        <h2>Results</h2>${FIG('e3')}${TAB('e3')}${cl.length ? P(`Client-side evaluation over the whole dataset took ${ms(Math.min(...cl))} to ${ms(Math.max(...cl))} for Q2–Q5 at ${recs(n)} records.`) : ''}${nat.length ? P('Native execution of Q4 and Q5: ' + nat.join('; ') + '.') : ''}
+        <h2>Hypothesis H3</h2>${FIGS.h3.build() ? FIG('h3') : ''}${TAB('h3')}${!e3reg().length ? NOTE('', `<b>Indicative only.</b> H3 is registered at 10⁵ and 10⁶ records; this run measured ${list(e3recs().map(recs))}.`) : ''}`));
+    }
+    if (has('E4')) { c = num(); out.push(sec(`${c}. E4 Edge resources`, 'rule', `<div class="chn">Chapter ${c} · RQ1 · H4</div><h1 class="ch" data-toc="${c}. E4 · Edge resource cost">E4 · Edge resource cost</h1><p class="lede">What does each system cost in CPU, memory, disk and network on an edge-sized node (1 CPU, 2 GB)?</p>
+      <h2>Design</h2>${P('Each system runs on the four edge hosts only. The client drives WO through edge-a at each load level while every container is sampled once per second.')}<h2>Results</h2>${FIG('e4')}${FIGS.e4b.build() ? FIG('e4b') : ''}${TAB('e4')}<h2>Hypothesis H4</h2>${TAB('h4')}${NOTE('', 'Edge hosts in this testbed are containers with Raspberry Pi 4-like limits, not Raspberry Pi boards.')}`)); }
+    if (has('E5')) { c = num(); const lim = e5limit(); const nc = SYS.map(e5cell).filter(x => x && x.convergence != null && x.convergence >= lim);
+      out.push(sec(`${c}. E5 Partitions`, 'rule', `<div class="chn">Chapter ${c} · RQ3 · H5</div><h1 class="ch" data-toc="${c}. E5 · Partitions and convergence">E5 · Partitions, contention and convergence</h1><p class="lede">During a network split, does each system keep accepting writes, does it lose acknowledged writes, and how fast do its replicas agree after healing?</p>
+        <h2>Design</h2>${P(`The hosts are split by dropping traffic in both directions; one writer per host sends WA (50 ops/s in total), with the given share of updates on 100 hot keys so both sides update the same keys. After healing, replicas are compared every 0.5 s until identical (limit ${lim} s), and every acknowledged key is read back.`)}
+        <h2>Results</h2>${FIG('e5')}${TAB('e5')}${nc.length ? P(`${list(nc.map(x => L(x.system)))} did not reach identical replicas within ${lim} s in the cell shown.`) : ''}${(D.E5_states || []).length ? `<h3>Replica states when the limit was reached</h3>${TAB('e5states')}` : ''}
+        <h2>Hypothesis H5</h2>${TAB('h5')}${nc.length ? P(`Values at the ${lim} s limit are lower bounds. ${(() => { const oc = e5cell('optimusdb'), bc = ['corrosion', 'gun', 'autobase', 'iroh'].map(e5cell).filter(x => x && x.convergence != null); const lo = bc.length ? Math.min(...bc.map(x => x.convergence)) : null; return oc && lo != null && oc.convergence <= lo ? `OptimusDB's ${f1(oc.convergence)} s is at or below the fastest replicating baseline (${f1(lo)} s), so the verdict does not depend on how they are counted.` : 'Counting them at the limit can only raise the median.'; })()}`) : ''}`));
+    }
+    if ((D.E1_stats || []).some(r => r.p != null)) { c = num(); out.push(sec(`${c}. Statistics`, 'rule', `<div class="chn">Chapter ${c}</div><h1 class="ch" data-toc="${c}. Statistics">Statistical tests (E1)</h1><p class="lede">OptimusDB against each baseline on the per-repetition P99 of each workload: Mann–Whitney U with Holm correction across baselines, and Cliff's δ as effect size (negative: OptimusDB lower).</p>${TAB('stats')}`)); }
+    out.push(fx('threats')); out.push(fx('changes'));
+    out.push(sec('Appendix A. Raw data', 'data', `<div class="chn">Appendix A</div><h1 class="ch" data-toc="Appendix A. Raw data">Raw data</h1><p class="lede">The rows of the result files as written by the harness.</p>${['E1', 'E2', 'E3', 'E4', 'E5'].map(e => `<div data-table="raw:${e}"></div>`).join('')}`));
+    out.push(fixed.glossary || '');
+    return out.join('\n');
+  }
+
+  /* ---------------------------------------------------------------- assemble, paginate */
+  function buildContent(root) {
+    root.querySelectorAll('[data-v]').forEach(el => { el.textContent = D.meta[el.dataset.v] || '–'; });
+    root.querySelectorAll('[data-block="kpis"]').forEach(el => { el.outerHTML = `<div class="kpis">${['H1', 'H2', 'H3', 'H4', 'H5'].map(h => `<div class="kpi"><div class="l">${h}</div><div class="v">${chip(verdictState(h))}</div><div class="t">${esc(kpiText[h]())}</div></div>`).join('')}</div>`; });
+    root.querySelectorAll('[data-tbody]').forEach(el => { el.innerHTML = TABLES[el.dataset.tbody](); });
+    root.querySelectorAll('[data-table]').forEach(el => { const [k, a] = el.dataset.table.split(':'); const html = TABLES[k](a); if (!html) { el.remove(); return; }
+      const t = document.createElement('div'); t.innerHTML = html; const nodes = Array.from(t.children);
+      nodes.forEach(nd => { const cap = nd.querySelector && nd.querySelector('caption'); if (cap) { tabN++; cap.innerHTML = `Table ${tabN} · ${cap.innerHTML}`; } });
+      el.replaceWith(...nodes); });
+    root.querySelectorAll('figure[data-fig]').forEach(el => { const id = el.dataset.fig, F = FIGS[id], out = F.build(); if (!out) { el.remove(); return; }
+      figN++; out.n = figN; BUILT[id] = out;
+      el.innerHTML = `<div class="fh"><div class="ft2"><span class="fn">Figure ${figN}</span>${esc(F.title)}</div><div class="ex"><button type="button" data-ex="svg" data-id="${id}">SVG</button><button type="button" data-ex="png" data-id="${id}">PNG</button><button type="button" data-ex="csv" data-id="${id}">CSV</button><button type="button" data-ex="copy" data-id="${id}">Copy SVG</button></div></div>${out.svg}${out.legend ? `<div class="legend">${out.legend.map(k => `<span><i class="sw" style="background:${COL[k]}"></i>${esc(L(k))}</span>`).join('')}</div>` : ''}<figcaption>${esc(F.caption())}${out.note ? ' ' + esc(out.note) : ''}</figcaption>`; });
+    const toc = root.querySelector('#toc');
+    root.querySelectorAll('[data-toc],[data-toc-sub]').forEach((h, i) => { h.id = 'rh' + i; toc.insertAdjacentHTML('beforeend', `<li class="${h.dataset.toc ? 'ch0' : 'sub'}"><span class="t">${esc(h.dataset.toc || h.dataset.tocSub)}</span><span class="pg" data-for="rh${i}">–</span></li>`); });
+  }
+  function newSheet(chapter) {
+    const s = document.createElement('div'); s.className = 'sheet';
+    s.innerHTML = `<div class="hd"><span>${esc(chapter)}</span><span>OptimusDB evaluation · ${esc(D.meta.label)}</span></div><div class="body"></div><div class="ft"><span>ICCS · Swarmchestrate · build ${esc((D.meta.commit || '–').slice(0, 7))}${modeNote() ? ' · ' + esc(modeNote()) : ''}</span><span class="pgno"></span></div>`;
+    return s;
+  }
+  function paginate(sections, meas) {
+    const sheets = [];
+    sections.forEach(sec => {
+      const chapter = sec.dataset.chapter; let sheet = newSheet(chapter); meas.appendChild(sheet); sheets.push(sheet); let body = sheet.querySelector('.body');
+      const over = () => body.scrollHeight > body.clientHeight + 1, fresh = () => { sheet = newSheet(chapter); meas.appendChild(sheet); sheets.push(sheet); body = sheet.querySelector('.body'); };
+      const blocks = Array.from(sec.children);
+      for (let i = 0; i < blocks.length; i++) {
+        const b = blocks[i];
+        if (!b.dataset.src && !b.matches('h1, h2, h3, .chn')) b.dataset.src = b.matches('figure, table, .kpis') && sec.dataset.src !== 'fixed' ? 'data' : (sec.dataset.src || '');
+        body.appendChild(b);
+        if ((/^(H2|H3)$/.test(b.tagName) || b.classList.contains('chn')) && blocks[i + 1] && blocks[i + 1].tagName !== 'H1') {
+          const nx = blocks[i + 1].cloneNode(true); if (nx.tagName === 'TABLE') nx.querySelectorAll('tbody tr').forEach((r, j) => { if (j > 1) r.remove(); });
+          body.appendChild(nx); const bad = over(); nx.remove(); if (bad && body.children.length > 1) { body.removeChild(b); fresh(); body.appendChild(b); } continue;
+        }
+        if (!over()) continue;
+        if (b.tagName === 'TABLE' || (b.tagName === 'UL' && b.children.length > 3)) {
+          const isT = b.tagName === 'TABLE', host = isT ? b.querySelector('tbody') : b, rows = Array.from(host.children); host.innerHTML = '';
+          let k = 0; while (k < rows.length) { host.appendChild(rows[k]); if (over()) { host.removeChild(rows[k]); break; } k++; }
+          if (k === 0) { body.removeChild(b); if (body.children.length) fresh(); body.appendChild(b); while (k < rows.length) { host.appendChild(rows[k]); if (over() && k > 0) { host.removeChild(rows[k]); break; } k++; } }
+          while (k < rows.length) { const cont = b.cloneNode(true), ch = isT ? cont.querySelector('tbody') : cont; ch.innerHTML = ''; const cap = cont.querySelector && cont.querySelector('caption'); if (cap) cap.innerHTML += ' (continued)';
+            fresh(); body.appendChild(cont); let m = 0; while (k < rows.length) { ch.appendChild(rows[k]); if (over() && m > 0) { ch.removeChild(rows[k]); break; } k++; m++; } }
+          continue;
+        }
+        if (body.children.length > 1) { body.removeChild(b); fresh(); body.appendChild(b); }
+      }
+    });
+    return sheets;
+  }
+  function coverSheet() {
+    const s = document.createElement('div'); s.className = 'sheet'; const c = D.meta.campaign;
+    const fmt = t => t ? new Date(t * 1000).toLocaleString('en-GB', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' }) : '–';
+    const short = { H1: 'Latency under the orchestration mix (E1)', H2: 'Saturation throughput (E2)', H3: 'Query cost and correctness (E3)', H4: 'Edge CPU and memory (E4)', H5: 'Availability and convergence under partition (E5)' };
+    s.innerHTML = `<div class="cover"><div class="band"><div class="k">ΕΠΙΣΕΥ · ICCS · Swarmchestrate · Evaluation report</div><h1><b>OptimusDB</b><br>against five decentralised data stores</h1><div class="sub">Latency, throughput, query cost, edge resource use and partition behaviour on an emulated edge–fog–cloud testbed</div><div class="ring"><span>ICCS</span></div></div>
+      ${modeNote() ? `<div class="stamp">${esc(modeNote())}</div>` : ''}
+      <div class="meta"><div><div class="l">Run</div><div class="v">${esc(D.meta.label)} · ${esc(c ? c.planned.join(', ') : '–')}</div></div><div><div class="l">Dates</div><div class="v">${esc(fmt(c && c.start))} → ${esc(fmt(c && c.end))}</div></div>
+        <div><div class="l">OptimusDB build</div><div class="v mono" style="font-size:11.5px">${esc(D.meta.commit || '–')}</div></div><div><div class="l">Testbed</div><div class="v">8 emulated hosts · ${esc(D.meta.vm || '–')}</div></div>
+        <div><div class="l">Baselines</div><div class="v">Corrosion, Gun.js, Autobase, Iroh docs, OpenDHT</div></div><div><div class="l">Repetitions</div><div class="v">${D.max_reps > 1 ? 'up to ' + D.max_reps + ' per cell' : 'one per cell'}</div></div></div>
+      <div class="verdicts">${['H1', 'H2', 'H3', 'H4', 'H5'].map(h => `<div class="row"><span class="h">${h}</span><span>${short[h]}</span>${chip(verdictState(h))}</div>`).join('')}</div>
+      <div class="foot"><span>Institute of Communication and Computer Systems (ICCS), National Technical University of Athens</span><span>Generated ${esc(D.meta.generated)} from ${esc(D.meta.folder)}</span></div></div>`;
+    return s;
+  }
+  let HOST = null;
+  function layout() {
+    if (!HOST) return; const sc = Math.min(1, (HOST.clientWidth - 32) / PAGE_W);
+    HOST.querySelectorAll('.wrap').forEach(w => { w.style.width = PAGE_W * sc + 'px'; w.style.height = PAGE_H * sc + 'px'; w.firstChild.style.transform = `scale(${sc})`; });
+  }
+  function render(opts) {
+    D = opts.data; BUILT = {}; figN = 0; tabN = 0; HOST = opts.host;
+    const holder = document.createElement('div'); holder.innerHTML = buildChapters(opts.template); buildContent(holder);
+    const meas = opts.measure; meas.innerHTML = '';
+    const sheets = [coverSheet(), ...paginate(Array.from(holder.querySelectorAll('section')), meas)];
+    HOST.innerHTML = '';
+    sheets.forEach((s, i) => { const pn = s.querySelector('.pgno'); if (pn) pn.textContent = `Page ${i + 1} of ${sheets.length}`; const w = document.createElement('div'); w.className = 'wrap'; w.appendChild(s); HOST.appendChild(w); });
+    const toc = [];
+    sheets.forEach((s, i) => s.querySelectorAll('[id^="rh"]').forEach(h => { const p = HOST.querySelector(`[data-for="${h.id}"]`); if (p) p.textContent = i + 1; toc.push({ title: h.dataset.toc || h.dataset.tocSub, sub: !h.dataset.toc, page: i + 1 }); }));
+    meas.innerHTML = ''; layout();
+    return { pages: sheets.length, figures: figN, tables: tabN, toc };
+  }
+
+  /* ---------------------------------------------------------------- export */
+  let toastEl = null;
+  function toast(msg) { if (!toastEl) return; toastEl.textContent = msg; toastEl.classList.add('on'); clearTimeout(toast.h); toast.h = setTimeout(() => toastEl.classList.remove('on'), 2200); }
+  function save(blob, name) { const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = name; document.body.appendChild(a); a.click(); setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 1000); }
+  const fname = id => `optimusdb-${(D.meta.archive || D.kind)}-fig${String(BUILT[id].n).padStart(2, '0')}-${id}`;
+  function exportFig(kind, id) {
+    const out = BUILT[id]; if (!out) return;
+    if (kind === 'svg') { save(new Blob([out.svg], { type: 'image/svg+xml' }), fname(id) + '.svg'); toast('SVG saved'); }
+    if (kind === 'csv') { const txt = out.csv.map(r => r.map(v => v == null ? '' : /[",\n]/.test(String(v)) ? `"${String(v).replace(/"/g, '""')}"` : v).join(',')).join('\n'); save(new Blob([txt], { type: 'text/csv' }), fname(id) + '.csv'); toast('CSV saved'); }
+    if (kind === 'copy') { navigator.clipboard.writeText(out.svg).then(() => toast('SVG copied'), () => toast('Copying is blocked here; use the SVG button')); }
+    if (kind === 'png') { const m = /viewBox="0 0 (\d+(?:\.\d+)?) (\d+(?:\.\d+)?)"/.exec(out.svg); const w = +m[1], h = +m[2], k = 3; const img = new Image();
+      img.onload = () => { const c = document.createElement('canvas'); c.width = w * k; c.height = h * k; c.getContext('2d').drawImage(img, 0, 0, w * k, h * k); c.toBlob(b => { save(b, fname(id) + '.png'); toast('PNG saved (300 dpi at column width)'); }); };
+      img.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(out.svg); }
+  }
+  function exportAll() { Object.keys(BUILT).forEach((id, i) => setTimeout(() => exportFig('svg', id), i * 250)); }
+  document.addEventListener('click', e => { const b = e.target.closest('.rpt [data-ex]'); if (b) exportFig(b.dataset.ex, b.dataset.id); });
+  window.addEventListener('resize', layout);
+  return { render, layout, exportAll, setToast: el => { toastEl = el; } };
+})();
+</script>
+<script>
+OptimusReport.setToast(document.getElementById('toast'));
+const info = OptimusReport.render({ data: window.REPORT_DATA, template: document.getElementById('tpl').innerHTML, host: document.getElementById('pages'), measure: document.getElementById('measure') });
+document.getElementById('pgcount').textContent = info.pages + ' pages · ' + info.figures + ' figures · saved ' + window.REPORT_DATA.meta.generated;
+</script></body></html>

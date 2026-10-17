@@ -1,0 +1,66 @@
+18:32:39 QUICK E2: 1 rep, 10^4 records, short windows, reduced grids, results in /results/quick
+18:32:39 OptimusDB runtime (cloud): GOGC=200 GOMAXPROCS=2 GOMEMLIMIT=2457MiB OPTIMUSDB_ARGS=-metrics=false OPTIMUSDB_IPFS_KEY=ed25519 OPTIMUSDB_IPFS_PROVIDE=false OPTIMUSDB_IPFS_SYNC=false OPTIMUSDB_LOG_LEVEL=WARN
+18:32:39 OptimusDB runtime (fog): GOGC=200 GOMAXPROCS=2 GOMEMLIMIT=2457MiB OPTIMUSDB_ARGS=-metrics=false OPTIMUSDB_IPFS_KEY=ed25519 OPTIMUSDB_IPFS_PROVIDE=false OPTIMUSDB_IPFS_SYNC=false OPTIMUSDB_LOG_LEVEL=WARN
+18:32:39 OptimusDB runtime (edge): GOGC=200 GOMAXPROCS=1 GOMEMLIMIT=1638MiB OPTIMUSDB_ARGS=-metrics=false OPTIMUSDB_IPFS_KEY=ed25519 OPTIMUSDB_IPFS_PROVIDE=false OPTIMUSDB_IPFS_SYNC=false OPTIMUSDB_LOG_LEVEL=WARN
+18:32:39 [1/6] E2 block gun 10000 records: load once, 1 repetitions
+18:32:39   reset gun: stop others, wipe, start, join, smoke test
+18:32:43   loading 10000 records (2KB)
+18:32:59   loaded in 16 s
+18:33:04   replicated on every host after 5 s
+18:33:05   measuring: 10 s warm-up + 30 s at 25 ops/s
+18:33:46   done E2-gun-10000-25-1: ops=712 errors=0 p50=14.735 ms p99=729.333 ms | load generator CPU 7.0 %, issue lag p50 1.0 ms, cloud-a CPU max 114.4 % of 100 %
+18:33:47   measuring: 10 s warm-up + 30 s at 100 ops/s
+18:34:39   done E2-gun-10000-100-1: ops=3017 errors=1758 p50=8783.073 ms p99=14022.623 ms | load generator CPU 76.4 %, issue lag p50 1085.8 ms, cloud-a CPU max 152.7 % of 100 %
+18:34:46 [2/6] E2 block autobase 10000 records: load once, 1 repetitions
+18:34:46   reset autobase: stop others, wipe, start, join, smoke test
+18:35:08   loading 10000 records (2KB)
+18:35:13   loaded in 5 s
+18:35:43   replicated on every host after 30 s
+18:35:43   measuring: 10 s warm-up + 30 s at 25 ops/s
+18:36:23   done E2-autobase-10000-25-1: ops=712 errors=13 p50=42.826 ms p99=8937.968 ms | load generator CPU 8.9 %, issue lag p50 1.0 ms, cloud-a CPU max 146.0 % of 100 %
+18:36:24   measuring: 10 s warm-up + 30 s at 100 ops/s
+18:37:13   done E2-autobase-10000-100-1: ops=3017 errors=1520 p50=6579.04 ms p99=12148.197 ms | load generator CPU 86.0 %, issue lag p50 206.4 ms, cloud-a CPU max 136.9 % of 100 %
+18:37:18 [3/6] E2 block corrosion 10000 records: load once, 1 repetitions
+18:37:18   reset corrosion: stop others, wipe, start, join, smoke test
+18:37:38   loading 10000 records (2KB)
+18:37:41   loaded in 3 s
+18:38:00   replicated on every host after 19 s
+18:38:00   measuring: 10 s warm-up + 30 s at 25 ops/s
+18:38:41   done E2-corrosion-10000-25-1: ops=712 errors=0 p50=3.525 ms p99=21.875 ms | load generator CPU 8.3 %, issue lag p50 0.9 ms, cloud-a CPU max 13.9 % of 150 %
+18:38:41   measuring: 10 s warm-up + 30 s at 100 ops/s
+18:39:21   done E2-corrosion-10000-100-1: ops=3017 errors=0 p50=3.339 ms p99=41.598 ms | load generator CPU 30.7 %, issue lag p50 0.9 ms, cloud-a CPU max 35.1 % of 150 %
+18:39:21   measuring: 10 s warm-up + 30 s at 200 ops/s
+18:40:01   done E2-corrosion-10000-200-1: ops=5995 errors=0 p50=5.32 ms p99=92.365 ms | load generator CPU 62.2 %, issue lag p50 1.1 ms, cloud-a CPU max 57.3 % of 150 %
+18:40:06 [4/6] E2 block iroh 10000 records: load once, 1 repetitions
+18:40:06   reset iroh: stop others, wipe, start, join, smoke test
+18:40:15   loading 10000 records (2KB)
+18:40:29   loaded in 14 s
+18:42:30   readable sample keys per host: cloud-a 200/200, cloud-b 192/200, fog-a 189/200, fog-b 200/200, edge-a 200/200, edge-b 189/200, edge-c 200/200, edge-d 200/200
+18:42:30   WARNING: sample not readable on every replica after 120 s; measuring anyway
+18:42:30   measuring: 10 s warm-up + 30 s at 25 ops/s
+18:43:11   done E2-iroh-10000-25-1: ops=712 errors=0 p50=3.646 ms p99=760.859 ms | load generator CPU 5.8 %, issue lag p50 1.0 ms, cloud-a CPU max 137.4 % of 150 %
+18:43:11   measuring: 10 s warm-up + 30 s at 100 ops/s
+18:44:03   done E2-iroh-10000-100-1: ops=3017 errors=305 p50=18.553 ms p99=264.268 ms | load generator CPU 18.8 %, issue lag p50 1.0 ms, cloud-a CPU max 145.5 % of 150 %
+18:44:03   measuring: 10 s warm-up + 30 s at 200 ops/s
+18:44:54   done E2-iroh-10000-200-1: ops=5839 errors=4045 p50=6766.212 ms p99=11534.435 ms | load generator CPU 88.6 %, issue lag p50 166.0 ms, cloud-a CPU max 146.7 % of 150 %
+18:45:00 [5/6] E2 block optimusdb 10000 records: load once, 1 repetitions
+18:45:00   reset optimusdb: stop others, wipe, start, join, smoke test
+18:45:22   loading 10000 records (2KB)
+18:45:24   loaded in 3 s
+18:45:30   replicated on every host after 5 s
+18:45:30   measuring: 10 s warm-up + 30 s at 25 ops/s
+18:46:11   done E2-optimusdb-10000-25-1: ops=712 errors=0 p50=3.404 ms p99=16.329 ms | load generator CPU 7.2 %, issue lag p50 1.0 ms, cloud-a CPU max 8.3 % of 150 %
+18:46:11   measuring: 10 s warm-up + 30 s at 100 ops/s
+18:46:51   done E2-optimusdb-10000-100-1: ops=3017 errors=0 p50=3.287 ms p99=28.084 ms | load generator CPU 27.7 %, issue lag p50 0.9 ms, cloud-a CPU max 21.6 % of 150 %
+18:46:51   measuring: 10 s warm-up + 30 s at 200 ops/s
+18:47:32   done E2-optimusdb-10000-200-1: ops=5995 errors=0 p50=4.674 ms p99=64.447 ms | load generator CPU 57.0 %, issue lag p50 1.1 ms, cloud-a CPU max 39.3 % of 150 %
+18:47:37 [6/6] E2 block opendht 10000 records: load once, 1 repetitions
+18:47:37   reset opendht: stop others, wipe, start, join, smoke test
+18:47:42   loading 10000 records (2KB)
+18:48:10   loaded in 28 s
+18:48:17   replicated on every host after 7 s
+18:48:17   measuring: 10 s warm-up + 30 s at 25 ops/s
+18:49:00   done E2-opendht-10000-25-1: ops=634 errors=0 p50=408.395 ms p99=1727.131 ms unsupported=78 | load generator CPU 4.5 %, issue lag p50 0.8 ms, cloud-a CPU max 11.2 % of 150 %
+18:49:00   measuring: 10 s warm-up + 30 s at 100 ops/s
+18:49:50   done E2-opendht-10000-100-1: ops=2712 errors=576 p50=1945.803 ms p99=10354.593 ms unsupported=305 | load generator CPU 66.0 %, issue lag p50 58.4 ms, cloud-a CPU max 74.4 % of 150 %
+18:49:50   WARNING: the load generator was the limit in E2-opendht-10000-100-1 (CPU 66.0 %, issue lag p50 58.4 ms): this run measures the client, not the system; it is marked client_limited

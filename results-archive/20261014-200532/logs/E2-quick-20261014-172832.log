@@ -1,0 +1,54 @@
+14:52:59 QUICK E2: 1 rep, 10^4 records, short windows, reduced grids, results in /results/quick
+14:52:59 [1/6] E2 block gun 10000 records: load once, 1 repetitions
+14:52:59   reset gun: stop others, wipe, start, join, smoke test
+14:53:03   loading 10000 records (2KB)
+14:53:37   loaded in 34 s
+14:53:45   replicated on every host after 7 s
+14:53:45   measuring: 10 s warm-up + 30 s at 25 ops/s
+14:54:33   done E2-gun-10000-25-1: ops=712 errors=408 p50=518.421 ms p99=9199.689 ms
+14:54:38 [2/6] E2 block autobase 10000 records: load once, 1 repetitions
+14:54:38   reset autobase: stop others, wipe, start, join, smoke test
+14:55:00   loading 10000 records (2KB)
+14:55:10   loaded in 10 s
+14:55:55   replicated on every host after 44 s
+14:55:55   measuring: 10 s warm-up + 30 s at 25 ops/s
+14:56:45   done E2-autobase-10000-25-1: ops=712 errors=267 p50=3621.407 ms p99=9893.353 ms
+14:56:50 [3/6] E2 block corrosion 10000 records: load once, 1 repetitions
+14:56:50   reset corrosion: stop others, wipe, start, join, smoke test
+14:57:10   loading 10000 records (2KB)
+14:57:16   loaded in 6 s
+14:57:35   replicated on every host after 19 s
+14:57:35   measuring: 10 s warm-up + 30 s at 25 ops/s
+14:58:15   done E2-corrosion-10000-25-1: ops=712 errors=0 p50=3.928 ms p99=15.685 ms
+14:58:15   measuring: 10 s warm-up + 30 s at 100 ops/s
+14:58:55   done E2-corrosion-10000-100-1: ops=3017 errors=0 p50=3.751 ms p99=18.7 ms
+14:58:55   measuring: 10 s warm-up + 30 s at 200 ops/s
+14:59:36   done E2-corrosion-10000-200-1: ops=5995 errors=0 p50=4.384 ms p99=39.402 ms
+14:59:41 [4/6] E2 block iroh 10000 records: load once, 1 repetitions
+14:59:41   reset iroh: stop others, wipe, start, join, smoke test
+14:59:50   loading 10000 records (2KB)
+15:00:04   loaded in 14 s
+15:02:06   readable sample keys per host: cloud-a 200/200, cloud-b 198/200, fog-a 192/200, fog-b 200/200, edge-a 194/200, edge-b 184/200, edge-c 200/200, edge-d 200/200
+15:02:06   WARNING: sample not readable on every replica after 120 s; measuring anyway
+15:02:06   measuring: 10 s warm-up + 30 s at 25 ops/s
+15:02:47   done E2-iroh-10000-25-1: ops=712 errors=0 p50=4.257 ms p99=919.53 ms
+15:02:47   measuring: 10 s warm-up + 30 s at 100 ops/s
+15:03:37   done E2-iroh-10000-100-1: ops=3017 errors=305 p50=22.882 ms p99=651.511 ms
+15:03:37   measuring: 10 s warm-up + 30 s at 200 ops/s
+15:04:28   done E2-iroh-10000-200-1: ops=4913 errors=3304 p50=5943.377 ms p99=12401.401 ms
+15:04:33 [5/6] E2 block optimusdb 10000 records: load once, 1 repetitions
+15:04:33   reset optimusdb: stop others, wipe, start, join, smoke test
+15:05:02   loading 10000 records (2KB)
+15:05:08   loaded in 6 s
+15:05:23   replicated on every host after 15 s
+15:05:23   measuring: 10 s warm-up + 30 s at 25 ops/s
+15:06:04   done E2-optimusdb-10000-25-1: ops=712 errors=0 p50=291.921 ms p99=897.995 ms
+15:06:04   measuring: 10 s warm-up + 30 s at 100 ops/s
+15:10:41   done E2-optimusdb-10000-100-1: ops=2400 errors=2400 p50=None ms p99=None ms
+15:10:46 [6/6] E2 block opendht 10000 records: load once, 1 repetitions
+15:10:46   reset opendht: stop others, wipe, start, join, smoke test
+15:10:51   loading 10000 records (2KB)
+15:11:22   loaded in 31 s
+15:11:30   replicated on every host after 8 s
+15:11:30   measuring: 10 s warm-up + 30 s at 25 ops/s
+15:12:12   done E2-opendht-10000-25-1: ops=634 errors=0 p50=438.453 ms p99=2199.36 ms unsupported=78

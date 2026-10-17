@@ -1,0 +1,12 @@
+13:43:04 QUICK E2: 1 rep, 10^4 records, short windows, reduced grids, results in /results/quick
+13:43:04 [1/1] E2 block corrosion 10000 records: load once, 1 repetitions
+13:43:04   reset corrosion: stop others, wipe, start, join, smoke test
+13:43:15   loading 10000 records (2KB)
+13:43:22   loaded in 7 s
+13:43:46   replicated on every host after 23 s
+13:43:46   measuring: 10 s warm-up + 30 s at 25 ops/s
+13:44:26   done E2-corrosion-10000-25-1: ops=712 errors=0 p50=3.966 ms p99=16.868 ms
+13:44:26   measuring: 10 s warm-up + 30 s at 100 ops/s
+13:45:06   done E2-corrosion-10000-100-1: ops=3017 errors=0 p50=4.114 ms p99=23.975 ms
+13:45:06   measuring: 10 s warm-up + 30 s at 200 ops/s
+13:45:46   done E2-corrosion-10000-200-1: ops=5995 errors=0 p50=3.96 ms p99=29.756 ms

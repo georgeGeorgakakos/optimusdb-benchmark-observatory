@@ -1,0 +1,77 @@
+# Copy to config/testbed.yaml and fill in. Values below are the PLANNED testbed (Section 8.1.2);
+# confirm each against the real deployment before running.
+seed: 20261101
+settle_s: 20                     # wait after a reset before loading data
+
+run:                             # defaults for open-loop runs (E1, E7)
+  rate: 50                       # ops/s
+  duration_s: 300                # measured window
+  warmup_s: 60                   # discarded
+  poisson: true
+  client_workers: 4              # load-generator processes (one Python process cannot decode WO answers at 10^5)
+
+data:
+  records: 100000
+
+agents:                          # 8-agent default cluster (2 cloud, 2 fog, 4 edge): HTTP base URLs
+  - http://10.0.1.11:8089
+  - http://10.0.1.12:8089
+  - http://10.0.2.21:8089
+  - http://10.0.2.22:8089
+  - http://10.0.3.31:8089
+  - http://10.0.3.32:8089
+  - http://10.0.3.33:8089
+  - http://10.0.3.34:8089
+
+initiators: {cloud: http://10.0.1.11:8089, fog: http://10.0.2.21:8089, edge: http://10.0.3.31:8089}
+
+agents_by_size:                  # E7/E9: endpoints per cluster size (16+ = containers on cloud hosts)
+  4: [http://10.0.1.11:8089, http://10.0.2.21:8089, http://10.0.3.31:8089, http://10.0.3.32:8089]
+  8: [http://10.0.1.11:8089, http://10.0.1.12:8089, http://10.0.2.21:8089, http://10.0.2.22:8089, http://10.0.3.31:8089, http://10.0.3.32:8089, http://10.0.3.33:8089, http://10.0.3.34:8089]
+
+nodes:                           # fault injection / netem / resource sampling
+  - {name: c1, tier: cloud, ip: 10.0.1.11, exec_prefix: "ssh ubuntu@10.0.1.11 sudo"}
+  - {name: c2, tier: cloud, ip: 10.0.1.12, exec_prefix: "ssh ubuntu@10.0.1.12 sudo"}
+  - {name: f1, tier: fog,   ip: 10.0.2.21, exec_prefix: "ssh ops@10.0.2.21 sudo"}
+  - {name: f2, tier: fog,   ip: 10.0.2.22, exec_prefix: "ssh ops@10.0.2.22 sudo"}
+  - {name: e1, tier: edge,  ip: 10.0.3.31, exec_prefix: "ssh pi@10.0.3.31 sudo"}
+  - {name: e2, tier: edge,  ip: 10.0.3.32, exec_prefix: "ssh pi@10.0.3.32 sudo"}
+  - {name: e3, tier: edge,  ip: 10.0.3.33, exec_prefix: "ssh pi@10.0.3.33 sudo"}
+  - {name: e4, tier: edge,  ip: 10.0.3.34, exec_prefix: "ssh pi@10.0.3.34 sudo"}
+
+links:                           # tc netem profiles (Testbed sheet)
+  cloud-cloud: {delay_ms: 5,  jitter_ms: 1,   loss_pct: 0.0, rate_mbit: 1000}
+  cloud-fog:   {delay_ms: 20, jitter_ms: 4,   loss_pct: 0.1, rate_mbit: 100}
+  fog-edge:    {delay_ms: 50, jitter_ms: 10,  loss_pct: 0.5, rate_mbit: 10}
+  edge-edge:   {delay_ms: 2,  jitter_ms: 0.5, loss_pct: 0.0, rate_mbit: 100}
+
+systems:                         # client endpoints of each system under test (all decentralized, P2P class)
+  optimusdb: {type: optimusdb, base_url: http://10.0.1.11:8089, strategy: LOCAL_THEN_REMOTE_MERGE}
+  corrosion: {type: corrosion, base_url: http://10.0.1.11:8080}
+  gun:       {type: http, name: gun,      base_url: http://10.0.1.11:7004}
+  autobase:  {type: http, name: autobase, base_url: http://10.0.1.11:7005}
+  iroh:      {type: http, name: iroh,     base_url: http://10.0.1.11:7006}
+  opendht:   {type: opendht, base_url: http://10.0.1.11:8000}
+
+replicas:                        # per-node endpoints (same node order as `nodes`) for E5 and E6
+  corrosion: [http://10.0.1.11:8080, http://10.0.1.12:8080, http://10.0.2.21:8080, http://10.0.2.22:8080, http://10.0.3.31:8080, http://10.0.3.32:8080, http://10.0.3.33:8080, http://10.0.3.34:8080]
+  gun:       [http://10.0.1.11:7004, http://10.0.1.12:7004, http://10.0.2.21:7004, http://10.0.2.22:7004, http://10.0.3.31:7004, http://10.0.3.32:7004, http://10.0.3.33:7004, http://10.0.3.34:7004]
+  autobase:  [http://10.0.1.11:7005, http://10.0.1.12:7005, http://10.0.2.21:7005, http://10.0.2.22:7005, http://10.0.3.31:7005, http://10.0.3.32:7005, http://10.0.3.33:7005, http://10.0.3.34:7005]
+  iroh:      [http://10.0.1.11:7006, http://10.0.1.12:7006, http://10.0.2.21:7006, http://10.0.2.22:7006, http://10.0.3.31:7006, http://10.0.3.32:7006, http://10.0.3.33:7006, http://10.0.3.34:7006]
+  opendht:   [http://10.0.1.11:8000, http://10.0.1.12:8000, http://10.0.2.21:8000, http://10.0.2.22:8000, http://10.0.3.31:8000, http://10.0.3.32:8000, http://10.0.3.33:8000, http://10.0.3.34:8000]
+
+reset:                           # fresh deployment before each run (principle P1)
+  optimusdb: "make -C deploy reset-optimusdb"
+  corrosion: "make -C deploy reset-corrosion"
+
+e3_targets:
+  - {system: optimusdb, path: crdt}
+  - {system: optimusdb, path: sqlite, override: {sql_tables: true}}
+  - {system: corrosion, path: sql}
+  - {system: gun,       path: client_filter}
+  - {system: autobase,  path: range_client_filter}
+  - {system: iroh,      path: prefix_client_filter}
+  - {system: opendht,   path: key_only}
+
+edge_systems: [optimusdb, corrosion, gun, autobase, iroh, opendht]
+process_pattern: {optimusdb: optimusdb, corrosion: corrosion, gun: gun_http, autobase: autobase_http, iroh: iroh_http, opendht: dhtnode}

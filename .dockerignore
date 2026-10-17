@@ -1,0 +1,7 @@
+.src
+out
+out-local
+results
+trace
+**/node_modules
+**/target

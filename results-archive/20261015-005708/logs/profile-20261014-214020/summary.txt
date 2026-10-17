@@ -1,0 +1,13 @@
+OptimusDB write-path profile 2026-10-14 21:40:20 workload WA at 50 ops/s
+cloud-a environment: {'OPTIMUSDB_LOG_LEVEL': 'WARN', 'GOGC': '200', 'GOMAXPROCS': '2', 'GOMEMLIMIT': '2457MiB', 'OPTIMUSDB_ARGS': '-metrics=false', 'OPTIMUSDB_PPROF': '0.0.0.0:6060'}
+cluster up + joined in 9 s
+load 10000 docs: 3.8 s
+running WA for 70 s; profiling cloud-a from second 15
+  saved goroutine.pb.gz (13 KB)
+  saved goroutines.txt (47 KB)
+  saved cpu.pb.gz (68 KB)
+  saved mutex.pb.gz (9 KB)
+  saved heap.pb.gz (60 KB)
+read    n= 1769 errors=   0 p50=     3.1 ms  p99=     6.6 ms  max=    34.4 ms
+update  n= 1716 errors=   0 p50=    12.9 ms  p99=    31.8 ms  max=    42.4 ms
+dropped (not issued in time): 0

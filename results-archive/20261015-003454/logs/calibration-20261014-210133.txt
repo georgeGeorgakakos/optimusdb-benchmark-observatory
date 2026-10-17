@@ -1,0 +1,19 @@
+Baseline calibration 2026-10-14 21:01:33 systems gun, workloads WO, rates [5.0, 10.0, 25.0, 50.0], 20 s each, 10000 records, cluster with link profiles
+
+=== gun WO
+  [single WO] started and loaded 10000 documents in 56 s
+  [single WO]    5 ops/s: achieved   5.0  P50     33.6 ms  P99   1676.0 ms  errors   0.0 %  CPU max 29.95 % of 100  mem 346.6 MB
+  [single WO]   10 ops/s: achieved  10.6  P50      6.4 ms  P99    550.7 ms  errors   0.0 %  CPU max 37.78 % of 100  mem 351.5 MB
+  [single WO]   25 ops/s: achieved  25.0  P50      9.5 ms  P99    475.6 ms  errors   0.0 %  CPU max 51.95 % of 100  mem 372.4 MB
+  [single WO]   50 ops/s: achieved  45.1  P50     13.2 ms  P99   6976.4 ms  errors   6.9 % (TimeoutError x67)  CPU max 121.33 % of 100  mem 417.3 MB
+  [cluster + links WO] started and loaded 10000 documents in 34 s
+  [cluster + links WO]    5 ops/s: achieved   5.0  P50     95.5 ms  P99   2905.0 ms  errors   0.0 %  CPU max 131.53 % of 100  mem 497.3 MB
+  [cluster + links WO]   10 ops/s: achieved  10.6  P50      6.2 ms  P99   1648.7 ms  errors   0.0 %  CPU max 37.23 % of 100  mem 475.1 MB
+  [cluster + links WO]   25 ops/s: achieved  25.0  P50     12.2 ms  P99    686.8 ms  errors   0.0 %  CPU max 45.34 % of 100  mem 467.5 MB
+  [cluster + links WO]   50 ops/s: achieved  48.1  P50    128.5 ms  P99   9024.3 ms  errors   0.7 % (TimeoutError x7)  CPU max 122.07 % of 100  mem 1656.83 MB
+  VERDICT gun WO: REAL (CPU-bound): saturates at 50 ops/s on a single node with CPU at its limit
+
+=== Summary
+  gun WO       REAL (CPU-bound): saturates at 50 ops/s on a single node with CPU at its limit
+
+report: calibration-20261014-210133.txt

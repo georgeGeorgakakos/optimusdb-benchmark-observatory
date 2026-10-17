@@ -1,0 +1,104 @@
+14:28:33 QUICK E1: 1 rep, 10^4 records, short windows, reduced grids, results in /results/quick
+14:28:33 == block 1/6: gun 2KB, 10000 records, 4 runs on one preload
+14:28:33 [1/24] gun WB 2KB rep 1
+14:28:33   reset gun: stop others, wipe, start, join, smoke test
+14:28:37   loading 10000 records (2KB)
+14:29:09   loaded in 31 s
+14:29:17   replicated on every host after 7 s
+14:29:17   measuring: 10 s warm-up + 30 s at 50 ops/s
+14:29:57   done E1-gun-WB-2KB-1: ops=1488 errors=0 p50=105.241 ms p99=283.15 ms
+14:29:57 [2/24] gun WC 2KB rep 1
+14:29:57   measuring: 10 s warm-up + 30 s at 50 ops/s
+14:30:37   done E1-gun-WC-2KB-1: ops=1488 errors=0 p50=103.511 ms p99=118.602 ms
+14:30:37 [3/24] gun WO 2KB rep 1
+14:30:37   measuring: 10 s warm-up + 30 s at 50 ops/s
+14:31:28   done E1-gun-WO-2KB-1: ops=1488 errors=967 p50=1595.881 ms p99=9906.321 ms
+14:31:28 [4/24] gun WA 2KB rep 1
+14:31:28   measuring: 10 s warm-up + 30 s at 50 ops/s
+14:32:18   done E1-gun-WA-2KB-1: ops=1488 errors=1344 p50=7290.404 ms p99=10060.664 ms
+14:32:18 == block 2/6: autobase 2KB, 10000 records, 4 runs on one preload
+14:32:18 [5/24] autobase WO 2KB rep 1
+14:32:18   reset autobase: stop others, wipe, start, join, smoke test
+14:32:39   loading 10000 records (2KB)
+14:32:47   loaded in 8 s
+14:33:29   replicated on every host after 42 s
+14:33:29   measuring: 10 s warm-up + 30 s at 50 ops/s
+14:34:20   done E1-autobase-WO-2KB-1: ops=1488 errors=835 p50=7349.343 ms p99=11632.419 ms
+14:34:20 [6/24] autobase WA 2KB rep 1
+14:34:20   measuring: 10 s warm-up + 30 s at 50 ops/s
+14:35:11   done E1-autobase-WA-2KB-1: ops=1488 errors=1488 p50=None ms p99=None ms
+14:35:11 [7/24] autobase WB 2KB rep 1
+14:35:11   measuring: 10 s warm-up + 30 s at 50 ops/s
+14:35:51   done E1-autobase-WB-2KB-1: ops=1488 errors=1488 p50=None ms p99=None ms
+14:35:51 [8/24] autobase WC 2KB rep 1
+14:35:51   measuring: 10 s warm-up + 30 s at 50 ops/s
+14:36:31   done E1-autobase-WC-2KB-1: ops=1488 errors=1488 p50=None ms p99=None ms
+14:36:31 == block 3/6: corrosion 2KB, 10000 records, 4 runs on one preload
+14:36:31 [9/24] corrosion WA 2KB rep 1
+14:36:31   reset corrosion: stop others, wipe, start, join, smoke test
+14:36:51   loading 10000 records (2KB)
+14:36:55   loaded in 4 s
+14:37:16   replicated on every host after 20 s
+14:37:16   measuring: 10 s warm-up + 30 s at 50 ops/s
+14:37:56   done E1-corrosion-WA-2KB-1: ops=1488 errors=0 p50=3.935 ms p99=11.394 ms
+14:37:56 [10/24] corrosion WC 2KB rep 1
+14:37:56   measuring: 10 s warm-up + 30 s at 50 ops/s
+14:38:36   done E1-corrosion-WC-2KB-1: ops=1488 errors=0 p50=3.225 ms p99=5.235 ms
+14:38:36 [11/24] corrosion WO 2KB rep 1
+14:38:36   measuring: 10 s warm-up + 30 s at 50 ops/s
+14:39:16   done E1-corrosion-WO-2KB-1: ops=1488 errors=0 p50=3.84 ms p99=16.417 ms
+14:39:16 [12/24] corrosion WB 2KB rep 1
+14:39:16   measuring: 10 s warm-up + 30 s at 50 ops/s
+14:39:56   done E1-corrosion-WB-2KB-1: ops=1488 errors=0 p50=3.52 ms p99=6.844 ms
+14:39:56 == block 4/6: iroh 2KB, 10000 records, 4 runs on one preload
+14:39:56 [13/24] iroh WB 2KB rep 1
+14:39:56   reset iroh: stop others, wipe, start, join, smoke test
+14:40:06   loading 10000 records (2KB)
+14:40:21   loaded in 15 s
+14:42:23   readable sample keys per host: cloud-a 200/200, cloud-b 200/200, fog-a 189/200, fog-b 193/200, edge-a 200/200, edge-b 200/200, edge-c 192/200, edge-d 200/200
+14:42:23   WARNING: sample not readable on every replica after 120 s; measuring anyway
+14:42:23   measuring: 10 s warm-up + 30 s at 50 ops/s
+14:43:03   done E1-iroh-WB-2KB-1: ops=1488 errors=0 p50=3.145 ms p99=8.38 ms
+14:43:03 [14/24] iroh WC 2KB rep 1
+14:43:04   measuring: 10 s warm-up + 30 s at 50 ops/s
+14:43:44   done E1-iroh-WC-2KB-1: ops=1488 errors=0 p50=3.138 ms p99=5.66 ms
+14:43:44 [15/24] iroh WO 2KB rep 1
+14:43:44   measuring: 10 s warm-up + 30 s at 50 ops/s
+14:44:30   done E1-iroh-WO-2KB-1: ops=1488 errors=0 p50=8.008 ms p99=7993.192 ms
+14:44:30 [16/24] iroh WA 2KB rep 1
+14:44:30   measuring: 10 s warm-up + 30 s at 50 ops/s
+14:45:10   done E1-iroh-WA-2KB-1: ops=1488 errors=0 p50=3.948 ms p99=11.192 ms
+14:45:10 == block 5/6: optimusdb 2KB, 10000 records, 4 runs on one preload
+14:45:10 [17/24] optimusdb WO 2KB rep 1
+14:45:10   reset optimusdb: stop others, wipe, start, join, smoke test
+14:45:39   loading 10000 records (2KB)
+14:45:48   loaded in 8 s
+14:46:03   replicated on every host after 15 s
+14:46:03   measuring: 10 s warm-up + 30 s at 50 ops/s
+14:46:54   done E1-optimusdb-WO-2KB-1: ops=1488 errors=1481 p50=9812.21 ms p99=9932.591 ms
+14:46:54 [18/24] optimusdb WB 2KB rep 1
+14:46:54   measuring: 10 s warm-up + 30 s at 50 ops/s
+14:47:44   done E1-optimusdb-WB-2KB-1: ops=1488 errors=1488 p50=None ms p99=None ms
+14:47:44 [19/24] optimusdb WA 2KB rep 1
+14:47:44   measuring: 10 s warm-up + 30 s at 50 ops/s
+14:48:34   done E1-optimusdb-WA-2KB-1: ops=1488 errors=1488 p50=None ms p99=None ms
+14:48:34 [20/24] optimusdb WC 2KB rep 1
+14:48:34   measuring: 10 s warm-up + 30 s at 50 ops/s
+14:49:24   done E1-optimusdb-WC-2KB-1: ops=1488 errors=1488 p50=None ms p99=None ms
+14:49:24 == block 6/6: opendht 2KB, 10000 records, 4 runs on one preload
+14:49:24 [21/24] opendht WC 2KB rep 1
+14:49:24   reset opendht: stop others, wipe, start, join, smoke test
+14:49:31   loading 10000 records (2KB)
+14:50:03   loaded in 32 s
+14:50:10   replicated on every host after 7 s
+14:50:10   measuring: 10 s warm-up + 30 s at 50 ops/s
+14:50:52   done E1-opendht-WC-2KB-1: ops=1488 errors=0 p50=448.496 ms p99=1514.713 ms
+14:50:52 [22/24] opendht WB 2KB rep 1
+14:50:52   measuring: 10 s warm-up + 30 s at 50 ops/s
+14:51:33   done E1-opendht-WB-2KB-1: ops=1488 errors=0 p50=448.678 ms p99=1731.387 ms
+14:51:33 [23/24] opendht WA 2KB rep 1
+14:51:33   measuring: 10 s warm-up + 30 s at 50 ops/s
+14:52:15   done E1-opendht-WA-2KB-1: ops=1488 errors=0 p50=588.09 ms p99=2516.565 ms
+14:52:15 [24/24] opendht WO 2KB rep 1
+14:52:15   measuring: 10 s warm-up + 30 s at 50 ops/s
+14:52:57   done E1-opendht-WO-2KB-1: ops=1334 errors=0 p50=1291.253 ms p99=4000.197 ms unsupported=154

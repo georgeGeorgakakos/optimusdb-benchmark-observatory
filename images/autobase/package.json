@@ -1,0 +1,3 @@
+{ "name": "odb-autobase", "private": true, "type": "module",
+  "dependencies": { "autobase": "7.28.2", "corestore": "7.13.0", "hyperbee": "2.27.3",
+                    "hyperswarm": "4.17.2", "express": "4.22.3" } }
